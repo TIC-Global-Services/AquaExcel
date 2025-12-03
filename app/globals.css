@@ -3,11 +3,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --hero-bg: #1a1a1a;
+  --hero-text: #ffffff;
+  --button-primary: #E31E24;
+  --button-primary-hover: #c41a1f;
+  --button-secondary-border: #ffffff;
+  --nav-text: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-hero-bg: var(--hero-bg);
+  --color-hero-text: var(--hero-text);
+  --color-button-primary: var(--button-primary);
+  --color-button-primary-hover: var(--button-primary-hover);
+  --color-button-secondary-border: var(--button-secondary-border);
+  --color-nav-text: var(--nav-text);
   --font-hoves-pro: var(--font-hoves-pro);
   --font-inter-tight: var(--font-inter-tight);
 }
@@ -18,4 +30,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter-tight), Helvetica, sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
