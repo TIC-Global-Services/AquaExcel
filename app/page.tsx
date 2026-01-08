@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar";
-import HeroBanner from "@/components/HeroBanner";
-import Carousel3DMarquee from "@/components/Carousel3DMarquee";
-import StatsSection from "@/components/StatsSection";
-import StackedCardsSection from "@/components/StackedCardsSection";
-import AppSection from "@/components/AppSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import Navbar from "@/components/reuseable/Navbar";
+import HeroBanner from "@/components/Home/HeroBanner";
+import Carousel3DMarquee from "@/components/Home/Carousel3DMarquee";
+import StatsSection from "@/components/Home/StatsSection";
+import StackedCardsSection from "@/components/Home/StackedCardsSection";
+import AppSection from "@/components/Home/AppSection";
+import TestimonialsSection from "@/components/Home/TestimonialsSection";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+     
       <HeroBanner />
       <Carousel3DMarquee />
       <StatsSection />

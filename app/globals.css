@@ -23,7 +23,14 @@
   --font-hoves-pro: var(--font-hoves-pro);
   --font-inter-tight: var(--font-inter-tight);
 }
-
+.outline-text {
+  font-size: 4.063rem;              /* adjust size */
+  font-weight: 800;
+  color: transparent;           /* transparent fill */
+  -webkit-text-stroke: 2px #7D7D7D;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 
 
 body {

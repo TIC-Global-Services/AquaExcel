@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroller from "@/layouts/SmoothScroller";
 import { hovesPro, interTight } from "@/fonts";
-import Footer from "@/components/Footer";
+import Footer from "@/components/reuseable/Footer";
+import Navbar from "@/components/reuseable/Navbar";
 
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
         className={`${hovesPro.variable} ${interTight.variable} antialiased`}
       >
         <SmoothScroller>
+           <Navbar />
           {children}
           <Footer />
         </SmoothScroller>
