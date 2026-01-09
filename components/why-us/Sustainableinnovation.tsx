@@ -20,7 +20,7 @@ const Sustainableinnovation = () => {
         },
     ]
   return (
-    <div className='px-10 py-20 '>
+    <div className='px-[5%] xl:py-20 py-10 '>
        <h1 className='text-xl lg:text-[2.75rem] font-medium '>Sustainable Innovation & Research</h1>
        <p className='lg:text-xl  text-sm font-medium'>
             We continually elevate our processes and products to create solutions that <br/> are smarter, stronger, and more environmentally responsible.

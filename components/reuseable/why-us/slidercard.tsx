@@ -10,37 +10,37 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
   return (
-    <div className="relative w-[630px] h-[700px]  rounded-2xl overflow-hidden bg-black">
+    <div className="relative  xl:w-[630px] w-[335px] md:w-[500px] h-[335px] sm:h-[320px] md:h-[500px] lg:h-[420px] xl:h-[700px] rounded-2xl overflow-hidden bg-black">
       
       {/* Background Image */}
-      <div>
+      <div className="absolute inset-0">
         <Image
-        src={image}
-        alt={title}
-        fill
-        className="object-cover w-[360px] h-[420px]"
-      />
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+        />
       </div>
 
+      {/* Glass Overlay Gradient */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
       {/* Top Glass Panel */}
-      <div className="absolute top-0 left-0 right-0 z-20 bg-white/90 backdrop-blur-md p-5 rounded-t-2xl h-[40%]">
-        
+      <div className="absolute top-0 left-0 right-0 z-20 bg-white/90 backdrop-blur-md p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 rounded-t-2xl h-[45%] sm:h-[42%] md:h-[40%] lg:h-[38%] xl:h-[40%] flex flex-col justify-center">
         {/* Icon */}
-       <div className="absolute bottom-10 px-6">
-         <div className="mb-3 text-gray-800">
-          <Image src={icon} alt="icon" width={24} height={24} />
+        <div className="mb-2 sm:mb-3">
+          <Image src={icon} alt="icon" width={20} height={20} className="sm:w-6 sm:h-6" />
         </div>
 
         {/* Title */}
-        <h3 className="lg:text-2xl text-base font-semibold text-gray-900">
+        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-900 leading-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mt-2 text-sm lg:text-xl text-gray-600 leading-relaxed">
+        <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 leading-relaxed line-clamp-2 sm:line-clamp-3 md:line-clamp-none">
           {description}
         </p>
-       </div>
       </div>
 
     </div>

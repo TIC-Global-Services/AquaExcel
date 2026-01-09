@@ -31,11 +31,13 @@ const aquaexcelapart = () => {
     ]
 
     return (
-        <ScrollOverlappingCards
+        <div className='mb-5'>
+            <ScrollOverlappingCards
             heading="What Sets Aqua Excel Apart"
             paragraph="Premium quality, thoughtful design, and reliable performance come together to create products that truly stand out."
             cards={cards}
         />
+        </div>
     )
 }
 

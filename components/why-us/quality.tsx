@@ -80,9 +80,9 @@ const Quality = () => {
           backgroundPosition: "center",
         }}
       />
-      <div className="absolute bottom-24 left-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center  gap-34">
-          <div className="px-10 mt-80">
+      <div className="absolute bottom-10 xl:bottom-24 w-full px-[5%]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
+          <div className="mt-80">
             <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
               Quality you can measure.<br/> performance you can trust
             </h2>
@@ -91,7 +91,7 @@ const Quality = () => {
               ensure long-term safety and reliability
             </p>
           </div>
-          <div className="relative w-[630px] h-[700px] overflow-hidden">
+          <div className="relative xl:w-[100%] h-[350px] xl:h-[700px] overflow-hidden">
                 {slides.map((res,index)=> (
                     <div key={index} className={`card-${index} absolute top-0 left-0`} style={{ zIndex: index + 1 }}>
                         <Card title={res.title} description={res.description} image={res.image} icon={res.icon}/>

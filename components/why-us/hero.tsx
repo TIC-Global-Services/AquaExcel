@@ -1,6 +1,5 @@
 import React from 'react'
 import banner from '@/assets/why-us/why-us-hero-image.svg'
-import HeroBanner from '../reuseable/heroBanner'
 import Button from '../reuseable/Button'
 import Image from 'next/image'
 
@@ -8,17 +7,15 @@ const hero = () => {
   return (
       <section className="relative h-[860px] w-full bg-hero-bg overflow-hidden">
           {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image
-              src={banner}
-              alt="AquaExcel Product"
-              fill
-              className="object-cover scale-110"
-              priority
-              quality={90}
-            />
-    
-          </div>
+          <div className="absolute inset-0 -z-10">
+        <Image
+          src={banner}
+          alt=""
+          fill
+          loading="lazy"
+          className="object-cover"
+        />
+      </div>
     
           {/* Content */}
           <div className="relative h-[860px] flex items-end pb-8">
