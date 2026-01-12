@@ -10,7 +10,7 @@ interface HeroBannerProps {
   backgroundPriority?: boolean;
   
   // Content
-  title?: string;
+  title?: string | React.ReactNode;
   titleClassName?: string;
   subtitle?: string | React.ReactNode;
   subtitleClassName?: string;
