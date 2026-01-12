@@ -1,5 +1,5 @@
 import Navbar from "@/components/reuseable/Navbar";
-import HeroBanner from "@/components/Home/HeroBanner";
+import Hero from "@/components/Home/HeroBanner";
 import Carousel3DMarquee from "@/components/Home/Carousel3DMarquee";
 import StatsSection from "@/components/Home/StatsSection";
 import StackedCardsSection from "@/components/Home/StackedCardsSection";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
      
-      <HeroBanner />
+      <Hero />
       <Carousel3DMarquee />
       <StatsSection />
       <StackedCardsSection />

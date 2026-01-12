@@ -4,8 +4,9 @@ import Image from "next/image";
 import image1 from "@/assets/why-us/distributionpatnerimg1.jpg";
 import image2 from "@/assets/why-us/distributionpatnerimg2.jpg";
 import image3 from "@/assets/why-us/distributionpatnerimg3.jpg";
+import SimpleParallax from "simple-parallax-js";
 const Distribution = () => {
-  const [isMobile, setIsMobile] = useState(false);
+
   const distributors = [
     {
       title: "Higher Margins. Stronger Business.",
@@ -20,64 +21,55 @@ const Distribution = () => {
       image: image3,
     },
   ];
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-  const scrollClasses = isMobile
-  ? "overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
-  : "overflow-visible";
+
   return (
-    <div className="flex justify-start xl:justify-start px-[2%]">
-    <div className="flex flex-col justify-start items-start py-10 px-[3%]">
-      <div className="flex flex-col justify-center items-start">
-        <h1 className="text-xl xl:text-[2.75rem]">For Distribution Partners</h1>
-        <p className="xl:text-xl text-sm font-medium">
+    <div className="w-full px-[5%] py-10 overflow-hidden">
+      <div className="flex flex-col gap-2 mb-8">
+        <h1 className="text-xl xl:text-[2.75rem] font-medium tracking-tight">For Distribution Partners</h1>
+        <p className="max-w-3xl text-sm xl:text-xl font-normal text-gray-700">
           We partner with distributors through dependable supply, strong product
           demand, and responsive service.
         </p>
       </div>
-      <div className={`flex ${isMobile ? 'justify-start' : 'justify-center'} gap-5 py-10 w-full ${scrollClasses} `}>
-  {distributors.map((card, index) => (
-    <div
-      key={index}
-    className={`relative shrink-0 ${
-        isMobile ? "snap-start" : ""
-      } h-[241px] w-[247px] md:h-[444px] lg:h-[241px] lg:w-[247px] xl:w-[413px] xl:h-[444px] rounded-xl flex justify-start xl:justify-center scrollbar-hide  w-full  overflow-x-auto`}
-    >
-      {/* Image */}
-      <Image
-        src={card.image}
-        alt={card.title}
-        fill
-        className="object-cover"
-      />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 z-10" />
+      <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:grid-cols-3 gap-5 md:gap-8 scrollbar-hide py-5">
+        {distributors.map((card, index) => (
+          <div
+            key={index}
+            className="relative shrink-0 w-[247px] h-[241px] md:w-auto md:h-[450px] lg:h-[400px] xl:h-[500px] snap-center rounded-2xl overflow-hidden shadow-md"
+          >
+            {/* Image */}
+            <SimpleParallax>
+            <Image
+              src={card.image}
+              alt={card.title}
+              fill
+              className="object-cover transition-transform duration-500 hover:scale-105"
+            />
+            </SimpleParallax>
 
-      {/* Center-bottom single-line text */}
-      <div className="absolute bottom-5 xl:bottom-14 left-1/2 -translate-x-1/2 z-20 px-4">
-        <p
-          className="
-            text-white
-            font-hoves-pro
-            font-medium
-            text-sm xl:text-xl
-            text-center
-            whitespace-nowrap
-          "
-        >
-          {card.title}
-        </p>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30 z-10" />
+
+            {/* Content Overlay */}
+            <div className="absolute inset-x-0 bottom-0 z-20 p-6 md:p-8 flex items-center justify-center">
+              <p
+                className="
+                  text-white
+                  font-medium
+                  text-center
+                  text-sm md:text-base xl:text-2xl
+                  leading-tight
+                  max-w-[90%]
+                  whitespace-normal
+                "
+              >
+                {card.title}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
-
-    </div>
     </div>
   );
 };

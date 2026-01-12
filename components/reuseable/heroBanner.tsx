@@ -79,7 +79,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   return (
     <section className={`relative ${height} w-full bg-hero-bg overflow-hidden`}>
       {/* Background Image */}
+      
       <div className="absolute inset-0">
+        
         <Image
           src={backgroundImage || "/hero-banner.jpg"}
           alt={backgroundAlt || "Hero background image"}
@@ -102,7 +104,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       </div>
 
       {/* Content */}
-      <div className={`relative ${height} flex items-end pb-8`}>
+      <div className={`relative ${height} flex items-end pb-28`}>
         <div className={`${paddingX} w-full`}>
           <div className={`${maxWidth} ${contentAlignmentClasses[contentAlignment]}`}>
             {/* Custom Content or Default Content */}

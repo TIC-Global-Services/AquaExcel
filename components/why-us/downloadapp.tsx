@@ -1,9 +1,32 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import bgimage from '@/assets/why-us/downloadappbg.jpg'
 import qrcode from '@/assets/why-us/qr code.jpg'
 import Image from 'next/image'
 
 const DownloadApp = () => {
+  useEffect(() => {
+    // Parallax effect — smooth, performant, respects rounded corners
+    const handleScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight / 2; // center-based trigger
+
+      document.querySelectorAll<HTMLElement>(".parallax-media").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2 + window.scrollY;
+
+        // Distance from viewport center
+        const distance = scrolled - cardCenter;
+        const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
+
+        el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className='relative py-10'>
     <div className="relative w-full h-[76vh] lg:h-[64vh] overflow-hidden">
@@ -14,7 +37,7 @@ const DownloadApp = () => {
           priority={false}
           loading="lazy"
           sizes="100vw"
-          className="object-cover"
+          className="object-cover parallax-media"
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>

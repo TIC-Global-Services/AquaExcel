@@ -1,43 +1,54 @@
 import Image from "next/image";
 import Button from "../reuseable/Button";
+import HeroBanner from "../reuseable/heroBanner";
 
-const HeroBanner = () => {
+const Hero = () => {
   return (
-    <section className="relative h-[860px] w-full bg-hero-bg overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/hero-banner.jpg"
-          alt="AquaExcel Product"
-          fill
-          className="object-cover scale-110"
-          priority
-          quality={90}
-        />
+    // <section className="relative h-[860px] w-full bg-hero-bg overflow-hidden">
+    //   {/* Background Image */}
+    //   <div className="absolute inset-0">
+    //     <Image
+    //       src="/hero-banner.jpg"
+    //       alt="AquaExcel Product"
+    //       fill
+    //       className="object-cover scale-110"
+    //       priority
+    //       quality={90}
+    //     />
 
-      </div>
+    //   </div>
 
-      {/* Content */}
-      <div className="relative h-[860px] flex items-end pb-8">
-        <div className="px-6 xl:px-[80px] lg:px-[40px] w-full">
-          <div className="max-w-5xl">
-            <h1 className="text-hero-text font-hoves-pro font-medium text-[60px] leading-[64px] tracking-[-0.04em] mb-4">
-              Elevating water usage with future-ready design.
-            </h1>
+    //   {/* Content */}
+    //   <div className="relative h-[860px] flex items-end pb-8">
+    //     <div className="px-6 xl:px-[80px] lg:px-[40px] w-full">
+    //       <div className="max-w-5xl">
+    //         <h1 className="text-hero-text font-hoves-pro font-medium text-[60px] leading-[64px] tracking-[-0.04em] mb-4">
+    //           Elevating water usage with future-ready design.
+    //         </h1>
             
-            <p className="text-hero-text font-hoves-pro font-light text-[20px] text-base max-w-4xl mb-4">
-              Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel <br></br>Product Is Made To Last, Leak-Free And Worry-Free.
-            </p>
+    //         <p className="text-hero-text font-hoves-pro font-light text-[20px] text-base max-w-4xl mb-4">
+    //           Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel <br></br>Product Is Made To Last, Leak-Free And Worry-Free.
+    //         </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Button variant="primary">Explore Innovations</Button>
-              <Button variant="secondary">Customer Enquiry</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    //         <div className="flex flex-wrap gap-4">
+    //           <Button variant="primary">Explore Innovations</Button>
+    //           <Button variant="secondary">Customer Enquiry</Button>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
+    <HeroBanner
+      height="h-screen"
+      backgroundImage="/hero-banner.jpg"
+      titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] text-[22px] leading-[64px] tracking-[-0.04em] mb-4"
+      title="Elevating water usage with future-ready design."
+      subtitleClassName="text-hero-text font-hoves-pro font-light xl:text-[20px] text-base max-w-4xl mb-4"
+      subtitle="Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel Product Is Made To Last, Leak-Free And Worry-Free."
+      primaryButtonText="Explore Innovations"
+      secondaryButtonText="Customer Enquiry"
+    />
   );
 };
 
-export default HeroBanner;
+export default Hero;

@@ -25,24 +25,43 @@ const Careeropportunities = () => {
         <h1 className='text-xl xl:text-[2.75rem] font-medium tracking-[-4%]'>Discover Career Opportunities</h1>
         <p className='xl:text-xl text-sm font-[300] tracking-[-1%]'>Choose the role that matches your skills and<br className='xl:hidden block' /> drives your growth.</p>
       </div>
-      <div className="relative w-screen left-1/2 -translate-x-1/2 h-auto min-h-[400px] md:h-[50vh] lg:h-[71.111vh] overflow-visible mt-6 md:mt-8 lg:mt-10">
+      <div className="relative w-screen md:left-1/2 md:-translate-x-1/2 h-auto min-h-[400px] md:h-[50vh] lg:h-[71.111vh] overflow-visible mt-6 md:mt-8 lg:mt-10">
         <Image
           src={logo}
           alt="Logo Background"
           fill
           priority={false}
           loading="lazy"
-          className="object-cover object-center opacity-30 md:opacity-40 lg:opacity-50 z-0"
+          className="object-cover object-center md:block hidden opacity-30 md:opacity-40 lg:opacity-50 z-0"
         />
-        <div className="absolute inset-0 flex flex-col items-stretch md:items-end justify-center px-[5%] py-6 md:py-8 lg:py-0 gap-3 md:gap-4 z-10">
-          {jobList.map((res, index) => (
-            <div key={index} className='bg-[#FAF9F5] py-3 px-6 rounded-[20px] max-w-md shadow-sm border-[1px]'>
+        <Image
+          src={logo}
+          alt="Logo Background"
+          fill
+          priority={false}
+          loading="lazy"
+          className="object-contain md:hidden block -rotate-90 opacity-30 md:opacity-40 lg:opacity-50 z-0 scale-[1.8]"
+        />
+       <div className="z-10 relative flex items-center justify-center p-4 ">
+          {jobList.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl xl:px-[10%]">
+              {jobList.map((res, index) => (
+               <div key={index} className='bg-[#FAF9F5] py-3 px-6 rounded-[20px] max-w-xl shadow-sm border-[1px]'>
               <p className="text-black text-sm font-medium">{res.location}</p>
               <h2 className="text-black text-2xl font-semibold tracking-[-4%]">{res.title}</h2>
               <p className="text-black text-base font-light mb-2">{res.description}</p>
               <button className="text-white bg-[#E31E24] font-medium text-sm px-5 py-2 rounded-xl">Apply Now</button>
             </div>
-          ))}
+              ))}
+            </div>
+          ) : (
+             <div className='bg-[#FAF9F5] flex flex-col items-center justify-center py-3 gap-5 py-[3%] px-6 rounded-[20px] max-w-3xl shadow-sm border-[1px]'>
+              <h2 className="text-black text-2xl font-semibold tracking-[-4%]">No job postings currently available</h2>
+              <input className='w-full rounded-xl border-[1px] py-[2%] px-5' placeholder='Enter your email'></input>
+              <button className="text-white bg-[#E31E24] font-medium text-sm px-5 py-2 rounded-xl">Notify me</button>
+              <p className='text-center'>You’ll receive an email once new job postings have been posted,<br/> thank you!</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

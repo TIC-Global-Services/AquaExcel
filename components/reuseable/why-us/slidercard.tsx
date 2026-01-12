@@ -10,7 +10,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
   return (
-    <div className="relative  xl:w-[630px] w-[335px] md:w-[500px] h-[335px] sm:h-[320px] md:h-[500px] lg:h-[420px] xl:h-[700px] rounded-2xl overflow-hidden bg-black">
+    <div className="relative  xl:w-[70vh] w-[335px] md:w-[500px] h-[335px] sm:h-[320px] md:h-[500px] lg:h-[420px] xl:h-[700px] rounded-2xl overflow-hidden bg-black">
       
       {/* Background Image */}
       <div className="absolute inset-0">
