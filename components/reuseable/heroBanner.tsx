@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
 
 interface HeroBannerProps {
   // Background
-  backgroundImage?: string;
+  backgroundImage?:  string | StaticImageData;
   backgroundAlt?: string;
   backgroundClassName?: string;
   backgroundQuality?: number;
@@ -12,7 +12,7 @@ interface HeroBannerProps {
   // Content
   title?: string;
   titleClassName?: string;
-  subtitle?: string;
+  subtitle?: string | React.ReactNode;
   subtitleClassName?: string;
   
   // Buttons
