@@ -11,7 +11,6 @@ import sliderimg2 from '@/assets/why-us/slides/slideimg2.jpg'
 import sliderimg3 from '@/assets/why-us/slides/slideimg3.jpg'
 import sliderimg4 from '@/assets/why-us/slides/slideimg4.jpg'
 import Card from "../reuseable/why-us/slidercard";
-import ContainerLayout from "@/layouts/ContainerLayout";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,10 +91,9 @@ const Quality = () => {
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
-      <ContainerLayout>
-        <div className="absolute bottom-10 xl:bottom-24 w-full">
+      <div className="absolute bottom-10 xl:bottom-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
-          <div className="mt-80 translate-x-5">
+          <div className="mt-80 translate-x-[14%]">
             <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
               Life at Aqua Excel
             </h2>
@@ -112,7 +110,6 @@ const Quality = () => {
           </div>
         </div>
       </div>
-      </ContainerLayout>
     </div>
   );
 };
