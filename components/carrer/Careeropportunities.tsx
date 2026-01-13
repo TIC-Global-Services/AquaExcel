@@ -25,7 +25,7 @@ const Careeropportunities = () => {
         <h1 className='text-xl xl:text-[2.75rem] font-medium tracking-[-4%]'>Discover Career Opportunities</h1>
         <p className='xl:text-xl text-sm font-[300] tracking-[-1%]'>Choose the role that matches your skills and<br className='xl:hidden block' /> drives your growth.</p>
       </div>
-      <div className="relative w-screen md:left-1/2 md:-translate-x-1/2 h-auto min-h-[400px] md:h-[50vh] lg:h-[71.111vh] overflow-visible mt-6 md:mt-8 lg:mt-10">
+      <div className="relative w-screen -translate-x-5 md:left-1/2 md:-translate-x-1/2 h-auto min-h-[400px] md:h-[80vh] lg:h-[71.111vh] overflow-visible mt-6 md:mt-8 lg:mt-10">
         <Image
           src={logo}
           alt="Logo Background"
@@ -40,11 +40,11 @@ const Careeropportunities = () => {
           fill
           priority={false}
           loading="lazy"
-          className="object-contain md:hidden block -rotate-90 opacity-30 md:opacity-40 lg:opacity-50 z-0 scale-[1.8]"
+          className="object-contain md:hidden block -rotate-90 opacity-30 z-0 scale-[1.8] translate-x-[18%] translate-y-[1%]"
         />
        <div className="z-10 relative flex items-center justify-center p-4 ">
           {jobList.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl xl:px-[10%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl px-[1%] xl:px-[10%]">
               {jobList.map((res, index) => (
                <div key={index} className='bg-[#FAF9F5] py-3 px-6 rounded-[20px] max-w-xl shadow-sm border-[1px]'>
               <p className="text-black text-sm font-medium">{res.location}</p>
