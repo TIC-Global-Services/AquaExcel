@@ -63,12 +63,12 @@ const Quality = () => {
           // Fade out the previous card while the new card slides in
           tl.to(
             `.card-${index - 1}`,
-            { opacity: 0, duration: 1 }
+            { opacity: 0, duration: 1 },
           );
           tl.fromTo(
             `.card-${index}`,
             { xPercent: 100, opacity: 0 },
-            { xPercent: 0, opacity: 1, duration: 1 },
+            { xPercent: 0, opacity: 1, duration: 1 ,ease:"none"},
             "<" // Start at the same time as the previous animation
           );
         }
@@ -77,6 +77,9 @@ const Quality = () => {
 
     return () => ctx.revert();
   }, [slides]);
+
+
+  
   return (
     <div ref={sectionRef} className="relative">
       <div className="relative w-full min-h-screen overflow-hidden">
@@ -101,7 +104,7 @@ const Quality = () => {
               We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
             </p>
           </div>
-          <div className="relative xl:w-full h-[38.889dvh] lg:h-[77.778dvh] overflow-hidden">
+          <div className="relative xl:w-full h-[38.889dvh] lg:h-[77.778dvh] overflow-hidden translate-y-5">
             {slides.map((res, index) => (
               <div key={index} className={`card-${index} absolute top-0 left-0`} style={{ zIndex: index + 1 }}>
                 <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />
