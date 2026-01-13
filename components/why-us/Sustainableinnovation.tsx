@@ -2,6 +2,8 @@ import React from 'react'
 import icon1 from  '@/assets/why-us/innovation/icon1.png'
 import icon2 from  '@/assets/why-us/innovation/icon2.png'
 import icon3 from  '@/assets/why-us/innovation/icon3.png'
+import tap from '@/assets/why-us/builforreason.png'
+import Image from 'next/image'
 import { describe } from 'node:test'
 
 const Sustainableinnovation = () => {
@@ -20,8 +22,9 @@ const Sustainableinnovation = () => {
         },
     ]
   return (
-    <div className='px-[5%] xl:py-20 py-10 '>
-       <h1 className='text-xl lg:text-[2.75rem] font-medium '>Sustainable Innovation & Research</h1>
+    <div className='px-[5%] xl:py-20 py-10 grid grid-cols-1 md:grid-cols-2 gap-20'>
+       <div>
+        <h1 className='text-xl lg:text-[2.75rem] font-medium '>Sustainable Innovation & Research</h1>
        <p className='lg:text-xl  text-sm font-medium'>
             We continually elevate our processes and products to create solutions that <br/> are smarter, stronger, and more environmentally responsible.
        </p>
@@ -33,8 +36,11 @@ const Sustainableinnovation = () => {
                </li>
            ))}
        </ul>
-       <div>
-        
+       </div>
+       <div className='md:-translate-y-2 -translate-y-10'>
+         <div className='relative flex items-center justify-center'>
+           <Image src={tap.src} alt="Tap" width={330} height={330} className='relative z-10 w-full h-[260px] md:w-[330px] md:h-[330px] object-cover rounded-2xl' />
+         </div>
        </div>
    </div>
   )
