@@ -11,6 +11,7 @@ import sliderimg2 from '@/assets/why-us/slides/slideimg2.jpg'
 import sliderimg3 from '@/assets/why-us/slides/slideimg3.jpg'
 import sliderimg4 from '@/assets/why-us/slides/slideimg4.jpg'
 import Card from "../reuseable/why-us/slidercard";
+import ContainerLayout from "@/layouts/ContainerLayout";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +80,7 @@ const Quality = () => {
   }, [slides]);
   return (
     <div ref={sectionRef} className="relative">
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full min-h-screen overflow-hidden">
         <Image
           src={bgimage}
           alt="Download App Background"
@@ -91,9 +92,10 @@ const Quality = () => {
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
-      <div className="absolute bottom-10 xl:bottom-24 w-full px-[5%]">
+      <ContainerLayout>
+        <div className="absolute bottom-10 xl:bottom-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
-          <div className="mt-80">
+          <div className="mt-80 translate-x-5">
             <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
               Life at Aqua Excel
             </h2>
@@ -101,7 +103,7 @@ const Quality = () => {
               We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
             </p>
           </div>
-          <div className="relative xl:w-full h-[350px] xl:h-[700px] overflow-hidden">
+          <div className="relative xl:w-full h-[38.889dvh] lg:h-[77.778dvh] overflow-hidden">
             {slides.map((res, index) => (
               <div key={index} className={`card-${index} absolute top-0 left-0`} style={{ zIndex: index + 1 }}>
                 <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />
@@ -110,6 +112,7 @@ const Quality = () => {
           </div>
         </div>
       </div>
+      </ContainerLayout>
     </div>
   );
 };

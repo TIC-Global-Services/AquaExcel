@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '@/assets/carrer/logowithoutname.png'
+import ContainerLayout from '@/layouts/ContainerLayout'
 const Careeropportunities = () => {
   const jobList = [
     {
@@ -20,11 +21,13 @@ const Careeropportunities = () => {
     },
   ]
   return (
-    <div className='py-10 xl:py-30 px-[5%] overflow-hidden'>
-      <div className='flex flex-col justify-start text-left'>
+    <div className='py-10 xl:py-30  overflow-hidden'>
+      <ContainerLayout>
+        <div className='flex flex-col justify-start text-left'>
         <h1 className='text-xl xl:text-[2.75rem] font-medium tracking-[-4%]'>Discover Career Opportunities</h1>
         <p className='xl:text-xl text-sm font-[300] tracking-[-1%]'>Choose the role that matches your skills and<br className='xl:hidden block' /> drives your growth.</p>
       </div>
+      </ContainerLayout>
       <div className="relative w-screen -translate-x-5 md:left-1/2 md:-translate-x-1/2 h-auto min-h-[400px] md:h-[80vh] lg:h-[71.111vh] overflow-visible mt-6 md:mt-8 lg:mt-10">
         <Image
           src={logo}

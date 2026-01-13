@@ -5,6 +5,7 @@ import image1 from "@/assets/why-us/distributionpatnerimg1.jpg";
 import image2 from "@/assets/why-us/distributionpatnerimg2.jpg";
 import image3 from "@/assets/why-us/distributionpatnerimg3.jpg";
 import SimpleParallax from "simple-parallax-js";
+import ContainerLayout from "@/layouts/ContainerLayout";
 const Distribution = () => {
 
   const distributors = [
@@ -23,7 +24,8 @@ const Distribution = () => {
   ];
 
   return (
-    <div className="w-full px-[5%] py-10 overflow-hidden">
+    <ContainerLayout>
+      <div className="w-full py-10 overflow-hidden">
       <div className="flex flex-col gap-2 mb-8">
         <h1 className="text-xl xl:text-[2.75rem] font-medium tracking-tight">For Distribution Partners</h1>
         <p className="max-w-3xl text-sm xl:text-xl font-normal text-gray-700">
@@ -71,6 +73,7 @@ const Distribution = () => {
         ))}
       </div>
     </div>
+    </ContainerLayout>
   );
 };
 

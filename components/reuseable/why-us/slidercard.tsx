@@ -10,7 +10,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
   return (
-    <div className="relative  xl:w-[70vh] w-[335px] md:w-[500px] h-[335px] sm:h-[320px] md:h-[500px] lg:h-[420px] xl:h-[700px] rounded-2xl overflow-hidden bg-black">
+    <div className="relative  xl:w-[70dvh] w-[39.222dvh] md:w-[55.556dvh] h-[37.222dvh] sm:h-[35.556dvh] md:h-[77.778dvh] lg:h-[77.778dvh] xl:h-[70.778dvh] rounded-2xl overflow-hidden bg-black">
       
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -33,12 +33,12 @@ const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-900 leading-tight">
+        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[2.222dvh] font-semibold text-gray-900 leading-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 leading-relaxed line-clamp-2 sm:line-clamp-3 md:line-clamp-none">
+        <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-[2.222dvh] text-gray-600 leading-relaxed line-clamp-2 sm:line-clamp-3 md:line-clamp-none">
           {description}
         </p>
       </div>

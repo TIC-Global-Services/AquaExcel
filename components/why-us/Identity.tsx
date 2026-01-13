@@ -3,10 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import identityimg from '@/assets/why-us/identityimg.jpg'
 import SimpleParallax from 'simple-parallax-js'
+import ContainerLayout from '@/layouts/ContainerLayout'
 const Identity = () => {
   return (
-    <div className='mt-10 lg:py-10 py-5'>
-      <div className='flex xl:flex-row flex-col px-5 xl:px-20 gap-5 xl:gap-16  xl:items-center'>
+    <ContainerLayout>
+      <div className='mt-10 lg:py-10 py-5'>
+      <div className='flex xl:flex-row flex-col gap-5 xl:gap-16  xl:items-center'>
        <div className='lg:w-[50%] w-full'>
          <div className='overflow-hidden rounded-[20px]'>
            <SimpleParallax>
@@ -23,6 +25,7 @@ const Identity = () => {
         </div>
       </div>
     </div>
+    </ContainerLayout>
   )
 }
 

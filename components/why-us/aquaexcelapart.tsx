@@ -5,6 +5,7 @@ import sliderimg2 from '@/assets/why-us/whyusslider2.png'
 import sliderimg3 from '@/assets/why-us/whyusslider3.png'
 import sliderimg4 from '@/assets/why-us/whyusslider4.png'
 import sliderimg5 from '@/assets/why-us/whyusslider5.png'
+import ContainerLayout from '@/layouts/ContainerLayout'
 
 const aquaexcelapart = () => {
     const cards = [
@@ -31,13 +32,13 @@ const aquaexcelapart = () => {
     ]
 
     return (
-        <div className='mb-5'>
+        <ContainerLayout className='mb-5'>
             <ScrollOverlappingCards
             heading="What Sets Aqua Excel Apart"
             paragraph="Premium quality, thoughtful design, and reliable performance come together to create products that truly stand out."
             cards={cards}
         />
-        </div>
+        </ContainerLayout>
     )
 }
 

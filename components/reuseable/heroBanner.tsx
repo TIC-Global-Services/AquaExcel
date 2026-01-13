@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
+import ContainerLayout from "@/layouts/ContainerLayout";
 
 interface HeroBannerProps {
   // Background
@@ -60,7 +61,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   
   // Layout
   height = "h-[860px]",
-  paddingX = "px-6 xl:px-[80px] lg:px-[40px]",
+  paddingX = "",
   maxWidth = "max-w-5xl",
   contentAlignment = "left",
   
@@ -104,7 +105,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       </div>
 
       {/* Content */}
-      <div className={`relative ${height} flex items-end pb-28`}>
+     <ContainerLayout>
+       <div className={`relative ${height} flex items-end pb-28`}>
         <div className={`${paddingX} w-full`}>
           <div className={`${maxWidth} ${contentAlignmentClasses[contentAlignment]}`}>
             {/* Custom Content or Default Content */}
@@ -139,6 +141,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           </div>
         </div>
       </div>
+     </ContainerLayout>
     </section>
   );
 };

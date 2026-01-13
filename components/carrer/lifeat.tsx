@@ -88,7 +88,7 @@ const LifeAt = () => {
       </div>
       <div className="absolute bottom-10 xl:bottom-24 w-full px-[5%]">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
-          <div className="mt-80">
+          <div className="mt-80 translate-x-5">
             <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
               Life at Aqua Excel
             </h2>

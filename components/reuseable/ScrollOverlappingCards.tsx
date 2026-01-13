@@ -49,7 +49,7 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
   }, [cards]);
 
   return (
-    <section ref={sectionRef} className="scroll-section min-h-full  py-16 px-[5%] md:px-[3%] xl:px-20 lg:px-5 bg-background relative">
+    <section ref={sectionRef} className="scroll-section min-h-screen  py-16 bg-background relative">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-48 items-start  xl:px-0">
           {/* Left Column: Static Text */}
@@ -64,7 +64,7 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
 
           {/* Right Column: Cards Container */}
           <div className="right-content relative mb-10">
-            <div className="cards-container relative w-full h-[400px] xl:h-[500px] 2xl:h-[600px] px-5">
+            <div className="cards-container relative w-full h-[400px] xl:h-[500px] 2xl:h-[600px]">
               {cards.map((card, index) => (
                 <div
                   key={index}

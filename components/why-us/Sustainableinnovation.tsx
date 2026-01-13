@@ -5,6 +5,7 @@ import icon3 from  '@/assets/why-us/innovation/icon3.png'
 import tap from '@/assets/why-us/builforreason.png'
 import Image from 'next/image'
 import { describe } from 'node:test'
+import ContainerLayout from '@/layouts/ContainerLayout'
 
 const Sustainableinnovation = () => {
     const list=[
@@ -22,7 +23,8 @@ const Sustainableinnovation = () => {
         },
     ]
   return (
-    <div className='px-[5%] xl:py-20 py-10 grid grid-cols-1 md:grid-cols-2 gap-20'>
+    <ContainerLayout>
+        <div className='xl:py-20 py-10 grid grid-cols-1 md:grid-cols-2 gap-20'>
        <div>
         <h1 className='text-xl lg:text-[2.75rem] font-medium '>Sustainable Innovation & Research</h1>
        <p className='lg:text-xl  text-sm font-medium'>
@@ -43,6 +45,7 @@ const Sustainableinnovation = () => {
          </div>
        </div>
    </div>
+    </ContainerLayout>
   )
 }
 

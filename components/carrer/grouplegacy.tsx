@@ -2,10 +2,12 @@
 import Image from "next/image";
 import Button from "../reuseable/Button";
 import SimpleParallax from "simple-parallax-js";
+import ContainerLayout from "@/layouts/ContainerLayout";
 
 const grouplegacy = () => {
   return (
-    <section className="px-[5%] py-[5%] bg-background">
+    <ContainerLayout>
+      <section className="py-[5%] bg-background">
       <div className="relative w-full py-[40%] lg:py-[18%] overflow-hidden rounded-[20px]">
         {/* Background Image */}
 
@@ -60,6 +62,7 @@ const grouplegacy = () => {
         </div> */}
       </div>
     </section>
+    </ContainerLayout>
   );
 };
 
