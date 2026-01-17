@@ -29,35 +29,37 @@ const DownloadApp = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className='relative py-10'>
-    <div className="relative w-full h-[76dvh] lg:h-[64dvh] overflow-hidden">
-        <Image
-          src={bgimage}
-          alt="Download App Background"
-          fill
-          priority={false}
-          loading="lazy"
-          sizes="100vw"
-          className="object-cover parallax-media"
-        />
-        <div className="absolute inset-0 bg-black/30" />
+    <div className="relative py-10% min-h-[580px] max-h-[580px] w-full overflow-hidden">
+      <Image
+        src={bgimage}
+        alt="Download App Background"
+        fill
+        priority={false}
+        loading="lazy"
+        sizes="100vw"
+        className="object-cover parallax-media"
+      />
+      <div className="absolute inset-0 bg-black/30" />
+
+      <div className="absolute inset-0 flex items-center justify-center">
+        <ContainerLayout>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
+            <div className="border-2 rounded-2xl border-white p-4 bg-white/10 backdrop-blur-sm">
+              <Image src={qrcode} width={148} height={152} alt="qrcode" />
+            </div>
+            <div className="text-center md:text-left text-white max-w-2xl">
+              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-semibold">
+                Plumbers / Dealers
+              </h2>
+              <p className="mt-2 text-sm lg:text-[1.25rem]">
+                One scan gives you instant access to installation videos,
+                <br className="hidden lg:block" /> product guides, catalogs, and
+                support.
+              </p>
+            </div>
+          </div>
+        </ContainerLayout>
       </div>
-      
-      
-   <ContainerLayout>
-       <div className="absolute top-20  xl:top-30">
-        
-        <h2 className=" text-[1.25rem] lg:text-[2.75rem] font-semibold text-white pt-4">Plumbers / Dealers</h2>
-        <p className="mt-2 text-white  text-sm lg:text-[1.25rem] mb-4">
-          One scan gives you instant access to installation videos,<br/> product guides,
-          catalogs, and support.
-        </p>
-         <div className='absolute left-3 xl:left-10 border-2 rounded-2xl border-white h-[180px] max-w-[180px] flex justify-center p-4'>
-          <Image src={qrcode} width={148} height={152} alt='qrcode'/>
-        </div>
-      </div>
-   </ContainerLayout>
-      
     </div>
   )
 }

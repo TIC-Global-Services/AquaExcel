@@ -1,7 +1,19 @@
 "use client";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  // Configuration for route-specific core colors
+  const routeColors: { [key: string]: string } = {
+    "/why-us": "#274689",
+    "/career": "#274689",
+    "/carrer": "#274689", // Handling potential typo in route usage
+  };
+
+  const activeColor = routeColors[pathname] || "#E31E24"; // Default color
+
   return (
     <footer className="lg:bg-[#2D2D2D] bg-[#000000] text-white lg:pt-16 lg:pb-8">
       <div className="px-6 xl:px-[80px] lg:px-[40px] lg:block hidden">
@@ -28,7 +40,7 @@ const Footer = () => {
         </div>
 
       </div>
-   {/* <div className="lg:hidden block py-2">
+      {/* <div className="lg:hidden block py-2">
          <svg
   viewBox="0 0 800 120"
   className="w-full h-auto"
@@ -54,8 +66,8 @@ const Footer = () => {
    </div> */}
 
       {/* Large Logo with Radial Gradient Hover Effect - Full Width */}
-      <div className="py-5 justify-center w-full relative cursor-pointer flex" 
-       onMouseMove={(e) => {
+      <div className="py-5 justify-center w-full relative cursor-pointer flex"
+        onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           const x = e.clientX - rect.left;
           const y = e.clientY - rect.top;
@@ -64,8 +76,8 @@ const Footer = () => {
         }}>
         <h1 className="font-hoves-pro text-[4.063rem] lg:text-[16.375rem] font-bold leading-15 lg:leading-[253.95px] tracking-[-2.24px] lg:tracking-[-15.24px]"
           style={{
-            backgroundImage: 'radial-gradient(circle 200px at var(--mouse-x, 60%) var(--mouse-y, 50%), #E31E24, #363639 100%)',
-             WebkitBackgroundClip: 'text',
+            backgroundImage: `radial-gradient(circle 200px at var(--mouse-x, 60%) var(--mouse-y, 50%), ${activeColor}, #363639 100%)`,
+            WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
           }}
@@ -94,7 +106,7 @@ const Footer = () => {
           AQUA EXCEL
         </h1>
       </div> */}
-      
+
       <div className="px-6 xl:px-[80px] lg:px-[40px]">
 
         {/* Footer Content Grid - 3 Columns */}

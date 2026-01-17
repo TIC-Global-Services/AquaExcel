@@ -37,6 +37,7 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
         },
       });
       cards.forEach((_, index) => {
+        if (index === 0) return;
         tl.fromTo(
           `.card-${index}`,
           { opacity: 0, yPercent: 100 }, // Invisible and below
@@ -51,7 +52,7 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
   return (
     <section ref={sectionRef} className="scroll-section min-h-screen  py-16 bg-background relative">
       <div className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-48 items-start  xl:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-[10%] items-start  xl:px-0">
           {/* Left Column: Static Text */}
           <div className="left-content">
             <h2 className="xl:text-[2.75rem] text-[1.25rem] font-medium">
@@ -68,15 +69,15 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className={`card card-${index} absolute top-0 left-0 w-full h-full  xl:w-[521px] xl:h-[521px] rounded-3xl overflow-hidden bg-white shadow-lg`}
-                  style={{ zIndex: index + 1 }} 
+                  className={`card card-${index} absolute top-0 left-0 w-full h-full  xl:w-[521px] xl:max-h-[521px]  rounded-3xl overflow-hidden bg-white shadow-lg`}
+                  style={{ zIndex: index + 1 }}
                 >
                   <Image
                     src={card.image}
                     alt={card.title}
                     fill
-                   priority={index === 0}
-  loading={index === 0 ? "eager" : "lazy"}
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"}
                     //  priority={index === 0}
                     className="object-cover"
                   />
