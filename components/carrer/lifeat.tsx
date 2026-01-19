@@ -89,7 +89,7 @@ const LifeAt = () => {
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
-      <div className="absolute bottom-10 xl:bottom-[15%] w-full">
+      <div className="absolute bottom-10 md:bottom-[15%] w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
           <div className="mt-80 translate-x-[14%]">
             <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
@@ -99,7 +99,7 @@ const LifeAt = () => {
               We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
             </p>
           </div>
-          <div className="relative xl:w-full h-[38.889dvh] lg:h-[77.778dvh] overflow-hidden translate-y-[10%]">
+          <div className="relative xl:w-full h-[38.889dvh] md:h-[77.778dvh] overflow-hidden translate-y-[10%]">
             {slides.map((res, index) => (
               <div key={index} className={`card-${index} absolute top-0 left-0`} style={{ zIndex: index + 1 }}>
                 <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />

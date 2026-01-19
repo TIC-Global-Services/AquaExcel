@@ -6,6 +6,7 @@ import Downloadapp from '@/components/why-us/downloadapp'
 import Distribution from '@/components/why-us/Distribution'
 import Quality from '@/components/why-us/quality'
 import Sustainableinnovation from '@/components/why-us/Sustainableinnovation'
+import Qualitycp from '@/components/why-us/qualitycp'
 const page = () => {
   return (
     <div>
@@ -14,7 +15,8 @@ const page = () => {
         <Aquaexcelapart/>
         <Downloadapp/>
         <Distribution/>
-        <Quality/>
+        <Qualitycp/>
+        {/* <Quality/> */}
         <Sustainableinnovation/>
     </div>
   )

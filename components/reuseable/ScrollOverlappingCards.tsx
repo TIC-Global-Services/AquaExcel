@@ -23,15 +23,21 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
   cards,
 }) => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [containerHeight, setContainerHeight] = useState(400);
+  const [cardWidth, setCardWidth] = useState('100%');
+  const [cardMaxHeight, setCardMaxHeight] = useState('auto');
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth < 768;
+      const isSmallHeightDesktop = window.innerWidth >= 768 && window.innerHeight < 768;
+      const offset = isSmallHeightDesktop ? 2 : 5;
+      const scrollMultiplier = isMobile ? 50 : isSmallHeightDesktop ? 75 : 100;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: `+=${cards.length * (isMobile ? 50 : 100)}%`, // Shorter scroll distance on mobile
+          end: `+=${cards.length * scrollMultiplier}%`, // Adjusted scroll distance
           pin: !isMobile, // Disable pinning on mobile to prevent overlapping
           scrub: true, // Smooth scrubbing tied to scroll progress
         },
@@ -41,13 +47,41 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
         tl.fromTo(
           `.card-${index}`,
           { opacity: 0, yPercent: 100 }, // Invisible and below
-          { opacity: 1, yPercent: index * 5, duration: 1 } // Fade in and slide up to offset position
+          { opacity: 1, yPercent: index * offset, duration: 1 } // Fade in and slide up to offset position
         );
       });
     }, sectionRef);
 
     return () => ctx.revert(); // Cleanup GSAP context on unmount
   }, [cards]);
+
+  useEffect(() => {
+    const updateSizes = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      if (width < 768) {
+        setContainerHeight(300);
+        setCardWidth('100%');
+        setCardMaxHeight('300px');
+      } else if (width < 1280) {
+        setContainerHeight(400);
+        setCardWidth('100%');
+        setCardMaxHeight('400px');
+      } else if (width < 1536) {
+        setContainerHeight(500);
+        setCardWidth('521px');
+        setCardMaxHeight('521px');
+      } else {
+        setContainerHeight(600);
+        setCardWidth('521px');
+        setCardMaxHeight('521px');
+      }
+    };
+
+    updateSizes();
+    window.addEventListener('resize', updateSizes);
+    return () => window.removeEventListener('resize', updateSizes);
+  }, []);
 
   return (
     <section ref={sectionRef} className="scroll-section min-h-screen  py-16 bg-background relative">
@@ -65,12 +99,12 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
 
           {/* Right Column: Cards Container */}
           <div className="right-content relative mb-10">
-            <div className="cards-container relative w-full h-[400px] xl:h-[500px] 2xl:h-[600px]">
+            <div className="cards-container relative w-full" style={{ height: `${containerHeight}px` }}>
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className={`card card-${index} absolute top-0 left-0 w-full h-full  xl:w-[521px] xl:max-h-[521px]  rounded-3xl overflow-hidden bg-white shadow-lg`}
-                  style={{ zIndex: index + 1 }}
+                  className={`card card-${index} absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden bg-white shadow-lg`}
+                  style={{ zIndex: index + 1, width: cardWidth, maxHeight: cardMaxHeight }}
                 >
                   <Image
                     src={card.image}

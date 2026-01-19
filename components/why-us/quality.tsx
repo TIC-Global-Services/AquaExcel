@@ -16,34 +16,34 @@ import Card from "../reuseable/why-us/slidercard";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const   Quality = () => {
+const Quality = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const slides = [
-    {
-      title: "Hydrostatic Pressure Test",
-      description: "Ensures long-term durability even under intense water pressure, protecting your installations from leaks, cracks, and sudden bursts.",
-      icon: icon1.src,
-      image: sliderimg1.src
-    },
-    {
-      title: "Reversion test",
-      description: "Checks heat resistance and dimensional stability when exposed to temperature variations.",
-      icon: icon2.src,
-      image: sliderimg2.src
-    },
-    {
-      title: "impact Test",
-      description: "Ensures pipes and fittings withstand accidental hits and rough handling during installation.",
-      icon: icon3.src,
-      image: sliderimg3.src
-    },
-    {
-      title: "opacity test",
-      description: "Ensures light blocking to prevent algae growth inside pipes over time.",
-      icon: icon4.src,
-      image: sliderimg4.src
-    },
-  ]
+      {
+        title: "Hydrostatic Pressure Test",
+        description: "Ensures long-term durability even under intense water pressure, protecting your installations from leaks, cracks, and sudden bursts.",
+        icon: icon1.src,
+        image: sliderimg1.src
+      },
+      {
+        title: "Reversion test",
+        description: "Checks heat resistance and dimensional stability when exposed to temperature variations.",
+        icon: icon2.src,
+        image: sliderimg2.src
+      },
+      {
+        title: "impact Test",
+        description: "Ensures pipes and fittings withstand accidental hits and rough handling during installation.",
+        icon: icon3.src,
+        image: sliderimg3.src
+      },
+      {
+        title: "opacity test",
+        description: "Ensures light blocking to prevent algae growth inside pipes over time.",
+        icon: icon4.src,
+        image: sliderimg4.src
+      },
+    ]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -69,7 +69,7 @@ const   Quality = () => {
           );
           tl.fromTo(
             `.card-${index}`,
-            { xPercent: 130, opacity: 0.5 },
+            { xPercent: 130, opacity: 0 },
             { xPercent: 0, opacity: 1, duration: 1, ease: "none" },
             "<" // Start at the same time as the previous animation
           );
@@ -83,35 +83,40 @@ const   Quality = () => {
 
 
   return (
-    <div ref={sectionRef} className="relative">
-      <div className="relative w-full min-h-screen h-full overflow-hidden">
+    <div ref={sectionRef} className="relative w-full min-h-screen overflow-hidden">
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <Image
           src={bgimage}
-          alt="Download App Background"
+          alt="Quality Measure Background"
           fill
           priority={false}
           loading="lazy"
-          // sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="absolute bottom-10 xl:bottom-[15%] w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
-          <div className="mt-80 translate-x-[14%]">
-            <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
-              Quality you can measure. performance you can trust
+
+      <div className="relative w-full min-h-screen flex items-center py-20 lg:py-0">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 ">
+          {/* Left Side - Text Content */}
+          <div className="space-y-6 md:space-y-8  text-center md:text-left z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-2xl xl:text-5xl text-white font-medium leading-tight tracking-tight">
+              Quality you can measure.<br className="hidden md:block" /> performance you can trust
             </h2>
-            <p className="lg:text-xl text-sm font-medium text-white max-w-md">
-              Every pipe and fitting is tested across critical <br/> parameters to ensure long-term safety and reliability
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white/90 max-w-xl mx-auto md:mx-0">
+              Every Pipe And Fitting Is Tested Across Critical Parameters To Ensure Long-Term Safety And Reliability
             </p>
           </div>
-          <div className="relative xl:w-full h-[38.889dvh] lg:h-[77.778dvh] overflow-hidden translate-y-[10%]">
-            {slides.map((res, index) => (
-              <div key={index} className={`card-${index} absolute top-0 left-0`} style={{ zIndex: index + 1 }}>
-                <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />
-              </div>
-            ))}
+
+          {/* Right Side - Cards */}
+          <div className="relative w-full flex items-center justify-center md:justify-end z-10">
+            <div className="relative w-full max-w-[630px] h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px]">
+              {slides.map((res, index) => (
+                <div key={index} className={`card-${index} absolute inset-0 w-full h-full`} style={{ zIndex: index + 1 }}>
+                  <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
