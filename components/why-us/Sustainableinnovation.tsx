@@ -24,7 +24,7 @@ const Sustainableinnovation = () => {
     ]
   return (
     <ContainerLayout maxWidth='w-full'>
-<div className='xl:py-20 py-10 flex lg:flex-row flex-col gap-[20%]'>
+<div className='xl:py-20 py-10 grid-cols-1 md:grid grid-cols-2 items-center gap-10'>
        <div>
         <h1 className='text-xl lg:text-[2.75rem] font-medium '>Sustainable Innovation & Research</h1>
        <p className='lg:text-xl  text-sm font-medium'>
@@ -39,7 +39,7 @@ const Sustainableinnovation = () => {
            ))}
        </ul>
        </div>
-       <div className='md:translate-y-10 -translate-y-10'>
+       <div className=''>
          <div className='relative flex items-center justify-center'>
            <Image src={tap.src} alt="Tap" width={330} height={330} className='relative z-10 w-full h-[260px] md:w-[330px] md:h-[330px] object-cover rounded-2xl' />
          </div>

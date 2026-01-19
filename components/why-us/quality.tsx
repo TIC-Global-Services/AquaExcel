@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import bgimage from "@/assets/why-us/qualitymeasurebg.png";
@@ -12,12 +12,13 @@ import sliderimg1 from '@/assets/why-us/slides/slideimg1.png'
 import sliderimg2 from '@/assets/why-us/slides/slideimg2.jpg'
 import sliderimg3 from '@/assets/why-us/slides/slideimg3.jpg'
 import sliderimg4 from '@/assets/why-us/slides/slideimg4.jpg'
-import Card from "../reuseable/why-us/slidercard";
+import Card from "../reuseable/why-us/slidercards";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Quality = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+    const [containerHeight, setContainerHeight] = useState(550);
   const slides = [
       {
         title: "Hydrostatic Pressure Test",
@@ -80,7 +81,24 @@ const Quality = () => {
     return () => ctx.revert();
   }, [slides]);
 
+ useEffect(() => {
+    const updateSizes = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setContainerHeight(550);
+      } else if (width < 1024) {
+        setContainerHeight(600);
+      } else if (width < 1280) {
+        setContainerHeight(650);
+      } else {
+        setContainerHeight(700);
+      }
+    };
 
+    updateSizes();
+    window.addEventListener('resize', updateSizes);
+    return () => window.removeEventListener('resize', updateSizes);
+  }, []);
 
   return (
     <div ref={sectionRef} className="relative w-full min-h-screen overflow-hidden">
@@ -97,20 +115,20 @@ const Quality = () => {
       </div>
 
       <div className="relative w-full min-h-screen flex items-center py-20 lg:py-0">
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 ">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-1 xl:gap-20 px-[5%] xl:px-[10%] ">
           {/* Left Side - Text Content */}
           <div className="space-y-6 md:space-y-8  text-center md:text-left z-10">
-            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-2xl xl:text-5xl text-white font-medium leading-tight tracking-tight">
+            <h2 className="text-xl md:text-4xl text-white text-left font-medium leading-tight tracking-tight">
               Quality you can measure.<br className="hidden md:block" /> performance you can trust
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white/90 max-w-xl mx-auto md:mx-0">
+            <p className="text-base font-light text-white/90 text-left max-w-xl mx-auto md:mx-0">
               Every Pipe And Fitting Is Tested Across Critical Parameters To Ensure Long-Term Safety And Reliability
             </p>
           </div>
 
           {/* Right Side - Cards */}
-          <div className="relative w-full flex items-center justify-center md:justify-end z-10">
-            <div className="relative w-full max-w-[630px] h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px]">
+          <div className="relative w-full flex items-center justify-center py-20 md:justify-end z-10">
+            <div className="relative w-full max-w-[630px]" style={{ height: `${containerHeight}px` }}>
               {slides.map((res, index) => (
                 <div key={index} className={`card-${index} absolute inset-0 w-full h-full`} style={{ zIndex: index + 1 }}>
                   <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />

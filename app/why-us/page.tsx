@@ -15,8 +15,8 @@ const page = () => {
         <Aquaexcelapart/>
         <Downloadapp/>
         <Distribution/>
-        <Qualitycp/>
-        {/* <Quality/> */}
+        {/* <Qualitycp/> */}
+        <Quality/>
         <Sustainableinnovation/>
     </div>
   )

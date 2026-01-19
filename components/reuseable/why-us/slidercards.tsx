@@ -11,7 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
   return (
     <div className="relative w-full sm:w-[90vw] md:w-[85vw] lg:w-[630px]
-                    max-w-[630px] h-full max-h-[85vh]
+                    max-w-[630px] h-full max-h-[70vh] md::max-h-[85vh]
                     rounded-2xl overflow-hidden bg-white flex flex-col">
 
       {/* Top Glass Panel - White Section */}
