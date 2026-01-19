@@ -114,10 +114,10 @@ const Quality = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="relative w-full min-h-screen flex items-center py-20 lg:py-0">
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-1 xl:gap-20 px-[5%] xl:px-[10%] ">
+      <div className="relative w-full min-h-screen flex items-center py-10 xl:py-0 lg:py-0">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-0 xl:gap-20 px-[5%] xl:px-[10%] ">
           {/* Left Side - Text Content */}
-          <div className="space-y-6 md:space-y-8  text-center md:text-left z-10">
+          <div className="space-y-6 md:space-y-8  text-center xl:pt-[50%] md:text-left z-10">
             <h2 className="text-xl md:text-4xl text-white text-left font-medium leading-tight tracking-tight">
               Quality you can measure.<br className="hidden md:block" /> performance you can trust
             </h2>
@@ -127,7 +127,7 @@ const Quality = () => {
           </div>
 
           {/* Right Side - Cards */}
-          <div className="relative w-full flex items-center justify-center py-20 md:justify-end z-10">
+          <div className="relative w-full flex items-center justify-center xl:py-20 lg:justify-end z-10 py-10">
             <div className="relative w-full max-w-[630px]" style={{ height: `${containerHeight}px` }}>
               {slides.map((res, index) => (
                 <div key={index} className={`card-${index} absolute inset-0 w-full h-full`} style={{ zIndex: index + 1 }}>
