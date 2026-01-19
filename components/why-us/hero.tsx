@@ -43,7 +43,7 @@ const hero = () => {
       <HeroBanner
         height='h-screen'
         backgroundImage={banner}
-        titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] text-[22px] leading-[64px] tracking-[-0.04em] mb-4"
+        titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] text-[22px] xl:leading-[64px] tracking-[-0.04em] mb-4"
         title={
           <>
             Strength in every detail,
