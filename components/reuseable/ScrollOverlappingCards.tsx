@@ -27,33 +27,70 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
   const [cardWidth, setCardWidth] = useState('100%');
   const [cardMaxHeight, setCardMaxHeight] = useState('auto');
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const isMobile = window.innerWidth < 768;
-      const isSmallHeightDesktop = window.innerWidth >= 768 && window.innerHeight < 768;
-      const offset = isSmallHeightDesktop ? 2 : 5;
-      const scrollMultiplier = isMobile ? 50 : isSmallHeightDesktop ? 75 : 100;
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: `+=${cards.length * scrollMultiplier}%`, // Adjusted scroll distance
-          pin: !isMobile, // Disable pinning on mobile to prevent overlapping
-          scrub: true, // Smooth scrubbing tied to scroll progress
-        },
-      });
-      cards.forEach((_, index) => {
-        if (index === 0) return;
-        tl.fromTo(
-          `.card-${index}`,
-          { opacity: 0, yPercent: 100 }, // Invisible and below
-          { opacity: 1, yPercent: index * offset, duration: 1 } // Fade in and slide up to offset position
-        );
-      });
-    }, sectionRef);
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    const getScrollConfig = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      
+      if (width < 768) {
+        // Mobile
+        return { 
+          scrollMultiplier: 200, // Longer scroll on mobile
+          offset: 8, // Larger offset for mobile stacking
+          scrub: 1.5 
+        };
+      } else if (height < 768) {
+        // Small height desktop
+        return { 
+          scrollMultiplier: 75, 
+          offset: 2,
+          scrub: 1 
+        };
+      } else {
+        // Normal desktop
+        return { 
+          scrollMultiplier: 100, 
+          offset: 5,
+          scrub: 1 
+        };
+      }
+    };
+    
+    const config = getScrollConfig();
+    
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: `+=${cards.length * config.scrollMultiplier}%`,
+        pin: true,
+        scrub: config.scrub,
+        anticipatePin: 1,
+      },
+    });
 
-    return () => ctx.revert(); // Cleanup GSAP context on unmount
-  }, [cards]);
+    cards.forEach((_, index) => {
+      if (index === 0) {
+        tl.set(`.card-${index}`, { opacity: 1, yPercent: 0 });
+        return;
+      }
+      
+      tl.fromTo(
+        `.card-${index}`,
+        { opacity: 0, yPercent: 100 },
+        { 
+          opacity: 1, 
+          yPercent: index * config.offset, 
+          duration: 1,
+          ease: "power2.out"
+        }
+      );
+    });
+  }, sectionRef);
+
+  return () => ctx.revert();
+}, [cards]);
 
   useEffect(() => {
     const updateSizes = () => {
