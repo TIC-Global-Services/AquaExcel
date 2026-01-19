@@ -57,7 +57,7 @@ const Qualitycp = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: '20% 20%',
+          start: 'top top',
           end: `+=${slides.length * (isMobile ? 50 : 100)}%`,
           pin: !isMobile,
           scrub: true,
