@@ -29,43 +29,18 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
 
 useEffect(() => {
   const ctx = gsap.context(() => {
-    const getScrollConfig = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      
-      if (width < 768) {
-        // Mobile
-        return { 
-          scrollMultiplier: 200, // Longer scroll on mobile
-          offset: 8, // Larger offset for mobile stacking
-          scrub: 1.5 
-        };
-      } else if (height < 768) {
-        // Small height desktop
-        return { 
-          scrollMultiplier: 75, 
-          offset: 2,
-          scrub: 1 
-        };
-      } else {
-        // Normal desktop
-        return { 
-          scrollMultiplier: 100, 
-          offset: 5,
-          scrub: 1 
-        };
-      }
-    };
-    
-    const config = getScrollConfig();
+    const isMobile = window.innerWidth < 768;
+    const isSmallHeightDesktop = window.innerWidth >= 768 && window.innerHeight < 768;
+    const offset = isSmallHeightDesktop ? 2 : 5;
+    const scrollMultiplier = isMobile ? 30 : isSmallHeightDesktop ? 75 : 100; // Reduced mobile to 30 for faster scroll
     
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top top',
-        end: `+=${cards.length * config.scrollMultiplier}%`,
+        end: `+=${cards.length * scrollMultiplier}%`,
         pin: true,
-        scrub: config.scrub,
+        scrub: isMobile ? 0.2 : 1, // Lower scrub value = faster, snappier animations
         anticipatePin: 1,
       },
     });
@@ -79,12 +54,7 @@ useEffect(() => {
       tl.fromTo(
         `.card-${index}`,
         { opacity: 0, yPercent: 100 },
-        { 
-          opacity: 1, 
-          yPercent: index * config.offset, 
-          duration: 1,
-          ease: "power2.out"
-        }
+        { opacity: 1, yPercent: index * offset, duration: 0.5 } // Shorter duration
       );
     });
   }, sectionRef);

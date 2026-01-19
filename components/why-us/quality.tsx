@@ -55,7 +55,7 @@ const Quality = () => {
           start: 'top top',
           end: `+=${slides.length * (isMobile ? 150 : 100)}%`,
           pin: true,
-          scrub: true,
+          scrub: isMobile ? 0.2 : 1,
         },
       });
       slides.forEach((_, index) => {
@@ -85,7 +85,7 @@ const Quality = () => {
     const updateSizes = () => {
       const width = window.innerWidth;
       if (width < 768) {
-        setContainerHeight(550);
+        setContainerHeight(278);
       } else if (width < 1024) {
         setContainerHeight(600);
       } else if (width < 1280) {
