@@ -106,7 +106,7 @@ const Qualitycp = () => {
             <br />
             performance you can trust
           </h1>
-          <p className="text-white text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl font-light opacity-90 max-w-xl">
+          <p className="text-white text-[clamp(16px,1.5vw,44px)] font-light opacity-90 max-w-xl">
             Every Pipe And Fitting Is Tested Across Critical Parameters To
             Ensure Long-Term Safety And Reliability
           </p>
