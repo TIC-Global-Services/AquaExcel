@@ -101,7 +101,7 @@ const Qualitycp = () => {
 
         {/* Left Side - Text Content */}
         <div className="flex flex-col text-left w-full mt-20 lg:mb-20">
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-5xl font-medium leading-tight tracking-tight mb-4">
+          <h1 className="text-white text-[clamp(16px,2.5vw,44px)] font-medium leading-tight mb-4">
             Quality you can measure.
             <br />
             performance you can trust
