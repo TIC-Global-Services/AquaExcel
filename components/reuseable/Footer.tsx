@@ -74,7 +74,7 @@ const Footer = () => {
           e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
           e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
         }}>
-        <h1 className="font-hoves-pro text-[4.063rem] lg:text-[16.375rem] font-bold leading-15 lg:leading-[253.95px] tracking-[-2.24px] lg:tracking-[-15.24px]"
+        <h1 className="font-hoves-pro text-[17vw] font-bold leading-none tracking-[-0.8vw]"
           style={{
             backgroundImage: `radial-gradient(circle 200px at var(--mouse-x, 60%) var(--mouse-y, 50%), ${activeColor}, #363639 100%)`,
             WebkitBackgroundClip: 'text',
@@ -83,6 +83,7 @@ const Footer = () => {
           }}
         >AQUA EXCEL</h1>
       </div>
+
 
       {/* <div 
         className="mb-16 w-full relative cursor-pointer px-6 xl:px-10 lg:px-7.5"
