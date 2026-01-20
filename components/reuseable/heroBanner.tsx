@@ -4,18 +4,19 @@ import ContainerLayout from "@/layouts/ContainerLayout";
 
 interface HeroBannerProps {
   // Background
-  backgroundImage?:  string | StaticImageData;
+  backgroundImage?: string | StaticImageData;
   backgroundAlt?: string;
   backgroundClassName?: string;
   backgroundQuality?: number;
   backgroundPriority?: boolean;
-  
+  buttonClassName?: string;
+
   // Content
   title?: string | React.ReactNode;
   titleClassName?: string;
   subtitle?: string | React.ReactNode;
   subtitleClassName?: string;
-  
+
   // Buttons
   primaryButtonText?: string;
   secondaryButtonText?: string;
@@ -23,13 +24,13 @@ interface HeroBannerProps {
   secondaryButtonVariant?: "primary" | "secondary";
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
-  
+
   // Layout
   height?: string;
   paddingX?: string;
   maxWidth?: string;
   contentAlignment?: "left" | "center" | "right";
-  
+
   // Customization
   customContent?: React.ReactNode;
   overlay?: boolean;
@@ -44,27 +45,28 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   backgroundClassName,
   backgroundQuality,
   backgroundPriority,
-  
+
   // Content
   title,
   titleClassName,
   subtitle,
   subtitleClassName,
-  
+
   // Buttons
   primaryButtonText,
   secondaryButtonText,
   primaryButtonVariant = "primary",
   secondaryButtonVariant = "secondary",
+  buttonClassName = "flex flex-wrap gap-4",
   onPrimaryClick,
   onSecondaryClick,
-  
+
   // Layout
   height = "h-[860px]",
   paddingX = "",
   maxWidth = "max-w-5xl",
   contentAlignment = "left",
-  
+
   // Customization
   customContent,
   overlay = false,
@@ -80,9 +82,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   return (
     <section className={`relative ${height} w-full bg-hero-bg overflow-hidden`}>
       {/* Background Image */}
-      
+
       <div className="absolute inset-0">
-        
+
         <Image
           src={backgroundImage || "/hero-banner.jpg"}
           alt={backgroundAlt || "Hero background image"}
@@ -91,57 +93,57 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           priority={backgroundPriority || true}
           quality={backgroundQuality || 90}
         />
-        
+
         {/* Optional Overlay */}
         {overlay && (
-          <div 
-            className="absolute inset-0" 
-            style={{ 
-              backgroundColor: overlayColor, 
-              opacity: overlayOpacity 
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundColor: overlayColor,
+              opacity: overlayOpacity
             }}
           />
         )}
       </div>
 
       {/* Content */}
-     <ContainerLayout>
-       <div className={`relative ${height} flex items-end pb-28`}>
-        <div className={`${paddingX} w-full`}>
-          <div className={`${maxWidth} ${contentAlignmentClasses[contentAlignment]}`}>
-            {/* Custom Content or Default Content */}
-            {customContent ? (
-              customContent
-            ) : (
-              <>
-                <h1 className={titleClassName}>
-                  {title}
-                </h1>
-                
-                <p className={subtitleClassName}>
-                  {subtitle}
-                </p>
+      <ContainerLayout>
+        <div className={`relative ${height} flex items-end pb-28`}>
+          <div className={`${paddingX} w-full`}>
+            <div className={`${maxWidth} ${contentAlignmentClasses[contentAlignment]}`}>
+              {/* Custom Content or Default Content */}
+              {customContent ? (
+                customContent
+              ) : (
+                <>
+                  <h1 className={titleClassName}>
+                    {title}
+                  </h1>
 
-                <div className="flex flex-wrap gap-4">
-                  <Button 
-                    variant={primaryButtonVariant} 
-                    onClick={onPrimaryClick}
-                  >
-                    {primaryButtonText}
-                  </Button>
-                  <Button 
-                    variant={secondaryButtonVariant} 
-                    onClick={onSecondaryClick}
-                  >
-                    {secondaryButtonText}
-                  </Button>
-                </div>
-              </>
-            )}
+                  <p className={subtitleClassName}>
+                    {subtitle}
+                  </p>
+
+                  <div className={buttonClassName}>
+                    <Button
+                      variant={primaryButtonVariant}
+                      onClick={onPrimaryClick}
+                    >
+                      {primaryButtonText}
+                    </Button>
+                    <Button
+                      variant={secondaryButtonVariant}
+                      onClick={onSecondaryClick}
+                    >
+                      {secondaryButtonText}
+                    </Button>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-     </ContainerLayout>
+      </ContainerLayout>
     </section>
   );
 };
