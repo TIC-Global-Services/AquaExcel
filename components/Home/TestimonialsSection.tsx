@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface Testimonial {
   id: number;
@@ -18,8 +18,26 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialsSection = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="pt-[80px] pb-[80px] px-6 xl:px-[80px] lg:px-[40px] bg-background overflow-hidden">
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-1800px);
+          }
+        }
+        .animate-scroll {
+          animation: scroll 25s linear infinite;
+        }
+        .animate-scroll.paused {
+          animation-play-state: paused;
+        }
+      `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
@@ -35,19 +53,10 @@ const TestimonialsSection = () => {
               {/* Left fade gradient */}
               <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
               {/* Infinite scrolling container */}
-              <motion.div
-                className="flex gap-6 absolute"
-                animate={{
-                  x: [0, -1800],
-                }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 25,
-                    ease: "linear",
-                  },
-                }}
+              <div
+                className={`flex gap-6 absolute animate-scroll ${isHovered ? 'paused' : ''}`}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
                 {/* Duplicate testimonials for seamless loop */}
                 {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
@@ -67,9 +76,8 @@ const TestimonialsSection = () => {
                           {[...Array(5)].map((_, i) => (
                             <span
                               key={i}
-                              className={`text-sm ${
-                                i < testimonial.rating ? "text-[#E31E24]" : "text-gray-300"
-                              }`}
+                              className={`text-sm ${i < testimonial.rating ? "text-[#E31E24]" : "text-gray-300"
+                                }`}
                             >
                               ★
                             </span>
@@ -79,7 +87,7 @@ const TestimonialsSection = () => {
                     </div>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>

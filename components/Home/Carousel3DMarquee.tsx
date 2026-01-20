@@ -80,7 +80,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   }, []);
 
   const faceCount: number = galleryImages.length;
-  const faceWidth: number = (cylinderWidth / faceCount) * 1;
+  const faceWidth: number = (cylinderWidth / faceCount) * 1.12;
   const radius: number = cylinderWidth / (1.7 * Math.PI);
   const angleStep: number = 360 / faceCount;
 
@@ -210,86 +210,92 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
 
   return (
     <div className="overflow-x-hidden">
-        <motion.div
-      className="relative md:h-[900px] h-[800px] w-full overflow-hidden py-20 md:py-20"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <div className="font-heading text-[28px] md:text-[64px] md:leading-14 text-center text-black">
-        Our Industry Footprint
-      </div>
+      <motion.div
+        className="relative md:h-[900px] h-[800px] w-full overflow-hidden py-20 md:py-20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="text-center  px-6">
+          <h2 className="text-foreground font-hoves-pro font-medium text-xl lg:text-[44px] mb-4">
+            Product Universe
+          </h2>
+          <p className="text-foreground font-hoves-pro font-light text-sm lg:text-[20px] text-base max-w-2xl mx-auto">
+            Offering Forward-Thinking Products Paired With Complete, Reliable
+            Solutions For Every Need.
+          </p>
+        </div>
 
-      <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d]">
-        <motion.div
-          drag="x"
-          dragElastic={0}
-          dragMomentum={false}
-          dragConstraints={false}
-          dragPropagation={false}
-          dragTransition={{
-            power: 0,
-            timeConstant: 0,
-            bounceStiffness: 0,
-            bounceDamping: 0,
-          }}
-          dragDirectionLock={false}
-          dragSnapToOrigin={false}
-          whileDrag={{
-            cursor: "grabbing",
-            scale: isMobile ? 1 : 0.98,
-          }}
-          onDragStart={handleDragStart}
-          onDrag={handleDrag}
-          onDragEnd={handleDragEnd}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          animate={controls}
-          onUpdate={handleUpdate}
-          style={{
-            transform: transform,
-            rotateY: rotation,
-            width: cylinderWidth,
-            transformStyle: "preserve-3d",
-            touchAction: "pan-x",
-          }}
-          className="flex min-h-[200px] cursor-grab active:cursor-grabbing items-center justify-center [transform-style:preserve-3d]"
-        >
-          {galleryImages.map((item, i) => (
-            <div
-              key={i}
-              className="group absolute flex h-fit items-center justify-center [backface-visibility:hidden]"
-              style={{
-                width: `${faceWidth}px`,
-                transform: `rotateY(${
-                  (360 / faceCount) * i
-                }deg) translateZ(${radius}px)`,
-              }}
-            >
-              <div className="relative h-[270px] w-[280px] sm:h-[280px] sm:w-[300px] md:w-[320px] lg:w-[350px] xl:w-[380px] rounded-[15px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
-                <img
-                  src={item.url}
-                  alt={item.title}
-                  className="pointer-events-none object-cover w-full h-full select-none"
-                  draggable={false}
-                />
+        <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d] px-6 md:px-0">
+          <motion.div
+            drag="x"
+            dragElastic={0}
+            dragMomentum={false}
+            dragConstraints={false}
+            dragPropagation={false}
+            dragTransition={{
+              power: 0,
+              timeConstant: 0,
+              bounceStiffness: 0,
+              bounceDamping: 0,
+            }}
+            dragDirectionLock={false}
+            dragSnapToOrigin={false}
+            whileDrag={{
+              cursor: "grabbing",
+              scale: isMobile ? 1 : 0.98,
+            }}
+            onDragStart={handleDragStart}
+            onDrag={handleDrag}
+            onDragEnd={handleDragEnd}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            animate={controls}
+            onUpdate={handleUpdate}
+            style={{
+              transform: transform,
+              rotateY: rotation,
+              width: cylinderWidth,
+              transformStyle: "preserve-3d",
+              touchAction: "pan-x",
+            }}
+            className="flex min-h-[200px] cursor-grab active:cursor-grabbing items-center justify-center transform-3d"
+          >
+            {galleryImages.map((item, i) => (
+              <div
+                key={i}
+                className="group absolute flex h-fit items-center justify-center [backface-visibility:hidden]"
+                style={{
+                  width: `${faceWidth}px`,
+                  transform: `rotateY(${(360 / faceCount) * i
+                    }deg) translateZ(${radius}px)`,
+                }}
+              >
+                <div className="relative h-[270px] w-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] lg:w-[350px] xl:w-[380px] rounded-[15px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
 
-                <div className="absolute bottom-0 left-0 right-0 pl-4 pt-3.5 pb-3 text-white z-50 select-none">
-                  <h3 className="xl:text-[18px] text-md font-light md:leading-[100%]">
-                    {item.title}
-                  </h3>
+                  <img
+                    src={item.url}
+                    alt={item.title}
+                    className="pointer-events-none object-cover w-full h-full select-none"
+                    draggable={false}
+                  />
+
+                  <div className="absolute bottom-0 left-0 right-0 pl-4 pt-3.5 pb-3 text-white z-50 select-none">
+                    <h3 className="xl:text-[18px] text-md font-light md:leading-[100%]">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-40" />
                 </div>
-
-                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-40" />
               </div>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+            ))}
+          </motion.div>
+        </div>
 
-    </motion.div>
+      </motion.div>
     </div>
   );
 };

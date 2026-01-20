@@ -9,7 +9,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 48,suffix:"+", label: "Products Built for\nDaily Reliability" },
+  { value: 48, suffix: "+", label: "Products Built for\nDaily Reliability" },
   { value: 1, suffix: "L+", label: "Customers Trust Us\nNationwide" },
   { value: 48, suffix: "+", label: "Years of Proven\nExpertise" },
   { value: 2, label: "Patents Filed for\nInnovation" },
@@ -45,7 +45,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
   }, [isInView, value]);
 
   return (
-    <div ref={ref} className="text-[100px] font-hoves-pro font-bold text-foreground leading-none">
+    <div ref={ref} className="text-[50px] sm:text-[70px] lg:text-[100px] font-hoves-pro font-medium xl:font-bold text-foreground leading-none">
       {count}
       {suffix}
     </div>
@@ -54,7 +54,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 
 const StatsSection = () => {
   return (
-    <section className="pt-5 pb-30 px-6 xl:px-20 lg:px-10 bg-background">
+    <section className="lg:pt-5 pb-30 px-6 xl:px-20 lg:px-10 bg-background pt-20">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <motion.div
@@ -64,16 +64,16 @@ const StatsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-foreground font-hoves-pro font-medium text-[44px] mb-0">
+          <h2 className="text-foreground font-hoves-pro font-medium text-[20px]  lg:text-[44px] mb-0">
             Aqua Excel at a glance
           </h2>
-          <p className="text-foreground font-hoves-pro font-light text-[24px] max-w-4xl">
+          <p className="text-foreground font-hoves-pro font-light text-base lg:text-[24px] max-w-4xl">
             A brief look into the trust, expertise, and innovation shaping Aqua Excel today.
           </p>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-4">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -81,20 +81,20 @@ const StatsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-[#FAF9F5] rounded-[40px] p-10 flex flex-col justify-between w-76.25 h-79.5 relative overflow-hidden"
+              className="bg-[#FAF9F5] rounded-[24px] lg:rounded-[40px] px-2 lg:p-10 flex flex-col items-start justify-center lg:items-start lg:justify-between text-left h-[120px] sm:h-[250px] lg:h-[318px] w-full relative overflow-hidden"
             >
-              {/* Background number in white */}
-              <div className="absolute -top-1 left-10 text-[150px] font-hoves-pro font-medium text-white leading-27 select-none pointer-events-none">
+              {/* Background number - repositioned for mobile */}
+              <div className={`absolute ${stat.value==2?'-top-5 right-10':'-top-1 -right-1'} lg:top-0 lg:left-10 text-[80px] sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-none select-none pointer-events-none`}>
                 {stat.value}{stat.suffix}
               </div>
-              
-              {/* Foreground number */}
-              <div className="flex-1 flex items-start pt-8 relative z-10">
+
+              {/* Foreground number container */}
+              <div className="relative z-10 lg:flex-1 flex items-center lg:items-start lg:pt-8 w-full justify-center lg:justify-start">
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </div>
-              
+
               {/* Label text */}
-              <p className="text-foreground font-hoves-pro font-medium text-[24px] whitespace-pre-line leading-tight relative z-10">
+              <p className="text-foreground font-hoves-pro font-medium text-xs sm:text-lg lg:text-[24px] whitespace-pre-line leading-tight relative z-10">
                 {stat.label}
               </p>
             </motion.div>
