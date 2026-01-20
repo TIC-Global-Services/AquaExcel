@@ -10,30 +10,28 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
   return (
-    <div className="relative w-full sm:w-[90vw] md:w-[85vw] lg:w-full xl:w-[630px]
-                    max-w-[630px] h-full max-h-[60.889vh] md:max-h-[90vh]
-                    rounded-2xl overflow-hidden bg-white flex flex-col">
+    <div className="relative w-full h-full rounded-2xl bg-white/10 backdrop-blur-md flex flex-col shadow-2xl border border-white/10 overflow-hidden">
 
-      {/* Top Glass Panel - White Section */}
-      <div className="relative z-20 bg-white/95 backdrop-blur-sm p-5 sm:p-6 md:p-8 lg:p-10 flex-shrink-0">
+      {/* Top Header - Gray Translucent Section (Flexible height with fixed corners) */}
+      <div className="relative z-20 bg-[#D9D9D9]/80 backdrop-blur-md p-6 sm:p-8 md:p-10 flex-none min-h-[40%] flex flex-col justify-center rounded-t-2xl">
         {/* Icon */}
-        <div className="mb-3 sm:mb-4 md:mb-5">
-          <Image src={icon} alt="icon" width={48} height={48} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+        <div className="mb-4">
+          <Image src={icon} alt="icon" width={64} height={64} className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0" />
         </div>
 
         {/* Title */}
-        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[1.5rem] font-semibold text-gray-900 leading-tight">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-black leading-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg lg:text-2xl xl:text-xl text-gray-600 leading-relaxed line-clamp-2 sm:line-clamp-3 md:line-clamp-none">
+        <p className="mt-4 text-sm sm:text-lg md:text-xl text-black/80 font-normal leading-relaxed">
           {description}
         </p>
       </div>
 
-      {/* Bottom Image Section - Fills remaining space */}
-      <div className="relative w-full flex-1 min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[380px]">
+      {/* Bottom Image Section */}
+      <div className="relative w-full grow min-h-[30%] rounded-b-2xl overflow-hidden">
         <Image
           src={image}
           alt={title}

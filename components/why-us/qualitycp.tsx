@@ -17,39 +17,37 @@ import Card from "../reuseable/why-us/slidercards";
 gsap.registerPlugin(ScrollTrigger);
 
 const Qualitycp = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const slides = [
     {
       title: "Hydrostatic Pressure Test",
       description:
-        "Ensures long-term durability even under intense water pressure, protecting your installations from leaks, cracks, and sudden bursts.",
+        "Ensures Long-Term Durability Even Under Intense Water Pressure, Protecting Your Installations From Leaks, Cracks, And Sudden Bursts.",
       icon: icon1.src,
       image: sliderimg1.src,
     },
     {
-      title: "Reversion test",
+      title: "Reversion Test",
       description:
-        "Checks heat resistance and dimensional stability when exposed to temperature variations.",
+        "Checks Heat Resistance And Dimensional Stability When Exposed To Temperature Variations.",
       icon: icon2.src,
       image: sliderimg2.src,
     },
     {
-      title: "impact Test",
+      title: "Impact Test",
       description:
-        "Ensures pipes and fittings withstand accidental hits and rough handling during installation.",
+        "Ensures Pipes And Fittings Withstand Accidental Hits And Rough Handling During Installation.",
       icon: icon3.src,
       image: sliderimg3.src,
     },
     {
-      title: "opacity test",
+      title: "Opacity Test",
       description:
-        "Ensures light blocking to prevent algae growth inside pipes over time.",
+        "Ensures Light Blocking To Prevent Algae Growth Inside Pipes Over Time.",
       icon: icon4.src,
       image: sliderimg4.src,
     },
   ];
-
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [containerHeight, setContainerHeight] = useState(550);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -57,27 +55,23 @@ const Qualitycp = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top top',
-          end: `+=${slides.length * (isMobile ? 50 : 100)}%`,
-          pin: !isMobile,
-          scrub: true,
+          start: "top top",
+          end: `+=${slides.length * (isMobile ? 150 : 100)}%`,
+          pin: true,
+          scrub: isMobile ? 0.2 : 1,
         },
       });
+
       slides.forEach((_, index) => {
         if (index === 0) {
-          // First card is visible by default
-          tl.set(`.card-${index}`, { xPercent: 0, opacity: 1 });
+          tl.set(`.card-cp-${index}`, { xPercent: 0, opacity: 1 });
         } else {
-          // Fade out the previous card while the new card slides in
-          tl.to(
-            `.card-${index - 1}`,
-            { opacity: 0, duration: 1 },
-          );
+          tl.to(`.card-cp-${index - 1}`, { opacity: 0, duration: 1 });
           tl.fromTo(
-            `.card-${index}`,
+            `.card-cp-${index}`,
             { xPercent: 130, opacity: 0 },
             { xPercent: 0, opacity: 1, duration: 1, ease: "none" },
-            "<" // Start at the same time as the previous animation
+            "<"
           );
         }
       });
@@ -86,59 +80,54 @@ const Qualitycp = () => {
     return () => ctx.revert();
   }, [slides]);
 
-
-  useEffect(() => {
-    const updateSizes = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setContainerHeight(550);
-      } else if (width < 1024) {
-        setContainerHeight(600);
-      } else if (width < 1280) {
-        setContainerHeight(650);
-      } else {
-        setContainerHeight(700);
-      }
-    };
-
-    updateSizes();
-    window.addEventListener('resize', updateSizes);
-    return () => window.removeEventListener('resize', updateSizes);
-  }, []);
-
   return (
-    <div ref={sectionRef} className="relative w-full min-h-screen overflow-hidden">
+    <div
+      ref={sectionRef}
+      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+    >
+      {/* Background Section */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <Image
           src={bgimage}
           alt="Quality Measure Background"
           fill
-          priority={false}
-          loading="lazy"
+          priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="relative flex items-center justify-center w-full  py-16">
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-12 lg:gap-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 ">
-          {/* Left Side - Text Content */}
-          <div className="space-y-6 md:space-y-4  text-center md:text-left z-10">
-            <h2 className="text-xl  md:text-xl lg:text-3xl xl:text-4xl text-white font-medium leading-tight tracking-tight">
-              Quality you can measure.
-              <br className="hidden md:block" /> performance you can trust
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-xl font-light text-white/90 max-w-xl mx-auto md:mx-0">
-              Every Pipe And Fitting Is Tested Across Critical Parameters To
-              Ensure Long-Term Safety And Reliability
-            </p>
-          </div>
-           <div className="relative w-full max-w-[630px] mx-auto" style={{ height: `${containerHeight}px` }}>
-              {slides.map((res, index) => (
-                <div key={index} className={`card-${index} absolute inset-0 w-full h-full`} style={{ zIndex: index + 1 }}>
-                  <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />
-                </div>
-              ))}
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-[8%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10">
+
+        {/* Left Side - Text Content */}
+        <div className="flex flex-col text-left w-full mt-20 lg:mb-20">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-5xl font-medium leading-tight tracking-tight mb-4">
+            Quality you can measure.
+            <br />
+            performance you can trust
+          </h1>
+          <p className="text-white text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl font-light opacity-90 max-w-xl">
+            Every Pipe And Fitting Is Tested Across Critical Parameters To
+            Ensure Long-Term Safety And Reliability
+          </p>
+        </div>
+
+        {/* Right Side - Slider Cards */}
+        <div className="w-full max-w-[630px] aspect-auto h-[65vh] sm:h-[75vh] lg:h-[70vh] max-h-[750px] relative mx-auto lg:mx-0">
+          {slides.map((res, index) => (
+            <div
+              key={index}
+              className={`card-cp-${index} absolute inset-0 w-full h-full opacity-0`}
+              style={{ zIndex: index + 1 }}
+            >
+              <Card
+                title={res.title}
+                description={res.description}
+                image={res.image}
+                icon={res.icon}
+              />
             </div>
+          ))}
         </div>
       </div>
     </div>
