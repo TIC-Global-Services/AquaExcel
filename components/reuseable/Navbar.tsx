@@ -37,9 +37,10 @@ const Navbar = () => {
           ))}
         </div>
 
+       <Link href='/contact'>
         <button className="bg-white text-foreground px-8 py-3 rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity">
           For Enquiries
-        </button>
+        </button></Link>
       </div>
     </nav>
   );

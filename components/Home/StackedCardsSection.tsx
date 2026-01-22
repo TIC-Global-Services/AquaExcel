@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Button from "../reuseable/Button";
+import Link from "next/link";
 
 interface Card {
   id: number;
@@ -49,7 +50,7 @@ const StackedCardsSection = () => {
   const visibleCards = getVisibleCards();
 
   return (
-    <section className="lg:pt-[60px] pb-[120px] px-6 xl:px-[80px] lg:px-[40px] bg-background">
+    <section className="lg:pt-[2%]  px-6 xl:px-[80px] lg:px-[40px] bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
@@ -65,7 +66,7 @@ const StackedCardsSection = () => {
             <p className="text-foreground font-hoves-pro font-[400] text-base lg:text-[24px] mb-8 leading-relaxed max-w-3xl">
               Discover immersive glimpses of the style, performance, and craftsmanship behind our products, beautifully captured through every reel.
             </p>
-            <Button variant="primary" className="hidden lg:block">Watch More</Button>
+           <Link href="/products"><Button variant="primary" className="hidden lg:block">Watch More</Button></Link>
           </motion.div>
 
           {/* Right Stacked Cards */}
@@ -125,7 +126,7 @@ const StackedCardsSection = () => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className="text-center text-foreground font-hoves-pro font-medium text-lg lg:text-[24px] mt-6"
+                          className="text-center text-foreground font-hoves-pro font-medium text-lg lg:text-[24px] mt-3"
                         >
                           {card.title}
                         </motion.p>

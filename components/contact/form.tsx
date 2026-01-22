@@ -7,7 +7,7 @@ const ContactForm = () => {
 
     return (
       <ContainerLayout>
-          <section className="py-10 lg:py-20 bg-background">
+          <section className="py-10 lg:py-5 bg-background">
             <div className="max-w-5xl mx-auto">
                 {/* Tabs */}
                 <div className="flex justify-center gap-4 mb-10">
@@ -33,7 +33,7 @@ const ContactForm = () => {
 
                 {/* Contact Form */}
                 {activeTab === 'contact' && (
-                    <div className="rounded-[20px] lg:rounded-[40px] py-8 lg:p-12">
+                    <div className="rounded-[20px] lg:rounded-[40px] py-2 lg:py-2">
                         <div className="text-center mb-10">
                             <h2 className="font-hoves-pro font-medium text-2xl lg:text-4xl text-foreground mb-4">
                                 Let's Connect
@@ -49,12 +49,12 @@ const ContactForm = () => {
                                 <input
                                     type="text"
                                     placeholder="Name"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                                 <input
                                     type="text"
                                     placeholder="City / State"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                             </div>
 
@@ -62,25 +62,25 @@ const ContactForm = () => {
                                 <input
                                     type="tel"
                                     placeholder="Phone number"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                                 <input
                                     type="email"
                                     placeholder="Email Address"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                             </div>
 
                             <textarea
                                 placeholder="Message / Description"
                                 rows={4}
-                                className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
+                                className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
                             />
 
                             <div className="flex justify-center pt-4">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white px-8 py-3 rounded-full font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
+                                    className="bg-[#E31E24] text-white px-8 py-3 rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
                                 >
                                     Submit Customer Enquiry
                                 </button>
@@ -91,7 +91,7 @@ const ContactForm = () => {
 
                 {/* Dealer Form */}
                 {activeTab === 'dealer' && (
-                    <div className="rounded-[20px] lg:rounded-[40px] py-8 lg:p-12">
+                    <div className="rounded-[20px] lg:rounded-[40px] py-2 lg:py-2">
                         <div className="text-center mb-10">
                             <h2 className="font-hoves-pro font-medium text-2xl lg:text-4xl text-foreground mb-4">
                                 Become a Dealer
@@ -107,12 +107,12 @@ const ContactForm = () => {
                                 <input
                                     type="text"
                                     placeholder="Name"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                                 <input
                                     type="text"
                                     placeholder="Company"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                             </div>
 
@@ -120,12 +120,12 @@ const ContactForm = () => {
                                 <input
                                     type="text"
                                     placeholder="Business Type(Dealer/Distributor/Retail)"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                                 <input
                                     type="tel"
                                     placeholder="Phone Number"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                             </div>
 
@@ -133,25 +133,25 @@ const ContactForm = () => {
                                 <input
                                     type="email"
                                     placeholder="Email ID"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                                 <input
                                     type="text"
                                     placeholder="City/State"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
                                 />
                             </div>
 
                             <textarea
                                 placeholder="Message"
                                 rows={4}
-                                className="w-full px-4 py-4 bg-[#FAF9F5] border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
+                                className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
                             />
 
                             <div className="flex justify-center pt-4">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white px-8 py-3 rounded-full font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
+                                    className="bg-[#E31E24] text-white px-8 py-3 rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
                                 >
                                     Connect With Us
                                 </button>

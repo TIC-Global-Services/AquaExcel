@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
 import ContainerLayout from "@/layouts/ContainerLayout";
+import Link from "next/link";
 
 interface HeroBannerProps {
   // Background
@@ -24,6 +25,10 @@ interface HeroBannerProps {
   secondaryButtonVariant?: "primary" | "secondary";
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
+  primaryButtonClassName?: string;
+  secondaryButtonClassName?: string;
+  primaryLink?: string;
+  secondaryLink?: string;
 
   // Layout
   height?: string;
@@ -60,6 +65,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   buttonClassName = "flex flex-wrap gap-4",
   onPrimaryClick,
   onSecondaryClick,
+  primaryLink,
+  secondaryLink,
+  primaryButtonClassName,
+  secondaryButtonClassName,
 
   // Layout
   height = "h-[860px]",
@@ -108,7 +117,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 
       {/* Content */}
       <ContainerLayout>
-        <div className={`relative ${height} flex items-end pb-28`}>
+        <div className={`relative ${height} flex items-center md:items-end md:pb-28`}>
           <div className={`${paddingX} w-full`}>
             <div className={`${maxWidth} ${contentAlignmentClasses[contentAlignment]}`}>
               {/* Custom Content or Default Content */}
@@ -125,18 +134,24 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
                   </p>
 
                   <div className={buttonClassName}>
+                    <Link href={primaryLink || '/products'}>
                     <Button
+                      className={primaryButtonClassName}
                       variant={primaryButtonVariant}
                       onClick={onPrimaryClick}
                     >
                       {primaryButtonText}
                     </Button>
+                    </Link>
+                    <Link href={secondaryLink || '/contact'}>
                     <Button
+                      className={secondaryButtonClassName}
                       variant={secondaryButtonVariant}
                       onClick={onSecondaryClick}
                     >
                       {secondaryButtonText}
                     </Button>
+                    </Link>
                   </div>
                 </>
               )}

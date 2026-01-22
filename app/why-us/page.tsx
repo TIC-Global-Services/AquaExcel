@@ -9,7 +9,7 @@ import Sustainableinnovation from '@/components/why-us/Sustainableinnovation'
 import Qualitycp from '@/components/why-us/qualitycp'
 const page = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
         <Hero/>
         <Identity/>
         <Aquaexcelapart/>

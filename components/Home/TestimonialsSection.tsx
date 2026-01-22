@@ -38,11 +38,11 @@ const TestimonialsSection = () => {
           animation-play-state: paused;
         }
       `}</style>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto pb-[5%]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
           <div className="lg:col-span-4">
-            <h2 className="text-foreground font-hoves-pro font-medium text-[44px] leading-tight">
+            <h2 className="text-foreground font-hoves-pro font-regular text-[44px] leading-tight">
               What people are saying about Aqua Excel
             </h2>
           </div>
@@ -52,6 +52,8 @@ const TestimonialsSection = () => {
             <div className="relative h-[180px] overflow-hidden">
               {/* Left fade gradient */}
               <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              {/* Right fade gradient */}
+              <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
               {/* Infinite scrolling container */}
               <div
                 className={`flex gap-6 absolute animate-scroll ${isHovered ? 'paused' : ''}`}
@@ -62,7 +64,7 @@ const TestimonialsSection = () => {
                 {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
                   <div
                     key={`${testimonial.id}-${index}`}
-                    className="flex-shrink-0 w-[350px] h-[150px] bg-[#FAF9F5] rounded-[24px] p-6 flex flex-col justify-between"
+                    className="flex-shrink-0 w-[350px] h-[150px] bg-[#E6E6E6] rounded-[24px] p-6 flex flex-col justify-between"
                   >
                     <p className="text-foreground font-hoves-pro font-regular text-[18px] leading-relaxed">
                       "{testimonial.text}"
