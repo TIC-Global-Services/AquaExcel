@@ -96,10 +96,10 @@ useEffect(() => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-[10%] items-start  xl:px-0">
           {/* Left Column: Static Text */}
           <div className="left-content">
-            <h2 className="xl:text-[2.75rem] text-[1.25rem] font-medium">
+            <h2 className="xl:text-[2.75rem] text-[1.25rem] font-medium font-hoves-pro">
               {heading}
             </h2>
-            <p className="text-[0.875rem]  xl:text-[1.25rem] font-normal">
+            <p className="text-[0.875rem] leading-[100%] max-w-lg xl:text-[1.25rem] font-regular font-inter-tight pt-2">
               {paragraph}
             </p>
           </div>
@@ -124,7 +124,7 @@ useEffect(() => {
                   />
                   <div className='absolute h-full w-full bg-black/40'></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-white font-hoves-pro font-medium text-lg lg:text-xl">
+                    <p className="text-white font-inter-tight font-medium text-lg lg:text-xl">
                       {card.title}
                     </p>
                   </div>

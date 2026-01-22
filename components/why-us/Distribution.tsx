@@ -27,14 +27,14 @@ const Distribution = () => {
     <ContainerLayout>
       <div className="w-full py-10 overflow-hidden">
       <div className="flex flex-col gap-2 mb-8">
-        <h1 className="text-xl xl:text-[2.75rem] font-medium tracking-tight">For Distribution Partners</h1>
-        <p className="max-w-3xl text-sm xl:text-xl font-normal text-gray-700">
+        <h1 className="text-xl xl:text-[2.75rem] font-medium font-hoves-pro tracking-tight">For Distribution Partners</h1>
+        <p className="max-w-3xl text-sm xl:text-xl font-normal text-gray-700 font-inter-tight">
           We partner with distributors through dependable supply, strong product
           demand, and responsive service.
         </p>
       </div>
 
-      <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:grid-cols-3 gap-5 md:gap-8 scrollbar-hide py-5">
+      <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:grid-cols-3 gap-5 md:gap-5 scrollbar-hide py-5">
         {distributors.map((card, index) => (
           <div
             key={index}

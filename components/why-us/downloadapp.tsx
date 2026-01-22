@@ -29,7 +29,7 @@ const DownloadApp = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="relative py-10% min-h-[580px] max-h-[580px] w-full overflow-hidden">
+    <div className="relative py-10% min-h-[405px] md:min-h-[580px] md:max-h-[580px] w-full overflow-hidden">
       <Image
         src={bgimage}
         alt="Download App Background"
@@ -39,16 +39,30 @@ const DownloadApp = () => {
         sizes="100vw"
         className="object-cover parallax-media"
       />
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/50" />
 
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex md:items-center items-start justify-start md:justify-center">
         <ContainerLayout>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
-            <div className="border-2 rounded-2xl border-white p-4 bg-white/10 backdrop-blur-sm">
-              <Image src={qrcode} width={148} height={152} alt="qrcode" />
+          <div className="flex flex-col md:flex-row md:items-center items-start justify-start md:justify-center gap-10 md:gap-20 w-full">
+            <div className="text-left md:text-left text-white max-w-2xl block md:hidden">
+              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-semibold"> 
+                Plumbers / Dealers
+              </h2>
+              <p className="mt-2 text-sm lg:text-[1.25rem]">
+                One scan gives you instant access to installation videos,
+                <br className="hidden lg:block" /> product guides, catalogs, and
+                support.
+              </p>
             </div>
-            <div className="text-center md:text-left text-white max-w-2xl">
-              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-semibold">
+            <div className='flex flex-col'>
+              <div className="border-2 rounded-2xl border-white py-2 px-3 bg-white/10 backdrop-blur-sm">
+              <p className='text-white font-medium text-xl tracking-[-4%] text-center uppercase mb-1  hidden md:block'>About App</p>
+              <Image src={qrcode} width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
+            </div>
+            <p className='text-white font-medium text-sm md:text-xl mt-1 text-center'>Scan to know more</p>
+            </div>
+            <div className="text-center md:text-left text-white max-w-2xl hidden md:block">
+              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-semibold"> 
                 Plumbers / Dealers
               </h2>
               <p className="mt-2 text-sm lg:text-[1.25rem]">

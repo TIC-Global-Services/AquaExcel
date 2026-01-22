@@ -43,7 +43,7 @@ const hero = () => {
       <HeroBanner
         height='h-screen'
         backgroundImage={banner}
-        titleClassName="text-[22px] md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-[-4%] font-medium mb-4 text-[#E0E0E0] w-full"
+        titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-[-4%] font-medium mb-4 text-[#E0E0E0] w-full"
         title={
           <>
             Strength in every detail,
@@ -52,16 +52,18 @@ const hero = () => {
           </>
         }
         maxWidth='md:max-w-6xl'
-        subtitleClassName="text-white font-[400] text-sm md:text-base xl:text-[20px] xl:leading-[100%] text-base text-left  mb-6"
+        subtitleClassName="mb-5"
         subtitle={
-          <>
+          <span className="text-white font-[400] font-inter-tight text-sm md:text-base xl:text-[20px] xl:leading-[100%] text-base text-left  mb-6">
           Where innovation and sustainability come together with uncompromising quality<br/> ensuring every installation stands the test of time.
-          </>
+          </span>
         }
         primaryButtonClassName='text-[10px] md:text-sm'
         secondaryButtonClassName="text-[10px] md:text-sm"
         buttonClassName='flex gap-4 '
+        primaryLink='/products'
         primaryButtonText="Explore Innovations"
+        secondaryLink='/contact'
         secondaryButtonText="Customer Enquiry"
       />
     </div>
