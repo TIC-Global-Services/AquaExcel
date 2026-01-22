@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import tapimage from '@/assets/contact/tap_image.png'
+import ContainerLayout from '@/layouts/ContainerLayout'
 
 const ContactDetails = () => {
   return (
-    <section className="px-6 lg:px-[80px] py-10 lg:py-20 bg-background">
+    <ContainerLayout>
+      <section className="py-10 lg:py-20 bg-background">
       <div className="max-w-8xl mx-auto">
         <div className="bg-[#FAF9F5] rounded-[20px] lg:rounded-[40px] p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center py-20">
@@ -59,6 +61,7 @@ const ContactDetails = () => {
         </div>
       </div>
     </section>
+    </ContainerLayout>
   )
 }
 

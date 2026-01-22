@@ -3,6 +3,8 @@ import ContactForm from '@/components/contact/form'
 import Hero from '@/components/contact/Hero'
 import GroupLegacy from '@/components/carrer/grouplegacy'
 import React from 'react'
+import Faq from '@/components/contact/faq'
+import Map from '@/components/contact/map'
 
 const page = () => {
   return (
@@ -11,6 +13,8 @@ const page = () => {
       <ContactDetails/>
       <ContactForm/>
       <GroupLegacy/>
+      <Map/>
+      <Faq/>
     </div>
   )
 }
