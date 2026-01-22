@@ -99,7 +99,7 @@ useEffect(() => {
             <h2 className="xl:text-[2.75rem] text-[1.25rem] font-medium font-hoves-pro">
               {heading}
             </h2>
-            <p className="text-[0.875rem] leading-[100%] max-w-lg xl:text-[1.25rem] font-regular font-inter-tight pt-2">
+            <p className="text-[0.875rem] leading-[100%] max-w-sm md:max-w-lg xl:text-[1.25rem] font-regular font-inter-tight pt-2">
               {paragraph}
             </p>
           </div>

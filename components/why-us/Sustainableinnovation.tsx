@@ -24,10 +24,10 @@ const Sustainableinnovation = () => {
     ]
     return (
         <ContainerLayout maxWidth='w-full'>
-            <div className='xl:py-20 py-10 grid-cols-1 md:grid md:grid-cols-3 items-center gap-20'>
-                <div className='md:col-span-2'>
-                    <h1 className='text-xl lg:text-[2.75rem] font-medium '>Sustainable Innovation & Research</h1>
-                    <p className='lg:text-xl  text-sm font-medium'>
+            <div className='xl:py-20 py-10 flex flex-col items-center gap-20'>
+                <div className=''>
+                    <h1 className='text-xl lg:text-[2.75rem] font-medium  text-center'>Sustainable Innovation & Research</h1>
+                    <p className='lg:text-xl  text-sm font-medium text-center'>
                         We continually elevate our processes and products to create solutions that <br /> are smarter, stronger, and more environmentally responsible.
                     </p>
                     <ul className='list-none mt-4 w-full space-y-5'>
@@ -38,11 +38,6 @@ const Sustainableinnovation = () => {
                             </li>
                         ))}
                     </ul>
-                </div>
-                <div className=''>
-                    <div className='relative flex items-center justify-center'>
-                        <Image src={tap.src} alt="Tap" width={330} height={330} className='relative z-10 w-full h-full max-h-[400px] object-cover rounded-2xl' />
-                    </div>
                 </div>
             </div>
         </ContainerLayout>
