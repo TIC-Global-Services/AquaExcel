@@ -27,10 +27,10 @@ const Distribution = () => {
     <ContainerLayout>
       <div className="w-full py-10 overflow-hidden">
       <div className="flex flex-col gap-2 mb-8">
-        <h1 className="text-xl xl:text-[2.75rem] font-medium font-hoves-pro tracking-tight">For Distribution Partners</h1>
-        <p className="max-w-3xl text-sm xl:text-xl font-normal text-gray-700 font-inter-tight">
+        <h1 className="text-xl xl:text-[2.75rem] font-medium font-hoves-pro tracking-[-4%]">For Distribution Partners</h1>
+        <p className="max-w-3xl text-sm xl:text-xl font-medium text-black font-inter-tight leading-[100%]">
           We partner with distributors through dependable supply, strong product
-          demand, and responsive service.
+          demand,<br/> and responsive service.
         </p>
       </div>
 
@@ -60,9 +60,9 @@ const Distribution = () => {
                   text-white
                   font-medium
                   text-center
-                  text-sm md:text-base xl:text-2xl
+                  text-sm md:text-base xl:text-[22px]
                   leading-tight
-                  max-w-[90%]
+                  w-full
                   whitespace-normal
                 "
               >

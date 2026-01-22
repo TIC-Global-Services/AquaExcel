@@ -43,7 +43,7 @@ const DownloadApp = () => {
 
       <div className="absolute inset-0 flex md:items-center items-start justify-start md:justify-center">
         <ContainerLayout>
-          <div className="flex flex-col md:flex-row md:items-center items-start justify-start md:justify-center gap-10 md:gap-20 w-full">
+          <div className="flex flex-col md:flex-row md:items-center items-start justify-start md:justify-center gap-10 md:gap-15 w-full">
             <div className="text-left md:text-left text-white max-w-2xl block md:hidden">
               <h2 className="text-[1.5rem] lg:text-[2.75rem] font-semibold"> 
                 Plumbers / Dealers
@@ -62,10 +62,10 @@ const DownloadApp = () => {
             <p className='text-white font-medium text-sm md:text-xl mt-1 text-center'>Scan to know more</p>
             </div>
             <div className="text-center md:text-left text-white max-w-2xl hidden md:block">
-              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-semibold"> 
+              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-medium font-hoves-pro"> 
                 Plumbers / Dealers
               </h2>
-              <p className="mt-2 text-sm lg:text-[1.25rem]">
+              <p className="text-sm lg:text-[1.25rem] font-medium font-inter-tight">
                 One scan gives you instant access to installation videos,
                 <br className="hidden lg:block" /> product guides, catalogs, and
                 support.

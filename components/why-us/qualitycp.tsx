@@ -100,14 +100,14 @@ const Qualitycp = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-[8%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
 
         {/* Left Side - Text Content */}
-        <div className="flex flex-col text-left w-full mt-20 lg:mb-20  lg:overflow-hidden">
-          <h1 className="text-white text-[clamp(16px,2.5vw,44px)] font-medium  mb-2 leading-[48px] font-hoves-pro">
+        <div className="flex flex-col text-left w-full mt-20 lg:mb-20   lg:overflow-hidden">
+          <h1 className="text-white text-[clamp(16px,3vw,40px)] font-medium  mb-2 leading-[50px] tracking-[-4%] font-hoves-pro">
             Quality you can measure.
             <br />
             performance you can trust
           </h1>
-          <p className="text-white text-[clamp(20px,1.4vw,44px)] font-medium opacity-90 max-w-xl font-inter-tight leading-[100%]">
-            Every Pipe And Fitting Is Tested Across Critical Parameters To
+          <p className="text-[#E0E0E0] text-[clamp(20px,1.4vw,44px)] font-medium opacity-90 max-w-xl font-inter-tight leading-[120%] tracking-[0%]">
+            Every Pipe And Fitting Is Tested Across Critical <br/> Parameters To
             Ensure Long-Term Safety And Reliability
           </p>
         </div>
