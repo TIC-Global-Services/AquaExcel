@@ -3,16 +3,17 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 interface Stat {
+  id: number;
   value: number;
   suffix?: string;
   label: string;
 }
 
 const stats: Stat[] = [
-  { value: 48, suffix: "+", label: "Products Built for\nDaily Reliability" },
-  { value: 1, suffix: "L+", label: "Customers Trust Us\nNationwide" },
-  { value: 48, suffix: "+", label: "Years of Proven\nExpertise" },
-  { value: 2, label: "Patents Filed for\nInnovation" },
+  { id: 1, value: 48, suffix: "", label: "Products Built for\nDaily Reliability" },
+  { id: 2, value: 1, suffix: "L+", label: "Customers Trust Us\nNationwide" },
+  { id: 3, value: 48, suffix: "+", label: "Years of Proven\nExpertise" },
+  { id: 4, value: 2, label: "Patents Filed for\nInnovation" },
 ];
 
 const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
@@ -84,8 +85,8 @@ const StatsSection = () => {
               className="bg-[#FAF9F5] rounded-[24px] lg:rounded-[20px] px-2 lg:px-5 py-10  flex flex-col items-start justify-center lg:items-start md:gap-20 gap-6 text-left h-[120px] sm:h-[250px] lg:h-[318px] w-full relative overflow-hidden"
             >
               {/* Background number - repositioned for mobile */}
-              <div className={`absolute font-inter-tight  ${stat.value==2?'md:-top-[7%] -top-[17%] left-[55%] md:left-[10%]':'md:-top-[12%] -top-[5%] left-[40%] md:left-[20%]'} text-[60px]  sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-none select-none pointer-events-none`}>
-                {stat.value}{stat.suffix}
+              <div className={`absolute font-inter-tight ${stat.id == 3 ? '' : ''}  ${stat.value == 2 ? 'md:top-[0%] -top-[17%] left-[55%] md:left-[10%]' : 'md:top-[0%] -top-[5%] left-[40%] md:left-[17%]'} text-[60px]  sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-[108px] select-none pointer-events-none tracking-[-4%]`}>
+                {stat.value}<span className={`${stat.id === 3 ? '-ml-2 lg:-ml-3   ' : ''}`}>{stat.suffix}</span>
               </div>
 
               {/* Foreground number container */}
