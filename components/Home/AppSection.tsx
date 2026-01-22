@@ -36,7 +36,7 @@ const AppSection = () => {
     // </section>
     <ContainerLayout>
       <section className="py-[5%] bg-background">
-      <div className="relative w-full py-[40%] lg:py-[18%] overflow-hidden rounded-[20px]">
+      <div className="relative w-full py-[40%] lg:py-[20%] overflow-hidden rounded-[20px]">
         {/* Background Image */}
 
         <div className="absolute inset-0">
@@ -53,14 +53,14 @@ const AppSection = () => {
         </div>
 
         <div className="absolute bottom-8 left-[5%] right-[5%] md:left-10 md:right-10 xl:bottom-15 xl:left-10 xl:right-5 z-10">
-          <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] xl:tracking-[-2px] leading-tight mb-4">
+          <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] tracking-[-2px] leading-tight mb-1">
             Learn how the Aqua Excel App works?
           </h2>
-          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-4 leading-relaxed">
+          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-1 leading-[100%]">
             Explore the essential principles, advanced tools, and powerful advantages crafted specifically for plumbers and dealers.
           </p>
           <div>
-            <button className="bg-[#E31E24] text-white xl:px-10 px-5 text-[10px] xl:text-sm py-2 rounded-[10px]">
+            <button className="bg-[#E31E24] text-white xl:px-10 px-5 text-[10px] xl:text-sm py-2 md:py-3 font-inter-tight rounded-[12px]">
               Download App
             </button>
           </div>

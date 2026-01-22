@@ -63,10 +63,10 @@ const StackedCardsSection = () => {
             <h2 className="text-foreground font-hoves-pro font-medium text-2xl lg:text-[44px] mb-4 leading-tight">
               Aqua Excel in Motion
             </h2>
-            <p className="text-foreground font-hoves-pro font-[400] text-base lg:text-[24px] mb-8 leading-relaxed max-w-3xl">
+            <p className="text-foreground font-inter-tight font-[400] text-base lg:text-[24px] mb-8 leading-[100%] max-w-3xl">
               Discover immersive glimpses of the style, performance, and craftsmanship behind our products, beautifully captured through every reel.
             </p>
-           <Link href="/products"><Button variant="primary" className="hidden lg:block">Watch More</Button></Link>
+           <Link href="/products"><Button variant="primary" className="hidden lg:block ">Watch More</Button></Link>
           </motion.div>
 
           {/* Right Stacked Cards */}
@@ -90,7 +90,7 @@ const StackedCardsSection = () => {
                       }}
                       animate={{
                         scale: 1 - stackPosition * 0.08,
-                        x: stackPosition * (isMobile ? 30 : 70),
+                        x: stackPosition * (isMobile ? 35 : 90),
                         y: stackPosition * (isMobile ? 6 : 12),
                         opacity: 1,
                         rotateY: 0,
@@ -126,7 +126,7 @@ const StackedCardsSection = () => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className="text-center text-foreground font-hoves-pro font-medium text-lg lg:text-[24px] mt-3"
+                          className="text-center text-foreground font-inter-tight font-regular text-lg lg:text-[24px] mt-3"
                         >
                           {card.title}
                         </motion.p>

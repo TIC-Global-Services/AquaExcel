@@ -15,10 +15,10 @@ const Footer = () => {
   const activeColor = routeColors[pathname] || "#E31E24"; // Default color
 
   return (
-    <footer className="lg:bg-[#2D2D2D] bg-[#000000] text-white lg:pt-16 lg:pb-8">
+    <footer className="lg:bg-[#2D2D2D] bg-[#000000] text-white pt-5 lg:pt-10 lg:pb-0">
       <div className="px-6 xl:px-[80px] lg:px-[40px] lg:block hidden">
         {/* Top Navigation */}
-        <div className="flex flex-wrap gap-8 mb-12 ">
+        <div className="flex flex-wrap gap-8">
           <Link href="/" className="text-white font-hoves-pro font-regular text-sm hover:opacity-80">
             HOME
           </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
    </div> */}
 
       {/* Large Logo with Radial Gradient Hover Effect - Full Width */}
-      <div className="py-5 justify-center w-full relative cursor-pointer flex"
+      <div className="pb-10 justify-center w-full relative cursor-pointer flex"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           const x = e.clientX - rect.left;
@@ -111,36 +111,36 @@ const Footer = () => {
       <div className="px-6 xl:px-[80px] lg:px-[40px]">
 
         {/* Footer Content Grid - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-16 mb-8">
+        <div className="flex flex-col md:flex-row gap-5 lg:gap-12 mb-8">
           {/* Column 1: Products */}
           <div>
             <h3 className="text-white font-hoves-pro font-medium text-[18px] mb-4 tracking-wide">PRODUCTS</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2  lg:gap-8">
-              <ul className="lg:space-y3 space-y-0.5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <ul className="space-y-1.5">
                 <li>
-                  <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                     BRASS THREADED TAPS
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                     MIXING COVERS
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                     BATH FITTINGS
                   </Link>
                 </li>
               </ul>
-              <ul className="lg:space-y-3 space-y-0.5">
+              <ul className="space-y-1.5">
                 <li>
-                  <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                     PIPES & FITTINGS
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                     ACCESSORIES
                   </Link>
                 </li>
@@ -151,23 +151,23 @@ const Footer = () => {
           {/* Column 2: Others */}
           <div>
             <h3 className="text-white font-hoves-pro font-medium text-[18px] mb-4 tracking-wide">OTHERS</h3>
-            <ul className="lg:space-y-3 space-y-1.5">
+            <ul className="space-y-1.5">
               <li>
-                <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                   PLUMBER APP (PLAY STORE)
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                   FIND A DEALER
                 </Link>
               </li>
-              <li className="text-white font-hoves-pro font-light text-[12px] leading-relaxed uppercase">
+              <li className="text-white font-inter-tight font-light text-[12px] leading-relaxed uppercase">
                 AQUA EXCEL, S.F.NO.774/4, ANNA PRIVATE INDUSTRIAL<br />
                 ESTATE, VILANKURICHI ROAD, COIMBATORE - 641035
               </li>
               <li>
-                <Link href="https://www.aquaexcel.in" className="text-white font-hoves-pro font-light text-[12px] hover:opacity-80 uppercase">
+                <Link href="https://www.aquaexcel.in" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                   WEB: WWW.AQUAEXCEL.IN
                 </Link>
               </li>
@@ -177,14 +177,14 @@ const Footer = () => {
           {/* Column 3: Contact Info */}
           <div>
             <h3 className="text-white font-hoves-pro font-medium text-sm hidden lg:block lg:mb-4 tracking-wide opacity-0">CONTACT</h3>
-            <ul className="lg:space-y-3 space-y-1.5">
-              <li className="text-white font-hoves-pro font-light text-[12px] uppercase">
+            <ul className="space-y-1.5">
+              <li className="text-white font-inter-tight font-light text-[12px] uppercase">
                 PHONE: +91-422-2666842
               </li>
-              <li className="text-white font-hoves-pro font-light text-[12px] uppercase">
+              <li className="text-white font-inter-tight font-light text-[12px] uppercase">
                 ENQUIRY: +91-87540-14018
               </li>
-              <li className="text-white font-hoves-pro font-light text-[12px] uppercase">
+              <li className="text-white font-inter-tight font-light text-[12px] uppercase">
                 EMAIL: SALESCORPORATE@AQUAEXCEL.IN
               </li>
             </ul>
@@ -192,11 +192,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white font-hoves-pro font-bold text-[18px]">
+        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <p className="text-white font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
             © 2025 AQUA EXCEL . ALL RIGHTS RESERVED.
           </p>
-          <p className="text-white font-hoves-pro font-bold text-[18px]">
+          <p className="text-white font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
             DESIGNED & DEVELOPED BY TIC GLOBAL SERVICES
           </p>
         </div>

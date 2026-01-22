@@ -9,12 +9,12 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { id: 1, text: "No Leaks after two years.", rating: 5, avatar: "👤" },
-  { id: 2, text: "Higher margins fewer returns.", rating: 5, avatar: "👤" },
-  { id: 3, text: "Looks great.", rating: 4, avatar: "👤" },
-  { id: 4, text: "Best quality products.", rating: 5, avatar: "👤" },
-  { id: 5, text: "Excellent service.", rating: 5, avatar: "👤" },
-  { id: 6, text: "Highly recommended.", rating: 5, avatar: "👤" },
+  { id: 1, text: "No Leaks after two years.", rating: 0, avatar: "👤" },
+  { id: 2, text: "Higher margins fewer returns.", rating: 0, avatar: "👤" },
+  { id: 3, text: "Looks great.", rating: 0, avatar: "👤" },
+  { id: 4, text: "Best quality products.", rating: 0, avatar: "👤" },
+  { id: 5, text: "Excellent service.", rating: 0, avatar: "👤" },
+  { id: 6, text: "Highly recommended.", rating: 0, avatar: "👤" },
 ];
 
 const TestimonialsSection = () => {
@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
                           {[...Array(5)].map((_, i) => (
                             <span
                               key={i}
-                              className={`text-sm ${i < testimonial.rating ? "text-[#E31E24]" : "text-gray-300"
+                              className={`text-sm ${ testimonial.rating >0 ? "text-[#E31E24]" : "text-[#00000066]"
                                 }`}
                             >
                               ★

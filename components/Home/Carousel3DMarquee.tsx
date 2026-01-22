@@ -80,8 +80,8 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   }, []);
 
   const faceCount: number = galleryImages.length;
-  const faceWidth: number = (cylinderWidth / faceCount) * 1.12;
-  const radius: number = cylinderWidth / (1.7 * Math.PI);
+  const faceWidth: number = (cylinderWidth / faceCount) * 0.9;
+  const radius: number = cylinderWidth / (2 * Math.PI);
   const angleStep: number = 360 / faceCount;
 
   // Drag tracking state
@@ -228,7 +228,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
           </p>
         </div>
 
-        <div className="flex pt-[9%] items-center justify-center [perspective:1200px] [transform-style:preserve-3d] px-6 md:px-0">
+        <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d] px-6 md:px-0 -translate-y-20">
           <motion.div
             drag="x"
             dragElastic={0}
@@ -261,7 +261,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
               transformStyle: "preserve-3d",
               touchAction: "pan-x",
             }}
-            className="flex min-h-[200px] cursor-grab active:cursor-grabbing items-center justify-center transform-3d"
+            className="flex min-h-[300px] cursor-grab active:cursor-grabbing items-center justify-center transform-3d"
           >
             {galleryImages.map((item, i) => (
               <div
@@ -273,7 +273,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                     }deg) translateZ(${radius}px)`,
                 }}
               >
-                <div className="relative h-[270px] w-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] lg:w-[350px] xl:w-[380px] rounded-[15px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
+                <div className="relative h-[270px] w-[220px] sm:w-[280px] sm:h-[300px] md:w-[320px] lg:w-[350px] xl:w-[344px] rounded-[15px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
 
                   <img
                     src={item.url}
