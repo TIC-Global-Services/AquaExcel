@@ -62,14 +62,14 @@ const Faq = () => {
                         Frequently Asked Questions
                     </h2>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-start relative px-4 lg:px-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center relative px-4 lg:px-0">
                         {/* Question List */}
-                        <div className="flex flex-col bg-[#FFFFFF] rounded-2xl shadow-sm space-y-4 lg:space-y-6 relative z-10 p-5 lg:p-0 lg:bg-transparent lg:shadow-none lg:rounded-none">
+                        <div className="flex flex-col bg-[#FFFFFF] rounded-2xl shadow-sm space-y-4 lg:space-y-6 relative z-10 p-5 lg:px-5">
                             {faqData.map((item) => (
-                                <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0">
+                                <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0 ">
                                     <button
                                         onClick={() => setActiveId(activeId === item.id ? null : item.id)}
-                                        className={`group flex items-center w-full py-4 text-left transition-all duration-300 ${activeId === item.id ? "opacity-100" : "opacity-100 lg:opacity-60 lg:hover:opacity-100"
+                                        className={`group flex items-center w-full py-4 text-left transition-all duration-300 ${activeId === item.id ? "opacity-100 bg-[#FFFEFA]" : "opacity-100 lg:opacity-60 lg:hover:opacity-100"
                                             }`}
                                     >
                                         {/* Custom Radio Circle - Desktop Only */}
@@ -102,7 +102,7 @@ const Faq = () => {
                         </div>
 
                         {/* Desktop Answer Section - Hidden on Mobile */}
-                        <div className="hidden lg:block relative z-0 lg:-ml-20 w-full lg:w-[110%]">
+                        <div className="hidden lg:block shadow-lg rounded-[2rem] relative z-0 lg:-ml-20 w-full lg:w-[110%]">
                             <div className="bg-[#FAF9F6] rounded-[2rem] p-8 md:p-12 lg:p-16 lg:pl-32 h-full min-h-[550px] flex flex-col justify-center transition-all duration-500 ease-in-out">
                                 <h3 className="text-2xl md:text-3xl font-medium text-black mb-6">
                                     {activeFAQ?.question}
