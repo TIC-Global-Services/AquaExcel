@@ -38,9 +38,9 @@ const ContactForm = () => {
                             <h2 className="font-hoves-pro font-medium text-xl lg:text-[44px] tracking-[-4%] md:leading-[46px] text-foreground md:mb-4 mb-2">
                                 Let's Connect
                             </h2>
-                            <p className="font-inter-tight font-regular text-sm lg:text-xl text-black  leading-[100%]  px-6 md:px-0 md:max-w-4xl md:mx-auto">
+                            <p className="font-inter-tight font-regular text-sm lg:text-xl text-black  leading-[120%]  px-6 md:px-0 md:max-w-5xl md:mx-auto">
                                 We're Here To Answer Your Questions And Discuss Your Ideas. Whether It's Project Support, Product Info,
-                                Or Just To Get In Touch, We'd Love To Hear From You And Will Respond Promptly.
+                               <br className='md:block hidden'/> Or Just To Get In Touch, We'd Love To Hear From You And Will Respond Promptly.
                             </p>
                         </div>
 
@@ -96,7 +96,7 @@ const ContactForm = () => {
                             <h2 className="font-hoves-pro font-medium text-2xl lg:text-4xl text-foreground md:mb-4 mb-2">
                                 Become a Dealer
                             </h2>
-                            <p className="font-inter-tight font-regular text-sm lg:text-xl leading-[100%] px-6 md:px-0  text-black max-w-4xl mx-auto">
+                            <p className="font-inter-tight font-regular text-sm lg:text-xl leading-[120%] px-6 md:px-0  text-black max-w-4xl mx-auto">
                                 Interested In Becoming A Dealer? Share Your Details With Us, And Our Team Will Connect With You To Discuss
                                 Partnership Opportunities And Requirements.
                             </p>
