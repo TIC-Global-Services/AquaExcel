@@ -80,7 +80,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   customContent,
   overlay = false,
   overlayColor = "black",
-  overlayOpacity = 0.3,
+  overlayOpacity = 0.5,
 }) => {
   const contentAlignmentClasses = {
     left: "items-start text-left",

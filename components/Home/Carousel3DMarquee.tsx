@@ -66,7 +66,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
       else if (width <= 768) setCylinderWidth(2600);
       else if (width <= 1024) setCylinderWidth(2200);
       else if (width <= 1280) setCylinderWidth(2500);
-      else setCylinderWidth(2800);
+      else setCylinderWidth(3800);
     };
 
     updateDeviceSettings();
@@ -80,8 +80,8 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   }, []);
 
   const faceCount: number = galleryImages.length;
-  const faceWidth: number = (cylinderWidth / faceCount) * 0.9;
-  const radius: number = cylinderWidth / (2 * Math.PI);
+  const faceWidth: number = (cylinderWidth / faceCount) * 0.7;
+  const radius: number = cylinderWidth / (2.5 * Math.PI);
   const angleStep: number = 360 / faceCount;
 
   // Drag tracking state
@@ -153,7 +153,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
     const newDragDistance = dragDistance + info.delta.x;
     setDragDistance(newDragDistance);
 
-    const dragThreshold = isMobile ? 80 : 120;
+    const dragThreshold = isMobile ? 80 : 100;
 
     if (Math.abs(newDragDistance) >= dragThreshold) {
       const currentAngle = rotation.get();
@@ -228,7 +228,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
           </p>
         </div>
 
-        <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d] px-6 md:px-0 -translate-y-20">
+        <div className="flex h-full items-center justify-center [perspective:1900px] [transform-style:preserve-3d] px-6 md:px-0 -translate-y-30">
           <motion.div
             drag="x"
             dragElastic={0}
@@ -288,7 +288,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                     </h3>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-40" />
+                  <div className="absolute bottom-0 left-0 right-0 h-20 backdrop-blur-xs z-40" />
                 </div>
               </div>
             ))}
