@@ -13,7 +13,7 @@ const ContactForm = () => {
                 <div className="flex justify-center gap-4 mb-10">
                     <button
                         onClick={() => setActiveTab('contact')}
-                        className={`px-6 py-3 rounded-full font-hoves-pro font-medium text-base transition-all ${activeTab === 'contact'
+                        className={`px-6 py-3 rounded-full font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'contact'
                                 ? 'bg-[#E31E24] text-white'
                                 : 'bg-[#FAF9F5] text-foreground hover:bg-[#f0ede8]'
                             }`}
@@ -22,7 +22,7 @@ const ContactForm = () => {
                     </button>
                     <button
                         onClick={() => setActiveTab('dealer')}
-                        className={`px-6 py-3 rounded-full font-hoves-pro font-medium text-base transition-all ${activeTab === 'dealer'
+                        className={`px-6 py-3 rounded-full font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'dealer'
                                 ? 'bg-[#E31E24] text-white'
                                 : 'bg-[#FAF9F5] text-foreground hover:bg-[#f0ede8]'
                             }`}
@@ -35,10 +35,10 @@ const ContactForm = () => {
                 {activeTab === 'contact' && (
                     <div className="rounded-[20px] lg:rounded-[40px] py-2 lg:py-2">
                         <div className="text-center mb-10">
-                            <h2 className="font-hoves-pro font-medium text-2xl lg:text-[44px] tracking-[-4%] md:leading-[46px] text-foreground mb-4">
+                            <h2 className="font-hoves-pro font-medium text-xl lg:text-[44px] tracking-[-4%] md:leading-[46px] text-foreground md:mb-4 mb-2">
                                 Let's Connect
                             </h2>
-                            <p className="font-inter-tight font-regular text-sm lg:text-xl text-black leading-[100%] max-w-4xl mx-auto">
+                            <p className="font-inter-tight font-regular text-sm lg:text-xl text-black  leading-[100%]  px-6 md:px-0 md:max-w-4xl md:mx-auto">
                                 We're Here To Answer Your Questions And Discuss Your Ideas. Whether It's Project Support, Product Info,
                                 Or Just To Get In Touch, We'd Love To Hear From You And Will Respond Promptly.
                             </p>
@@ -80,7 +80,7 @@ const ContactForm = () => {
                             <div className="flex justify-center pt-4">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white px-8 py-3 rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f]  transition-colors"
+                                    className="bg-[#E31E24] text-white  px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f]  transition-colors"
                                 >
                                     Submit Customer Enquiry
                                 </button>
@@ -93,10 +93,10 @@ const ContactForm = () => {
                 {activeTab === 'dealer' && (
                     <div className="rounded-[20px] lg:rounded-[40px] py-2 lg:py-2">
                         <div className="text-center mb-10">
-                            <h2 className="font-hoves-pro font-medium text-2xl lg:text-4xl text-foreground mb-4">
+                            <h2 className="font-hoves-pro font-medium text-2xl lg:text-4xl text-foreground md:mb-4 mb-2">
                                 Become a Dealer
                             </h2>
-                            <p className="font-inter-tight font-regular text-sm lg:text-xl leading-[100%] text-black max-w-4xl mx-auto">
+                            <p className="font-inter-tight font-regular text-sm lg:text-xl leading-[100%] px-6 md:px-0  text-black max-w-4xl mx-auto">
                                 Interested In Becoming A Dealer? Share Your Details With Us, And Our Team Will Connect With You To Discuss
                                 Partnership Opportunities And Requirements.
                             </p>
@@ -151,7 +151,7 @@ const ContactForm = () => {
                             <div className="flex justify-center pt-4">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white px-8 py-3 rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
+                                    className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
                                 >
                                     Connect With Us
                                 </button>

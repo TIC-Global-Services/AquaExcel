@@ -9,24 +9,21 @@ const ContactDetails = () => {
       <section className="py-10 lg:py-20 bg-background">
       <div className="">
         <div className="bg-[#FAF9F5] rounded-[20px] lg:rounded-[40px] p-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center justify-center py-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-center justify-center py-10">
 
             {/* Left - Corporate Office */}
-            <div className="text-left lg:text-left">
+            <div className="text-left lg:text-left w-full">
               <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-4">
                 Corporate Office
               </h3>
-              <div className="font-inter-tight text-sm lg:text-base text-[#646464] ">
-                <p className="font-medium mb-1 text-[24px] leading-[100%]">Aqua Excel</p>
-                <p className='text-[24px] font-light leading-[100%]'>S.F.NO.274/4, Anna Private</p>
-                <p className='text-[24px] font-light leading-[100%]'>Industrial Estate, Vilankurichi</p>
-                <p className='text-[24px] font-light leading-[100%]'>Road, Coimbatore - 641035</p>
-              </div>
+             
+                <p className="font-medium mb-1 text-base md:text-[24px] leading-[100%]">Aqua Excel</p>
+                <p className='text-base md:text-[24px] font-light leading-[100%] w-[90%]'>S.F.NO.274/4, Anna Private Industrial Estate, Vilankurichi Road, Coimbatore - 641035</p>
             </div>
 
             {/* Center - Tap Image */}
-            <div className="flex justify-center lg:order-none mb-20">
-              <div className="relative  w-[150px] h-[150px] lg:w-[292px] lg:h-[338px]">
+            <div className="flex justify-center lg:order-none mb-5">
+              <div className="relative  w-[162px] h-[187px] lg:w-[292px] lg:h-[338px]">
                 <Image
                   src={tapimage}
                   alt="Aqua Excel Tap"
@@ -37,22 +34,22 @@ const ContactDetails = () => {
             </div>
 
             {/* Right - Contact */}
-            <div className="text-left lg:text-left">
+            <div className="text-left lg:text-left w-full">
               <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-4">
                 Contact
               </h3>
               <div className=" space-y-2">
                 <p>
-                  <span className="text-black font-normal text-[24px] font-hoves-pro leading-[100%]">Enquiry: </span>
-                  <a href="tel:+918754010016" className="font-light text-[#646464]  text-[24px] leading-[100%] font-inter-tight">+91-87540 10016</a>
+                  <span className="text-black font-normal text-base md:text-[24px] font-hoves-pro leading-[100%]">Enquiry: </span>
+                  <a href="tel:+918754010016" className="font-light text-[#646464]  text-base md:text-[24px] leading-[100%] font-inter-tight">+91-87540 10016</a>
                 </p>
                 <p>
-                  <span className="text-black font-normal text-[24px] leading-[100%] font-hoves-pro">Phone: </span>
-                  <a href="tel:+914222986842" className="font-light text-[#646464] text-[24px] leading-[100%] font-inter-tight">+91-422-2986842</a>
+                  <span className="text-black font-normal text-base md:text-[24px] leading-[100%] font-hoves-pro">Phone: </span>
+                  <a href="tel:+914222986842" className="font-light text-[#646464] text-base md:text-[24px] leading-[100%] font-inter-tight">+91-422-2986842</a>
                 </p>
                 <p>
-                  <span className="text-black font-normal text-[24px] leading-[100%] font-hoves-pro">Email: </span>
-                  <a href="mailto:salescoordinator@aquaexcel.in" className="font-light text-[#646464] text-[22px] leading-[100%] font-inter-tight">salescoordinator@aquaexcel.in</a>
+                  <span className="text-black font-normal text-base md:text-[24px] leading-[100%] font-hoves-pro">Email: </span>
+                  <a href="mailto:salescoordinator@aquaexcel.in" className="font-light text-[#646464] text-base md:text-[22px] leading-[100%] font-inter-tight">salescoordinator@aquaexcel.in</a>
                 </p>
               </div>
             </div>

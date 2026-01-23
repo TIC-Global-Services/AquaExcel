@@ -21,11 +21,11 @@ const map = () => {
             <input
               type="text"
               placeholder="Search Postal code / City"
-              className="w-full px-4 py-3.5 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight placeholder:font-medium text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+              className="w-full px-4 py-2 md:py-3.5 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight placeholder:text-[12px] placeholder:md:text-base placeholder:font-medium text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
             />
           </div>
           <div className="shrink-0">
-            <button className="border border-[#646464] rounded-lg p-3.5 bg-[#FAF9F5] hover:bg-gray-50 transition-colors h-full flex items-center justify-center">
+            <button className="border border-[#646464] rounded-lg p-2 md:p-3.5 bg-[#FAF9F5] hover:bg-gray-50 transition-colors h-full flex items-center justify-center">
               <Image src={filter} alt="Filter" className="w-6 h-6" />
             </button>
           </div>

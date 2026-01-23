@@ -56,29 +56,29 @@ const Faq = () => {
 
     return (
         <ContainerLayout>
-            <div className="w-full bg-white py-16">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl md:text-[44px] font-medium text-black mb-10">
+            <div className="w-full bg-white md:py-16">
+                <div className="md:max-w-7xl mx-auto">
+                    <h2 className="text-xl md:text-[44px] text-center md:text-left font-medium text-black mb-0 md:mb-10">
                         Frequently Asked Questions
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center relative px-4 lg:px-0">
                         {/* Question List */}
-                        <div className="flex flex-col bg-[#FFFFFF] rounded-[8px] shadow-sm space-y-4 lg:space-y-3 relative z-10 p-5 lg:px-5">
+                        <div className="flex flex-col bg-[#FFFFFF] rounded-[8px] shadow-sm space-y-4 lg:space-y-3 relative z-10">
                             {faqData.map((item) => (
-                                <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0 ">
+                                <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0">
                                     <button
                                         onClick={() => setActiveId(activeId === item.id ? null : item.id)}
-                                        className={`group flex items-center w-full py-4 text-left transition-all duration-300 ${activeId === item.id ? "opacity-100 bg-[#FFFEFA]" : "opacity-100 lg:opacity-60 lg:hover:opacity-100"
+                                        className={`group flex items-center w-full py-4 text-left px-2 gap-2 transition-all duration-300 ${activeId === item.id ? "opacity-100 bg-[#FFFEFA]" : "opacity-100 lg:opacity-60 lg:hover:opacity-100"
                                             }`}
                                     >
                                         {/* Custom Radio Circle - Desktop Only */}
                                         <div
-                                            className={`hidden lg:block flex-shrink-0 w-5 h-5 rounded-full mr-6 transition-colors duration-300 ${activeId === item.id ? "bg-black" : "bg-gray-300"
+                                            className={`block flex-shrink-0 md:w-5 md:h-5 h-4 w-4 rounded-full transition-colors  duration-300 ${activeId === item.id ? "bg-black" : "bg-gray-300"
                                                 }`}
                                         />
 
-                                        <span className="text-xs md:text-base text-black font-medium flex-grow pr-4">
+                                        <span className="text-xs md:text-base font-inter-tight text-black font-regular flex-grow">
                                             {item.question}
                                         </span>
 
@@ -90,10 +90,10 @@ const Faq = () => {
 
                                     {/* Mobile Answer - Accordion Style */}
                                     <div
-                                        className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${activeId === item.id ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0"
+                                        className={`lg:hidden overflow-hidden px-3 md:px-0 transition-[max-height,opacity] duration-300 ease-in-out ${activeId === item.id ? "max-h-96 opacity-100 pb-4 bg-[#FAF9F5]" : "max-h-0 opacity-0"
                                             }`}
                                     >
-                                        <p className="text-gray-600 leading-relaxed text-base pl-1">
+                                        <p className="text-gray-600 font-inter-tight leading-relaxed text-xs md:text-base pl-1">
                                             {item.answer}
                                         </p>
                                     </div>
