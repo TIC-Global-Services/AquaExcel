@@ -8,10 +8,10 @@ const map = () => {
     <ContainerLayout>
       <div>
         <div className="flex flex-col gap-2 justify-center items-center">
-          <h1 className="text-[44px] font-hoves-pro font-medium tracking-[-4%]">
+          <h1 className="text-[20px] md:text-[44px] font-hoves-pro font-medium tracking-[-4%]">
             Find a Dealer
           </h1>
-          <p className="font-inter-tight font-light text-sm lg:text-xl text-black text-center max-w-2xl">
+          <p className="font-inter-tight font-regular text-sm lg:text-xl text-black text-center max-w-2xl">
             Find the closest Aqua Excel dealer with ease. Search nearby
             locations and connect with verified partners instantly.
           </p>
@@ -20,12 +20,12 @@ const map = () => {
           <div className="w-full">
             <input
               type="text"
-              placeholder="Enter your location"
-              className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-lg font-hoves-pro text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
+              placeholder="Search Postal code / City"
+              className="w-full px-4 py-3.5 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight placeholder:font-medium text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-[#E31E24] transition-colors"
             />
           </div>
           <div className="shrink-0">
-            <button className="border border-gray-200 rounded-lg p-3.5 hover:bg-gray-50 transition-colors h-full flex items-center justify-center">
+            <button className="border border-[#646464] rounded-lg p-3.5 bg-[#FAF9F5] hover:bg-gray-50 transition-colors h-full flex items-center justify-center">
               <Image src={filter} alt="Filter" className="w-6 h-6" />
             </button>
           </div>

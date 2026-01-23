@@ -58,13 +58,13 @@ const Faq = () => {
         <ContainerLayout>
             <div className="w-full bg-white py-16">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-medium text-black mb-16">
+                    <h2 className="text-4xl md:text-[44px] font-medium text-black mb-10">
                         Frequently Asked Questions
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center relative px-4 lg:px-0">
                         {/* Question List */}
-                        <div className="flex flex-col bg-[#FFFFFF] rounded-2xl shadow-sm space-y-4 lg:space-y-6 relative z-10 p-5 lg:px-5">
+                        <div className="flex flex-col bg-[#FFFFFF] rounded-[8px] shadow-sm space-y-4 lg:space-y-3 relative z-10 p-5 lg:px-5">
                             {faqData.map((item) => (
                                 <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0 ">
                                     <button
@@ -78,7 +78,7 @@ const Faq = () => {
                                                 }`}
                                         />
 
-                                        <span className="text-lg md:text-xl text-black font-medium flex-grow pr-4">
+                                        <span className="text-xs md:text-base text-black font-medium flex-grow pr-4">
                                             {item.question}
                                         </span>
 
@@ -102,12 +102,12 @@ const Faq = () => {
                         </div>
 
                         {/* Desktop Answer Section - Hidden on Mobile */}
-                        <div className="hidden lg:block shadow-lg rounded-[2rem] relative z-0 lg:-ml-20 w-full lg:w-[110%]">
-                            <div className="bg-[#FAF9F6] rounded-[2rem] p-8 md:p-12 lg:p-16 lg:pl-32 h-full min-h-[550px] flex flex-col justify-center transition-all duration-500 ease-in-out">
-                                <h3 className="text-2xl md:text-3xl font-medium text-black mb-6">
+                        <div className="hidden lg:block shadow-sm rounded-[16px] relative z-0 lg:-ml-20 w-full lg:w-[110%] ">
+                            <div className="bg-[#FAF9F6] rounded-[16px] p-8 md:p-12 lg:p-12 lg:pl-32 h-full min-h-[500px] flex flex-col justify-start transition-all duration-500 ease-in-out ">
+                                <h3 className="text-xl md:text-2xl font-hoves-pro font-medium text-black mb-6">
                                     {activeFAQ?.question}
                                 </h3>
-                                <p className="text-gray-700 leading-relaxed text-lg">
+                                <p className="text-gray-700 leading-relaxed text-base font-inter-tight">
                                     {activeFAQ?.answer}
                                 </p>
                             </div>

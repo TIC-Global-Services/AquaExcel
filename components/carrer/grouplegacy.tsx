@@ -8,7 +8,7 @@ const grouplegacy = () => {
   return (
     <ContainerLayout>
       <section className="py-[5%] bg-background">
-      <div className="relative w-full py-[40%] lg:py-[18%] overflow-hidden rounded-[20px]">
+      <div className="relative w-full py-[40%] lg:py-[20%] overflow-hidden rounded-[20px]">
         {/* Background Image */}
 
         <div className="absolute inset-0">
@@ -24,11 +24,11 @@ const grouplegacy = () => {
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="absolute bottom-8 left-[5%] right-[5%] md:left-10 md:right-10 xl:bottom-15 xl:left-10 xl:right-5 z-10">
-          <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] xl:tracking-[-2px] leading-tight mb-4">
+        <div className="absolute bottom-10 left-[5%] right-[5%] md:left-10 md:right-10 xl:bottom-10 xl:left-10 xl:right-5 z-10">
+          <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] xl:tracking-[-2px] leading-tight">
             Excel Group Legacy
           </h2>
-          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-4 leading-relaxed">
+          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-2 leading-[100%]">
             Excel Plast (25+ years) supplies polymer components to leading
             Indian and global organizations—bringing manufacturing
             discipline and reliability to Aqua Excel’s plumbing solutions.
