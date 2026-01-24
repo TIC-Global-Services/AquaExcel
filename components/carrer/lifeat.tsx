@@ -10,7 +10,7 @@ import sliderimg1 from '@/assets/carrer/slider1.jpg'
 import sliderimg2 from '@/assets/carrer/slider1.jpg'
 import sliderimg3 from '@/assets/carrer/slider1.jpg'
 
-import Card from "../reuseable/why-us/slidercard";
+import Card from "../reuseable/why-us/slidercards";
 import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger);
@@ -38,33 +38,29 @@ const LifeAt = () => {
     },
   ]
 
-   useEffect(() => {
+    useEffect(() => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth < 768;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top top',
-          end: `+=${slides.length * (isMobile ? 50 : 100)}%`,
-          pin: !isMobile,
-          scrub: true,
+          start: "top top",
+          end: `+=${slides.length * (isMobile ? 150 : 100)}%`,
+          pin: true,
+          scrub: isMobile ? 0.2 : 1,
         },
       });
+
       slides.forEach((_, index) => {
         if (index === 0) {
-          // First card is visible by default
-          tl.set(`.card-${index}`, { xPercent: 0, opacity: 1 });
+          tl.set(`.card-cp-${index}`, { xPercent: 0, opacity: 1 });
         } else {
-          // Fade out the previous card while the new card slides in
-          tl.to(
-            `.card-${index - 1}`,
-            { opacity: 0, duration: 1 },
-          );
+          tl.to(`.card-cp-${index - 1}`, { opacity: 0, duration: 1 });
           tl.fromTo(
-            `.card-${index}`,
-            { xPercent: 130, opacity: 0.5 },
+            `.card-cp-${index}`,
+            { xPercent: 130, opacity: 0 },
             { xPercent: 0, opacity: 1, duration: 1, ease: "none" },
-            "<" // Start at the same time as the previous animation
+            "<"
           );
         }
       });
@@ -76,36 +72,50 @@ const LifeAt = () => {
 
 
   return (
-    <div ref={sectionRef} className="relative">
-      <div className="relative w-full min-h-screen overflow-hidden">
+    <div
+      ref={sectionRef}
+      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+    >
+      {/* Background Section */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <Image
           src={bgimage}
-          alt="Download App Background"
+          alt="Quality Measure Background"
           fill
-          priority={false}
-          loading="lazy"
-          // sizes="100vw"
+          priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="absolute bottom-10 md:bottom-[15%] w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
-          <div className="mt-80 translate-x-[14%]">
-            <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white tracking-tighter leading-[120%] font-medium">
-              Life at Aqua Excel
-            </h2>
-            <p className="lg:text-xl text-sm font-medium leading-[120%] text-white max-w-md">
-              We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
-            </p>
-          </div>
-          <div className="relative xl:w-full h-[38.889dvh] md:h-[77.778dvh] overflow-hidden translate-y-[10%]">
-            {slides.map((res, index) => (
-              <div key={index} className={`card-${index} absolute top-0 left-0`} style={{ zIndex: index + 1 }}>
-                <Card title={res.title} description={res.description} image={res.image} icon={res.icon} />
-              </div>
-            ))}
-          </div>
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-[8%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
+
+        {/* Left Side - Text Content */}
+        <div className="flex flex-col text-left w-full mt-20 lg:mb-20   lg:overflow-hidden">
+          <h1 className="text-white text-xl leading-[120%] md:text-[clamp(16px,3vw,40px)] font-medium  mb-2 md:leading-[50px] tracking-tight font-hoves-pro">
+            Life at Aqua Excel
+          </h1>
+          <p className="text-[#E0E0E0] text-sm md:text-[clamp(20px,1.4vw,44px)] font-medium opacity-90 max-w-md md:max-w-xl font-inter-tight leading-[120%]">
+            We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
+          </p>
+        </div>
+
+        {/* Right Side - Slider Cards */}
+        <div className="w-full max-w-[630px] aspect-auto h-[65vh] sm:h-[75vh] lg:h-[70vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
+          {slides.map((res, index) => (
+            <div
+              key={index}
+              className={`card-cp-${index} absolute inset-0 w-full h-full opacity-0`}
+              style={{ zIndex: index + 1 }}
+            >
+              <Card
+                title={res.title}
+                description={res.description}
+                image={res.image}
+                icon={res.icon}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
