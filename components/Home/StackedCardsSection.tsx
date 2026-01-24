@@ -60,10 +60,10 @@ const StackedCardsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-foreground font-hoves-pro font-medium text-2xl lg:text-[44px] mb-4 leading-tight">
+            <h2 className="text-foreground font-hoves-pro font-medium text-2xl lg:text-[44px] mb-4 tracking-tighter leading-tight">
               Aqua Excel in Motion
             </h2>
-            <p className="text-foreground font-inter-tight font-[400] text-base lg:text-[24px] mb-8 leading-[100%] max-w-3xl">
+            <p className="text-foreground font-inter-tight font-[400] text-base lg:text-[24px] mb-6 leading-[100%] max-w-3xl">
               Discover immersive glimpses of the style, performance, and craftsmanship behind our products, beautifully captured through every reel.
             </p>
            <Link href="/products"><Button variant="primary" className="hidden lg:block ">Watch More</Button></Link>

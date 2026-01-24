@@ -51,6 +51,11 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
+  // Navigation drag state
+  const navDragStartX = useRef<number>(0);
+  const isNavDragging = useRef<boolean>(false);
+  const lastNavUpdate = useRef<number>(Date.now());
+  const animationFrameId = useRef<number | null>(null);
 
   // Device detection and responsive setup
   useEffect(() => {
@@ -66,7 +71,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
       else if (width <= 768) setCylinderWidth(2600);
       else if (width <= 1024) setCylinderWidth(2200);
       else if (width <= 1280) setCylinderWidth(2500);
-      else setCylinderWidth(3800);
+      else setCylinderWidth(2900);
     };
 
     updateDeviceSettings();
@@ -80,8 +85,8 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   }, []);
 
   const faceCount: number = galleryImages.length;
-  const faceWidth: number = (cylinderWidth / faceCount) * 0.7;
-  const radius: number = cylinderWidth / (2.5 * Math.PI);
+  const faceWidth: number = (cylinderWidth / faceCount) *1.1;
+  const radius: number = cylinderWidth / (1.7  * Math.PI);
   const angleStep: number = 360 / faceCount;
 
   // Drag tracking state
@@ -153,7 +158,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
     const newDragDistance = dragDistance + info.delta.x;
     setDragDistance(newDragDistance);
 
-    const dragThreshold = isMobile ? 80 : 100;
+    const dragThreshold = isMobile ? 80 : 120;
 
     if (Math.abs(newDragDistance) >= dragThreshold) {
       const currentAngle = rotation.get();
@@ -207,11 +212,109 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
     }
   };
 
+  // Navigation function
+  const navigateToIndex = (index: number): void => {
+    if (index === currentIndex) return;
 
+    const currentAngle = rotation.get();
+    const targetAngle = currentAngle - angleStep * (index - currentIndex);
+
+    controls
+      .start({
+        rotateY: targetAngle,
+        transition: {
+          duration: 0.5,
+          ease: "easeOut",
+        },
+      })
+      .then(() => {
+        rotation.set(targetAngle);
+        setCurrentIndex(index);
+      });
+  };
+
+  // Navigation drag handlers with throttling to prevent bugs
+  const handleNavDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    navDragStartX.current = clientX;
+    isNavDragging.current = true;
+    lastNavUpdate.current = Date.now();
+    setIsAutoScrolling(false);
+    controls.stop();
+  };
+
+  const handleNavDrag = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isNavDragging.current) return;
+
+    const now = Date.now();
+    // Throttle updates to every 50ms to prevent rapid firing
+    if (now - lastNavUpdate.current < 50) return;
+
+    e.preventDefault();
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const totalDrag = clientX - navDragStartX.current;
+
+    // Calculate how many items to scroll (increased sensitivity)
+    const pixelsPerItem = 30; // Adjust this value: lower = more sensitive
+    const itemsToScroll = Math.round(totalDrag / pixelsPerItem);
+
+    if (itemsToScroll !== 0) {
+      // Calculate new index and wrap around
+      const newIndex = (currentIndex - itemsToScroll + faceCount * 100) % faceCount;
+
+      if (newIndex !== currentIndex) {
+        navigateToIndex(newIndex);
+        // Reset the start position to current position for continuous drag
+        navDragStartX.current = clientX;
+        lastNavUpdate.current = now;
+      }
+    }
+  };
+
+  const handleNavDragEnd = () => {
+    isNavDragging.current = false;
+
+    if (animationFrameId.current) {
+      cancelAnimationFrame(animationFrameId.current);
+      animationFrameId.current = null;
+    }
+
+    if (autoplay) {
+      setTimeout(() => {
+        setIsAutoScrolling(true);
+      }, 1000);
+    }
+  };
+
+  // Cleanup animation frame on unmount
+  useEffect(() => {
+    return () => {
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
+    };
+  }, []);
+
+  // Navigation dot click handler
+  const handleDotClick = (index: number): void => {
+    if (index === currentIndex || isDragging) return;
+
+    setIsAutoScrolling(false);
+    controls.stop();
+
+    navigateToIndex(index);
+
+    setTimeout(() => {
+      if (autoplay) {
+        setIsAutoScrolling(true);
+      }
+    }, 1000);
+  };
   return (
     <div className="overflow-x-hidden">
       <motion.div
-        className="relative md:h-[900px] h-[800px] w-full overflow-hidden py-20 md:py-20"
+        className="relative md:h-[900px] h-[800px] w-full overflow-hidden py-20 md:py-28"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
@@ -219,16 +322,16 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="text-center  px-6 space-y-0">
-          <h2 className="text-foreground font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
+         <h2 className="text-foreground font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
             Product Universe
           </h2>
           <p className="text-foreground font-inter-tight leading-[100%] font-light text-sm lg:text-[20px] tracking-[-1%] max-w-2xl mx-auto">
-            Offering Forward-Thinking Products Paired With Complete, Reliable
+            Offering Forward-Thinking Products Paired With Complete, Reliable<br/>
             Solutions For Every Need.
           </p>
         </div>
 
-        <div className="flex h-full items-center justify-center [perspective:1900px] [transform-style:preserve-3d] px-6 md:px-0 -translate-y-30">
+        <div className="flex h-full items-center justify-center [perspective:2500px] [transform-style:preserve-3d]">
           <motion.div
             drag="x"
             dragElastic={0}
@@ -261,7 +364,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
               transformStyle: "preserve-3d",
               touchAction: "pan-x",
             }}
-            className="flex min-h-[300px] cursor-grab active:cursor-grabbing items-center justify-center transform-3d"
+            className="flex min-h-[200px] cursor-grab active:cursor-grabbing items-center justify-center [transform-style:preserve-3d]"
           >
             {galleryImages.map((item, i) => (
               <div
@@ -273,8 +376,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                     }deg) translateZ(${radius}px)`,
                 }}
               >
-                <div className="relative h-[270px] w-[220px] sm:w-[280px] sm:h-[300px] md:w-[320px] lg:w-[350px] xl:w-[344px] rounded-[15px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
-
+                <div className="relative w-[344px] aspect-[280/455] rounded-[32px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
                   <img
                     src={item.url}
                     alt={item.title}
@@ -282,19 +384,60 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                     draggable={false}
                   />
 
-                  <div className="absolute bottom-0 left-0 right-0 pl-4 pt-3.5 pb-3 text-white z-50 select-none">
+                  <div className="absolute bottom-0 left-0 right-0 pl-5 pt-3.5 pb-5 text-white z-50 select-none">
                     <h3 className="xl:text-[18px] text-md font-light md:leading-[100%]">
                       {item.title}
                     </h3>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 h-20 backdrop-blur-xs z-40" />
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-40" />
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
 
+        {/* Perfect 3D Curved Navigation with Smooth Drag */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+          <div className="relative w-[500px] h-24 flex items-center justify-center">
+            {/* 3D Perspective Container */}
+            <div
+              className="relative w-full h-full cursor-grab active:cursor-grabbing select-none"
+              style={{
+                perspective: "1000px",
+                transformStyle: "preserve-3d",
+              }}
+              onMouseDown={handleNavDragStart}
+              onMouseMove={(e) => {
+                if (e.buttons === 1) handleNavDrag(e);
+              }}
+              onMouseUp={handleNavDragEnd}
+              onMouseLeave={handleNavDragEnd}
+              onTouchStart={handleNavDragStart}
+              onTouchMove={handleNavDrag}
+              onTouchEnd={handleNavDragEnd}
+            >
+              {/* Curved Track Background */}
+              <div
+                className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                style={{
+                  transform: "rotateX(35deg)",
+                  transformStyle: "preserve-3d",
+                }}
+              >
+                <div
+                  className="w-80 h-1 rounded-full"
+                  style={{
+                    transform: "translateZ(-40px)",
+                  }}
+                />
+              </div>
+
+              {/* Navigation Dots Container */}
+
+            </div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );

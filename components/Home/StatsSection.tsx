@@ -65,10 +65,10 @@ const StatsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-[-4%]  lg:text-[44px] mb-1">
+          <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-tighter  lg:text-[44px] mb-1">
             Aqua Excel at a glance
           </h2>
-          <p className="text-foreground font-hoves-pro font-regular text-base lg:text-[24px] max-w-4xl">
+          <p className="text-foreground font-inter-tight font-regular tracking-tight text-base lg:text-[24px] max-w-4xl">
             A brief look into the trust, expertise, and innovation shaping Aqua Excel today.
           </p>
         </motion.div>

@@ -56,7 +56,7 @@ const AppSection = () => {
           <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] tracking-[-2px] leading-tight mb-1">
             Learn how the Aqua Excel App works?
           </h2>
-          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-1 leading-[100%]">
+          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-1 leading-[120%]">
             Explore the essential principles, advanced tools, and powerful advantages crafted specifically for plumbers and dealers.
           </p>
           <div>
