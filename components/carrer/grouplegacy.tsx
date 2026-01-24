@@ -7,7 +7,7 @@ import ContainerLayout from "@/layouts/ContainerLayout";
 const grouplegacy = () => {
   return (
     <ContainerLayout>
-      <section className="py-[5%] bg-background">
+      <section className="py-[2%] bg-background">
       <div className="relative w-full py-[40%] lg:py-[20%] overflow-hidden rounded-[20px]">
         {/* Background Image */}
 
@@ -28,7 +28,7 @@ const grouplegacy = () => {
           <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] xl:tracking-[-2px] leading-tight">
             Excel Group Legacy
           </h2>
-          <p className="text-white max-w-[45rem] font-inter-tight font-light text-sm xl:text-[20px] mb-4 mt-2 leading-[100%]">
+          <p className="text-white max-w-[45rem] font-inter-tight font-light text-sm xl:text-[20px] mb-4 mt-2 leading-[120%]">
             Excel Plast (25+ years) supplies polymer components to leading
             Indian and global organizations—bringing manufacturing
             discipline and reliability to Aqua Excel’s plumbing solutions.

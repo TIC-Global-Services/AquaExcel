@@ -13,16 +13,16 @@ const ContactDetails = () => {
 
             {/* Left - Corporate Office */}
             <div className="text-left lg:text-left w-full">
-              <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-4">
+              <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-5">
                 Corporate Office
               </h3>
              
-                <p className="font-medium mb-1 text-base md:text-[24px] leading-[100%]">Aqua Excel</p>
-                <p className='text-base md:text-[24px] font-light leading-[100%] w-[90%]'>S.F.NO.274/4, Anna Private Industrial Estate, Vilankurichi Road, Coimbatore - 641035</p>
+                <p className="font-medium mb-1 text-base text-[#646464] md:text-[24px] leading-[100%]">Aqua Excel</p>
+                <p className='text-base md:text-[24px] text-[#646464] font-light leading-[100%] w-[90%]'>S.F.NO.274/4, Anna Private Industrial Estate, Vilankurichi Road, Coimbatore - 641035</p>
             </div>
 
             {/* Center - Tap Image */}
-            <div className="flex justify-center lg:order-none mb-5">
+            <div className="lg:order-none mb-5">
               <div className="relative  w-[162px] h-[187px] lg:w-[292px] lg:h-[338px]">
                 <Image
                   src={tapimage}

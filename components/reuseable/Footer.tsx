@@ -114,33 +114,33 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-5 lg:gap-12 mb-8">
           {/* Column 1: Products */}
           <div>
-            <h3 className="text-white font-hoves-pro font-medium text-[18px] mb-4 tracking-wide">PRODUCTS</h3>
+            <h3 className="text-white font-hoves-pro font-medium text-[18px] leading-[20  px] mb-4 tracking-wide">PRODUCTS</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <ul className="space-y-1.5">
                 <li>
-                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     BRASS THREADED TAPS
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     MIXING COVERS
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     BATH FITTINGS
                   </Link>
                 </li>
               </ul>
               <ul className="space-y-1.5">
                 <li>
-                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     PIPES & FITTINGS
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                  <Link href="#" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     ACCESSORIES
                   </Link>
                 </li>
@@ -178,13 +178,13 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-hoves-pro font-medium text-sm hidden lg:block lg:mb-4 tracking-wide opacity-0">CONTACT</h3>
             <ul className="space-y-1.5">
-              <li className="text-white font-inter-tight font-light text-[12px] uppercase">
+              <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
                 PHONE: +91-422-2666842
               </li>
-              <li className="text-white font-inter-tight font-light text-[12px] uppercase">
+              <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
                 ENQUIRY: +91-87540-14018
               </li>
-              <li className="text-white font-inter-tight font-light text-[12px] uppercase">
+              <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
                 EMAIL: SALESCORPORATE@AQUAEXCEL.IN
               </li>
             </ul>
@@ -193,10 +193,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-white font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
+          <p className="text-[#FFFFFF] font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
             © 2025 AQUA EXCEL . ALL RIGHTS RESERVED.
           </p>
-          <p className="text-white font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
+          <p className="text-[#FFFFFF] font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
             DESIGNED & DEVELOPED BY TIC GLOBAL SERVICES
           </p>
         </div>

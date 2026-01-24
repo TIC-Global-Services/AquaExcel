@@ -68,17 +68,17 @@ const Faq = () => {
                             {faqData.map((item) => (
                                 <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0">
                                     <button
-                                        onClick={() => setActiveId(activeId === item.id ? null : item.id)}
+                                        onClick={() => setActiveId(activeId === item.id ? item.id : item.id)}
                                         className={`group flex items-center w-full py-4 text-left px-2 gap-2 transition-all duration-300 ${activeId === item.id ? "opacity-100 bg-[#FFFEFA]" : "opacity-100 lg:opacity-60 lg:hover:opacity-100"
                                             }`}
                                     >
                                         {/* Custom Radio Circle - Desktop Only */}
                                         <div
-                                            className={`block flex-shrink-0 md:w-5 md:h-5 h-4 w-4 rounded-full transition-colors  duration-300 ${activeId === item.id ? "bg-black" : "bg-gray-300"
+                                            className={`block flex-shrink-0 md:w-5 md:h-5 h-4 w-4  rounded-full transition-colors  duration-300 ${activeId === item.id ? "bg-black" : "bg-gray-300"
                                                 }`}
                                         />
 
-                                        <span className="text-xs md:text-base font-inter-tight text-black font-regular flex-grow">
+                                        <span className="text-xs md:text-base font-inter-tight text-black font-regular pl-2 flex-grow">
                                             {item.question}
                                         </span>
 

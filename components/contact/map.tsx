@@ -8,10 +8,10 @@ const map = () => {
     <ContainerLayout>
       <div>
         <div className="flex flex-col gap-2 justify-center items-center">
-          <h1 className="text-[20px] md:text-[44px] font-hoves-pro font-medium tracking-[-4%]">
+          <h1 className="text-[20px] md:text-[44px] tracking-tighter font-hoves-pro font-medium tracking-[-4%]">
             Find a Dealer
           </h1>
-          <p className="font-inter-tight font-regular text-sm lg:text-xl text-black text-center max-w-2xl">
+          <p className="font-inter-tight font-regular text-sm lg:text-xl leading-[120%] text-black text-center max-w-3xl">
             Find the closest Aqua Excel dealer with ease. Search nearby
             locations and connect with verified partners instantly.
           </p>

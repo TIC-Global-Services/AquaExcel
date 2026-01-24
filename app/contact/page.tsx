@@ -5,12 +5,13 @@ import GroupLegacy from '@/components/carrer/grouplegacy'
 import React from 'react'
 import Faq from '@/components/contact/faq'
 import Map from '@/components/contact/map'
+import Contactdetailscp from '@/components/contact/contactdetailscp'
 
 const page = () => {
   return (
     <div>
       <Hero/>
-      <ContactDetails/>
+      <Contactdetailscp/>
       <ContactForm/>
       <GroupLegacy/>
       <Map/>

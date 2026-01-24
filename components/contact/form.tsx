@@ -34,13 +34,13 @@ const ContactForm = () => {
                 {/* Contact Form */}
                 {activeTab === 'contact' && (
                     <div className="rounded-[20px] lg:rounded-[40px] py-2 lg:py-2">
-                        <div className="text-center mb-10">
-                            <h2 className="font-hoves-pro font-medium text-xl lg:text-[44px] tracking-[-4%] md:leading-[46px] text-foreground md:mb-4 mb-2">
+                        <div className="text-center mb-8">
+                            <h2 className="font-hoves-pro font-medium text-xl lg:text-[44px] md:leading-[46px] tracking-tighter text-foreground md:mb-4 mb-2">
                                 Let's Connect
                             </h2>
-                            <p className="font-inter-tight font-regular text-sm lg:text-xl text-black  leading-[120%]  px-6 md:px-0 md:max-w-5xl md:mx-auto">
-                                We're Here To Answer Your Questions And Discuss Your Ideas. Whether It's Project Support, Product Info,
-                               <br className='md:block hidden'/> Or Just To Get In Touch, We'd Love To Hear From You And Will Respond Promptly.
+                            <p className="font-inter-tight font-regular text-sm lg:text-xl text-black   leading-[120%]  px-6 md:px-0 md:max-w-5xl md:mx-auto">
+                                We're here to answer your questions and discuss your ideas. Whether it's project support, product info,
+                                or <br className='md:block hidden'/> just to get in touch, we'd love to hear from you and will respond promptly.
                             </p>
                         </div>
 
@@ -77,7 +77,7 @@ const ContactForm = () => {
                                 className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none placeholder:font-medium  focus:border-[#E31E24] transition-colors resize-none"
                             />
 
-                            <div className="flex justify-center pt-4">
+                            <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
                                     className="bg-[#E31E24] text-white  px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f]  transition-colors"
@@ -92,13 +92,13 @@ const ContactForm = () => {
                 {/* Dealer Form */}
                 {activeTab === 'dealer' && (
                     <div className="rounded-[20px] lg:rounded-[40px] py-2 lg:py-2">
-                        <div className="text-center mb-10">
-                            <h2 className="font-hoves-pro font-medium text-2xl lg:text-4xl text-foreground md:mb-4 mb-2">
+                        <div className="text-center mb-8">
+                            <h2 className="font-hoves-pro font-medium text-2xl tracking-tighter lg:text-4xl text-foreground md:mb-4 mb-2">
                                 Become a Dealer
                             </h2>
-                            <p className="font-inter-tight font-regular text-sm lg:text-xl leading-[120%] px-6 md:px-0  text-black max-w-4xl mx-auto">
-                                Interested In Becoming A Dealer? Share Your Details With Us, And Our Team Will Connect With You To Discuss
-                                Partnership Opportunities And Requirements.
+                            <p className="font-inter-tight font-regular text-sm lg:text-xl tracking-[0%] leading-[120%] px-6 md:px-0  text-black max-w-5xl mx-auto">
+                                Interested in becoming a dealer? Share your details with us, and our team will connect with you to discuss<br className='md:block hidden'/>
+                                partnership opportunities and requirements.
                             </p>
                         </div>
 
@@ -143,12 +143,12 @@ const ContactForm = () => {
                             </div>
 
                             <textarea
-                                placeholder="Message"
+                                placeholder="Write your message here"
                                 rows={4}
                                 className="w-full px-4 py-4 bg-[#FAF9F5] border  placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
                             />
 
-                            <div className="flex justify-center pt-4">
+                            <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
                                     className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"

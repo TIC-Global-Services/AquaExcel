@@ -20,7 +20,7 @@ const hero = () => {
       maxWidth='md:max-w-6xl'
       subtitleClassName="mb-5"
       subtitle={
-        <span className="text-white font-[400] font-inter-tight text-sm md:text-base xl:text-[20px] xl:leading-[100%] text-base text-left  mb-6">
+        <span className="text-white font-[400] font-inter-tight text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
           From engineering guides to industry insights  explore curated resources designed for <br/> builders, contractors, architects, and infrastructure teams
         </span>
       }
