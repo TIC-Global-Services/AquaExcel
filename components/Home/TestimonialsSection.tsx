@@ -42,8 +42,8 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
           <div className="lg:col-span-4">
-            <h2 className="text-foreground font-hoves-pro font-regular text-[44px] tracking-tight leading-tight">
-              What people are saying about Aqua Excel
+            <h2 className="text-foreground font-hoves-pro font-regular text-xl md:text-[44px] tracking-tight leading-[24px] md:leading-tight">
+              What people are <br className="md:hidden"/> saying about Aqua Excel
             </h2>
           </div>
 

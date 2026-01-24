@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,45 +80,44 @@ const Navbar = () => {
         <div className="fixed w-full px-3 sm:px-4 -mt-2 pt-0 pb-2 z-[10000] flex justify-end">
           <motion.button
             onClick={toggleMenu}
-            className={`${isMenuOpen ? 'text-gray-600 bg-white/90' : 'text-white bg-black/20'} backdrop-blur-sm rounded-lg p-2 sm:p-3 z-[10001] hover:bg-black/30 transition-colors touch-manipulation border-none outline-none -mt-3`}
+            className={`${isMenuOpen ? 'text-gray-600 ' : 'text-white'}  p-2 sm:p-3 z-[10001] hover:bg-black/30  touch-manipulation border-none outline-none -mt-3`}
             style={{ appearance: 'none', WebkitAppearance: 'none' }}
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             whileTap={{ scale: 0.9 }}
           >
             {isMenuOpen ? (
-              <svg
-                className="w-5 h-5 sm:w-6 sm:h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 18L18 6M6 6L18 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <X className="z-5" />
             ) : (
-              <svg
-                className="w-5 h-5 sm:w-6 sm:h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 12H21M3 6H21M3 18H21"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <Menu className="z-5" />
             )}
           </motion.button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0}}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-white z-[9999] flex flex-col pt-24 px-6 h-screen justify-center overflow-y-auto"
+          >
+            <div className="flex flex-col justify-center items-center gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={toggleMenu}
+                  className={`text-2xl font-hoves-pro font-medium ${isActive(pathname, link.href) ? 'text-[#E31E24]' : 'text-black'
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </nav>
   );

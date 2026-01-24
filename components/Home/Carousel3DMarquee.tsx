@@ -322,11 +322,11 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="text-center  px-6 space-y-0">
-         <h2 className="text-foreground font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
+         <h2 className="text-foreground mb-1 md:mb-0 font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
             Product Universe
           </h2>
-          <p className="text-foreground font-inter-tight leading-[100%] font-light text-sm lg:text-[20px] tracking-[-1%] max-w-2xl mx-auto">
-            Offering Forward-Thinking Products Paired With Complete, Reliable<br/>
+          <p className="text-foreground font-inter-tight leading-[100%] font-light text-base lg:text-[20px] tracking-[-1%] w-full  md:max-w-2xl mx-auto">
+            Offering Forward-Thinking Products Paired With Complete, Reliable<br className="hidden md:block"/>
             Solutions For Every Need.
           </p>
         </div>
