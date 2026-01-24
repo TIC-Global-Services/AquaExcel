@@ -101,9 +101,9 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-white z-[9999] flex flex-col pt-24 px-6 h-screen justify-center overflow-y-auto"
+            className="fixed inset-0 bg-white z-[9999] flex flex-col pt-24 px-6 h-screen justify-start overflow-y-auto"
           >
-            <div className="flex flex-col justify-center items-center gap-6">
+            <div className="flex flex-col justify-start items-center mt-10  gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
