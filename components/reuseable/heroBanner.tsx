@@ -80,7 +80,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   customContent,
   overlay = false,
   overlayColor = "black",
-  overlayOpacity = 0.5,
+  overlayOpacity = 0.6,
 }) => {
   const contentAlignmentClasses = {
     left: "items-start text-left",
@@ -106,11 +106,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         {/* Optional Overlay */}
         {overlay && (
           <div
-            className="absolute inset-0"
-            style={{
-              backgroundColor: overlayColor,
-              opacity: overlayOpacity
-            }}
+            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
+            // style={{
+            //   backgroundColor: overlayColor,
+            //   opacity: overlayOpacity
+            // }}
           />
         )}
       </div>

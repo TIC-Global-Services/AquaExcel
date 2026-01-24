@@ -57,9 +57,9 @@ const gallary = () => {
 ];
   return (
    <ContainerLayout>
-     <div className='md:py-10'>
-      <h1 className='font-medium text-xl md:text-[44px] tracking-[-4%] font-hoves-pro text-center'>Aqua Excel Gallery</h1>
-        <div className="w-full max-w-[1440px] mx-auto py-10">
+     <div className='md:py-0'>
+      <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro text-center'>Aqua Excel Gallery</h1>
+    <div className="w-full max-w-[1440px] mx-auto py-20">
 
       {/* Mobile: Scrollable Carousel */}
       <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-3 pb-6 scrollbar-hide">
@@ -79,10 +79,10 @@ const gallary = () => {
 
             {/* Content */}
             <div className="absolute bottom-6 left-0 right-0 z-20 text-white text-center px-4">
-              <h3 className="font-hoves-pro font-medium text-[28px] leading-[100%] mb-2">
+              <h3 className="font-hoves-pro font-medium text-[28px] leading-[120%] mb-2">
                 {item.title}
               </h3>
-              <p className="font-inter-tight font-normal text-[16px] leading-[100%] opacity-90 mx-auto max-w-[90%]">
+              <p className="font-inter-tight font-normal text-[16px] leading-[120%] opacity-90 mx-auto max-w-[90%]">
                 {item.description}
               </p>
             </div>

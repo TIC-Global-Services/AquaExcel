@@ -92,10 +92,10 @@ const LifeAt = () => {
       <div className="absolute bottom-10 md:bottom-[15%] w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-34">
           <div className="mt-80 translate-x-[14%]">
-            <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white font-medium">
+            <h2 className="lg:text-[2.75rem] md:text-[1.25rem] text-[1.25rem] text-white tracking-tighter leading-[120%] font-medium">
               Life at Aqua Excel
             </h2>
-            <p className="lg:text-xl text-sm font-medium text-white max-w-md">
+            <p className="lg:text-xl text-sm font-medium leading-[120%] text-white max-w-md">
               We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
             </p>
           </div>

@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
         </h3>
 
         {/* Description */}
-        <p className="mt-[2vh] text-[1.6vh] sm:text-[2vh] md:text-[2.2vh] text-black/80 font-normal leading-relaxed">
+        <p className="mt-[2vh] text-[1.6vh] sm:text-[2vh] md:text-[2.2vh] text-black font-normal leading-relaxed">
           {description}
         </p>
       </div>

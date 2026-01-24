@@ -13,13 +13,13 @@ const Identity = () => {
        <div className=''>
          <div className='overflow-hidden rounded-[20px]'>
            <SimpleParallax>
-             <Image src={identityimg} alt="Identity" className='object-cover w-full h-full' />
+             <Image src={identityimg} alt="Identity" className='object-cover w-full h-full ' />
            </SimpleParallax>
          </div>
        </div>
         <div className='flex flex-col items-start justify-start gap-2 xl:px-10 '>
-           <h1 className='text-[1.5rem] xl:text-[2.75rem] font-medium font-hoves-pro'>The Aqua Excel Identity</h1>
-           <p className='text-sm lg:text-xl font-normal leading-[100%] xl:mt-0  xl:max-w-xl pr-8 xl:pr-0 text-left font-inter-tight'>
+           <h1 className='text-[1.5rem] xl:text-[2.75rem] tracking-tighter font-medium font-hoves-pro'>The Aqua Excel Identity</h1>
+           <p className='text-sm lg:text-xl font-normal leading-[120%] xl:mt-0  xl:max-w-xl pr-8 xl:pr-0 text-left font-inter-tight'>
             Headquartered near Coimbatore, operating with state-of-the art machinery across 5 acres, powered by 75+ skilled people. We manufacture brass-threaded polymer taps, bath accessories, and CPVC/UPVC pipes & fittings for diverse market segments.
             </p>  
          <Link href='/resources'><button className='mt-2 px-5 lg:px-10 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition duration-300 text-[10px] lg:text-sm'>Know More</button></Link>

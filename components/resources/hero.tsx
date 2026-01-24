@@ -10,7 +10,7 @@ const hero = () => {
       <HeroBanner
       height="h-screen"
       backgroundImage={banner}
-      titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-[-4%] font-medium mb-4 text-[#E0E0E0] w-full"
+      titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-[#E0E0E0] w-full"
       title={
         <>
           Everything You Need <br/>

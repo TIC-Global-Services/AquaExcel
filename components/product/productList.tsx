@@ -81,10 +81,10 @@ const ProductList = () => {
         {/* Section Header */}
         {activeSection && (
           <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="font-hoves-pro font-medium tracking-[-4%] text-3xl md:text-[40px] mb-4">
+            <h2 className="font-hoves-pro font-medium tracking-tighter leading-[120%] text-3xl md:text-[40px] mb-4">
               {activeSection.title}
             </h2>
-            <p className="font-inter-tight text-[#000000] text-center max-w-4xl text-base md:text-xl leading-[100%]">
+            <p className="font-inter-tight text-[#000000] text-center max-w-4xl text-base md:text-xl leading-[120%]">
               {activeSection.description}
             </p>
           </div>
@@ -95,7 +95,7 @@ const ProductList = () => {
           <div key={subIndex} className="col-span-full">
             {/* Subcategory Heading */}
             {subcategory.heading && (
-              <h3 className="font-hoves-pro font-medium text-2xl md:text-[32px] mb-8 mt-8">
+              <h3 className="font-hoves-pro font-medium leading-[120%] tracking-tighter text-2xl md:text-[32px] mb-8 mt-8">
                 {subcategory.heading}
               </h3>
             )}

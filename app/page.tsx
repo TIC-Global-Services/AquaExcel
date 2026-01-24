@@ -12,10 +12,11 @@ export default function Home() {
      
       <Hero />
       <Carousel3DMarquee />
-      <StatsSection />
+      <TestimonialsSection />
       <StackedCardsSection />
       <AppSection />
-      <TestimonialsSection />
+       <StatsSection />
+      
     </>
   );
 }

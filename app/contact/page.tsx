@@ -13,7 +13,7 @@ const page = () => {
       <Hero/>
       <Contactdetailscp/>
       <ContactForm/>
-      <GroupLegacy/>
+      {/* <GroupLegacy/> */}
       <Map/>
       <Faq/>
     </div>

@@ -113,12 +113,12 @@ const Downloads = () => {
 
   return (
     <ContainerLayout>
-      <div className="md:py-20 py-5 w-full overflow-hidden">
-        <div className='flex flex-col items-center mb-10'>
-          <h1 className='font-medium text-[20px] md:text-[44px] tracking-[-4%] font-hoves-pro text-center mb-1'>
+      <div className="md:py-10 py-5 w-full overflow-hidden">
+        <div className='flex flex-col items-center mb-5'>
+          <h1 className='font-medium text-[20px] md:text-[44px] tracking-tighter font-hoves-pro text-center mb-1'>
             Resources & Downloads
           </h1>
-          <p className='font-normal text-base md:text-xl font-inter-tight text-center max-w-2xl text-muted-foreground'>
+          <p className='font-medium text-base md:text-xl leading-[120%] font-inter-tight text-center max-w-3xl text-muted-foreground'>
             Access product catalogs, installation manuals, safety datasheets, certifications, and engineering drawings.
           </p>
         </div>
