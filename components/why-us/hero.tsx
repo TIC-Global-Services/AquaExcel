@@ -43,23 +43,23 @@ const hero = () => {
       <HeroBanner
         height='h-screen'
         backgroundImage={banner}
-        titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-[#E0E0E0] w-full"
+        titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px]  tracking-tighter font-medium mb-4 text-[#E0E0E0] w-full"
         title={
           <>
-            Strength in every detail,
-            <br />
-            reliability in every moment of use.
+            Strength in every detail,<br className='md:hidden'/>
+            <br className='hidden md:block'/>
+            reliability in every moment <br className='md:hidden'/> of use.
           </>
         }
         maxWidth='md:max-w-6xl'
         subtitleClassName="mb-5"
         subtitle={
-          <span className="text-[#E0E0E0] font-[400] font-inter-tight text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
-          Where innovation and sustainability come together with uncompromising quality<br/> ensuring every installation stands the test of time.
+          <span className="text-[#E0E0E0] font-[400] font-inter-tight text-sm md:text-base xl:text-[20px]  leading-[120%] text-base text-left  mb-6">
+          Where innovation and sustainability come together with uncompromising quality<br className='hidden md:block'/> ensuring every installation stands the test of time.
           </span>
         }
-        primaryButtonClassName='text-[10px] md:text-sm'
-        secondaryButtonClassName="text-[10px] md:text-sm"
+        primaryButtonClassName='text-[12px] py-2 md:text-sm'
+        secondaryButtonClassName="text-[12px] py-2 md:text-sm"
         buttonClassName='flex gap-4 '
         primaryLink='/products'
         primaryButtonText="Explore Innovations"

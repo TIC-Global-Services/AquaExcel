@@ -29,7 +29,7 @@ const DownloadApp = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="relative py-[10%] min-h-[405px] md:min-h-[580px] md:max-h-[580px] w-full overflow-hidden">
+    <div className="relative md:py-[10%] min-h-[405px] md:min-h-[580px] md:max-h-[580px] w-full overflow-hidden">
       <Image
         src={bgimage}
         alt="Download App Background"
@@ -45,12 +45,12 @@ const DownloadApp = () => {
       <div className="absolute inset-0 flex md:items-center items-start justify-start md:justify-center">
         <ContainerLayout>
           <div className="flex flex-col md:flex-row md:items-center items-start justify-start md:justify-center gap-10 md:gap-15 w-full">
-            <div className="text-left md:text-left text-white max-w-2xl block md:hidden">
-              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-hoves-pro font-semibold"> 
+            <div className="text-left md:text-left text-white max-w-2xl pt-5 block md:hidden">
+              <h2 className="text-[1.5rem] lg:text-[2.75rem] font-hoves-pro font-medium tracking-tighter"> 
                 Plumbers/Dealers
               </h2>
               <p className="mt-2 text-sm lg:text-[1.25rem] font-inter-tight">
-                One scan gives you instant access to installation videos,
+                One scan gives you instant access to installation <br className='block md:hidden'/> videos,
                 <br className="hidden lg:block" /> product guides, catalogs, and
                 support.
               </p>

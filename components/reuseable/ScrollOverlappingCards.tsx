@@ -91,7 +91,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="scroll-section min-h-screen  py-16 bg-background relative">
+    <section ref={sectionRef} className="scroll-section min-h-screen  py-10 bg-background relative">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-[10%] w-full items-start  xl:px-0">
           {/* Left Column: Static Text */}

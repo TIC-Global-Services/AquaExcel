@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Identity = () => {
   return (
     <ContainerLayout>
-      <div className='mt-10 lg:py-10 py-5'>
+      <div className='mt-10 lg:py-10'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 items-center'>
        <div className=''>
          <div className='overflow-hidden rounded-[20px]'>
@@ -22,7 +22,7 @@ const Identity = () => {
            <p className='text-sm lg:text-xl font-normal leading-[120%] xl:mt-0  xl:max-w-xl pr-8 xl:pr-0 text-left font-inter-tight'>
             Headquartered near Coimbatore, operating with state-of-the art machinery across 5 acres, powered by 75+ skilled people. We manufacture brass-threaded polymer taps, bath accessories, and CPVC/UPVC pipes & fittings for diverse market segments.
             </p>  
-         <Link href='/resources'><button className='mt-2 px-5 lg:px-10 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition duration-300 text-[10px] lg:text-sm'>Know More</button></Link>
+         <Link href='/resources'><button className='mt-2 px-8 lg:px-10 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition duration-300 text-[12px] lg:text-sm'>Know More</button></Link>
         </div>
       </div>
     </div>

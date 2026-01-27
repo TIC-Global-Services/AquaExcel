@@ -18,7 +18,8 @@ const Appsection = () => {
               src="/bottomsecimg.png"
               alt="Aqua Excel App"
               fill
-              className="object-cover"
+              className="object-cover scale-100"
+               objectPosition="30% 0%"
               priority={false}
             />
           </SimpleParallax>
@@ -27,10 +28,12 @@ const Appsection = () => {
 
         <div className="absolute bottom-8 left-[5%] right-[5%] md:left-10 md:right-10 xl:bottom-15 xl:left-10 xl:right-5 z-10">
           <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] tracking-tighter leading-tight mb-1">
-            Learn how the Aqua Excel App works?
+            Excel Group Legacy
           </h2>
           <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-1 leading-[120%]">
-            Explore the essential principles, advanced tools, and powerful advantages crafted specifically for plumbers and dealers.
+            Excel Plast (25+ years) supplies polymer components to leading
+            Indian and global organizations—bringing manufacturing
+            discipline and reliability to Aqua Excel’s plumbing solutions.
           </p>
           <div>
             <button className="bg-[#E31E24] text-white xl:px-10 px-5 text-[10px] xl:text-sm py-2 md:py-3 font-inter-tight rounded-[12px]">

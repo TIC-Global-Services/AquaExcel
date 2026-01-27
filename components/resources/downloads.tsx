@@ -99,8 +99,8 @@ const Downloads = () => {
   }, [totalSlides, currentSlide]);
 
   return (
-    <ContainerLayout>
-      <div className="md:py-10 py-5 w-full overflow-hidden">
+    <>
+      <div className="md:py-10 py-5 w-full overflow-hidden px-[5%]">
         <div className='flex flex-col items-center mb-5'>
           <h1 className='font-medium text-[20px] md:text-[44px] tracking-tighter font-hoves-pro text-center mb-1'>
             Resources & Downloads
@@ -130,7 +130,7 @@ const Downloads = () => {
                     {content.slice(slideIndex * itemsPerView, (slideIndex + 1) * itemsPerView).map((item) => (
                       <div
                         key={item.id}
-                        className="relative w-full md:flex-1 h-[560px] rounded-[20px] overflow-hidden group shadow-sm transition-all duration-300"
+                        className="relative w-full md:flex-1 h-[350px] md:h-[560px] rounded-[20px] overflow-hidden group shadow-sm transition-all duration-300"
                       >
                         <Image
                           src={item.image}
@@ -182,7 +182,7 @@ const Downloads = () => {
 
         </div>
       </div>
-    </ContainerLayout>
+    </>
   );
 };
 

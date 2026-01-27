@@ -314,7 +314,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   return (
     <div className="overflow-x-hidden">
       <motion.div
-        className="relative md:h-[900px] h-[800px] w-full overflow-hidden py-20 md:py-28"
+        className="relative md:h-[900px] h-[800px] w-full overflow-hidden py-26 md:py-28"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
@@ -325,13 +325,13 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
           <h2 className="text-foreground mb-1 md:mb-0 font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
             Product Universe
           </h2>
-          <p className="text-foreground font-inter-tight leading-[100%] font-light text-sm lg:text-[20px] tracking-tight w-full  md:max-w-2xl mx-auto">
-            Offering Forward-Thinking Products Paired With Complete, Reliable<br className="hidden md:block" />
+          <p className="text-foreground font-inter-tight leading-[120%] font-light text-sm lg:text-[20px] md:tracking-tight w-full  md:max-w-2xl mx-auto">
+            Offering Forward-Thinking Products Paired With <br className="block md:hidden" /> Complete, Reliable <br className="hidden md:block" />
             Solutions For Every Need.
           </p>
         </div>
 
-        <div className="flex h-full items-center justify-center [perspective:2500px] [transform-style:preserve-3d] translate-y-[-8%] md:translate-y-[-5%]">
+        <div className="flex h-full items-center justify-center [perspective:2500px] [transform-style:preserve-3d] translate-y-[-3%] md:translate-y-[-5%]">
           <motion.div
             drag="x"
             dragElastic={0}

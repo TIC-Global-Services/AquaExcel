@@ -3,7 +3,7 @@ import Hero from '@/components/resources/hero'
 import Gallary from '@/components/resources/gallary'
 import Insights from '@/components/resources/insights'
 import Downloads from '@/components/resources/downloads'
-import Appsection from '@/components/resources/Appsection'
+import AppSection from '@/components/carrer/Appsection'
 import Videovalt from '@/components/resources/videovalt'
 const page = () => {
   return (
@@ -13,7 +13,7 @@ const page = () => {
       <Gallary/>
       <Insights/>
       <Downloads/>
-      <Appsection/>
+     <AppSection/>
     </div>
   )
 }

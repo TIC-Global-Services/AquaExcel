@@ -98,9 +98,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           src={backgroundImage || "/hero-banner.jpg"}
           alt={backgroundAlt || "Hero background image"}
           fill
-          className={backgroundClassName || "object-cover scale-110"}
+          className={backgroundClassName || "object-cover scale-100"}
           priority={backgroundPriority || true}
           quality={backgroundQuality || 90}
+          objectPosition="47% 0%"
         />
 
         {/* Optional Overlay */}

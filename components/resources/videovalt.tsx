@@ -76,9 +76,9 @@ const Videovault = () => {
 
   return (
     <ContainerLayout>
-      <div className="md:py-10">
+      <div className="py-10">
         {/* Tabs */}
-        <h1 className='font-medium text-xl md:text-[44px] tracking-tighter text-center font-hoves-pro mb-20'>Video Vault</h1>
+        <h1 className='font-medium text-xl md:text-[44px] tracking-tighter text-center font-hoves-pro mb-10 md:mb-20'>Video Vault</h1>
         <div className="flex justify-center gap-4 mb-16">
           {tabs.map((tab) => (
             <button

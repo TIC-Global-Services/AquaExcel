@@ -23,7 +23,7 @@ const Navbar = () => {
     { name: "Why us", href: "/why-us" },
     { name: "Resources", href: "/resources" },
     { name: "Career", href: "/career" },
-    { name: "Contact us", href: "/contact" },
+    // { name: "Contact us", href: "/contact" },
   ];
 
   const isActive = (currentPath: string, itemLink: string) => {

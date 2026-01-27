@@ -20,13 +20,13 @@ const hero = () => {
       maxWidth='md:max-w-6xl'
       subtitleClassName="mb-5"
       subtitle={
-        <span className="text-[#E0E0E0] font-[400] font-inter-tight text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
-          From engineering guides to industry insights  explore curated resources designed for <br/> builders, contractors, architects, and infrastructure teams
+        <span className="text-[#E0E0E0] font-[400] font-inter-tight text-sm md:text-base xl:text-[20px] xl:leading-[120%]  text-left  mb-6">
+          From engineering guides to industry insights  explore curated resources designed for <br className='hidden md:block'/> builders, contractors, architects, and infrastructure teams
         </span>
       }
       overlay={true}
-      primaryButtonClassName='text-[10px] md:text-sm'
-      secondaryButtonClassName="text-[10px] md:text-sm"
+      primaryButtonClassName='text-[12px] py-2 md:text-sm'
+      secondaryButtonClassName="text-[12px] py-2 md:text-sm"
       buttonClassName='flex gap-4 '
       primaryButtonText="Explore Innovations"
       secondaryButtonText="Customer Enquiry"

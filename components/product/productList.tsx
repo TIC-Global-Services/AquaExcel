@@ -8,6 +8,7 @@ import { bathfitting } from '@/app/data/bathfitting'
 import { pipes } from '@/app/data/Pipes'
 import { maxion } from '@/app/data/maxion'
 import { accessories } from '@/app/data/accesorries'
+import Appsection from './appsection'
 // Placeholder images - using imports if available or strings
 // Ideally replace with actual assets
 const placeholderImage = '/assets/logo.png' // Fallback
@@ -113,7 +114,7 @@ const ProductList = () => {
             </div>
           </div>
         ))}
-
+       {(activeTab === "Pipe" || "Bath") && <Appsection/>}
         {!activeSection && (
           <div className="text-center py-20 text-gray-400">
             Content coming soon for this category.

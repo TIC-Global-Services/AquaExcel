@@ -48,6 +48,7 @@ const Hero = () => {
           Elevating water usage with <br className="md:hidden block" /> future-ready<br className="hidden md:block" /> design.
         </>
       }
+      backgroundClassName="object-cover"
       maxWidth='md:max-w-6xl'
       subtitleClassName="mb-5"
       subtitle={
@@ -55,8 +56,8 @@ const Hero = () => {
           Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel <br className="hidden md:block"></br>Product Is Made To Last, Leak-Free And Worry-Free.
         </span>
       }
-      primaryButtonClassName='text-[10px] md:text-sm md:px-10'
-      secondaryButtonClassName="text-[10px] md:text-sm md:px-10 w-full"
+      primaryButtonClassName='text-[12px] py-2  md:text-sm md:px-10 w-full'
+      secondaryButtonClassName="text-[12px] py-2 md:text-sm md:px-10 w-full"
       buttonClassName='flex gap-4 '
       primaryButtonText="Explore Innovations"
       secondaryButtonText="Customer Enquiry"

@@ -53,16 +53,16 @@ useEffect(() => {
         },
     ]
     return (
-      <ContainerLayout>
-          <div className='py-10 xl:py-30'>
-            <div className='flex flex-col justify-center text-center'>
+      <>
+          <div className='py-10 xl:py-30 px-[5%]'>
+            <div className='flex flex-col justify-center gap-2 text-center'>
                 <h1 className='text-xl xl:text-[2.75rem] leading-[120%] font-medium tracking-tighter'>Why work with us</h1>
                 <p className='xl:text-xl text-sm font-light leading-[120%]'>We believe great products come from great people.<br className='xl:hidden block' /> Here's what <br className='hidden xl:block' /> drives us every day.</p>
             </div>
-            <div className='flex md:grid overflow-x-auto md:overflow-x-visible md:grid-cols-9 gap-5 relative py-16 snap-x snap-mandatory md:snap-none scrollbar-hide'>
+            <div className='flex md:grid overflow-x-auto md:overflow-x-visible md:grid-cols-9 gap-5 relative py-16 snap-start snap-mandatory md:snap-start scrollbar-hide'>
                 {content.map((val, index) => (
                     <div key={index} className={`relative flex-shrink-0 w-[280px] md:w-auto  snap-center ${index == 0 ? 'md:col-span-3' : index == 1 ? 'md:col-span-6' : index == 2 ? 'md:col-span-6' : index == 3 ? 'md:col-span-3' : ''}`}>
-                        <div className="w-full h-full overflow-hidden rounded-[20px]">
+                    <div className="w-full h-full overflow-hidden rounded-[20px]">
                         <div className='absolute inset-0 bg-black/40 z-10 rounded-[20px]'></div>
                             <Image
                                 src={val.image}
@@ -79,7 +79,7 @@ useEffect(() => {
                 ))}
             </div>
         </div>
-      </ContainerLayout>
+      </>
     )
 }
 

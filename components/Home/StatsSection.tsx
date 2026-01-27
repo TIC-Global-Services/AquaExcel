@@ -87,12 +87,12 @@ const StatsSection = () => {
               className="bg-[#FAF9F5] rounded-[24px] lg:rounded-[20px] px-2 lg:px-5 py-10  flex flex-col items-start justify-center lg:items-start md:gap-20 gap-6 text-left h-[120px] sm:h-[250px] lg:h-[318px] w-full relative overflow-hidden"
             >
               {/* Background number - repositioned for mobile */}
-              <div className={`absolute font-inter-tight ${stat.id == 3 ? '' : ''}  ${stat.value == 2 ? 'md:top-[0%] -top-[30%] left-[50%] md:left-[10%]' : 'md:top-[0%] -top-[30%] left-[35%] md:left-[17%]'} text-[60px]  sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-[108px] select-none pointer-events-none tracking-[-4%]`}>
+              <div className={`absolute font-inter-tight ${stat.id == 3 ? '' : ''}  ${stat.value == 2 ? 'md:top-[0%] -top-[30%] left-[15%] md:left-[10%]' : 'md:top-[0%] -top-[30%] left-[15%] md:left-[17%]'} text-[60px]  sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-[108px] select-none pointer-events-none tracking-[-4%]`}>
                 {stat.value}<span className={`${stat.id === 3 ? '-ml-2 lg:-ml-3   ' : ''}`}>{stat.suffix}</span>
               </div>
 
               {/* Foreground number container */}
-              <div className=" relative z-10 lg:flex-1 flex items-center lg:items-start lg:pt-8 w-full justify-center lg:justify-start">
+              <div className=" relative z-10 lg:flex-1 flex items-start lg:items-start lg:pt-8 w-full justify-start lg:justify-start">
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </div>
 

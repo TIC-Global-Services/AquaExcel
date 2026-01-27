@@ -20,12 +20,12 @@ const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-[2.2vh] sm:text-[2.5vh] md:text-[3vh] font-medium text-black leading-tight">
+        <h3 className="text-sm sm:text-[2.5vh] md:text-[3vh] font-medium text-black leading-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mt-[2vh] text-[1.6vh] sm:text-[2vh] md:text-[2.2vh] text-black font-normal leading-relaxed">
+        <p className="mt-[2vh] text-sm sm:text-[2vh] md:text-[2.2vh] text-black font-normal leading-relaxed">
           {description}
         </p>
       </div>

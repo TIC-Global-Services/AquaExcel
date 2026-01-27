@@ -44,15 +44,17 @@ const hero = () => {
       <HeroBanner
         height='h-screen'
         backgroundImage={banner}
-        titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] text-[22px] leading-[64px] tracking-tighter mb-4"
+        titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] text-[22px] leading-[64px] tracking-tighter md:mb-4"
         title="Build the Future With Us"
-        subtitleClassName="text-[#E0E0E0] font-hoves-pro font-light xl:text-[20px] leading-[120%] text-base max-w-4xl mb-4"
+        subtitleClassName="text-[#E0E0E0] font-hoves-pro font-light xl:text-[20px] leading-[120%] text-base max-w-sm md:max-w-4xl mb-4"
         subtitle={
           <>
-          Join a team that’s shaping sustainable infrastructure, delivering quality, and creating<br/> solutions that last for decades.
+          Join a team that’s shaping sustainable infrastructure, delivering quality, and creating<br className='hidden md:block'/> solutions that last for decades.
           </>
         }
         overlay={true}  
+        primaryButtonClassName='text-[12px] py-2  md:text-sm md:px-10 w-full'
+        secondaryButtonClassName="text-[12px] py-2 md:text-sm md:px-10 w-full"
         primaryButtonText="Explore Innovations"
         secondaryButtonText="Customer Enquiry"
       />

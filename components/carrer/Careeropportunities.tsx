@@ -47,7 +47,7 @@ const Careeropportunities = () => {
         />
        <div className="z-10 relative flex items-center justify-center p-4 ">
           {jobList.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl px-[1%] xl:px-[10%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl px-[8%] xl:px-[10%]">
               {jobList.map((res, index) => (
                <div key={index} className='bg-[#FAF9F5] py-3 px-6 rounded-[20px] max-w-xl shadow-sm border-[1px]'>
               <p className="text-black text-sm font-medium">{res.location}</p>
