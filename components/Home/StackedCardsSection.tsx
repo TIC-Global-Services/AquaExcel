@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Button from "../reuseable/Button";
 import Link from "next/link";
+import ContainerLayout from "@/layouts/ContainerLayout";
 
 interface Card {
   id: number;
@@ -50,8 +51,9 @@ const StackedCardsSection = () => {
   const visibleCards = getVisibleCards();
 
   return (
-    <section className="lg:pt-[2%]  px-6 xl:px-[80px] lg:px-[40px] bg-background">
-      <div className="max-w-7xl mx-auto">
+   <ContainerLayout>
+     <section className="lg:pt-[2%]  bg-background">
+      <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <motion.div
@@ -140,6 +142,7 @@ const StackedCardsSection = () => {
         </div>
       </div>
     </section>
+   </ContainerLayout>
   );
 };
 

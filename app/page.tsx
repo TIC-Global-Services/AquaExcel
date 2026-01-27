@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/Home/TestimonialsSection";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
      
       <Hero />
       <Carousel3DMarquee />
@@ -17,6 +17,6 @@ export default function Home() {
       <AppSection />
        <StatsSection />
       
-    </>
+    </div>
   );
 }

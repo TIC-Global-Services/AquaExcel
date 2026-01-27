@@ -184,10 +184,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-[#FFFFFF] font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
+          <p className="text-[#FFFFFF] font-hoves-pro font-[500] text-xs leading-5 md:text-[18px]">
             © 2025 AQUA EXCEL . ALL RIGHTS RESERVED.
           </p>
-          <p className="text-[#FFFFFF] font-hoves-pro font-bold text-xs leading-5 md:text-[18px]">
+          <p className="text-[#FFFFFF] font-hoves-pro font-[500] text-xs leading-5 md:text-[18px]">
             DESIGNED & DEVELOPED BY TIC GLOBAL SERVICES
           </p>
         </div>

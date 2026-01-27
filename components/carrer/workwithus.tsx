@@ -6,6 +6,7 @@ import image2 from '@/assets/carrer/grid2.png'
 import image3 from '@/assets/carrer/grid3.jpg'
 import image4 from '@/assets/carrer/grid4.png'
 import SimpleParallax from 'simple-parallax-js'
+import ContainerLayout from '@/layouts/ContainerLayout'
 const workwithus = () => {
 useEffect(() => {
     // Parallax effect — smooth, performant, respects rounded corners
@@ -52,7 +53,8 @@ useEffect(() => {
         },
     ]
     return (
-        <div className='py-10 xl:py-30 px-[5%]'>
+      <ContainerLayout>
+          <div className='py-10 xl:py-30'>
             <div className='flex flex-col justify-center text-center'>
                 <h1 className='text-xl xl:text-[2.75rem] leading-[120%] font-medium tracking-tighter'>Why work with us</h1>
                 <p className='xl:text-xl text-sm font-light leading-[120%]'>We believe great products come from great people.<br className='xl:hidden block' /> Here's what <br className='hidden xl:block' /> drives us every day.</p>
@@ -77,6 +79,7 @@ useEffect(() => {
                 ))}
             </div>
         </div>
+      </ContainerLayout>
     )
 }
 

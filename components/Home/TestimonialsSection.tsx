@@ -1,4 +1,5 @@
 "use client";
+import ContainerLayout from "@/layouts/ContainerLayout";
 import { useState } from "react";
 
 interface Testimonial {
@@ -21,7 +22,8 @@ const TestimonialsSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="pt-[80px] pb-[80px] px-6 xl:px-[80px] lg:px-[40px] bg-background overflow-hidden">
+   <ContainerLayout>
+     <section className="pt-[80px] pb-[80px]  bg-background overflow-hidden">
       <style jsx>{`
         @keyframes scroll {
           0% {
@@ -38,7 +40,7 @@ const TestimonialsSection = () => {
           animation-play-state: paused;
         }
       `}</style>
-      <div className="max-w-7xl mx-auto pb-[5%]">
+      <div className="pb-[5%]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
           <div className="lg:col-span-4">
@@ -95,6 +97,7 @@ const TestimonialsSection = () => {
         </div>
       </div>
     </section>
+   </ContainerLayout>
   );
 };
 

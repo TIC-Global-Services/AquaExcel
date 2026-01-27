@@ -6,6 +6,7 @@ import download3 from '@/assets/resource/downloads-3.jpg';
 import download4 from '@/assets/resource/downloads-1.jpg';
 import Button from '../reuseable/Button';
 import ContainerLayout from '@/layouts/ContainerLayout';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const Downloads = () => {
 
@@ -51,9 +52,7 @@ const Downloads = () => {
   }, []);
 
   const totalSlides = Math.ceil(content.length / itemsPerView);
-
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
@@ -61,7 +60,6 @@ const Downloads = () => {
   const minSwipeDistance = 50;
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setIsPaused(true);
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -71,7 +69,6 @@ const Downloads = () => {
   };
 
   const handleTouchEnd = () => {
-    setIsPaused(false);
     if (!touchStart || !touchEnd) return;
 
     const distance = touchStart - touchEnd;
@@ -79,25 +76,20 @@ const Downloads = () => {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      // Next Slide
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+      handleNext();
     }
     if (isRightSwipe) {
-      // Prev Slide
-      setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+      handlePrev();
     }
   };
 
-  // Auto-scroll logic
-  useEffect(() => {
-    if (isPaused) return;
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
 
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 3000); // 3 seconds per slide
-
-    return () => clearInterval(timer);
-  }, [isPaused, totalSlides]);
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
   // Reset or clamp slide if View changes (e.g. Resize)
   useEffect(() => {
@@ -105,11 +97,6 @@ const Downloads = () => {
       setCurrentSlide(0);
     }
   }, [totalSlides, currentSlide]);
-
-  // Prevent hydration mismatch by rendering null or stable skeleton until mounted
-  // Or simpler: just accept flash if okay, but here let's ensure consistency
-  // If not mounted, we can render the desktop view (ssr default) or nothing.
-  // Rendering desktop view by default is standard.
 
   return (
     <ContainerLayout>
@@ -123,12 +110,10 @@ const Downloads = () => {
           </p>
         </div>
 
-        <div className="w-full max-w-[1440px] mx-auto">
+        <div className="w-full max-w-[1440px] mx-auto relative">
           {/* Carousel Window */}
           <div
             className="overflow-visible"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -145,7 +130,7 @@ const Downloads = () => {
                     {content.slice(slideIndex * itemsPerView, (slideIndex + 1) * itemsPerView).map((item) => (
                       <div
                         key={item.id}
-                        className="relative w-full md:flex-1 h-[560px] rounded-[20px] overflow-hidden group shadow-sm"
+                        className="relative w-full md:flex-1 h-[560px] rounded-[20px] overflow-hidden group shadow-sm transition-all duration-300"
                       >
                         <Image
                           src={item.image}
@@ -177,25 +162,24 @@ const Downloads = () => {
             </div>
           </div>
 
-          {/* Bottom Tabs / Pagination */}
-          <div className="hidden md:flex justify-center flex-wrap gap-2 mt-8">
-            {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-1 rounded-full transition-all duration-300 ${index === currentSlide
-                  ? 'w-16 bg-black'
-                  : 'w-8 bg-gray-300 hover:bg-gray-400'
-                  } ${
-                  // Hide excessive dots on mobile if too many?
-                  // User didn't ask to hide, but 15 dots might be a lot.
-                  // For now, keeping them as requested "tabs should move along"
-                  ''
-                  }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+          {/* Navigation Buttons - Bottom Right */}
+          <div className="flex justify-end gap-3 px-4 mt-6">
+            <button
+              onClick={handlePrev}
+              className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+              aria-label="Previous slide"
+            >
+              <ArrowLeft className="w-6 h-6 text-black" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+              aria-label="Next slide"
+            >
+              <ArrowRight className="w-6 h-6 text-black" />
+            </button>
           </div>
+
         </div>
       </div>
     </ContainerLayout>

@@ -28,7 +28,7 @@ const Distribution = () => {
       <div className="w-full py-10 mt-10 overflow-hidden">
       <div className="flex flex-col gap-2 mb-8">
         <h1 className="text-xl xl:text-[2.75rem] tracking-tighter font-medium font-hoves-pro">For Distribution Partners</h1>
-        <p className="max-w-3xl text-sm xl:text-xl font-medium text-black font-inter-tight leading-[120%]">
+        <p className="max-w-3xl text-sm xl:text-xl font-regular text-black font-inter-tight leading-[120%]">
           We partner with distributors through dependable supply, strong product
           demand,<br/> and responsive service.
         </p>

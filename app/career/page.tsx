@@ -8,7 +8,7 @@ import Appsection from '@/components/carrer/Appsection'
 
 const page = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <HeroBanner/>
       <Workwithus/>
       <LifeAt/>

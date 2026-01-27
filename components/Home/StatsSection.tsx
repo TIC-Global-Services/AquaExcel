@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import ContainerLayout from "@/layouts/ContainerLayout";
 
 interface Stat {
   id: number;
@@ -55,8 +56,9 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 
 const StatsSection = () => {
   return (
-    <section className="lg:pt-5 pb-30 px-6 xl:px-20 lg:px-10 bg-background pt-20">
-      <div className="max-w-7xl mx-auto">
+   <ContainerLayout>
+     <section className="lg:pt-5 pb-30 bg-background pt-20">
+      <div className="">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,6 +105,7 @@ const StatsSection = () => {
         </div>
       </div>
     </section>
+   </ContainerLayout>
   );
 };
 

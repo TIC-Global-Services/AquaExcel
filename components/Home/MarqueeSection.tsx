@@ -13,7 +13,7 @@ const MarqueeSection = () => {
   return (
     <section className="pt-[120px] pb-[120px] px-[80px] bg-background overflow-hidden">
       {/* Heading and Description */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-[2%]">
         <h2 className="text-foreground font-hoves-pro font-medium text-5xl">
           Product Universe
         </h2>

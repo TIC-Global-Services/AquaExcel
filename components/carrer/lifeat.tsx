@@ -88,7 +88,7 @@ const LifeAt = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-[8%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-12 lg:px-[2%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
 
         {/* Left Side - Text Content */}
         <div className="flex flex-col text-left w-full mt-20 lg:mb-20   lg:overflow-hidden">

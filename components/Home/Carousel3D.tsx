@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import ContainerLayout from "@/layouts/ContainerLayout";
 
 interface Card {
   id: number;
@@ -61,7 +62,8 @@ const Carousel3D = () => {
   };
 
   return (
-    <section className="pt-[120px] pb-[120px] bg-background overflow-hidden">
+  <ContainerLayout>
+      <section className="pt-[120px] pb-[120px] bg-background overflow-hidden">
       <div className="text-center mb-16 px-6">
         <h2 className="text-foreground font-hoves-pro font-medium text-5xl mb-4">
           Product Universe
@@ -141,6 +143,7 @@ const Carousel3D = () => {
         ))}
       </div>
     </section>
+    </ContainerLayout>
   );
 };
 

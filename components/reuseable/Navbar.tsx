@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 py-6">
       {/*Desktop Navbar*/}
-      <div className="px-6 xl:px-[105px] lg:px-[50px] flex items-center justify-between">
+      <div className="px-6 xl:px-[80px] lg:px-[50px] flex items-center justify-between">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/AE-logo.png"

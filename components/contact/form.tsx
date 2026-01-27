@@ -16,18 +16,16 @@ const ContactForm = () => {
                         className={`px-6 py-3 rounded-full font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'contact'
                                 ? 'bg-[#E31E24] text-white'
                                 : 'bg-[#FAF9F5] text-foreground hover:bg-[#f0ede8]'
-                            }`}
-                    >
-                        Contact Form
+                            }`}>
+                       General Enquiry
                     </button>
                     <button
                         onClick={() => setActiveTab('dealer')}
                         className={`px-6 py-3 rounded-full font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'dealer'
                                 ? 'bg-[#E31E24] text-white'
                                 : 'bg-[#FAF9F5] text-foreground hover:bg-[#f0ede8]'
-                            }`}
-                    >
-                        Dealer Form
+                            }`}>
+                        Dealers Enquiry
                     </button>
                 </div>
 
