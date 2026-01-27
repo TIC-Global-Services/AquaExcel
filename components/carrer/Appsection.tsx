@@ -18,7 +18,7 @@ const Appsection = () => {
               src="/bottomsecimg.png"
               alt="Aqua Excel App"
               fill
-              className="object-cover scale-100"
+              className="object-cover scale-75 md:scale-110"
                objectPosition="30% 0%"
               priority={false}
             />

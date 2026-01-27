@@ -38,7 +38,7 @@ useEffect(() => {
         },
         {
 
-            title: "transparent, On-Time Work",
+            title: "Transparent, On-Time Work",
             image: image2
         },
         {
