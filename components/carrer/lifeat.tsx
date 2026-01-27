@@ -88,14 +88,14 @@ const LifeAt = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-[2%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-12 lg:px-[5%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
 
         {/* Left Side - Text Content */}
-        <div className="flex flex-col text-left w-full mt-20 lg:mb-20   lg:overflow-hidden">
+        <div className="flex flex-col text-left w-full mt-20 lg:mb-20 lg:overflow-hidden">
           <h1 className="text-white text-xl leading-[120%] md:text-[clamp(16px,3vw,40px)] font-medium  mb-2 md:leading-[50px] tracking-tight font-hoves-pro">
             Life at Aqua Excel
           </h1>
-          <p className="text-[#E0E0E0] text-sm md:text-[clamp(20px,1.4vw,44px)] font-medium opacity-90 max-w-md md:max-w-xl font-inter-tight leading-[120%]">
+          <p className="text-[#E0E0E0] text-sm md:text-[clamp(20px,1.4vw,44px)] font-regular opacity-90 max-w-md md:max-w-xl font-inter-tight leading-[120%]">
             We believe exceptional products are created by <br />exceptional people and these are the values that inspire us every single day.
           </p>
         </div>
