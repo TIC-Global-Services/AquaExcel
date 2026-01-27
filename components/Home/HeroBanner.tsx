@@ -55,8 +55,8 @@ const Hero = () => {
           Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel <br className="hidden md:block"></br>Product Is Made To Last, Leak-Free And Worry-Free.
         </span>
       }
-      primaryButtonClassName='text-[10px] md:text-sm px-10'
-      secondaryButtonClassName="text-[10px] md:text-sm px-10"
+      primaryButtonClassName='text-[10px] md:text-sm md:px-10'
+      secondaryButtonClassName="text-[10px] md:text-sm md:px-10 w-full"
       buttonClassName='flex gap-4 '
       primaryButtonText="Explore Innovations"
       secondaryButtonText="Customer Enquiry"

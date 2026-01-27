@@ -105,7 +105,7 @@ const Downloads = () => {
           <h1 className='font-medium text-[20px] md:text-[44px] tracking-tighter font-hoves-pro text-center mb-1'>
             Resources & Downloads
           </h1>
-          <p className='font-medium text-base md:text-xl leading-[120%] font-inter-tight text-center max-w-3xl text-muted-foreground'>
+          <p className='font-medium text-sm md:text-xl leading-[120%] font-inter-tight text-center w-full md:max-w-3xl text-muted-foreground'>
             Access product catalogs, installation manuals, safety datasheets, certifications, and engineering drawings.
           </p>
         </div>
@@ -122,7 +122,7 @@ const Downloads = () => {
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${currentSlide * (itemsPerView === 1 ? 85 : 100)}%)` }}
               >
                 {/* Render "Slides" based on itemsPerView logic */}
                 {Array.from({ length: totalSlides }).map((_, slideIndex) => (

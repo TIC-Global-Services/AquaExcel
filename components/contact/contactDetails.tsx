@@ -22,8 +22,8 @@ const ContactDetails = () => {
             </div>
 
             {/* Center - Tap Image */}
-            <div className="lg:order-none mb-5">
-              <div className="relative  w-[162px] h-[187px] lg:w-[292px] lg:h-[338px]">
+            <div className="lg:order-none flex justify-center items-center mb-5">
+              <div className="relative   w-[162px] h-[187px] lg:w-[292px] lg:h-[338px]">
                 <Image
                   src={tapimage}
                   alt="Aqua Excel Tap"

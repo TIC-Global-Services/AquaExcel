@@ -59,10 +59,10 @@ const gallary = () => {
    <ContainerLayout>
      <div className='md:py-0'>
       <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro text-center'>Aqua Excel Gallery</h1>
-    <div className="w-full max-w-[1440px] mx-auto py-20">
+    <div className="w-full max-w-[1440px] mx-auto py-10">
 
       {/* Mobile: Scrollable Carousel */}
-      <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-3 pb-6 scrollbar-hide">
+      <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-3 pb-0 scrollbar-hide">
         {GALLERY_ITEMS.map((item) => (
           <div
             key={item.id}

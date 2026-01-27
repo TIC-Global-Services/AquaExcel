@@ -85,6 +85,7 @@ const Navbar = () => {
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             whileTap={{ scale: 0.9 }}
+            suppressHydrationWarning
           >
             {isMenuOpen ? (
               <X className="z-5" />
@@ -98,7 +99,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0}}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-white z-[9999] flex flex-col pt-24 px-6 h-screen justify-start overflow-y-auto"

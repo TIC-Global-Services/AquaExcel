@@ -32,8 +32,8 @@ const insights = () => {
             <div>
             <div className='flex flex-col items-center'>
                 <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro'>Insights That Inspire</h1>
-                <p className='font-regular text-sm text-center md:text-xl leading-[120%] font-inter-tight py-2'>
-                    Stay updated on the latest in piping materials, systems, techniques,<br/> and industry standards.
+                <p className='font-regular text-sm  text-center w-full md:text-xl leading-[120%] font-inter-tight py-2'>
+                    Stay updated on the latest in piping materials, systems, techniques,<br className='hidden md:block'/> and industry standards.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">

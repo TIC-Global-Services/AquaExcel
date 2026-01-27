@@ -6,7 +6,7 @@ const contactdetailscp = () => {
     return (
         <ContainerLayout >
            <div className='py-10 lg:mt-10'>
-             <div className='bg-[#FAF9F5] rounded-[20px] grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-center justify-start  lg:rounded-[40px] px-10 py-10'>
+             <div className='bg-[#FAF9F5] rounded-[20px] grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-center justify-center md:justify-start  lg:rounded-[40px] px-10 py-10'>
                 <div className='flex flex-col gap-2'>
                     <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-5">
                         Corporate Office
@@ -14,7 +14,7 @@ const contactdetailscp = () => {
                     <h4 className='font-medium text-base text-[#646464] md:text-[24px] -tracking-4 leading-[120%]'>Aqua Excel</h4>
                     <p className='text-base md:text-[24px] text-[#646464] font-regular max-w-xs leading-[120%]'>S.F.No.274/4, Anna Private Industrial Estate, Vilankurichi Road, Coimbatore - 641035</p>
                 </div>
-                <div className='relative mb-16 w-[162px] h-[187px] lg:w-[292px] lg:h-[338px]'>
+                <div className='relative mx-auto md:mx-0 mb-16 w-[162px] h-[187px] lg:w-[292px] lg:h-[338px]'>
                     <Image src={tapimage} alt="Aqua Excel Tap" fill className="object-cover" />
                 </div>
                 <div className='flex flex-col gap-2 max-w-full'>
