@@ -56,9 +56,9 @@ const Faq = () => {
 
     return (
         <ContainerLayout>
-            <div className="w-full bg-white md:py-16">
+            <div className="w-full bg-white py-10 md:py-16">
                 <div className="md:max-w-7xl mx-auto">
-                    <h2 className="text-xl md:text-[44px] text-center md:text-left font-medium text-black mb-0 md:mb-10">
+                    <h2 className="text-xl md:text-[44px] text-center md:text-left font-medium text-black mb-5 md:mb-10">
                         Frequently Asked Questions
                     </h2>
 

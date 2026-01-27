@@ -8,7 +8,7 @@ const ContactDetails = () => {
     <ContainerLayout>
       <section className="py-10 lg:py-20 bg-background">
       <div className="">
-        <div className="bg-[#FAF9F5] rounded-[20px] lg:rounded-[40px] p-8 lg:px-10">
+        <div className="bg-[#FAF9F5] rounded-[20px] lg:rounded-[40px] p-8 lg:px-10 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-center justify-center py-10">
 
             {/* Left - Corporate Office */}
