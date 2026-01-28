@@ -158,7 +158,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
     const newDragDistance = dragDistance + info.delta.x;
     setDragDistance(newDragDistance);
 
-    const dragThreshold = isMobile ? 80 : 120;
+    const dragThreshold = isMobile ? 90 : 120;
 
     if (Math.abs(newDragDistance) >= dragThreshold) {
       const currentAngle = rotation.get();
