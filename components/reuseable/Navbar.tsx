@@ -9,7 +9,9 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
+   const hiddenRoutes = ['/resources/blogs/'];
+  const shouldHideNavbar = hiddenRoutes.some(route => pathname.includes(route));
+  console.log("shouldHideNavbarshouldHideNavbar",shouldHideNavbar);
   // Cleanup effect to restore body scroll
   useEffect(() => {
     return () => {
@@ -41,6 +43,7 @@ const Navbar = () => {
       document.body.style.overflow = 'unset';
     }
   };
+   
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 py-6">
       {/*Desktop Navbar*/}
@@ -54,8 +57,9 @@ const Navbar = () => {
             className="h-8 w-auto"
           />
         </Link>
-
-        <div className="hidden lg:flex items-center gap-0">
+        
+        <div className={`${shouldHideNavbar==true ? 'hidden' : 'hidden lg:flex items-center gap-0'}`}>
+        
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -70,7 +74,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <Link href='/contact' className="hidden lg:block">
+        <Link href='/contact' className={`${shouldHideNavbar==true ? 'hidden' : 'lg:block hidden'}`}>
           <button className="bg-white text-foreground px-8 py-3 cursor-pointer rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity">
             For Enquiries
           </button></Link>

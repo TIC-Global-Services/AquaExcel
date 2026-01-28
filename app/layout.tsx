@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hovesPro.variable} ${interTight.variable} ${ubermove.variable} antialiased`}
+        className={`${hovesPro.variable} ${interTight.variable} ${ubermove.variable} antialiased`}      
       >
         <SmoothScroller>
            <Navbar />

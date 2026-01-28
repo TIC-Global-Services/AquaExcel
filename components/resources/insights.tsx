@@ -79,9 +79,9 @@ const insights = () => {
                                 href={`/resources/blogs/${item.slug}`}
                                 className={`relative w-full overflow-hidden rounded-[20px] shadow-lg ${gridClass} group block touch-manipulation`}
                                 style={{ WebkitTapHighlightColor: 'transparent' }}  
-                            >
+                                    >
                                 <SimpleParallax>
-                                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                                    <Image src={item.image} alt={item.title} fill className="object-cover pointer-events-none" />
                                 </SimpleParallax>
                                 {/* Gradient Overlay */}
                                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />

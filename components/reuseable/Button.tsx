@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
         variant === "primary" &&
         "bg-button-primary text-white hover:bg-button-primary-hover",
         variant === "secondary" &&
-        "bg-transparent text-white border border-button-secondary-border hover:bg-white hover:text-foreground",
+        "bg-transparent text-white border-[1.5px] border-button-secondary-border hover:bg-white hover:text-foreground",
         className
       )}
       {...props}
