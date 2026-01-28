@@ -96,7 +96,7 @@ useEffect(() => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-[10%] w-full items-start  xl:px-0">
           {/* Left Column: Static Text */}
           <div className="left-content">
-            <h2 className="xl:text-[2.75rem] text-[1.25rem] tracking-tighter font-medium font-hoves-pro">
+            <h2 className="xl:text-[2.75rem] text-[1.25rem] tracking-tighter font-medium w-full font-hoves-pro">
               {heading}
             </h2>
             <p className="text-[0.875rem] leading-[120%] max-w-sm md:max-w-lg xl:text-[1.25rem] font-regular font-inter-tight pt-2">

@@ -13,7 +13,7 @@ const ContactForm = () => {
                 <div className="flex justify-center gap-4 mb-10">
                     <button
                         onClick={() => setActiveTab('contact')}
-                        className={`md:px-4 px-3 py-3 rounded-full font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'contact'
+                        className={`md:px-4 px-3 py-3 rounded-full cursor-pointer font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'contact'
                                 ? 'bg-[#E31E24] text-white'
                                 : 'bg-[#FAF9F5] text-foreground hover:bg-[#f0ede8]'
                             }`}>
@@ -21,7 +21,7 @@ const ContactForm = () => {
                     </button>
                     <button
                         onClick={() => setActiveTab('dealer')}
-                        className={`px-4 md:px-6 py-3 rounded-full font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'dealer'
+                        className={`px-4 md:px-6 py-3 rounded-full cursor-pointer font-hoves-pro font-medium text-sm md:text-base transition-all ${activeTab === 'dealer'
                                 ? 'bg-[#E31E24] text-white'
                                 : 'bg-[#FAF9F5] text-foreground hover:bg-[#f0ede8]'
                             }`}>
@@ -78,7 +78,7 @@ const ContactForm = () => {
                             <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white  px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f]  transition-colors"
+                                    className="bg-[#E31E24] text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f]  transition-colors"
                                 >
                                     Submit Customer Enquiry
                                 </button>

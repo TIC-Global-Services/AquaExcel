@@ -36,7 +36,7 @@ const Appsection = () => {
             discipline and reliability to Aqua Excel’s plumbing solutions.
           </p>
           <div>
-            <button className="bg-[#E31E24] text-white xl:px-10 px-5 text-[10px] xl:text-sm py-2 md:py-3 font-inter-tight rounded-[12px]">
+            <button className="bg-[#E31E24] text-white cursor-pointer xl:px-10 px-5 text-[10px] xl:text-sm py-2 md:py-3 font-inter-tight rounded-[12px]">
               Download App
             </button>
           </div>

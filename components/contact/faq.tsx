@@ -83,7 +83,7 @@ const Faq = () => {
                                         </span>
 
                                         <ChevronRight
-                                            className={`w-6 h-6 text-gray-400 transition-transform duration-300 ml-auto flex-shrink-0 ${activeId === item.id ? "text-black rotate-90" : ""
+                                            className={`w-6 h-6 text-gray-400 transition-transform duration-300 ml-auto flex-shrink-0 ${activeId === item.id ? "text-black rotate-90 md:rotate-0" : ""
                                                 }`}
                                         />
                                     </button>
