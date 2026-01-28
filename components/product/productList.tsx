@@ -59,6 +59,7 @@ const ProductList = () => {
 
   // Filter or show all? Design usually implies one section active at a time for tabs
   const activeSection = productSections.find(s => s.id === activeTab)
+  console.log("activeSection",activeSection)
 
   return (
     <ContainerLayout>
@@ -114,7 +115,8 @@ const ProductList = () => {
             </div>
           </div>
         ))}
-       {(activeTab === "Pipe" || "Bath") && <Appsection/>}
+       
+       {(activeSection?.id === "Pipe" || activeSection?.id === "Bath") ? <Appsection/> : null}
         {!activeSection && (
           <div className="text-center py-20 text-gray-400">
             Content coming soon for this category.
