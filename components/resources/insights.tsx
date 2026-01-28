@@ -85,7 +85,7 @@ const insights = () => {
                                 {/* Gradient Overlay */}
                                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
 
-                                <div className="absolute inset-0 flex flex-col cursor-pointer justify-end p-6 z-10">
+                                <div className="absolute inset-0 flex flex-col cursor-pointer justify-end p-6 z-0">
                                     <h2 className="text-white text-xl md:text-[28px] leading-[24px] md:leading-[30px] tracking-tighter  font-hoves-pro font-medium mb-1 uppercase text-left">{item.title}</h2>
                                     <div className="flex items-center gap-2 text-white/90 cursor-pointer group-hover:text-white transition-colors">
                                         <span className="md:text-xl text-base font-inter-tight font-medium">Read the Article</span>

@@ -125,7 +125,7 @@ const BlogDetailPage = async ({ params }: BlogPageProps) => {
                 {/* Back Button */}
                 <Link
                     href="/resources"
-                    className="inline-flex items-center gap-2 text-[#646464] hover:text-black transition-colors mb-8 font-inter-tight"
+                    className="inline-flex items-center gap-2 text-[#646464] hover:text-black transition-colors mt-10 md:mb-8 font-inter-tight"
                 >
                     <ArrowLeft className="w-5 h-5" />
                     <span className="text-sm md:text-base">Back to Resources</span>
