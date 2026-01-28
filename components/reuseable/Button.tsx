@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={cn(
-        "px-4 py-1 xl:px-8 xl:py-2 rounded-[12px] font-inter-tight font-medium text-sm cursor-pointer transition-all",
+        "px-4 py-1 xl:px-8 xl:py-2 border-[1.5px] border-[#E31E24] rounded-[12px] font-inter-tight font-medium text-sm cursor-pointer transition-all",
         variant === "primary" &&
         "bg-button-primary text-white hover:bg-button-primary-hover",
         variant === "secondary" &&
