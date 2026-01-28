@@ -25,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         src={image}
                         alt={title}
                         fill
-                        className="object-contain"
+                        className="object-contain object-center"
                     />
                 </div>
             </div>

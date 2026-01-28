@@ -88,7 +88,7 @@ const Footer = () => {
           containerRef.current.style.setProperty('--mouse-x', `${x}px`);
           containerRef.current.style.setProperty('--mouse-y', `${y}px`);
         }}>
-        <h1 className="font-hoves-pro text-[17vw] font-bold leading-none tracking-[-0.8vw] select-none pointer-events-none"
+        <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.8vw] select-none pointer-events-none"
           style={{
             backgroundImage: `radial-gradient(circle 250px at var(--mouse-x, 50%) var(--mouse-y, 50%), ${activeColor}, #363639 100%)`,
             WebkitBackgroundClip: 'text',

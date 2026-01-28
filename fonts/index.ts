@@ -28,6 +28,17 @@ export const hovesPro = localFont({
   variable: "--font-hoves-pro",
 });
 
+export const ubermove = localFont({
+  src: [
+    {
+      path: "./Uber Move Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-uber-move",
+});
+
 export const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],

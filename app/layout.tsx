@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroller from "@/layouts/SmoothScroller";
-import { hovesPro, interTight } from "@/fonts";
+import { hovesPro, interTight,ubermove } from "@/fonts";
 import Footer from "@/components/reuseable/Footer";
 import Navbar from "@/components/reuseable/Navbar";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hovesPro.variable} ${interTight.variable} antialiased`}
+        className={`${hovesPro.variable} ${interTight.variable} ${ubermove.variable} antialiased`}
       >
         <SmoothScroller>
            <Navbar />

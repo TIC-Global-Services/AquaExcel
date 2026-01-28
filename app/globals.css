@@ -21,6 +21,7 @@
   --color-button-secondary-border: var(--button-secondary-border);
   --color-nav-text: var(--nav-text);
   --font-hoves-pro: var(--font-hoves-pro);
+  --font-uber-move:var(--font-uber-move)
   --font-inter-tight: var(--font-inter-tight);
 }
 .outline-text {
