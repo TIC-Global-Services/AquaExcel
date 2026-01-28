@@ -71,7 +71,7 @@ const Navbar = () => {
         </div>
 
         <Link href='/contact' className="hidden lg:block">
-          <button className="bg-white text-foreground px-8 py-3 rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity">
+          <button className="bg-white text-foreground px-8 py-3 cursor-pointer rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity">
             For Enquiries
           </button></Link>
       </div>

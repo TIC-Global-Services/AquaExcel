@@ -96,7 +96,7 @@ const gallary = () => {
 
               <div
                 key={item.id}
-                className={`relative group rounded-[20px] overflow-hidden ${item.className}`}
+                className={`relative group rounded-[20px] overflow-hidden cursor-pointer ${item.className}`}
               >
                 <SimpleParallax>
                   <Image

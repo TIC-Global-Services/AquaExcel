@@ -6,7 +6,13 @@ import image2 from "@/assets/why-us/distributionpatnerimg2.jpg";
 import image3 from "@/assets/why-us/distributionpatnerimg3.jpg";
 import SimpleParallax from "simple-parallax-js";
 import ContainerLayout from "@/layouts/ContainerLayout";
+import { useRouter } from "next/navigation";
 const Distribution = () => {
+ const router = useRouter();
+
+  const navigateAndScroll = (value: string) => {
+    router.push(`/resources${value}`);
+  };
 
   const distributors = [
     {
@@ -37,6 +43,7 @@ const Distribution = () => {
       <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:grid-cols-3 gap-5 md:gap-5 scrollbar-hide py-5">
         {distributors.map((card, index) => (
           <div
+          onClick={() => navigateAndScroll('#blogs')}
             key={index}
             className="relative shrink-0 w-[247px] h-[241px] md:w-auto md:h-[450px] lg:h-[400px] xl:h-[500px] snap-center rounded-2xl overflow-hidden shadow-md"
           >

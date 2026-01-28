@@ -65,12 +65,12 @@ const ProductList = () => {
     <ContainerLayout>
       <div className="py-20">
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-4 mb-20">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-9 py-3 rounded-xl border transition-all duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
+              className={`px-9 py-3 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
                 ? 'bg-[#323232] text-white'
                 : 'bg-white text-black border-[#AAAAAA] hover:border-gray-400'
                 }`}
