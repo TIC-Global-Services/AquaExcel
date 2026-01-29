@@ -106,8 +106,8 @@ const Footer = () => {
           {/* Column 1: Products */}
           <div>
             <h3 className="text-white font-hoves-pro font-medium text-[18px] leading-[20  px] mb-4 tracking-wide">PRODUCTS</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              <ul className="space-y-1.5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-5">
+              <ul className="md:space-y-1.5">
                 <li>
                   <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     BRASS THREADED TAPS
@@ -124,7 +124,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="space-y-1.5">
+              <ul className="md:space-y-1.5">
                 <li>
                   <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     PIPES & FITTINGS

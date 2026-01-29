@@ -321,7 +321,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="text-center  px-6">
+        <div className="text-center py-10 px-6">
           <h2 className="text-foreground mb-1 md:mb-0 font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
             Product Universe
           </h2>
@@ -331,7 +331,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
           </p>
         </div>
 
-        <div className="flex grow md:h-full items-center justify-center [perspective:2500px] [transform-style:preserve-3d] translate-y-[-3%] md:translate-y-[-5%]">
+        <div className="flex grow md:h-full items-center justify-center [perspective:2500px] [transform-style:preserve-3d] translate-y-[-15%] md:translate-y-[-10%]">
           <motion.div
             drag="x"
             dragElastic={0}
