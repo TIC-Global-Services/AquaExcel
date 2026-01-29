@@ -30,7 +30,7 @@ const Sustainableinnovation = () => {
                     <p className='lg:text-xl  text-sm font-regular font-inter-tight md:text-center'>
                         We continually elevate our processes and products to create solutions that <br  className='hidden md:block'/> are smarter, stronger, and more environmentally responsible.
                     </p>
-                    <ul className='list-none mt-4 w-full space-y-5'>
+                    <ul className='list-none mt-10 w-full space-y-5'>
                         {list.map((item, index) => (
                             <li key={index} className='flex items-center '>
                                 <img src={item.icon.src} alt="" className='w-12 h-12 mr-3'/>

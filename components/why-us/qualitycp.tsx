@@ -97,7 +97,7 @@ const Qualitycp = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-[5%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:pb-[10%] items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-12 lg:px-[5%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:py-25 items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
 
         {/* Left Side - Text Content */}
         <div className="flex flex-col text-left w-full mt-20 lg:mb-20   lg:overflow-hidden">
@@ -113,11 +113,11 @@ const Qualitycp = () => {
         </div>
 
         {/* Right Side - Slider Cards */}
-        <div className="w-full max-w-[630px] aspect-auto h-[65vh] sm:h-[75vh] lg:h-[70vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
+        <div className="w-full max-w-[630px] rounded-2xl aspect-auto h-[65vh] sm:h-[75vh] lg:h-[75vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
           {slides.map((res, index) => (
             <div
               key={index}
-              className={`card-cp-${index} absolute inset-0 w-full h-full opacity-0`}
+              className={`card-cp-${index}  absolute inset-0 w-full h-full opacity-0`}
               style={{ zIndex: index + 1 }}
             >
               <Card

@@ -101,7 +101,7 @@ const LifeAt = () => {
         </div>
 
         {/* Right Side - Slider Cards */}
-        <div className="w-full max-w-[630px] aspect-auto h-[65vh] sm:h-[75vh] lg:h-[70vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
+        <div className="w-full max-w-[630px] aspect-auto h-[65vh] sm:h-[75vh] lg:h-[75vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
           {slides.map((res, index) => (
             <div
               key={index}
