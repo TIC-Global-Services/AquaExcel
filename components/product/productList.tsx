@@ -1,6 +1,6 @@
 'use client'
 
-import React, { use, useState } from 'react'
+import React, { ReactElement, use, useState } from 'react'
 import ContainerLayout from '@/layouts/ContainerLayout'
 import ProductCard from '../reuseable/ProductCard'
 import { Taps } from '@/app/data/taps'
@@ -9,19 +9,20 @@ import { pipes } from '@/app/data/Pipes'
 import { maxion } from '@/app/data/maxion'
 import { accessories } from '@/app/data/accesorries'
 import Appsection from './appsection'
+import { StaticImageData } from 'next/image'
 // Placeholder images - using imports if available or strings
 // Ideally replace with actual assets
 const placeholderImage = '/assets/logo.png' // Fallback
 
-interface product {
-  id?: string,
-  title?: string
-  description?: string | HTMLDivElement
-  product?: string
-}
+// interface product {
+//   id?: string,
+//   title?: string
+//   description?: string | HTMLDivElement
+//   product?: StaticImageData
+// }
 
-// Mock Data Structure
-const productSections: product = [
+
+const productSections = [
   {
     id: 'taps',
     title: 'Taps & Fittings',
@@ -29,7 +30,7 @@ const productSections: product = [
     products: Taps
   },
   {
-    id: 'Bath', // Matching tab ID
+    id: 'Bath', 
     title: 'Bath Fittings',
     description: <>Engineered for smooth flow and everyday reliability, these fittings enhance comfort <br /> with every use. From showers to health faucets, each piece delivers durable<br />performance and consistent operation.</>,
     products: bathfitting

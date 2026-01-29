@@ -45,10 +45,10 @@ const Hero = () => {
       titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-[#E0E0E0] w-full"
       title={
         <>
-          Elevating water usage with <br className="md:hidden block" /> future-ready<br className="hidden md:block" /> design.
+          Elevating water usage <br className="hidden md:block" /> with <br className="md:hidden block" /> future-ready design.
         </>
       }
-      backgroundClassName="object-cover"
+      backgroundClassName="object-cover scale-[0.95] overflow-hidden relative"
       maxWidth='md:max-w-6xl'
       subtitleClassName="mb-5"
       subtitle={

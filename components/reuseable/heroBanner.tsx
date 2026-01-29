@@ -144,7 +144,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 
       {/* Content */}
       <ContainerLayout>
-        <div className={`relative ${height} flex items-center md:items-end md:pb-28`}>
+        <div className={`relative ${height} flex items-end pb-28`}>
           <div className={`${paddingX} w-full`}>
             <div className={`${maxWidth} ${contentAlignmentClasses[contentAlignment]}`}>
               {/* Custom Content or Default Content */}
