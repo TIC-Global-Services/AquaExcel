@@ -56,11 +56,11 @@ const DownloadApp = () => {
               </p>
             </div>
             <div className='flex flex-col'>
-              <div className="border-2 rounded-2xl border-white py-2 px-3 bg-white/10 backdrop-blur-sm">
+              <div className="border-2 rounded-2xl border-white py-2 px-6 pb-2.5 bg-white/10 backdrop-blur-sm">
               <p className='text-white font-medium text-xl tracking-[-4%] text-center uppercase mb-1  hidden md:block'>About App</p>
               <Image src={qrcode} width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
             </div>
-            <p className='text-white font-light font-hoves-pro text-sm md:text-xl mt-1 text-center'>Scan to know more</p>
+            <p className='text-white font-light font-hoves-pro text-sm md:text-xl mt-2 text-center'>Scan to know more</p>
             </div>
             <div className="text-center md:text-left text-white max-w-2xl hidden md:block">
               <h2 className="text-[1.5rem] lg:text-[2.75rem] tracking-tighter font-medium font-hoves-pro"> 

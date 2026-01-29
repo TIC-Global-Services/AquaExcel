@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return (
         <div className={cn("flex flex-col group cursor-pointer", className)}>
             {/* Image Container */}
-            <div className="bg-[#FAF9F5] aspect-3/4 rounded-[20px] p-4 flex items-center justify-center mb-6 relative overflow-hidden transition-all duration-300">
+            <div className="bg-[#FAF9F5] aspect-4/3 rounded-[20px] p-4 flex items-center justify-center mb-6 relative overflow-hidden transition-all duration-300">
                 <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
                     <Image
                         src={image}
@@ -39,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 {/* Divider */}
                 <div className="w-full h-px bg-[#000000] mb-3" />
 
-                <p className="font-inter-tight text-sm font-medium md:text-[22px] text-[#646464] leading-relaxed line-clamp-4">
+                <p className="font-inter-tight text-sm font-regular md:text-[22px] text-[#646464] leading-relaxed line-clamp-4">
                     {description}
                 </p>
 

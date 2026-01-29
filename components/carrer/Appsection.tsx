@@ -18,7 +18,7 @@ const Appsection = () => {
               src="/bottomsecimg.png"
               alt="Aqua Excel App"
               fill
-              className="object-cover scale-75 md:scale-110"
+              className="object-cover scale-100 md:scale-110"
                objectPosition="30% 0%"
               priority={false}
             />
@@ -30,7 +30,7 @@ const Appsection = () => {
           <h2 className="text-white font-hoves-pro font-medium text-xl xl:text-[44px] tracking-tighter leading-tight mb-1">
             Excel Group Legacy
           </h2>
-          <p className="text-white max-w-[45rem] font-hoves-pro font-light text-sm xl:text-[20px] mb-4 mt-1 leading-[120%]">
+          <p className="text-white max-w-[45rem] font-hoves-pro font-[400] text-sm xl:text-[20px] mb-4 mt-1 leading-[120%]">
             Excel Plast (25+ years) supplies polymer components to leading
             Indian and global organizations—bringing manufacturing
             discipline and reliability to Aqua Excel’s plumbing solutions.

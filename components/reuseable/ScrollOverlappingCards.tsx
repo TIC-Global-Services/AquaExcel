@@ -27,49 +27,49 @@ const ScrollOverlappingCards: React.FC<ScrollOverlappingCardsProps> = ({
   const [cardWidth, setCardWidth] = useState('100%');
   const [cardMaxHeight, setCardMaxHeight] = useState('auto');
 
-useEffect(() => {
-  const ctx = gsap.context(() => {
-    const isMobile = window.innerWidth < 768;
-    const isSmallHeightDesktop = window.innerWidth >= 768 && window.innerHeight < 768;
-    const offset = isSmallHeightDesktop ? 2 : 5;
-    const scrollMultiplier = isMobile ? 30 : isSmallHeightDesktop ? 75 : 100; // Reduced mobile to 30 for faster scroll
-    
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: `+=${cards.length * scrollMultiplier}%`,
-        pin: true,
-        scrub: isMobile ? 0.2 : 1, // Lower scrub value = faster, snappier animations
-        anticipatePin: 1,
-      },
-    });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 768;
+      const isSmallHeightDesktop = window.innerWidth >= 768 && window.innerHeight < 768;
+      const offset = isSmallHeightDesktop ? 2 : 5;
+      const scrollMultiplier = isMobile ? 20 : isSmallHeightDesktop ? 75 : 100; // Reduced mobile to 30 for faster scroll
 
-    cards.forEach((_, index) => {
-      if (index === 0) {
-        tl.set(`.card-${index}`, { opacity: 1, yPercent: 0 });
-        return;
-      }
-      
-      tl.fromTo(
-        `.card-${index}`,
-        { opacity: 0, yPercent: 100 },
-        { opacity: 1, yPercent: index * offset, duration: 0.5 } // Shorter duration
-      );
-    });
-  }, sectionRef);
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: `+=${cards.length * scrollMultiplier}%`,
+          pin: true,
+          scrub: isMobile ? 0.2 : 1, // Lower scrub value = faster, snappier animations
+          anticipatePin: 1,
+        },
+      });
 
-  return () => ctx.revert();
-}, [cards]);
+      cards.forEach((_, index) => {
+        if (index === 0) {
+          tl.set(`.card-${index}`, { opacity: 1, yPercent: 0 });
+          return;
+        }
+
+        tl.fromTo(
+          `.card-${index}`,
+          { opacity: 0, yPercent: 100 },
+          { opacity: 1, yPercent: index * offset, duration: 0.5 } // Shorter duration
+        );
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [cards]);
 
   useEffect(() => {
     const updateSizes = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
       if (width < 768) {
-        setContainerHeight(300);
+        setContainerHeight(380);
         setCardWidth('100%');
-        setCardMaxHeight('300px');
+        setCardMaxHeight('380px');
       } else if (width < 1280) {
         setContainerHeight(400);
         setCardWidth('100%');
@@ -91,7 +91,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="scroll-section min-h-screen  py-10 bg-background relative">
+    <section ref={sectionRef} className="scroll-section min-h-screen py-10 bg-background relative">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-x-[10%] w-full items-start  xl:px-0">
           {/* Left Column: Static Text */}

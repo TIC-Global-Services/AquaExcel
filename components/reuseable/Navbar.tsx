@@ -8,9 +8,10 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  let [shouldHideNavbar]=useState(false)
   const pathname = usePathname();
-   const hiddenRoutes = ['/resources/blogs/'];
-  const shouldHideNavbar = hiddenRoutes.some(route => pathname.includes(route));
+  const hiddenRoutes = ['/resources/blogs/'];
+  shouldHideNavbar = hiddenRoutes.some(route => pathname.includes(route));
   console.log("shouldHideNavbarshouldHideNavbar",shouldHideNavbar);
   // Cleanup effect to restore body scroll
   useEffect(() => {
@@ -58,7 +59,7 @@ const Navbar = () => {
           />
         </Link>
         
-        <div className={`${shouldHideNavbar==true ? 'hidden' : 'hidden lg:flex items-center gap-0'}`}>
+        <div className={`${shouldHideNavbar==true || undefined  ? 'hidden' : 'hidden lg:flex items-center gap-0'}`}>
         
           {navLinks.map((link) => (
             <Link

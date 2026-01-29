@@ -100,7 +100,7 @@ const Downloads = () => {
 
   return (
     <>
-      <div className="md:py-10 py-5 w-full overflow-hidden px-[5%]">
+      <div className="py-10  w-full overflow-hidden md:px-[5%]">
         <div className='flex flex-col items-center mb-5'>
           <h1 className='font-medium text-[20px] md:text-[44px] tracking-tighter font-hoves-pro text-center mb-1'>
             Resources & Downloads
@@ -110,7 +110,7 @@ const Downloads = () => {
           </p>
         </div>
 
-        <div className="w-full max-w-[1440px] mx-auto relative">
+        <div className="w-full max-w-full mx-auto relative">
           {/* Carousel Window */}
           <div
             className="overflow-visible"
@@ -122,7 +122,7 @@ const Downloads = () => {
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * (itemsPerView === 1 ? 85 : 100)}%)` }}
+                style={{ transform: `translateX(-${currentSlide * (itemsPerView === 1 ? 95 : 100)}%)` }}
               >
                 {/* Render "Slides" based on itemsPerView logic */}
                 {Array.from({ length: totalSlides }).map((_, slideIndex) => (

@@ -107,14 +107,14 @@ const gallary = () => {
                   />
                 </SimpleParallax>
                 {/* Gradient Overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
+                <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t bg-gradient-full from-black/90 via-black/50 to-transparent z-10" />
 
                 {/* Content */}
                 <div className="absolute bottom-8 left-0 right-0 z-20 text-white text-center px-6">
                   <h3 className="font-hoves-pro font-medium text-[34px] leading-[100%] mb-2">
                     {item.title}
                   </h3>
-                  <p className="font-inter-tight font-normal text-[20px] leading-[100%] text-white/90 mx-auto max-w-[80%]">
+                  <p className="font-inter-tight font-normal text-[2.2vh] leading-[100%] text-white/90 mx-auto max-w-[80%]">
                     {item.description}
                   </p>
                 </div>

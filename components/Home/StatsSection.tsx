@@ -20,13 +20,13 @@ const stats: Stat[] = [
 const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
     if (!isInView) return;
 
     let startTime: number;
-    const duration = 2000; // 2 seconds
+    const duration = 1500; // 1.5 seconds for better mobile performance
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
@@ -47,9 +47,8 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
   }, [isInView, value]);
 
   return (
-    <div ref={ref} className="text-[50px] sm:text-[70px] lg:text-[100px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
-      {count}
-      {suffix}
+    <div ref={ref} className="text-[28px] sm:text-[40px] lg:text-[50px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
+      {count}{suffix}
     </div>
   );
 };
@@ -92,7 +91,7 @@ const StatsSection = () => {
               </div>
 
               {/* Foreground number container */}
-              <div className=" relative z-10 lg:flex-1 flex items-start lg:items-start lg:pt-8 w-full justify-start lg:justify-start">
+              <div className="relative z-10 lg:flex-1 flex items-start lg:items-start lg:pt-8 w-full justify-start lg:justify-start">
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </div>
 

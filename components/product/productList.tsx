@@ -13,35 +13,43 @@ import Appsection from './appsection'
 // Ideally replace with actual assets
 const placeholderImage = '/assets/logo.png' // Fallback
 
+interface product {
+  id?: string,
+  title?: string
+  description?: string | HTMLDivElement
+  product?: string
+}
+
 // Mock Data Structure
-const productSections = [
+const productSections: product = [
   {
     id: 'taps',
     title: 'Taps & Fittings',
-    description: 'Engineered for smooth water flow, strong sealing, and reliable daily use.Made with quality materials and precise craftsmanship to deliver long-lasting performance in any space.',
+    description: <>Engineered for smooth water flow, strong sealing, and reliable daily use.<br /> Made with quality materials and precise craftsmanship to deliver long-lasting performance in any space</>,
     products: Taps
   },
   {
     id: 'Bath', // Matching tab ID
     title: 'Bath Fittings',
-    description: 'Experience luxury and functionality combined.',
+    description: <>Engineered for smooth flow and everyday reliability, these fittings enhance comfort <br /> with every use. From showers to health faucets, each piece delivers durable<br />performance and consistent operation.</>,
     products: bathfitting
   }, {
     id: 'Pipe',
     title: 'Pipes',
-    description: 'Built to withstand pressure, heat, and time.Delivers clean flow, strong joints, and reliable installation across all applications.',
+    description: <>Built to withstand pressure, heat, and time.<br />Delivers clean flow, strong joints, and reliable installation across all applications.</>,
     products: pipes
   },
   {
     id: 'maxion',
     title: 'Maxion',
-    description: 'A durable, heavy-duty cover designed to secure underground chambers, ensuring safety, easy maintenance access, and long-lasting protection from external damage.',
+    description: <>A durable, heavy-duty cover designed to secure underground chambers, ensuring safety, easy<br /> maintenance access, and long-lasting protection from external damage.</>,
     products: maxion
   },
   {
     id: 'accessories',
     title: 'Accessories',
-    description: 'Essential add-ons that complete your plumbing setup.Each accessory is built for reliable performance, safer water flow, and long-lasting use.',
+    description: <>Essential add-ons that complete your plumbing setup.<br />
+      Each accessory is built for reliable performance, safer water flow, and long-lasting use.</>,
     products: accessories
   }
 ]
@@ -59,18 +67,18 @@ const ProductList = () => {
 
   // Filter or show all? Design usually implies one section active at a time for tabs
   const activeSection = productSections.find(s => s.id === activeTab)
-  console.log("activeSection",activeSection)
+  console.log("activeSection", activeSection)
 
   return (
     <ContainerLayout>
-      <div className="py-20">
+      <div className="py-10">
         {/* Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-4 mb-20">
+        <div className="md:grid flex overflow-x-auto scrollbar-hide gap-5 px-10  md:grid-cols-5 items-center justify-center md:gap-4 mb-20">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-9 py-3 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
+              className={`px-10 shrink-0  md:px-3 py-3 rounded-xl border transition-all snap-start cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
                 ? 'bg-[#323232] text-white'
                 : 'bg-white text-black border-[#AAAAAA] hover:border-gray-400'
                 }`}
@@ -82,7 +90,7 @@ const ProductList = () => {
 
         {/* Section Header */}
         {activeSection && (
-          <div className="text-center mb-16 max-w-4xl mx-auto">
+          <div className="text-center mb-24 max-w-4xl mx-auto">
             <h2 className="font-hoves-pro font-medium tracking-tighter leading-[120%] text-3xl md:text-[40px] mb-4">
               {activeSection.title}
             </h2>
@@ -94,29 +102,31 @@ const ProductList = () => {
 
         {/* Products by Subcategory */}
         {activeSection?.products.map((subcategory, subIndex) => (
+          console.log("subcategory", subcategory),
           <div key={subIndex} className="col-span-full">
             {/* Subcategory Heading */}
             {subcategory.heading && (
-              <h3 className="font-hoves-pro font-medium leading-[120%] tracking-tighter text-2xl md:text-[32px] mb-8 mt-8">
+              <h3 className="font-hoves-pro font-medium leading-[120%]  text-2xl md:text-[32px] mb-12 mt-12">
                 {subcategory.heading}
               </h3>
             )}
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className={`flex flex-wrap justify-center gap-x-8 gap-y-16`}>
               {subcategory.products.map((product, productIndex) => (
-                <ProductCard
-                  key={productIndex}
-                  title={product.title}
-                  description={product.description}
-                  image={product.image || placeholderImage}
-                />
+                <div key={productIndex} className={`${activeSection.id === 'maxion' ? 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]' : 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]'}`}>
+                  <ProductCard
+                    title={product.title}
+                    description={product.description}
+                    image={product.image || placeholderImage}
+                  />
+                </div>
               ))}
             </div>
           </div>
         ))}
-       
-       {(activeSection?.id === "Pipe" || activeSection?.id === "Bath") ? <Appsection/> : null}
+
+        <Appsection />
         {!activeSection && (
           <div className="text-center py-20 text-gray-400">
             Content coming soon for this category.

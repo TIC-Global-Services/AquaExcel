@@ -176,7 +176,7 @@ const Footer = () => {
                 ENQUIRY: +91-87540-14018
               </li>
               <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
-                EMAIL: SALESCORPORATE@AQUAEXCEL.IN
+                <a href="mailto:salescoordinator@aquaexcel.in">EMAIL: SALESCORPORATE@AQUAEXCEL.IN</a>
               </li>
             </ul>
           </div>
@@ -187,9 +187,9 @@ const Footer = () => {
           <p className="text-[#FFFFFF] font-hoves-pro font-[500] text-xs leading-5 md:text-[18px]">
             © 2025 AQUA EXCEL . ALL RIGHTS RESERVED.
           </p>
-          <p className="text-[#FFFFFF] font-hoves-pro font-[500] text-xs leading-5 md:text-[18px]">
+          <Link href={'https://www.theinternetcompany.one/contact'} target="_blank" ><p className="text-[#FFFFFF] font-hoves-pro font-[500] text-xs leading-5 md:text-[18px]">
             DESIGNED & DEVELOPED BY TIC GLOBAL SERVICES
-          </p>
+          </p></Link>
         </div>
       </div>
     </footer>

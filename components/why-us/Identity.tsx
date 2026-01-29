@@ -17,7 +17,7 @@ const Identity = () => {
   return (
     <ContainerLayout>
       <div className='mt-10 lg:py-10'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-5 items-center'>
           <div className=''>
             <div className='overflow-hidden rounded-[20px]'>
               <SimpleParallax>

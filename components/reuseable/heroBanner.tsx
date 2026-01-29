@@ -1,7 +1,9 @@
+"use client"
 import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
 import ContainerLayout from "@/layouts/ContainerLayout";
 import Link from "next/link";
+import { useEffect } from "react";
 
 interface HeroBannerProps {
   // Background
@@ -88,13 +90,37 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     right: "items-end text-right",
   };
 
+  useEffect(() => {
+      // Parallax effect — smooth, performant, respects rounded corners
+      const handleScroll = () => {
+        const scrolled = window.scrollY + window.innerHeight / 2; // center-based trigger
+  
+        document.querySelectorAll<HTMLElement>(".parallax-media").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const cardCenter = rect.top + rect.height / 2 + window.scrollY;
+  
+          // Distance from viewport center
+          const distance = scrolled - cardCenter;
+          const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
+  
+          el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
+        });
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // initial position
+  
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    
   return (
     <section className={`relative ${height} w-full bg-hero-bg overflow-hidden`}>
       {/* Background Image */}
 
-      <div className="absolute inset-0">
+      <div className="absolute parallax-media inset-0">
 
         <Image
+      
           src={backgroundImage || "/hero-banner.jpg"}
           alt={backgroundAlt || "Hero background image"}
           fill

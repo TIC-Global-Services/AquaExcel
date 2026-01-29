@@ -48,7 +48,7 @@ const VideoCard = ({
 
   return (
     <div
-      className="relative aspect-3/4 h-full rounded-2xl overflow-hidden cursor-pointer group"
+      className="relative aspect-9/16 h-full rounded-2xl overflow-hidden cursor-pointer group"
       onClick={handleClick}
     >
       <video
@@ -78,13 +78,13 @@ const Videovault = () => {
     <ContainerLayout>
       <div className="py-10">
         {/* Tabs */}
-        <h1 className='font-medium text-xl md:text-[44px] tracking-tighter text-center font-hoves-pro mb-10 md:mb-20'>Video Vault</h1>
-        <div className="flex justify-center gap-4 mb-16">
+        <h1 className='font-medium text-xl md:text-[44px] tracking-tighter text-center font-hoves-pro mb-10 md:mb-5'>Video Vault</h1>
+        <div className="flex justify-center gap-4 mb-10">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`md:px-8 md:py-3 py-2 px-3 rounded-xl border transition-all duration-300 font-inter-tight text-xs md:text-lg ${activeTab === tab
+              className={`md:px-8 md:py-3 py-2 px-3 rounded-xl cursor-pointer border transition-all duration-300 font-inter-tight text-xs md:text-lg ${activeTab === tab
                 ? 'bg-[#323232] text-white border-[#323232]'
                 : 'bg-white text-black border-[#E5E5E5] hover:border-gray-400'
                 }`}

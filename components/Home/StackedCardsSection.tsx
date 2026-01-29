@@ -23,12 +23,20 @@ const cards: Card[] = [
 const StackedCardsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isSmallDesktop, setIsSmallDesktop] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const checkSmallDesktop = () => setIsSmallDesktop(window.innerWidth <= 1350 && window.innerWidth >= 768);
+    checkSmallDesktop();
+    window.addEventListener('resize', checkSmallDesktop);
+    return () => window.removeEventListener('resize', checkSmallDesktop);
   }, []);
 
   useEffect(() => {
@@ -53,8 +61,8 @@ const StackedCardsSection = () => {
   return (
    <ContainerLayout>
      <section className="lg:pt-[2%]  bg-background">
-      <div className="">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="relative">
+        <div className="grid grid-cols-1 w-auto lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -92,7 +100,7 @@ const StackedCardsSection = () => {
                       }}
                       animate={{
                         scale: 1 - stackPosition * 0.08,
-                        x: stackPosition * (isMobile ? 35 : 90),
+                        x: stackPosition * (isMobile ? 35 : isSmallDesktop ? 60 : 90),
                         y: stackPosition * (isMobile ? 6 : 12),
                         opacity: 1,
                         rotateY: 0,

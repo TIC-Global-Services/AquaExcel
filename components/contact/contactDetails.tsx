@@ -35,21 +35,21 @@ const ContactDetails = () => {
 
             {/* Right - Contact */}
             <div className="text-left lg:text-left w-full">
-              <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-4">
+              <h3 className="font-hoves-pro font-medium text-xl lg:text-[32px] text-foreground mb-2">
                 Contact
               </h3>
               <div className=" space-y-2">
                 <p>
-                  <span className="text-black font-normal text-base md:text-[24px] font-hoves-pro leading-[100%]">Enquiry: </span>
-                  <a href="tel:+918754010016" className="font-light text-[#646464]  text-base md:text-[24px] leading-[100%] font-inter-tight">+91-87540 10016</a>
+                  <span className="text-black font-normal text-[1.2vh] font-hoves-pro leading-[100%]">Enquiry: </span>
+                  <a href="tel:+918754010016" className="font-light text-[#646464]  text-[1.2vh] leading-[100%] font-inter-tight">+91-87540 10016</a>
                 </p>
                 <p>
-                  <span className="text-black font-normal text-base md:text-[24px] leading-[100%] font-hoves-pro">Phone: </span>
-                  <a href="tel:+914222986842" className="font-light text-[#646464] text-base md:text-[24px] leading-[100%] font-inter-tight">+91-422-2986842</a>
+                  <span className="text-black font-normal text-[1.2vh] leading-[100%] font-hoves-pro">Phone: </span>
+                  <a href="tel:+914222986842" className="font-light text-[#646464] text-[1.2vh] leading-[100%] font-inter-tight">+91-422-2986842</a>
                 </p>
                 <p>
-                  <span className="text-black font-normal text-base md:text-[24px] leading-[100%] font-hoves-pro">Email: </span>
-                  <a href="mailto:salescoordinator@aquaexcel.in" className="font-light text-[#646464] text-base md:text-[22px] leading-[100%] font-inter-tight">salescoordinator@aquaexcel.in</a>
+                  <span className="text-black font-normal text-[1.2vh] leading-[100%] font-hoves-pro">Email: </span>
+                  <a href="mailto:salescoordinator@aquaexcel.in" className="font-light text-[#646464] text-[1.2vh] leading-[100%] font-inter-tight">salescoordinator@aquaexcel.in</a>
                 </p>
               </div>
             </div>
