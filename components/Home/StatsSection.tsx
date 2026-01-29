@@ -24,7 +24,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 
   useEffect(() => {
     if (!isInView) return;
-
+    
     let startTime: number;
     const duration = 1500; // 1.5 seconds for better mobile performance
 
@@ -47,8 +47,8 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
   }, [isInView, value]);
 
   return (
-    <div ref={ref} className="text-[28px] sm:text-[40px] lg:text-[50px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
-      {count}{suffix}
+    <div ref={ref} key={`${count}-${suffix}`} className="text-[28px] sm:text-[40px] lg:text-[50px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
+      {count}{suffix || "\u00A0"}
     </div>
   );
 };
