@@ -28,6 +28,14 @@ const Navbar = () => {
     { name: "Career", href: "/career" },
     // { name: "Contact us", href: "/contact" },
   ];
+  const mobileNavLinks = [
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Why us", href: "/why-us" },
+    { name: "Resources", href: "/resources" },
+    { name: "Career", href: "/career" },
+    { name: "Contact us", href: "/contact" },
+  ];
 
   const isActive = (currentPath: string, itemLink: string) => {
     if (itemLink === '/') {
@@ -110,7 +118,7 @@ const Navbar = () => {
             className="fixed inset-0 bg-white z-[9999] flex flex-col pt-24 px-6 h-screen justify-start overflow-y-auto"
           >
             <div className="flex flex-col justify-start items-center mt-10  gap-6">
-              {navLinks.map((link) => (
+              {mobileNavLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}

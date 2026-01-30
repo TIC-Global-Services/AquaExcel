@@ -30,7 +30,7 @@ const productSections = [
     products: Taps
   },
   {
-    id: 'Bath', 
+    id: 'Bath',
     title: 'Bath Fittings',
     description: <>Engineered for smooth flow and everyday reliability, these fittings enhance comfort <br /> with every use. From showers to health faucets, each piece delivers durable<br />performance and consistent operation.</>,
     products: bathfitting
@@ -71,15 +71,15 @@ const ProductList = () => {
   console.log("activeSection", activeSection)
 
   return (
-    <ContainerLayout>
+    <ContainerLayout disablePaddingX>
       <div className="py-10">
         {/* Tabs */}
-        <div className="md:grid flex overflow-x-auto scrollbar-hide gap-5 px-10  md:grid-cols-5 items-center justify-center md:gap-4 mb-20">
-          {tabs.map((tab) => (
+        <div className="flex md:grid md:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:gap-4 mb-10 md:mb-20 px-0 md:px-[50px] xl:px-[80px]">
+          {tabs.map((tab) => ( 
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-10 shrink-0  md:px-3 py-3 rounded-xl border transition-all snap-start cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
+              className={`px-6 py-2 md:py-3 whitespace-nowrap shrink-0 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
                 ? 'bg-[#323232] text-white'
                 : 'bg-white text-black border-[#AAAAAA] hover:border-gray-400'
                 }`}
@@ -91,7 +91,7 @@ const ProductList = () => {
 
         {/* Section Header */}
         {activeSection && (
-          <div className="text-center mb-24 max-w-4xl mx-auto">
+          <div className="text-center mb-24 max-w-4xl mx-auto px-6 md:px-0">
             <h2 className="font-hoves-pro font-medium tracking-tighter leading-[120%] text-3xl md:text-[40px] mb-4">
               {activeSection.title}
             </h2>
@@ -101,38 +101,40 @@ const ProductList = () => {
           </div>
         )}
 
-        {/* Products by Subcategory */}
-        {activeSection?.products.map((subcategory, subIndex) => (
-          console.log("subcategory", subcategory),
-          <div key={subIndex} className="col-span-full">
-            {/* Subcategory Heading */}
-            {subcategory.heading && (
-              <h3 className="font-hoves-pro font-medium leading-[120%]  text-2xl md:text-[32px] mb-12 mt-12">
-                {subcategory.heading}
-              </h3>
-            )}
+        <div className="px-6 md:px-[50px] xl:px-[80px]">
+          {/* Products by Subcategory */}
+          {activeSection?.products.map((subcategory, subIndex) => (
+            console.log("subcategory", subcategory),
+            <div key={subIndex} className="col-span-full">
+              {/* Subcategory Heading */}
+              {subcategory.heading && (
+                <h3 className="font-hoves-pro font-medium leading-[120%]  text-2xl md:text-[32px] mb-12 mt-12">
+                  {subcategory.heading}
+                </h3>
+              )}
 
-            {/* Products Grid */}
-            <div className={`flex flex-wrap justify-center gap-x-8 gap-y-16`}>
-              {subcategory.products.map((product, productIndex) => (
-                <div key={productIndex} className={`${activeSection.id === 'maxion' ? 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]' : 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]'}`}>
-                  <ProductCard
-                    title={product.title}
-                    description={product.description}
-                    image={product.image || placeholderImage}
-                  />
-                </div>
-              ))}
+              {/* Products Grid */}
+              <div className={`flex flex-wrap justify-center gap-x-8 gap-y-16`}>
+                {subcategory.products.map((product, productIndex) => (
+                  <div key={productIndex} className={`${activeSection.id === 'maxion' ? 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]' : 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]'}`}>
+                    <ProductCard
+                      title={product.title}
+                      description={product.description}
+                      image={product.image || placeholderImage}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
 
-        <Appsection />
-        {!activeSection && (
-          <div className="text-center py-20 text-gray-400">
-            Content coming soon for this category.
-          </div>
-        )}
+          <Appsection />
+          {!activeSection && (
+            <div className="text-center py-20 text-gray-400">
+              Content coming soon for this category.
+            </div>
+          )}
+        </div>
       </div>
     </ContainerLayout>
   )

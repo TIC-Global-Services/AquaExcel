@@ -68,7 +68,13 @@ const Faq = () => {
                             {faqData.map((item) => (
                                 <div key={item.id} className="border-b border-gray-100 last:border-0 lg:border-0">
                                     <button
-                                        onClick={() => setActiveId(activeId === item.id ? item.id : item.id)}
+                                        onClick={() => {
+                                            if (window.innerWidth < 1024) {
+                                                setActiveId(activeId === item.id ? null : item.id);
+                                            } else {
+                                                setActiveId(item.id);
+                                            }
+                                        }}
                                         className={`group flex items-center w-full py-4 text-left px-2 gap-2 transition-all duration-300 ${activeId === item.id ? "opacity-100 bg-[#FFFEFA]" : "opacity-100 lg:opacity-60 lg:hover:opacity-100"
                                             }`}
                                     >
@@ -83,7 +89,7 @@ const Faq = () => {
                                         </span>
 
                                         <ChevronRight
-                                            className={`w-6 h-6 text-gray-400 transition-transform duration-300 ml-auto flex-shrink-0 ${activeId === item.id ? "text-black rotate-90 md:rotate-0" : ""
+                                            className={`w-6 h-6 text-gray-400 transition-transform duration-300 ml-auto flex-shrink-0 ${activeId === item.id ? "text-black rotate-90 lg:rotate-0" : ""
                                                 }`}
                                         />
                                     </button>
