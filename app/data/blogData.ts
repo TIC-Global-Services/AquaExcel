@@ -1,3 +1,7 @@
+import insight1 from '@/assets/resource/inspire-1.png'
+import insight2 from '@/assets/resource/inspire-2.png'
+import insight3 from '@/assets/resource/inspire-3.png'
+
 export const blogs = [
   {
     id: 1,
@@ -6,6 +10,7 @@ export const blogs = [
     date: "Sunday, 1 Jan 2023",
     tags: ["Brass Threading", "Brass", "Plumbing"],
     slug: "brass-threading",
+    image: insight1,
     content: `## Brass Threading
 
 Brass threading is a crucial process in plumbing and pipe fitting, ensuring proper connections and functionality. It involves threading a brass pipe or fitting to create a smooth, tapered surface that mates with a nut or screw. This process is essential for maintaining pressure, preventing leaks, and ensuring proper flow in plumbing systems.
@@ -60,6 +65,7 @@ As plumbing technology advances, brass threading continues to be a reliable and 
     date: "Sunday, 1 Jan 2023",
     tags: ["Water Conservation", "Plumbing Fixtures", "Sustainability"],
     slug: "water-saving-aerators-explained",
+    image: insight3,
     content: `## Water-Saving Aerators Explained
 
 Water conservation is no longer optional—it's essential. Faucet aerators are simple yet powerful devices that reduce water consumption without compromising performance.
@@ -118,6 +124,7 @@ Organizations and households that prioritize water efficiency contribute to reso
     date: "Sunday, 1 Jan 2023",
     tags: ["Home Repair", "Plumbing Maintenance", "DIY"],
     slug: "fixing-common-bathroom-leaks",
+    image: insight2,
     content: `## Fixing Common Bathroom Leaks
 
 Bathroom leaks waste water, increase utility bills, and can cause serious structural damage if left unaddressed. Most common leaks are fixable with basic tools and minimal plumbing knowledge.

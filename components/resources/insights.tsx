@@ -2,60 +2,27 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import insight1 from '@/assets/resource/inspire-1.png'
-import insight2 from '@/assets/resource/inspire-2.png'
-import insight3 from '@/assets/resource/inspire-3.png'
 import ContainerLayout from '@/layouts/ContainerLayout'
 import SimpleParallax from 'simple-parallax-js'
-import { useLocation } from 'react-router-dom'
 import { MoveRight } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import { blogs } from '@/app/data/blogData' // Import the blogs data
 
 const insights = () => {
- useEffect(() => {
-    // Check if there's a hash in the URL
-    const hash = window.location.hash;
-    
-    if (hash) {
-      // Small timeout to ensure DOM is ready
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 1000);
-    }
-  }, []);
-    // Utility function to generate URL-friendly slugs from titles
-    const generateSlug = (title: string) => {
-        return title
-            .toLowerCase()
-            .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-            .trim()
-            .replace(/\s+/g, '-') // Replace spaces with hyphens
-            .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
-    }
+    useEffect(() => {
+        // Check if there's a hash in the URL
+        const hash = window.location.hash;
 
-    const insightsData = [
-        {
-            title: "Why Brass Threading  matters",
-            subtitle: "Read the Article",
-            image: insight1,
-            slug: "brass-threading" // Matches blogData slug
-        },
-        {
-            title: "Water-saving aerators explained",
-            subtitle: "Read the Article",
-            image: insight2,
-            slug: "water-saving-aerators-explained" // Matches blogData slug
-        },
-        {
-            title: "Fixing common bathroom leaks",
-            subtitle: "Read the Article",
-            image: insight3,
-            slug: "fixing-common-bathroom-leaks" // Matches blogData slug
+        if (hash) {
+            // Small timeout to ensure DOM is ready
+            setTimeout(() => {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 1000);
         }
-    ]
+    }, []);
+
     return (
         <ContainerLayout>
             <div id='blogs'>
@@ -66,7 +33,7 @@ const insights = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
-                    {insightsData.map((item, index) => {
+                    {blogs.map((item, index) => {
                         const isTall = index === 2;
                         // Mobile: Base height 300px. Desktop: Tall item spans 2 rows and is full height. Others 350px.
                         const gridClass = isTall
@@ -78,8 +45,8 @@ const insights = () => {
                                 key={index}
                                 href={`/resources/blogs/${item.slug}`}
                                 className={`relative w-full overflow-hidden rounded-[20px] shadow-lg ${gridClass} group block touch-manipulation`}
-                                style={{ WebkitTapHighlightColor: 'transparent' }}  
-                                    >
+                                style={{ WebkitTapHighlightColor: 'transparent' }}
+                            >
                                 <SimpleParallax>
                                     <Image src={item.image} alt={item.title} fill className="object-cover pointer-events-none" />
                                 </SimpleParallax>

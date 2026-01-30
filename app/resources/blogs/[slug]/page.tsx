@@ -1,6 +1,7 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { blogs } from '@/app/data/blogData'
 import ContainerLayout from '@/layouts/ContainerLayout'
 import { ArrowLeft } from 'lucide-react'
@@ -120,46 +121,65 @@ const BlogDetailPage = async ({ params }: BlogPageProps) => {
     }
 
     return (
-        <div className="min-h-screen bg-white py-10 md:py-16">
-            <ContainerLayout>
-                {/* Back Button */}
-                <Link
-                    href="/resources"
-                    className="inline-flex items-center gap-2 text-[#646464] hover:text-black transition-colors mt-10 md:mb-8 font-inter-tight"
-                >
-                    <ArrowLeft className="w-5 h-5" />
-                    <span className="text-sm md:text-base">Back to Resources</span>
-                </Link>
+        <div className="min-h-screen bg-white">
+            {/* Hero Banner Section */}
+            <div className="relative h-[60vh] md:h-[70vh] w-full">
+                {/* Background Image */}
+                {blog.image && (
+                    <Image
+                        src={blog.image}
+                        alt={blog.title}
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                )}
 
-                {/* Blog Header */}
-                <div className="mb-8 md:mb-12">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {blog.tags.map((tag) => (
-                            <span
-                                key={tag}
-                                className="text-xs md:text-sm px-3 py-1 rounded-full bg-[#FAF9F5] text-[#E31E24] font-inter-tight"
-                            >
-                                {tag}
-                            </span>
-                        ))}
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+                <ContainerLayout className="relative h-full flex flex-col justify-end pb-12 md:pb-16">
+                    {/* Back Button (Absolute Top) */}
+                    <div className="max-w-4xl">
+                        <div className="flex flex-wrap gap-2 mb-6">
+
+                            {blog.tags.map((tag) => (
+                                <span
+                                    key={tag}
+                                    className="text-xs md:text-sm px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white border border-white/30 font-inter-tight"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+
+                        <h1 className="font-hoves-pro font-medium text-3xl md:text-5xl lg:text-6xl text-white mb-6 tracking-tight leading-[110%]">
+                            {blog.title}
+                        </h1>
+
+                        <p className="text-sm md:text-lg text-white/80 font-inter-tight">
+                            {blog.date}
+                        </p>
                     </div>
+                </ContainerLayout>
+            </div>
 
-                    <h1 className="font-hoves-pro font-medium text-2xl md:text-4xl lg:text-5xl text-black mb-4 tracking-tight">
-                        {blog.title}
-                    </h1>
+            <div className="py-10 md:py-16 relative">
+                <ContainerLayout>
+                    <Link
+                        href="/resources"
+                        className=" absolute top-[2%] left-[5%] flex items-center gap-2 text-black/90 hover:text-black transition-colors font-inter-tight z-20"
+                    >
+                        <ArrowLeft className="w-5 h-5" />
+                        <span className="text-sm md:text-base">Back to Resources</span>
+                    </Link>
+                    {/* Blog Content */}
+                    <article className="max-w-none">
+                        {renderContent(blog.content)}
+                    </article>
 
-                    <p className="text-sm md:text-base text-[#646464] font-inter-tight">
-                        {blog.date}
-                    </p>
-                </div>
-
-                {/* Blog Content */}
-                <article className="max-w-none">
-                    {renderContent(blog.content)}
-                </article>
-
-                {/* Related Articles / CTA */}
-                {/* <div className="mt-12 md:mt-16 pt-8 border-t border-gray-200">
+                    {/* Related Articles / CTA */}
+                    {/* <div className="mt-12 md:mt-16 pt-8 border-t border-gray-200">
                     <Link
                         href="/resources"
                         className="inline-flex items-center gap-2 bg-[#E31E24] text-white px-6 py-3 rounded-xl hover:bg-[#c41a1f] transition-colors font-inter-tight font-medium"
@@ -167,7 +187,8 @@ const BlogDetailPage = async ({ params }: BlogPageProps) => {
                         Explore More Articles
                     </Link>
                 </div> */}
-            </ContainerLayout>
+                </ContainerLayout>
+            </div>
         </div>
     )
 }
