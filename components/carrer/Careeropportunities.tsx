@@ -19,6 +19,11 @@ const Careeropportunities = () => {
       description: "We are looking for a dedicated Production Supervisor to ensure smooth manufacturing operations on the shop floor. You will coordinate teams, monitor production quality, and maintain daily output targets while ensuring safety and consistency.",
       location: "Chennai",
     },
+    {
+      title: "Production Supervisor ",
+      description: "We are looking for a dedicated Production Supervisor to ensure smooth manufacturing operations on the shop floor. You will coordinate teams, monitor production quality, and maintain daily output targets while ensuring safety and consistency.",
+      location: "Chennai",
+    },
   ]
   return (
     <div className='py-10 xl:py-20  overflow-hidden'>
