@@ -56,8 +56,8 @@ useEffect(() => {
       <>
           <div className='py-10 xl:py-30 px-[5%]'>
             <div className='flex flex-col justify-center gap-2 text-center'>
-                <h1 className='text-xl xl:text-[2.75rem] leading-[120%] font-medium tracking-tighter'>Why work with us</h1>
-                <p className='xl:text-xl text-sm font-light leading-[120%]'>We believe great products come from great people.<br className='xl:hidden block' /> Here's what <br className='hidden xl:block' /> drives us every day.</p>
+                <h1 className='text-xl md:text-3xl lg:text-[2.75rem] leading-[120%] font-medium tracking-tighter'>Why work with us</h1>
+                <p className='md:text-xl text-sm font-light leading-[120%]'>We believe great products come from great people.<br className='xl:hidden block' /> Here's what <br className='hidden xl:block' /> drives us every day.</p>
             </div>
             <div className='flex md:grid overflow-x-auto md:overflow-x-visible md:grid-cols-9 gap-5 relative py-16 snap-start snap-mandatory md:snap-start scrollbar-hide'>
                 {content.map((val, index) => (
