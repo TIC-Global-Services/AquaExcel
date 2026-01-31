@@ -47,7 +47,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
   }, [isInView, value]);
 
   return (
-    <div ref={ref} key={`${count}-${suffix}`} className="text-[28px] sm:text-[40px] lg:text-[50px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
+    <div ref={ref} key={`${count}-${suffix}`} className="text-[28px] sm:text-[40px] lg:text-[50px] md:text-[60px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
       {count}{suffix || "\u00A0"}
     </div>
   );
@@ -66,10 +66,10 @@ const StatsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-tighter  lg:text-[44px] mb-1">
+          <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-tighter md:text-4xl lg:text-[44px] mb-1">
             Aqua Excel at a glance
           </h2>
-          <p className="text-foreground font-inter-tight font-regular tracking-tight text-base lg:text-[24px] max-w-4xl">
+          <p className="text-foreground font-inter-tight font-regular tracking-tight text-base md:text-xl lg:text-[24px] max-w-4xl">
             A brief look into the trust, expertise, and innovation shaping Aqua Excel today.
           </p>
         </motion.div>

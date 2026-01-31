@@ -67,13 +67,13 @@ const Navbar = () => {
           />
         </Link>
         
-        <div className={`${shouldHideNavbar==true || undefined  ? 'hidden' : 'hidden lg:flex items-center gap-0'}`}>
+        <div className={`${shouldHideNavbar==true || undefined  ? 'hidden' : 'hidden lg:flex items-center gap-2'}`}>
         
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`font-hoves-pro font-regular text-[16px] px-4 py-3 rounded-full transition-all duration-300 ${isActive(pathname, link.href)
+              className={`font-hoves-pro font-regular text-[16px] px-6 py-2 rounded-full transition-all duration-300 ${isActive(pathname, link.href)
                 ? 'bg-white font-medium text-black'
                 : 'text-nav-text hover:bg-white hover:text-black'
                 }`}

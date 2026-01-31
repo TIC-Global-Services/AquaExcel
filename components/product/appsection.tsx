@@ -7,7 +7,7 @@ const appsection = () => {
     return (
         <div>  <ContainerLayout>
             <section className=" bg-background mt-[7%]">
-                <div className="relative w-full py-[40%] lg:py-[20%] overflow-hidden rounded-[20px]">
+                <div className="relative w-full py-[40%] md:py-[20%] overflow-hidden rounded-[20px]">
                     {/* Background Image */}
 
                     <div className="absolute inset-0">
