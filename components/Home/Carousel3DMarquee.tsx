@@ -314,7 +314,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   return (
     <div className="overflow-x-hidden">
       <motion.div
-        className="relative h-[85dvh] md:h-[65dvh] lg:h-[80dvh] xl:h-[85dvh] w-full overflow-hidden flex flex-col justify-center md:block sm:py-10 lg:py-10"
+        className="relative h-[85dvh] min-h-[850px] md:h-[65dvh] lg:h-[80dvh] xl:h-[85dvh] w-full overflow-hidden flex flex-col justify-center md:block sm:py-10 lg:py-20"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
