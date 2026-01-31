@@ -29,7 +29,7 @@ const DownloadApp = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="relative md:py-[10%] min-h-[405px] md:min-h-[580px] md:max-h-[580px] w-full overflow-hidden">
+    <div className="relative md:mt-[10%] lg:mt-[5%] lg:py-[10%] min-h-[405px] lg:min-h-[580px] lg:max-h-[580px] w-full overflow-hidden">
       <Image
         src={bgimage}
         alt="Download App Background"

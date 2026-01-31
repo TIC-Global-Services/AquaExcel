@@ -67,7 +67,7 @@ useEffect(() => {
                             <Image
                                 src={val.image}
                                 alt="grids"
-                                className={`w-full h-full object-cover parallax-media ${index == 0 ? "" : ""}`}
+                                className={`w-full h-full object-cover md:scale-105 parallax-media ${index == 0 ? "" : ""}`}
                             />
                         </div>
                         <div className="absolute bottom-7 left-5 right-5 z-10">

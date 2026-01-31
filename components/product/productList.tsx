@@ -74,12 +74,12 @@ const ProductList = () => {
     <ContainerLayout disablePaddingX>
       <div className="py-10">
         {/* Tabs */}
-        <div className="flex md:grid md:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:gap-4 mb-10 md:mb-20 px-0 md:px-[50px] xl:px-[80px]">
+        <div className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:justify-center md:gap-4 mb-10 md:mb-20 px-0 md:px-0 lg:px-[50px] xl:px-[80px]">
           {tabs.map((tab) => ( 
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-2 md:py-3 whitespace-nowrap shrink-0 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
+              className={`px-6 py-2 md:px-5 lg:py-3 whitespace-nowrap shrink-0 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
                 ? 'bg-[#323232] text-white'
                 : 'bg-white text-black border-[#AAAAAA] hover:border-gray-400'
                 }`}

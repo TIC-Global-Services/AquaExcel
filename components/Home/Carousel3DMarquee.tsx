@@ -314,14 +314,14 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   return (
     <div className="overflow-x-hidden">
       <motion.div
-        className="relative md:h-[900px] h-[800px] w-full overflow-hidden flex flex-col justify-center md:block md:py-28"
+        className="relative h-[95dvh] md:h-[82dvh] lg:h-[90dvh] xl:h-[110dvh] w-full overflow-hidden flex flex-col justify-center md:block sm:py-10 lg:py-28"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="text-center py-10 px-6">
+        <div className="text-center py-20 md:py-10 px-6">
           <h2 className="text-foreground mb-1 md:mb-0 font-hoves-pro font-medium tracking-[-4%] text-xl lg:text-[44px]">
             Product Universe
           </h2>

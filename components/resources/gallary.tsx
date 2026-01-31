@@ -35,14 +35,14 @@ const gallary = () => {
     },
     {
       id: 4,
-      title: 'BATHROOM LAYOUT',
+      title: 'OUR TEAM',
       description: 'Every line drawn with purpose.',
       image: gallaryimg4,
       className: 'col-span-1 md:col-span-1 lg:col-span-2 h-[250px] md:h-[350px]', // Third width
     },
     {
       id: 5,
-      title: 'PRODUCT MACROS',
+      title: 'DESIGN CENTER',
       description: 'Engineering excellence, magnified.',
       image: gallaryimg5, // Placeholder reuse
       className: 'col-span-1 md:col-span-1 lg:col-span-2 h-[250px] md:h-[350px]', // Third width
@@ -52,7 +52,7 @@ const gallary = () => {
       title: 'ON-SITE INSTALLS',
       description: 'Installation you can trust, every time.',
       image: gallaryimg6, // Placeholder reuse
-      className: 'col-span-1 md:col-span-1 lg:col-span-2 h-[250px] md:h-[350px]', // Third width
+      className: 'col-span-1 md:col-span-2 lg:col-span-2 h-[250px] md:h-[350px]', // Third width
     },
   ];
   return (
