@@ -24,7 +24,7 @@ const Careeropportunities = () => {
     <div className='py-10 xl:py-20  overflow-hidden'>
       <ContainerLayout>
         <div className='flex flex-col justify-start text-left'>
-          <h1 className='text-xl md:text-2xl xl:text-[2.75rem] font-medium tracking-tighter'>Discover Career Opportunities</h1>
+          <h1 className='text-xl md:text-2xl xl:text-[2.75rem] font-medium md:tracking-tight tracking-tighter'>Discover Career Opportunities</h1>
           <p className='md:text-xl text-sm font-[300]  leading-[120%]'>Choose the role that matches your skills and<br className='block' /> drives your growth.</p>
         </div>
       </ContainerLayout>

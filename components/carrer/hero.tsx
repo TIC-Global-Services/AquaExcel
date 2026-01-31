@@ -44,7 +44,7 @@ const hero = () => {
       <HeroBanner
         height='h-screen'
         backgroundImage={banner}
-        titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] text-[22px] leading-[64px] tracking-tighter md:mb-4"
+        titleClassName="text-hero-text font-hoves-pro font-medium xl:text-[60px] md:text-[40px] text-[22px] leading-[64px] tracking-tighter md:mb-4"
         title="Build the Future With Us"
         subtitleClassName="text-[#E0E0E0] font-hoves-pro font-light xl:text-[20px] leading-[120%] text-base max-w-sm md:max-w-4xl mb-4"
         subtitle={
