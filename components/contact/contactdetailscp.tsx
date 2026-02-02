@@ -5,9 +5,9 @@ import Image from 'next/image'
 const contactdetailscp = () => {
     return (
         <ContainerLayout >
-            <div className='py-8 md:py-10 lg:mt-10 px-4 md:px-0'>
+            <div className='py-8 md:py-10 lg:mt-10 px-0 md:px-0'>
                 <div className='bg-[#FAF9F5] relative rounded-[20px] md:rounded-[30px] lg:rounded-[40px] grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 items-start lg:items-center px-6 md:px-8 lg:px-10 py-8 md:py-10'>
-                    <div className='flex flex-col gap-3 md:gap-0'>
+                    <div className='flex flex-col gap-0 md:gap-0'>
                         <h3 className="font-hoves-pro font-medium text-xl lg:text-[2.135vw]  text-foreground mb-2 md:mb-0 lg:mb-2">
                             Corporate Office
                         </h3>
@@ -17,7 +17,7 @@ const contactdetailscp = () => {
                     <div className='relative mx-auto w-[162px] h-[187px] md:w-[220px] md:h-[254px] lg:w-[292px] lg:h-[338px] my-4 md:my-6 lg:my-0'>
                         <Image src={tapimage} alt="Aqua Excel Tap" fill className="object-contain" />
                     </div>
-                    <div className='flex flex-col gap-3 md:gap-4 max-w-full'>
+                    <div className='flex flex-col gap-2 md:gap-4 max-w-full'>
                         <h2 className='font-hoves-pro font-medium text-xl lg:text-[2.135vw] text-foreground mb-2 md:mb-0 lg:mb-2'>
                             Contact
                         </h2>
