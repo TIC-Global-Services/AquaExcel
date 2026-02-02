@@ -7,7 +7,7 @@ const ContactForm = () => {
 
     return (
       <ContainerLayout>
-          <section className="py-10 lg:py-5 bg-background">
+          <section className="py-15 lg:py-5 bg-background">
             <div className="max-w-5xl mx-auto">
                 {/* Tabs */}
                 <div className="flex justify-center gap-4 mb-10">
@@ -78,7 +78,7 @@ const ContactForm = () => {
                             <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f]  transition-colors"
+                                    className="bg-[#E31E24] text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f]  transition-colors"
                                 >
                                     Submit Customer Enquiry
                                 </button>
@@ -149,7 +149,7 @@ const ContactForm = () => {
                             <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-base hover:bg-[#c91a1f] transition-colors"
+                                    className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] transition-colors"
                                 >
                                     Connect With Us
                                 </button>

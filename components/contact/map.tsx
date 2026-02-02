@@ -30,7 +30,7 @@ const map = () => {
             </button>
           </div>
         </div>
-        <div className="w-full mt-8 px-[8%]">
+        <div className="w-full mt-8 px-[5%] md:px-[8%]">
           <iframe
             src="https://www.openstreetmap.org/export/embed.html?bbox=76.99909687042238%2C11.035412260567426%2C77.0191812515259%2C11.052618511481354&layer=mapnik"
             className="w-full h-[400px] border border-gray-300 rounded-lg rounded-2xl"

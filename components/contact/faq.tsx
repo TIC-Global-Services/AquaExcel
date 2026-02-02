@@ -47,16 +47,21 @@ const Faq = () => {
     const [activeId, setActiveId] = useState<number | null>(2);
 
     useEffect(() => {
-        if (window.innerWidth < 1024) {
-            setActiveId(null);
-        }
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setActiveId((prev) => (prev === null ? 2 : prev));
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const activeFAQ = faqData.find((item) => item.id === activeId);
 
     return (
         <ContainerLayout>
-            <div className="w-full bg-white py-10 md:py-16">
+            <div className="w-full bg-white py-16">
                 <div className="md:max-w-7xl mx-auto">
                     <h2 className="text-xl md:text-[44px] text-center md:text-left font-medium text-black mb-5 md:mb-10">
                         Frequently Asked Questions
