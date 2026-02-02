@@ -50,15 +50,15 @@ const Careeropportunities = () => {
           loading="lazy"
           className="object-contain md:hidden block -rotate-90 opacity-30 z-0 scale-[1.8] translate-x-[18%] translate-y-[2%]"
         />
-        <div className="z-20 relative flex items-center  justify-center p-4 min-h-[400px] md:min-h-[80vh] lg:min-h-[75.111vh]">
+        <div className="z-20 relative flex items-center  justify-center min-h-[400px] md:min-h-[80vh] lg:min-h-[75.111vh]">
           {jobList.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full justify-center items-center pl-8 md:pl-0 md:max-w-7xl px-[3%] xl:px-[10%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full justify-center items-center pl-8  md:pl-0 md:max-w-7xl px-[2%] xl:px-[10%]">
               {jobList.map((res, index) => (
                 <div key={index} className='bg-[#FAF9F5] py-3 px-6 rounded-[20px] max-w-xl shadow-sm border-[1px]'>
                   <p className="text-black text-xs md:text-sm font-medium">{res.location}</p>
                   <h2 className="text-black text-base md:text-2xl font-semibold tracking-[-4%]">{res.title}</h2>
                   <p className="text-black text-xs md:text-base font-light mb-2">{res.description}</p>
-                  <button className="text-white bg-[#E31E24] font-medium text-sm px-5 py-2 rounded-xl">Apply Now</button>
+                  <button className="text-white bg-[#E31E24] font-medium md:text-sm text-xs px-5 py-2 rounded-xl">Apply Now</button>
                 </div>
               ))}
             </div>

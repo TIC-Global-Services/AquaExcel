@@ -8,7 +8,7 @@ import ContainerLayout from "@/layouts/ContainerLayout";
 const Appsection = () => {
   return (
     <div>  <ContainerLayout>
-      <section className="py-[1%] bg-background mb-[10%]">
+      <section className="py-[5%] bg-background mb-[10%]">
       <div className="relative w-full py-[40%] md:py-[20%] overflow-hidden rounded-[20px]">
         {/* Background Image */}
 
