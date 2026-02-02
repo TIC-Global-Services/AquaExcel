@@ -8,28 +8,28 @@ import image4 from '@/assets/carrer/grid4.png'
 import SimpleParallax from 'simple-parallax-js'
 import ContainerLayout from '@/layouts/ContainerLayout'
 const workwithus = () => {
-useEffect(() => {
-    // Parallax effect — smooth, performant, respects rounded corners
-    const handleScroll = () => {
-      const scrolled = window.scrollY + window.innerHeight / 2; // center-based trigger
+    useEffect(() => {
+        // Parallax effect — smooth, performant, respects rounded corners
+        const handleScroll = () => {
+            const scrolled = window.scrollY + window.innerHeight / 2; // center-based trigger
 
-      document.querySelectorAll<HTMLElement>(".parallax-media").forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const cardCenter = rect.top + rect.height / 2 + window.scrollY;
+            document.querySelectorAll<HTMLElement>(".parallax-media").forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                const cardCenter = rect.top + rect.height / 2 + window.scrollY;
 
-        // Distance from viewport center
-        const distance = scrolled - cardCenter;
-        const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
+                // Distance from viewport center
+                const distance = scrolled - cardCenter;
+                const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
 
-        el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
-      });
-    };
+                el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
+            });
+        };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initial position
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // initial position
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     const content = [
         {
 
@@ -53,33 +53,33 @@ useEffect(() => {
         },
     ]
     return (
-      <>
-          <div className='py-10 xl:py-30 px-[5%]'>
-            <div className='flex flex-col justify-center gap-2 text-center'>
-                <h1 className='text-xl md:text-3xl lg:text-[2.75rem] leading-[120%] font-medium tracking-tighter'>Why work with us</h1>
-                <p className='md:text-xl text-sm font-light leading-[120%]'>We believe great products come from great people.<br className='xl:hidden block' /> Here's what <br className='hidden xl:block' /> drives us every day.</p>
-            </div>
-            <div className='flex md:grid overflow-x-auto md:overflow-x-visible md:grid-cols-9 gap-5 relative py-16 snap-start snap-mandatory md:snap-start scrollbar-hide'>
-                {content.map((val, index) => (
-                    <div key={index} className={`relative flex-shrink-0 w-[280px] md:w-auto  snap-center ${index == 0 ? 'md:col-span-3' : index == 1 ? 'md:col-span-6' : index == 2 ? 'md:col-span-6' : index == 3 ? 'md:col-span-3' : ''}`}>
-                    <div className="w-full h-full overflow-hidden rounded-[20px]">
-                        <div className='absolute inset-0 bg-black/40 z-10 rounded-[20px]'></div>
-                            <Image
-                                src={val.image}
-                                alt="grids"
-                                className={`w-full h-full object-cover md:scale-105 parallax-media ${index == 0 ? "" : ""}`}
-                            />
+        <>
+            <div className='pt-17 pb-10 xl:py-30 md:px-[5%]'>
+                <div className='flex flex-col justify-center gap-2 text-center'>
+                    <h1 className='text-xl md:text-3xl lg:text-[2.75rem] leading-[120%] font-medium tracking-tighter'>Why work with us</h1>
+                    <p className='md:text-xl text-sm font-light leading-[120%]'>We believe great products come from great people.<br className='xl:hidden block' /> Here's what <br className='hidden xl:block' /> drives us every day.</p>
+                </div>
+                <div className='flex md:grid overflow-x-auto  md:overflow-x-visible md:grid-cols-9 gap-5 relative py-5 px-5 md:px-0 snap-start snap-mandatory md:snap-start scrollbar-hide'>
+                    {content.map((val, index) => (
+                        <div key={index} className={`relative flex-shrink-0 w-[280px] aspect-square md:aspect-auto md:w-auto  snap-center ${index == 0 ? 'md:col-span-3' : index == 1 ? 'md:col-span-6' : index == 2 ? 'md:col-span-6' : index == 3 ? 'md:col-span-3' : ''}`}>
+                            <div className="w-full h-full overflow-hidden rounded-[20px]">
+                                <div className='absolute inset-0 bg-black/40 z-10 rounded-[20px]'></div>
+                                <Image
+                                    src={val.image}
+                                    alt="grids"
+                                    className={`w-full h-full object-cover scale-100 md:scale-105 parallax-media ${index == 0 ? "" : ""}`}
+                                />
+                            </div>
+                            <div className="absolute bottom-7 left-5 right-5 z-10">
+                                <p className="text-white font-hoves-pro font-medium text-lg lg:text-xl">
+                                    {val.title}
+                                </p>
+                            </div>
                         </div>
-                        <div className="absolute bottom-7 left-5 right-5 z-10">
-                            <p className="text-white font-hoves-pro font-medium text-lg lg:text-xl">
-                                {val.title}
-                            </p>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
-      </>
+        </>
     )
 }
 

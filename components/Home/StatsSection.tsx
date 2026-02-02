@@ -56,7 +56,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 const StatsSection = () => {
   return (
    <ContainerLayout>
-     <section className="lg:pt-5 pb-30 bg-background pt-20">
+     <section className="lg:pt-5 pb-20 md:pb-30 bg-background pt-10 md:pt-20">
       <div className="">
         {/* Heading */}
         <motion.div
@@ -64,7 +64,7 @@ const StatsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
           <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-tighter md:text-4xl lg:text-[44px] mb-1">
             Aqua Excel at a glance

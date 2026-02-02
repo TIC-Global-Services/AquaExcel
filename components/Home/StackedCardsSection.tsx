@@ -62,7 +62,7 @@ const StackedCardsSection = () => {
    <ContainerLayout>
      <section className="lg:pt-[2%]  bg-background">
       <div className="relative">
-        <div className="grid grid-cols-1 w-auto md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 w-auto md:grid-cols-2 gap-0 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

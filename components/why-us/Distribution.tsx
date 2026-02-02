@@ -33,7 +33,7 @@ const Distribution = () => {
     <div>
       <div className="hidden md:block">
         <ContainerLayout> 
-          <div className="w-full py-10 mt-10 overflow-hidden">
+          <div className="w-full py-10 mt-5 overflow-hidden">
             <div className="flex flex-col gap-2 mb-8">
               <h1 className="text-xl md:text-3xl xl:text-[2.75rem] tracking-tighter font-medium font-hoves-pro">
                 For Distribution Partners
@@ -88,7 +88,7 @@ const Distribution = () => {
         </ContainerLayout>
       </div>
       <div className="md:hidden">
-        <div className="w-full py-10  mt-10 overflow-hidden">
+        <div className="w-full py-10 mb-10 mt-10 overflow-hidden">
           {/* <ContainerLayout> */}
           <div className="flex flex-col gap-2 mb-8 pl-[5%]">
             <h1 className="text-xl xl:text-[2.75rem] tracking-tighter font-medium font-hoves-pro">

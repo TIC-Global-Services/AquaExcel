@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
 
   return (
    <ContainerLayout>
-     <section className="md:pt-[80px] pb-[80px]  bg-background overflow-hidden">
+     <section className="md:pt-[80px] pb-[40px]  bg-background overflow-hidden">
       <style jsx>{`
         @keyframes scroll {
           0% {

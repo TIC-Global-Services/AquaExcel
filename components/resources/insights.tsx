@@ -32,7 +32,7 @@ const insights = () => {
                         Stay updated on the latest in piping materials, systems, techniques,<br className='hidden md:block' /> and industry standards.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-8">
                     {blogs.map((item, index) => {
                         const isTall = index === 2;
                         // Mobile: Base height 300px. Desktop: Tall item spans 2 rows and is full height. Others 350px.

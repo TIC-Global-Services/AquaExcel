@@ -24,7 +24,7 @@ const Sustainableinnovation = () => {
     ]
     return (
         <ContainerLayout maxWidth='w-full'>
-            <div className='xl:py-20 mb-10 py-10 flex flex-col items-center gap-20'>
+            <div className='xl:py-20 mb-10 py-10 mt-5 md:mt-0 flex flex-col items-center gap-20'>
                 <div className=''>
                     <h1 className='text-xl md:text-[2.75rem] font-medium tracking-tight font-hoves-pro  md:text-center'>Sustainable Innovation & Research</h1>
                     <p className='md:text-xl  text-sm font-regular font-inter-tight md:text-center'>

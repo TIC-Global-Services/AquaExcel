@@ -29,7 +29,7 @@ const DownloadApp = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="relative md:mt-[10%] lg:mt-[5%] lg:py-[10%] min-h-[405px] lg:min-h-[580px] lg:max-h-[580px] w-full overflow-hidden">
+    <div className="relative mt-[15%] md:mt-[10%] lg:mt-[5%] lg:py-[10%] min-h-[405px] lg:min-h-[580px] lg:max-h-[580px] w-full overflow-hidden">
       <Image
         src={bgimage}
         alt="Download App Background"
@@ -37,12 +37,12 @@ const DownloadApp = () => {
         priority={false}
         loading="lazy"
         sizes="100vw"
-       style={{ objectPosition: '80% 50%' }}
+       style={{ objectPosition: '45% 50%' }}
         className="object-cover parallax-media"
       />
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="absolute inset-0 flex md:items-center items-start justify-start md:justify-center">
+      <div className="absolute inset-0 flex md:items-center items-center justify-start md:justify-center">
         <ContainerLayout>
           <div className="flex flex-col md:flex-row md:items-center items-start justify-start md:justify-center gap-10 md:gap-15 w-full">
             <div className="text-left md:text-left text-white max-w-2xl pt-5 block md:hidden">
@@ -57,10 +57,10 @@ const DownloadApp = () => {
             </div>
             <div className='flex flex-col'>
               <div className="border-2 rounded-2xl border-white py-2 px-6 pb-2.5 bg-white/10 backdrop-blur-sm">
-              <p className='text-white font-medium text-xl tracking-[-4%] text-center uppercase mb-1  hidden md:block'>About App</p>
+              <p className='text-white font-medium text-xs md:text-xl tracking-[-4%] text-center uppercase mb-1  block'>About App</p>
               <Image src={qrcode} width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
             </div>
-            <p className='text-white font-light font-hoves-pro text-sm md:text-xl mt-2 text-center'>Scan to know more</p>
+            <p className='text-white font-light font-hoves-pro text-sm md:text-xl mt-2 text-center'>Scan to <br className='block md:hidden'/> know more</p>
             </div>
             <div className="text-center md:text-left text-white max-w-2xl hidden md:block">
               <h2 className="text-[1.5rem] lg:text-[2.75rem] tracking-tighter font-medium font-hoves-pro"> 
