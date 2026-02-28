@@ -5,12 +5,14 @@ import StatsSection from "@/components/Home/StatsSection";
 import StackedCardsSection from "@/components/Home/StackedCardsSection";
 import AppSection from "@/components/Home/AppSection";
 import TestimonialsSection from "@/components/Home/TestimonialsSection";
+import TapAnimation from "@/components/Home/tapAnimation";
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
      
       <Hero />
+      <TapAnimation/>
       <Carousel3DMarquee />
       <TestimonialsSection />
       <StackedCardsSection />

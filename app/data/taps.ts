@@ -1,12 +1,13 @@
 import image1 from '@/assets/product/taps/BrassThreaded-1.png'
 import image2 from '@/assets/product/taps/BrassThreaded-2.png'
 import image3 from '@/assets/product/taps/BrassThreaded-3.png'
+import image10 from '@/assets/product/taps/upvc-compact-(long- handle).jpg'
 import image4 from '@/assets/product/taps/PTMTTaps-1.png'
 import image5 from '@/assets/product/taps/PTMTTaps-2.png'
 import image6 from '@/assets/product/taps/PTMTTaps-3.png'
 import image7 from '@/assets/product/taps/Greentaps-1.png'
-import image8 from '@/assets/product/taps/Greentaps-2.png'
-import image9 from '@/assets/product/taps/Greentaps-3.png'
+import image8 from '@/assets/product/taps/gt-bib-tap-long-body.jpg'
+import image9 from '@/assets/product/taps/gt-angle-valve.jpg'
 
 export const Taps = [
   // Brass Threaded Taps section
@@ -22,6 +23,11 @@ export const Taps = [
     title: "Bib Tap Long Body",
     description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
     image: image2
+  },
+  {
+    title: "Angle Valve",
+    description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+    image: image3
   },
   {
     title: "Angle Valve",

@@ -19,13 +19,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return (
         <div className={cn("flex flex-col group cursor-pointer", className)}>
             {/* Image Container */}
-            <div className="bg-[#FAF9F5] aspect-4/3 rounded-[20px] p-4 flex items-center justify-center mb-6 relative overflow-hidden transition-all duration-300">
+            <div className="bg-[#FAF9F5] aspect-4/3 rounded-[20px] flex items-center justify-center mb-6 relative overflow-hidden transition-all duration-300">
                 <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
                     <Image
                         src={image}
                         alt={title}
                         fill
-                        className="object-contain object-center"
+                        style={{objectPosition:'50% 50%'}}
+                        className="object-cover object-center"
                     />
                 </div>
             </div>

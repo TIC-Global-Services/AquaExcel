@@ -2,7 +2,7 @@ import image21 from '@/assets/product/accessories/accessories-1.png'
 import image22 from '@/assets/product/accessories/accessories-2.png'
 import image23 from '@/assets/product/accessories/accessories-3.png'
 import image24 from '@/assets/product/accessories/accessories-4.png'
-import image25 from '@/assets/product/accessories/accessories-5.png'
+import image25 from '@/assets/product/accessories/tank_filter.jpg'
 import image26 from '@/assets/product/accessories/accessories-6.png'
 export const accessories=[
  {

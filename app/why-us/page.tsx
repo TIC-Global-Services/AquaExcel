@@ -12,7 +12,7 @@ const page = () => {
     <div className='overflow-x-hidden'>
         <Hero/>
         <Identity/>
-        {/* <Aquaexcelapart/> */}
+        <Aquaexcelapart/>
         <Downloadapp/>
         <Distribution/>
         <Qualitycp/>
