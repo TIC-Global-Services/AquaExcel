@@ -11,17 +11,17 @@ export const accessories=[
      {
     title: "Cistern",
     description: "A Cistern Is A Water Storage Tank Used In Toilets To Hold And Release Water For Flushing, Designed For Efficient Flow And Smooth Operation.",
-    image: image21
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/Cistern.png?updatedAt=1773046227551'
   },
   {
     title: "Seat Cover",
     description: "A Bathroom Seat Cover Is A Hinged Cover Fitted On The Toilet Seat, Designed For Comfort, Hygiene, And A Neat, Finished Look.",
-    image: image22
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/SeatCover.png?updatedAt=1773046227635'
   },
   {
     title: "Bathroom Cabinet",
     description: "A Bathroom Cabinet Is A Storage Unit Designed To Keep Toiletries Organized While Adding A Neat, Functional Look To The Bathroom Space.",
-    image: image23
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/BathroomCabinet.png?updatedAt=1773046227753'
   },
   {
     title: "Waste Coupling-Full Threaded",
@@ -31,12 +31,12 @@ export const accessories=[
   {
     title: "Tank Filter",
     description: "A Tank Filter Is A Device Used To Screen Out Dirt And Debris Before Water Enters The Tank, Ensuring Cleaner Storage And Smoother Flow.",
-    image: image25
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tankfilter.jpg?updatedAt=1773046227140'
   },
   {
     title: "PVC Solvent Cement",
     description: "PVC Solvent Cement Is A Fast-Setting Adhesive Used To Bond PVC Pipes And Fittings, Creating A Strong, Leak-Proof Joint.",
-    image: image26
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/PVCSolventCement.jpg?updatedAt=1773046227143'
   }
   ]
  }

@@ -8,6 +8,7 @@ interface ProductCardProps {
     description: string;
     image: string | StaticImageData;
     className?: string;
+    onClick?: () => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -15,9 +16,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
     description,
     image,
     className,
+    onClick,
 }) => {
     return (
-        <div className={cn("flex flex-col group cursor-pointer", className)}>
+        <div
+            className={cn("flex flex-col group cursor-pointer", className)}
+            onClick={onClick}
+        >
             {/* Image Container */}
             <div className="bg-[#FAF9F5] aspect-4/3 rounded-[20px] flex items-center justify-center mb-6 relative overflow-hidden transition-all duration-300">
                 <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
@@ -25,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         src={image}
                         alt={title}
                         fill
-                        style={{objectPosition:'50% 50%'}}
+                        style={{ objectPosition: '50% 50%' }}
                         className="object-cover object-center"
                     />
                 </div>

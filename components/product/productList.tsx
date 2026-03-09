@@ -10,6 +10,8 @@ import { maxion } from '@/app/data/maxion'
 import { accessories } from '@/app/data/accesorries'
 import Appsection from './appsection'
 import { StaticImageData } from 'next/image'
+import { ArrowDown, ArrowUp } from 'lucide-react'
+import ProductModal from './ProductModal'
 // Placeholder images - using imports if available or strings
 // Ideally replace with actual assets
 const placeholderImage = '/assets/logo.png' // Fallback
@@ -57,6 +59,15 @@ const productSections = [
 
 const ProductList = () => {
   const [activeTab, setActiveTab] = useState('taps')
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+  const [selectedProduct, setSelectedProduct] = useState<any>(null)
+
+  const toggleViewMore = (categoryKey: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryKey]: !prev[categoryKey]
+    }))
+  }
 
   const tabs = [
     { id: "taps", label: "Taps & Fittings" },
@@ -75,7 +86,7 @@ const ProductList = () => {
       <div className="py-10">
         {/* Tabs */}
         <div className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:justify-center md:gap-4 mb-10 md:mb-20 px-0 md:px-0 lg:px-[50px] xl:px-[80px]">
-          {tabs.map((tab) => ( 
+          {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
@@ -103,30 +114,50 @@ const ProductList = () => {
 
         <div className="px-6 md:px-[50px] xl:px-[80px]">
           {/* Products by Subcategory */}
-          {activeSection?.products.map((subcategory, subIndex) => (
-            console.log("subcategory", subcategory),
-            <div key={subIndex} className="col-span-full">
-              {/* Subcategory Heading */}
-              {subcategory.heading && (
-                <h3 className="font-hoves-pro font-medium leading-[120%]  text-2xl md:text-[32px] mb-12 mt-12">
-                  {subcategory.heading}
-                </h3>
-              )}
+          {activeSection?.products.map((subcategory, subIndex) => {
+            const categoryKey = `${activeTab}-${subIndex}`;
+            const isExpanded = expandedCategories[categoryKey];
+            const productsToShow = isExpanded ? subcategory.products : subcategory.products.slice(0, 3);
+            const hasMore = subcategory.products.length > 3;
 
-              {/* Products Grid */}
-              <div className={`flex flex-wrap justify-center gap-x-8 gap-y-16`}>
-                {subcategory.products.map((product, productIndex) => (
-                  <div key={productIndex} className={`${activeSection.id === 'maxion' ? 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]' : 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]'}`}>
-                    <ProductCard
-                      title={product.title}
-                      description={product.description}
-                      image={product.image || placeholderImage}
-                    />
+            return (
+              <div key={subIndex} className="col-span-full">
+                {/* Subcategory Heading */}
+                {subcategory.heading && (
+                  <h3 className="font-hoves-pro font-medium leading-[120%] text-2xl md:text-[32px] mb-12 mt-12">
+                    {subcategory.heading}
+                  </h3>
+                )}
+
+                {/* Products Grid */}
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-16">
+                  {productsToShow.map((product, productIndex) => (
+                    <div key={productIndex} className={`${activeSection.id === 'maxion' ? 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]' : 'w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]'}`}>
+                      <ProductCard
+                        title={product.title}
+                        description={product.description}
+                        image={product.image || placeholderImage}
+                        onClick={() => setSelectedProduct(product)}
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* View More Button */}
+                {hasMore && (
+                  <div className="flex justify-center mt-12 w-full">
+                    <button
+                      onClick={() => toggleViewMore(categoryKey)}
+                      className="px-8 py-3 rounded-xl border flex flex-row-reverse gap-2 border-none transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-base"
+                    >
+                      {isExpanded ? <ArrowUp /> : <ArrowDown />}
+                      {isExpanded ? 'View Less' : 'View More'}
+                    </button>
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
 
           <Appsection />
           {!activeSection && (
@@ -136,6 +167,12 @@ const ProductList = () => {
           )}
         </div>
       </div>
+
+      <ProductModal
+        isOpen={!!selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+        product={selectedProduct}
+      />
     </ContainerLayout>
   )
 }

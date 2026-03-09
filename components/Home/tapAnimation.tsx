@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import { LeftArrow, RigthArrow } from "@/assets/Arrows";
-import Arrowright from "@/assets/Arrows/arrowRight.svg";
+import Arrowright from "@/public/Arrow6.png";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -86,7 +86,7 @@ const TapAnimation = () => {
           duration: 0.15,
           ease: "power2.out",
         },
-        0.75
+        0.80
       )
 
       // Phase 3: Show Brass 2 (65% - 75% of scroll) - Tap is horizontal
@@ -99,7 +99,7 @@ const TapAnimation = () => {
           duration: 0.15,
           ease: "power2.out",
         },
-        0.75
+        0.80
       )
 
 
@@ -121,7 +121,7 @@ const TapAnimation = () => {
           duration: 0.05,
           ease: "power2.in",
         },
-        0.85
+        1
       )
 
       // Phase 5: Hide Brass 1 (85% - 90% of scroll)
@@ -132,7 +132,7 @@ const TapAnimation = () => {
           duration: 0.05,
           ease: "power2.in",
         },
-        0.85
+        1
       )
       .to(
         contentElement,
@@ -190,8 +190,8 @@ const TapAnimation = () => {
         style={{ visibility: "hidden" }}
       >
         <div className="flex items-center md:gap-2 mt-20">
-          <MoveLeft strokeWidth={1.2} className="md:w-25 h-25 w-15" />
-          <h1 className="md:text-[40px] text-[20px] leading-[42px] font-bold">
+          <MoveLeft strokeWidth={1.2} className="md:w-20 h-25 w-15" />
+          <h1 className="md:text-[40px] text-[20px] leading-[42px] font-medium">
             Plastic Tap
           </h1>
         </div>
@@ -201,13 +201,13 @@ const TapAnimation = () => {
       {/* Brass 1 - Bottom Right */}
       <div
         ref={brass1Ref}
-        className="fixed md:right-[5%] right-12 bottom-0 w-1/2 h-1/2 flex flex-row items-center justify-start px-0 md:px-20 z-10 pb-20 md:gap-2 py-20"
+        className="fixed md:right-[4%] right-12 bottom-0 w-1/2 h-1/2 flex flex-row items-center justify-start px-0 md:px-20 z-10 pb-20 md:gap-2 py-20"
         style={{ visibility: "hidden" }}
       >
 
         <div className="flex flex-col md:gap-2 md:mt-10 mt-15">
           <MoveUp strokeWidth={1.2} className="md:w-25 h-25 w-15" />
-          <h1 className="md:text-[40px] text-[20px] leading-[42px] font-bold">
+          <h1 className="md:text-[40px] text-[20px] leading-[42px]  font-medium">
             Brass
           </h1>
         </div>
@@ -216,12 +216,12 @@ const TapAnimation = () => {
       {/* Brass 2 (Horizontal position) - Top Right */}
       <div
         ref={brass2Ref}
-        className="fixed md:right-[20%] right-[10%] md:top-[5%] top-30 w-1/2 h-1/2 flex md:flex-row flex-row-reverse items-start justify-start px-0 md:px-20 z-10 md:pt-20 pt-4 md:gap-2 gap-1"
+        className="fixed md:right-[18%] right-[10%] md:top-[5%] top-30 w-1/2 h-1/2 flex md:flex-row flex-row-reverse items-start justify-start px-0 md:px-20 z-10 md:pt-20 pt-4 md:gap-2 gap-1"
         style={{ visibility: "hidden" }}
       >
 
         <div className="flex flex-col md:gap-1 gap-1 md:mt-10 mt-2">
-          <h1 className="md:text-[40px] text-[18px] text-right leading-[20px] md:leading-[42px] font-bold">
+          <h1 className="md:text-[40px] text-[18px] text-right leading-[20px] md:leading-[42px] font-medium">
             Brass
           </h1>
           <Image
@@ -237,7 +237,7 @@ const TapAnimation = () => {
         <Model jsonPath="/tap.json" scrollSpeed={1.9} id="tap-animation" />
       </div>
       <div ref={contentRef} style={{ visibility: "hidden" }} className="fixed bottom-4 sm:bottom-6 md:bottom-20 left-0 right-0 flex justify-center items-center z-50 px-4">
-        <h1 className="text-[20px] md:text-[40px] font-inter-tight font-bold">“Brass + Brass” but with a plastic tap</h1>
+        <h1 className="text-[20px] md:text-[40px] font-inter-tight font-medium">“Brass + Brass” but with a plastic tap</h1>
       </div>
       {/* Keep Scrolling Indicator */}
       <div
