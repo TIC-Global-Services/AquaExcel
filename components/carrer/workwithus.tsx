@@ -1,13 +1,15 @@
 "use client"
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import image1 from '@/assets/carrer/grid1.png'
-import image2 from '@/assets/carrer/grid2.png'
-import image3 from '@/assets/carrer/grid3.jpg'
-import image4 from '@/assets/carrer/grid4.png'
 import SimpleParallax from 'simple-parallax-js'
 import ContainerLayout from '@/layouts/ContainerLayout'
 const workwithus = () => {
+    
+    const image1 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid1.png";
+    const image2 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid2.png";
+    const image3 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid3.jpg";
+    const image4 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid4.png";
+
     useEffect(() => {
         // Parallax effect — smooth, performant, respects rounded corners
         const handleScroll = () => {
@@ -65,6 +67,7 @@ const workwithus = () => {
                             <div className="w-full h-full overflow-hidden rounded-[20px]">
                                 <div className='absolute inset-0 bg-black/40 z-10 rounded-[20px]'></div>
                                 <Image
+                                    fill
                                     src={val.image}
                                     alt="grids"
                                     className={`w-full h-full object-cover scale-100 md:scale-105 parallax-media ${index == 0 ? "" : ""}`}

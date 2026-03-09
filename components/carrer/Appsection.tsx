@@ -15,7 +15,7 @@ const Appsection = () => {
         <div className="absolute inset-0">
           <SimpleParallax>
             <Image
-              src="/bottomsecimg.png"
+              src="https://ik.imagekit.io/pgtxr2fmn/Resources/AppSection/bottomsecimg.png"
               alt="Aqua Excel App"
               fill
               className="object-cover scale-100 md:scale-110"

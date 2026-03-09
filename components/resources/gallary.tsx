@@ -1,16 +1,18 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import gallaryimg1 from '@/assets/resource/gallaryimg-1.jpg';
-import gallaryimg2 from '@/assets/resource/gallaryimg-2.jpg';
-import gallaryimg3 from '@/assets/resource/gallaryimg-3.jpg';
-import gallaryimg4 from '@/assets/resource/gallaryimg-4.jpg';
-import gallaryimg5 from '@/assets/resource/gallaryimg-5.jpg';
-import gallaryimg6 from '@/assets/resource/gallaryimg-6.jpg';
 import SimpleParallax from 'simple-parallax-js';
 import ContainerLayout from '@/layouts/ContainerLayout';
 
 const gallary = () => {
+
+  const gallaryimg1 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-1.jpg";
+  const gallaryimg2 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-2.jpg";
+  const gallaryimg3 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-3.jpg";
+  const gallaryimg4 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-4.jpg";
+  const gallaryimg5 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-5.jpg";
+  const gallaryimg6 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-6.jpg";
+
   const GALLERY_ITEMS = [
     {
       id: 1,

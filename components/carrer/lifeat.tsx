@@ -2,13 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import bgimage from "@/assets/carrer/lifeatbgaquaexcel.jpg";
-import icon1 from '@/assets/carrer/icons/icon1.svg'
-import icon2 from '@/assets/carrer/icons/icon2.svg'
-import icon3 from '@/assets/carrer/icons/icon3.svg'
-import sliderimg1 from '@/assets/carrer/slider1.jpg'
-import sliderimg2 from '@/assets/carrer/slider1.jpg'
-import sliderimg3 from '@/assets/carrer/slider1.jpg'
+
 
 import Card from "../reuseable/why-us/slidercards";
 import Image from 'next/image'
@@ -16,25 +10,34 @@ import Image from 'next/image'
 gsap.registerPlugin(ScrollTrigger);
 
 const LifeAt = () => {
+
+  const bgimage = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/lifeatbgaquaexcel.jpg";
+  const icon1 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/icon1.svg";
+  const icon2 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/icon2.svg";
+  const icon3 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/icon3.svg";
+  const sliderimg1 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/slider1.jpg";
+  const sliderimg2 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/slider1.jpg";
+  const sliderimg3 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/slider1.jpg";
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const slides = [
     {
       title: "A culture Built on safety",
       description: "We begin every day with safety checks and team alignment to ensure a secure, organized workspace.",
-      icon: icon1.src,
-      image: sliderimg1.src
+      icon: icon1,
+      image: sliderimg1
     },
     {
       title: "Working With Purpose",
       description: "Our production teams operate advanced machinery with precision to maintain consistent product quality.",
-      icon: icon2.src,
-      image: sliderimg2.src
+      icon: icon2,
+      image: sliderimg2
     },
     {
       title: "Learning & Growth",
       description: "Employees receive hands-on training and upskilling opportunities to grow in their roles.",
-      icon: icon3.src,
-      image: sliderimg3.src
+      icon: icon3,
+      image: sliderimg3
     },
   ]
 

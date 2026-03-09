@@ -1,14 +1,15 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import download2 from '@/assets/resource/downloads-2.jpg';
-import download3 from '@/assets/resource/downloads-3.jpg';
-import download4 from '@/assets/resource/downloads-1.jpg';
 import Button from '../reuseable/Button';
 import ContainerLayout from '@/layouts/ContainerLayout';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const Downloads = () => {
+
+  const download2 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Download/downloads-2.jpg";
+  const download3 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Download/downloads-3.jpg";
+  const download4 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Download/downloads-1.jpg";
 
   const content = [
     { id: 0, title: "PRODUCT CATALOG", image: download4 },

@@ -1,13 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import image1 from "@/assets/why-us/distributionpatnerimg1.jpg";
-import image2 from "@/assets/why-us/distributionpatnerimg2.jpg";
-import image3 from "@/assets/why-us/distributionpatnerimg3.jpg";
 import SimpleParallax from "simple-parallax-js";
 import ContainerLayout from "@/layouts/ContainerLayout";
 import { useRouter } from "next/navigation";
 const Distribution = () => {
+
+  const image1 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Distribution/distributionpatnerimg1.jpg";
+  const image2 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Distribution/distributionpatnerimg2.jpg";
+  const image3 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Distribution/distributionpatnerimg3.jpg";
   const router = useRouter();
 
   const navigateAndScroll = (value: string) => {

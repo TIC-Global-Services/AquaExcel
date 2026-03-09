@@ -1,13 +1,14 @@
 import React from 'react'
-import icon1 from '@/assets/why-us/innovation/icon1.png'
-import icon2 from '@/assets/why-us/innovation/icon2.png'
-import icon3 from '@/assets/why-us/innovation/icon3.png'
-import tap from '@/assets/why-us/builforreason.png'
 import Image from 'next/image'
 import { describe } from 'node:test'
 import ContainerLayout from '@/layouts/ContainerLayout'
 
 const Sustainableinnovation = () => {
+
+    const icon1 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Sustainable/icon1.png";
+    const icon2 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Sustainable/icon2.png";
+    const icon3 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Sustainable/icon3.png";
+
     const list = [
         {
             description: "Ongoing R&D that pushes function, efficiency, and durability to new standards.",
@@ -33,7 +34,7 @@ const Sustainableinnovation = () => {
                     <ul className='list-none mt-10 w-full space-y-5'>
                         {list.map((item, index) => (
                             <li key={index} className='flex items-center '>
-                                <img src={item.icon.src} alt="" className='w-12 h-12 mr-3'/>
+                                <img src={item.icon} alt="" className='w-12 h-12 mr-3'/>
                                 <span className='lg:text-xl md:text-base text-sm font-inter-tight font-regular text-[#646464]'>{item.description}</span>
                             </li>
                         ))}

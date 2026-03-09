@@ -1,11 +1,12 @@
 "use client"
 import React, { useEffect } from 'react'
-import bgimage from '@/assets/why-us/downloadappbg.jpg'
-import qrcode from '@/assets/why-us/qr code.jpg'
 import Image from 'next/image'
 import ContainerLayout from '@/layouts/ContainerLayout'
 
 const DownloadApp = () => {
+
+  const bgimage = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/DownloadApp/downloadappbg.jpg";
+  const qrcode = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/DownloadApp/qr%20code.jpg";
   useEffect(() => {
     // Parallax effect — smooth, performant, respects rounded corners
     const handleScroll = () => {

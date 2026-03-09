@@ -3,7 +3,7 @@
 import ContainerLayout from '@/layouts/ContainerLayout'
 import React, { useState, useRef, useEffect } from 'react'
 
-const samplevideo = '/videos/sample-video-1.mp4'
+const samplevideo = 'https://ik.imagekit.io/pgtxr2fmn/Resources/VideoVault/sample-video-1.mp4'
 
 const VideoCard = ({
   index,

@@ -1,10 +1,12 @@
 import React from 'react'
-import banner from '@/assets/carrer/carrerhomebanner.png'
 import Button from '../reuseable/Button'
 import Image from 'next/image'
 import HeroBanner from '../reuseable/heroBanner'
 
 const hero = () => {
+
+  const banner = "https://ik.imagekit.io/pgtxr2fmn/Career/Hero/carrerhomebanner.png";
+
   return (
       // <section className="relative h-[860px] w-full bg-hero-bg overflow-hidden">
       //     {/* Background Image */}

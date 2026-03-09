@@ -11,23 +11,23 @@ const aquaexcelapart = () => {
     const cards = [
         {
             title: "Hassle-free fittings that last",
-            image: sliderimg1.src // Use .src for string path if needed, but imported images work directly
+            image: "https://ik.imagekit.io/pgtxr2fmn/WhyUs/AquaExcelApart/whyusslider1.png" // Use .src for string path if needed, but imported images work directly
         },
         {
             title: "Crafted for Durability",
-            image: sliderimg2.src
+            image: "https://ik.imagekit.io/pgtxr2fmn/WhyUs/AquaExcelApart/whyusslider2.png"
         },
         {
             title: "Elegant yet practical.",
-            image: sliderimg3.src
+            image: "https://ik.imagekit.io/pgtxr2fmn/WhyUs/AquaExcelApart/whyusslider3.png"
         },
         {
             title: "Precision-Engineered Quality",
-            image: sliderimg4.src
+            image: "https://ik.imagekit.io/pgtxr2fmn/WhyUs/AquaExcelApart/whyusslider4.png"
         },
         {
             title: "Trusted by Professionals",
-            image: sliderimg5.src
+            image: "https://ik.imagekit.io/pgtxr2fmn/WhyUs/AquaExcelApart/whyusslider5.png"
         },
     ]
 

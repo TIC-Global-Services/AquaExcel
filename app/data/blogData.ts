@@ -2,6 +2,8 @@ import insight1 from '@/assets/resource/inspire-1.png'
 import insight2 from '@/assets/resource/inspire-2.png'
 import insight3 from '@/assets/resource/inspire-3.png'
 
+// Chunk error couldnt upload image kit images here
+
 export const blogs = [
   {
     id: 1,

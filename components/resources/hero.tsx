@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import banner from '@/assets/resource/resourceherobanner.png'
 import HeroBanner from '../reuseable/heroBanner'
 
 
 const hero = () => {
+
+  const banner = "https://ik.imagekit.io/pgtxr2fmn/Resources/Hero/resourceherobanner.png";
+
   return (
     <div>
       <HeroBanner

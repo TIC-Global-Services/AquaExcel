@@ -1,10 +1,12 @@
 import React from 'react'
-import banner from '@/assets/why-us/why-us-hero-image.svg'
 import Button from '../reuseable/Button'
 import Image from 'next/image'
 import HeroBanner from '../reuseable/heroBanner'
 
 const hero = () => {
+
+  const banner = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/Hero/why-us-hero-image.svg";
+
   return (
     // <section className="relative h-screen w-full bg-hero-bg overflow-hidden">
     //     {/* Background Image */}

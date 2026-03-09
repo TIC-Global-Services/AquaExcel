@@ -4,47 +4,51 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import bgimage from "@/assets/why-us/qualitymeasurebg.png";
 import Image from "next/image";
-import icon1 from "@/assets/why-us/icons/icons1(new).svg";
-import icon2 from "@/assets/why-us/icons/icons2.png";
-import icon3 from "@/assets/why-us/icons/icons3.svg";
-import icon4 from "@/assets/why-us/icons/icons4.svg";
-import sliderimg1 from "@/assets/why-us/slides/slideimg1.png";
-import sliderimg2 from "@/assets/why-us/slides/slideimg2.jpg";
-import sliderimg3 from "@/assets/why-us/slides/slideimg3.jpg";
 import sliderimg4 from "@/assets/why-us/slides/slideimg4.jpg";
 import Card from "../reuseable/why-us/slidercards";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Qualitycp = () => {
+
+  const bgimage = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/qualitymeasurebg.png";
+  const icon1 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/icons1(new).svg";
+  const icon2 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/icons2.png";
+  const icon3 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/icons3.svg";
+  const icon4 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/icons4.svg";
+  const sliderimg1 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/slideimg1.png";
+  const sliderimg2 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/slideimg2.jpg";
+  const sliderimg3 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/slideimg3.jpg";
+  // const sliderimg4 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/slideimg4.jpg"; image kit bad response
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const slides = [
     {
       title: "Hydrostatic Pressure Test",
       description:
         "Ensures Long-Term Durability Even Under Intense Water Pressure, Protecting Your Installations From Leaks, Cracks, And Sudden Bursts.",
-      icon: icon1.src,
-      image: sliderimg1.src,
+      icon: icon1,
+      image: sliderimg1,
     },
     {
       title: "Reversion Test",
       description:
         "Checks Heat Resistance And Dimensional Stability When Exposed To Temperature Variations.",
-      icon: icon2.src,
-      image: sliderimg2.src,
+      icon: icon2,
+      image: sliderimg2,
     },
     {
       title: "Impact Test",
       description:
         "Ensures Pipes And Fittings Withstand Accidental Hits And Rough Handling During Installation.",
-      icon: icon3.src,
-      image: sliderimg3.src,
+      icon: icon3,
+      image: sliderimg3,
     },
     {
       title: "Opacity Test",
       description:
         "Ensures Light Blocking To Prevent Algae Growth Inside Pipes Over Time.",
-      icon: icon4.src,
+      icon: icon4,
       image: sliderimg4.src,
     },
   ];

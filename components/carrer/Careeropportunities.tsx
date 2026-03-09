@@ -3,6 +3,9 @@ import Image from 'next/image'
 import logo from '@/assets/carrer/logowithoutname.png'
 import ContainerLayout from '@/layouts/ContainerLayout'
 const Careeropportunities = () => {
+
+  const logo = "https://ik.imagekit.io/pgtxr2fmn/Career/CareerOppurtunities/logowithoutname.png";
+
   const jobList = [
     {
       title: "Production Supervisor ",
