@@ -9,6 +9,7 @@ import React, {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+import { useLoaderStore } from "@/store/loaderStore";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -73,6 +74,8 @@ const Model: React.FC<ModelProps> = ({
     const [loadingProgress, setLoadingProgress] = useState(0);
     const [data, setData] = useState<Data | null>(null);
     const [error, setError] = useState<string | null>(null);
+
+    const { setProgress, setIsLoading } = useLoaderStore();
 
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const isLowEndDevice = useMemo(() => {
@@ -222,9 +225,9 @@ const Model: React.FC<ModelProps> = ({
                             const onLoad = () => {
                                 loadedCount++;
                                 if (!isCancelled && isMountedRef.current) {
-                                    setLoadingProgress(
-                                        Math.round((loadedCount / assetsToLoad.length) * 100)
-                                    );
+                                    const computedProgress = Math.round((loadedCount / assetsToLoad.length) * 100);
+                                    setLoadingProgress(computedProgress);
+                                    setProgress(computedProgress);
                                 }
                                 resolve(img);
                             };
@@ -248,6 +251,11 @@ const Model: React.FC<ModelProps> = ({
                 if (!isCancelled && isMountedRef.current) {
                     setImages(loadedImages);
                     setIsLoaded(true);
+
+                    // Delay hiding the loader slightly after 100% just like previously
+                    setTimeout(() => {
+                        setIsLoading(false);
+                    }, 400);
                 }
             } catch (err) {
                 if (!isCancelled && isMountedRef.current) {
@@ -259,6 +267,8 @@ const Model: React.FC<ModelProps> = ({
 
         setIsLoaded(false);
         setLoadingProgress(0);
+        setProgress(0);
+
         loadImages();
 
         return () => {

@@ -1,50 +1,28 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLoaderStore } from "@/store/loaderStore";
 
 export default function Loader() {
-    const [progress, setProgress] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    const { progress, isLoading, setIsLoading } = useLoaderStore();
 
     useEffect(() => {
-        // Check if we already showed the loader in this session
+        // Only run check on mount
         const hasLoaded = sessionStorage.getItem("hasLoaded");
         if (hasLoaded) {
             setIsLoading(false);
             return;
         }
 
-        // Lock scroll initially
-        document.body.style.overflow = "hidden";
+        if (isLoading) {
+            document.body.style.overflow = "hidden";
+        } else {
+            sessionStorage.setItem("hasLoaded", "true");
+        }
+    }, [isLoading, setIsLoading]);
 
-        // Simulate loading percentage
-        const duration = 2500; // 2.5 seconds matching the vibe
-        const intervalTime = 30; // 30ms per tick
-        const totalSteps = duration / intervalTime;
-        let currentStep = 0;
-
-        const interval = setInterval(() => {
-            currentStep++;
-            // Custom easing effect for numbers: fast then slow
-            const easeOutQuart = 1 - Math.pow(1 - currentStep / totalSteps, 4);
-            const currentProgress = Math.min(100, Math.floor(easeOutQuart * 100));
-            setProgress(currentProgress);
-
-            if (currentStep >= totalSteps) {
-                clearInterval(interval);
-                setTimeout(() => {
-                    setIsLoading(false);
-                    sessionStorage.setItem("hasLoaded", "true");
-                }, 400); // Wait a bit at 100%
-            }
-        }, intervalTime);
-
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
-
+    // Cleanup scrolling when Loader mounts/unmounts essentially
     useEffect(() => {
         if (!isLoading) {
             document.body.style.overflow = ""; // Reset scroll
@@ -58,7 +36,7 @@ export default function Loader() {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="fixed inset-0 z-[99999] flex items-center justify-center bg-black text-white"
+                    className="fixed inset-0 z-99999 flex items-center justify-center bg-black text-white"
                 >
                     <div className="text-5xl md:text-7xl font-light tracking-wide">
                         {progress}%
