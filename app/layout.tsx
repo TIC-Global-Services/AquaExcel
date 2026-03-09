@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroller from "@/layouts/SmoothScroller";
-import { hovesPro, interTight,ubermove } from "@/fonts";
+import { hovesPro, interTight, ubermove } from "@/fonts";
 import Footer from "@/components/reuseable/Footer";
 import Navbar from "@/components/reuseable/Navbar";
+import Loader from "@/components/reuseable/Loader";
 
 
 export const metadata: Metadata = {
@@ -19,10 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hovesPro.variable} ${interTight.variable} ${ubermove.variable} antialiased`}      
+        className={`${hovesPro.variable} ${interTight.variable} ${ubermove.variable} antialiased`}
       >
+        <Loader />
         <SmoothScroller>
-           <Navbar />
+          <Navbar />
           {children}
           <Footer />
         </SmoothScroller>
