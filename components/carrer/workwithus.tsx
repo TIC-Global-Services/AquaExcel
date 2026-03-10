@@ -4,7 +4,7 @@ import Image from 'next/image'
 import SimpleParallax from 'simple-parallax-js'
 import ContainerLayout from '@/layouts/ContainerLayout'
 const workwithus = () => {
-    
+
     const image1 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid1.png";
     const image2 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid2.png";
     const image3 = "https://ik.imagekit.io/pgtxr2fmn/Career/WorkWithUs/grid3.jpg";
@@ -23,7 +23,8 @@ const workwithus = () => {
                 const distance = scrolled - cardCenter;
                 const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
 
-                el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
+                // Check if this offset is causing it to fly off page
+                // el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
             });
         };
 
@@ -64,12 +65,13 @@ const workwithus = () => {
                 <div className='flex md:grid overflow-x-auto  md:overflow-x-visible md:grid-cols-9 gap-5 relative py-5 px-5 md:px-0 snap-start snap-mandatory md:snap-start scrollbar-hide'>
                     {content.map((val, index) => (
                         <div key={index} className={`relative flex-shrink-0 w-[280px] aspect-square md:aspect-auto md:w-auto  snap-center ${index == 0 ? 'md:col-span-3' : index == 1 ? 'md:col-span-6' : index == 2 ? 'md:col-span-6' : index == 3 ? 'md:col-span-3' : ''}`}>
-                            <div className="w-full h-full overflow-hidden rounded-[20px]">
+                            <div className="relative w-full h-full overflow-hidden rounded-[20px]">
                                 <div className='absolute inset-0 bg-black/40 z-10 rounded-[20px]'></div>
                                 <Image
                                     fill
                                     src={val.image}
-                                    alt="grids"
+                                    alt={val.title}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className={`w-full h-full object-cover scale-100 md:scale-105 parallax-media ${index == 0 ? "" : ""}`}
                                 />
                             </div>

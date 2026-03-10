@@ -41,7 +41,7 @@ const LifeAt = () => {
     },
   ]
 
-    useEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth < 768;
       const tl = gsap.timeline({
@@ -86,6 +86,7 @@ const LifeAt = () => {
           alt="Quality Measure Background"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />

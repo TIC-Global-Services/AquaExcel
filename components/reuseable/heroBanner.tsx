@@ -91,28 +91,28 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   };
 
   useEffect(() => {
-      // Parallax effect — smooth, performant, respects rounded corners
-      const handleScroll = () => {
-        const scrolled = window.scrollY + window.innerHeight / 2; // center-based trigger
-  
-        document.querySelectorAll<HTMLElement>(".parallax-media").forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          const cardCenter = rect.top + rect.height / 2 + window.scrollY;
-  
-          // Distance from viewport center
-          const distance = scrolled - cardCenter;
-          const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
-  
-          el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
-        });
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      handleScroll(); // initial position
-  
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-    
+    // Parallax effect — smooth, performant, respects rounded corners
+    const handleScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight / 2; // center-based trigger
+
+      document.querySelectorAll<HTMLElement>(".parallax-media").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2 + window.scrollY;
+
+        // Distance from viewport center
+        const distance = scrolled - cardCenter;
+        const offset = distance * 0.12; // adjust speed here (0.12 = smooth & subtle)
+
+        el.style.transform = `translateY(${offset}px) scale(1.1)`; // slight scale to fill bleed
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className={`relative ${height} w-full bg-hero-bg overflow-hidden`}>
       {/* Background Image */}
@@ -120,24 +120,24 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className="absolute parallax-media inset-0">
 
         <Image
-      
+
           src={backgroundImage || "/hero-banner.jpg"}
           alt={backgroundAlt || "Hero background image"}
           fill
           className={backgroundClassName || "object-cover scale-100"}
           priority={backgroundPriority || true}
           quality={backgroundQuality || 90}
-          objectPosition="47% 0%"
+          style={{ objectPosition: "47% 0%" }}
         />
 
         {/* Optional Overlay */}
         {overlay && (
           <div
             className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
-            // style={{
-            //   backgroundColor: overlayColor,
-            //   opacity: overlayOpacity
-            // }}
+          // style={{
+          //   backgroundColor: overlayColor,
+          //   opacity: overlayOpacity
+          // }}
           />
         )}
       </div>
@@ -162,22 +162,22 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 
                   <div className={buttonClassName}>
                     <Link href={primaryLink || '/products'}>
-                    <Button
-                      className={primaryButtonClassName}
-                      variant={primaryButtonVariant}
-                      onClick={onPrimaryClick}
-                    >
-                      {primaryButtonText}
-                    </Button>
+                      <Button
+                        className={primaryButtonClassName}
+                        variant={primaryButtonVariant}
+                        onClick={onPrimaryClick}
+                      >
+                        {primaryButtonText}
+                      </Button>
                     </Link>
                     <Link href={secondaryLink || '/contact'}>
-                    <Button
-                      className={secondaryButtonClassName}
-                      variant={secondaryButtonVariant}
-                      onClick={onSecondaryClick}
-                    >
-                      {secondaryButtonText}
-                    </Button>
+                      <Button
+                        className={secondaryButtonClassName}
+                        variant={secondaryButtonVariant}
+                        onClick={onSecondaryClick}
+                      >
+                        {secondaryButtonText}
+                      </Button>
                     </Link>
                   </div>
                 </>

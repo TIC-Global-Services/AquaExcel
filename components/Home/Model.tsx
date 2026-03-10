@@ -211,42 +211,52 @@ const Model: React.FC<ModelProps> = ({
             try {
                 let loadedCount = 0;
 
-                const imagePromises = assetsToLoad.map(
-                    (asset, index) =>
-                        new Promise<HTMLImageElement>((resolve, reject) => {
-                            const img = new Image();
-                            img.crossOrigin = "anonymous";
+                const loadedImages: HTMLImageElement[] = [];
+                const batchSize = isMobile ? 20 : 50;
 
-                            // Reduce image quality for mobile
-                            if (isMobile) {
-                                img.decoding = "async";
-                            }
+                for (let i = 0; i < assetsToLoad.length; i += batchSize) {
+                    if (isCancelled || !isMountedRef.current) break;
 
-                            const onLoad = () => {
-                                loadedCount++;
-                                if (!isCancelled && isMountedRef.current) {
-                                    const computedProgress = Math.round((loadedCount / assetsToLoad.length) * 100);
-                                    setLoadingProgress(computedProgress);
-                                    setProgress(computedProgress);
+                    const batch = assetsToLoad.slice(i, i + batchSize);
+                    const batchPromises = batch.map(
+                        (asset, index) =>
+                            new Promise<HTMLImageElement>((resolve, reject) => {
+                                const img = new Image();
+                                img.crossOrigin = "anonymous";
+
+                                // Reduce image quality for mobile
+                                if (isMobile) {
+                                    img.decoding = "async";
                                 }
-                                resolve(img);
-                            };
 
-                            const onError = () =>
-                                reject(new Error(`Failed to load image ${index}`));
+                                const globalIndex = i + index;
+                                const onLoad = () => {
+                                    loadedCount++;
+                                    if (!isCancelled && isMountedRef.current) {
+                                        const computedProgress = Math.round((loadedCount / assetsToLoad.length) * 100);
+                                        setLoadingProgress(computedProgress);
+                                        setProgress(computedProgress);
+                                    }
+                                    resolve(img);
+                                };
 
-                            img.addEventListener("load", onLoad, { once: true });
-                            img.addEventListener("error", onError, { once: true });
+                                const onError = () =>
+                                    reject(new Error(`Failed to load image ${globalIndex}`));
 
-                            img.src = asset.p.startsWith("data:image/")
-                                ? asset.p
-                                : asset.u
-                                    ? asset.u + asset.p
-                                    : asset.p;
-                        })
-                );
+                                img.addEventListener("load", onLoad, { once: true });
+                                img.addEventListener("error", onError, { once: true });
 
-                const loadedImages = await Promise.all(imagePromises);
+                                img.src = asset.p.startsWith("data:image/")
+                                    ? asset.p
+                                    : asset.u
+                                        ? asset.u + asset.p
+                                        : asset.p;
+                            })
+                    );
+
+                    const batchResults = await Promise.all(batchPromises);
+                    loadedImages.push(...batchResults);
+                }
 
                 if (!isCancelled && isMountedRef.current) {
                     setImages(loadedImages);

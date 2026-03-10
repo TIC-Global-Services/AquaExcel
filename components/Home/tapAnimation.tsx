@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { LeftArrow, RigthArrow } from "@/assets/Arrows";
 import Arrowright from "@/public/Arrow6.png";
 import Image from "next/image";
@@ -18,6 +18,16 @@ const TapAnimation = () => {
   const contentRef = useRef(null);
   const brass2Ref = useRef(null);
   const scrollRef = useRef(null);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileDevice(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -234,7 +244,7 @@ const TapAnimation = () => {
 
       {/* Tap Animation - Always visible in center */}
       <div className="flex items-center justify-center z-0">
-        <Model jsonPath="/tap.json" scrollSpeed={1.9} id="tap-animation" />
+        <Model jsonPath={isMobileDevice ? "/tap-mobile.json" : "/tap.json"} scrollSpeed={1.9} id="tap-animation" />
       </div>
       <div ref={contentRef} style={{ visibility: "hidden" }} className="fixed bottom-4 sm:bottom-6 md:bottom-20 left-0 right-0 flex justify-center items-center z-50 px-4">
         <h1 className="text-[20px] md:text-[40px] font-inter-tight font-medium">“Brass + Brass” but with a plastic tap</h1>
