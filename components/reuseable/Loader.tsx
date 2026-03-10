@@ -3,9 +3,11 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLoaderStore } from "@/store/loaderStore";
+import { usePathname } from "next/navigation";
 
 export default function Loader() {
-    const { progress, isLoading, setIsLoading } = useLoaderStore();
+    const { progress, isLoading, setIsLoading, setProgress } = useLoaderStore();
+    const pathname = usePathname();
 
     useEffect(() => {
         // Only run check on mount
@@ -15,12 +17,33 @@ export default function Loader() {
             return;
         }
 
+        if (pathname !== "/") {
+            let currentProgress = 0;
+            const interval = setInterval(() => {
+                currentProgress += 15;
+                if (currentProgress >= 100) {
+                    currentProgress = 100;
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        setIsLoading(false);
+                    }, 400);
+                }
+                setProgress(currentProgress);
+            }, 50);
+            return () => clearInterval(interval);
+        }
+    }, [pathname, setIsLoading, setProgress]);
+
+    useEffect(() => {
+        const hasLoaded = sessionStorage.getItem("hasLoaded");
+        if (hasLoaded) return;
+
         if (isLoading) {
             document.body.style.overflow = "hidden";
         } else {
             sessionStorage.setItem("hasLoaded", "true");
         }
-    }, [isLoading, setIsLoading]);
+    }, [isLoading]);
 
     // Cleanup scrolling when Loader mounts/unmounts essentially
     useEffect(() => {
