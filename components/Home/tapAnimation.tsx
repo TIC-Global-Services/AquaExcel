@@ -6,7 +6,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Model from "./Model";
-import { CornerDownLeft, MoveLeft, MoveUp } from "lucide-react";
+import { CornerDownLeft, MoveDown, MoveLeft, MoveUp } from "lucide-react";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -196,12 +196,19 @@ const TapAnimation = () => {
       {/* Plastic Tap - Left Middle (Start) */}
       <div
         ref={plasticRef}
-        className="fixed md:right-[10%] right-[2%] top-[20%] transform -translate-y-1/2 w-1/2 h-1/2 flex flex-row items-end text-right justify-end px-2 md:px-20 z-10 md:gap-2"
+        className="fixed md:right-[10%] right-[24%] top-[18%] md:top-[20%] transform -translate-y-1/2 w-1/2 h-1/2 flex flex-row items-end text-right justify-end px-2 md:px-20 z-10 md:gap-2"
         style={{ visibility: "hidden" }}
       >
-        <div className="flex items-center md:gap-2 mt-20">
-          <MoveLeft strokeWidth={1.2} className="md:w-20 h-25 w-15" />
-          <h1 className="md:text-[40px] text-[20px] leading-[42px] font-medium">
+        <div className="flex items-center md:gap-2 md:mt-20">
+          <MoveLeft strokeWidth={1.2} className="md:w-20 h-25 w-15 hidden md:block" />
+          <h1 className="md:text-[40px] text-[20px] md:leading-[42px] font-medium md:hidden">
+            Plastic Tap
+            <span className="flex items-center justify-center">
+              <MoveDown strokeWidth={1.2} className="md:hidden h-25 w-15" ></MoveDown>
+            </span>
+          </h1>
+          
+          <h1 className="md:text-[40px] text-[20px] leading-[42px] font-medium hidden md:block">
             Plastic Tap
           </h1>
         </div>
@@ -211,7 +218,7 @@ const TapAnimation = () => {
       {/* Brass 1 - Bottom Right */}
       <div
         ref={brass1Ref}
-        className="fixed md:right-[4%] right-12 bottom-0 w-1/2 h-1/2 flex flex-row items-center justify-start px-0 md:px-20 z-10 pb-20 md:gap-2 py-20"
+        className="fixed md:right-[4%] right-[3%] md:right-12 bottom-[12%] md:bottom-0 w-1/2 h-1/2 flex flex-row items-center justify-start px-0 md:px-20 z-10 pb-20 md:gap-2 py-20"
         style={{ visibility: "hidden" }}
       >
 
@@ -226,7 +233,7 @@ const TapAnimation = () => {
       {/* Brass 2 (Horizontal position) - Top Right */}
       <div
         ref={brass2Ref}
-        className="fixed md:right-[18%] right-[10%] md:top-[5%] top-30 w-1/2 h-1/2 flex md:flex-row flex-row-reverse items-start justify-start px-0 md:px-20 z-10 md:pt-20 pt-4 md:gap-2 gap-1"
+        className="fixed md:right-[18%] right-[55%] md:top-[5%] top-[35%] w-1/2 h-1/2 flex md:flex-row flex-row-reverse items-start justify-start px-0 md:px-20 z-10 md:pt-20 pt-4 md:gap-2 gap-1"
         style={{ visibility: "hidden" }}
       >
 
@@ -237,7 +244,7 @@ const TapAnimation = () => {
           <Image
             src={Arrowright}
             alt="Right Arrow"
-            className="md:w-25 h-50 w-12 flex-shrink-0"
+            className="md:w-25 md:h-50 w-12 flex-shrink-0"
           />
         </div>
       </div>
@@ -246,7 +253,7 @@ const TapAnimation = () => {
       <div className="flex items-center justify-center z-0">
         <Model jsonPath={isMobileDevice ? "/tap-mobile.json" : "/tap.json"} scrollSpeed={1.9} id="tap-animation" />
       </div>
-      <div ref={contentRef} style={{ visibility: "hidden" }} className="fixed bottom-4 sm:bottom-6 md:bottom-20 left-0 right-0 flex justify-center items-center z-50 px-4">
+      <div ref={contentRef} style={{ visibility: "hidden" }} className="fixed bottom-[14%] sm:bottom-6 md:bottom-20 left-0 right-0 flex justify-center items-center z-50 px-4">
         <h1 className="text-[20px] md:text-[40px] font-inter-tight font-medium">“Brass + Brass” but with a plastic tap</h1>
       </div>
       {/* Keep Scrolling Indicator */}
