@@ -25,21 +25,21 @@ const Sustainableinnovation = () => {
     ]
     return (
         <ContainerLayout maxWidth='w-full'>
-            <div className='xl:py-20 mb-10 py-10 mt-5 md:mt-0 flex flex-col items-center gap-20'>
+            <div className='xl:py-10 mb-10 py-10 mt-5 md:mt-0 flex  items-center gap-20'>
                 <div className=''>
-                    <h1 className='text-xl md:text-[2.75rem] font-medium tracking-tight font-hoves-pro  md:text-center'>Sustainable Innovation & Research</h1>
-                    <p className='md:text-xl  text-sm font-regular font-inter-tight md:text-center'>
-                        We continually elevate our processes and products to create solutions that <br  className='hidden md:block'/> are smarter, stronger, and more environmentally responsible.
+                    <h1 className='text-xl md:text-[2rem] font-medium tracking-tight font-hoves-pro  md:text-left'>Sustainable Innovation & Research</h1>
+                    <p className='md:text-base  text-sm font-regular font-inter-tight md:text-left'>
+                        We continually elevate our processes and products to create solutions that are smarter, stronger, and more environmentally responsible.
                     </p>
-                    <ul className='list-none mt-10 w-full space-y-5'>
-                        {list.map((item, index) => (
-                            <li key={index} className='flex items-center '>
-                                <img src={item.icon} alt="" className='w-12 h-12 mr-3'/>
-                                <span className='lg:text-xl md:text-base text-sm font-inter-tight font-regular text-[#646464]'>{item.description}</span>
-                            </li>
-                        ))}
-                    </ul>
                 </div>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 w-full'>
+                        {list.map((item, index) => (
+                            <div key={index} className='flex flex-col items-start p-6 rounded-2xl bg-[#F9F9F9] border border-gray-100'>
+                                <img src={item.icon} alt="" className='w-12 h-12 mb-4' />
+                                <span className='lg:text-base md:text-base text-sm font-inter-tight font-regular text-[#646464]'>{item.description}</span>
+                            </div>
+                        ))}
+                    </div>
             </div>
         </ContainerLayout>
     )

@@ -11,32 +11,104 @@ export const accessories=[
      {
     title: "Cistern",
     description: "A Cistern Is A Water Storage Tank Used In Toilets To Hold And Release Water For Flushing, Designed For Efficient Flow And Smooth Operation.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/Cistern.png?updatedAt=1773046227551'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/Cistern.png?updatedAt=1773046227551',
+
+    specs: [
+      "Material: Heavy-Duty Reinforced Polymer Composite",
+      "Design: Secure, Anti-Skid & Lockable Cover",
+      "Build Quality: Weather, UV & Temperature Resistant",
+      "Strength: High Load Bearing Capacity",
+      "Suitable For: Underground Chambers, Drainage Systems",
+      "Maintenance: Easy Lift & Access Design",
+      "Durability: Non-Brittle & Long-Lasting",
+      "Installation: Flush Mountable with Floor Surface",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Seat Cover",
     description: "A Bathroom Seat Cover Is A Hinged Cover Fitted On The Toilet Seat, Designed For Comfort, Hygiene, And A Neat, Finished Look.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/SeatCover.png?updatedAt=1773046227635'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/SeatCover.png?updatedAt=1773046227635',
+    
+    specs: [
+      "Material: Heavy-Duty Reinforced Polymer Composite",
+      "Design: Secure, Anti-Skid & Lockable Cover",
+      "Build Quality: Weather, UV & Temperature Resistant",
+      "Strength: High Load Bearing Capacity",
+      "Suitable For: Underground Chambers, Drainage Systems",
+      "Maintenance: Easy Lift & Access Design",
+      "Durability: Non-Brittle & Long-Lasting",
+      "Installation: Flush Mountable with Floor Surface",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Bathroom Cabinet",
     description: "A Bathroom Cabinet Is A Storage Unit Designed To Keep Toiletries Organized While Adding A Neat, Functional Look To The Bathroom Space.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/BathroomCabinet.png?updatedAt=1773046227753'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/BathroomCabinet.png?updatedAt=1773046227753',
+
+    specs: [
+      "Material: Superior Grade UPVC & Brass Core",
+      "Finish: Elegant Chrome / Matte Finish Options",
+      "Mechanism: Advanced Anti-Clogging Nozzles",
+      "Build Quality: Leak-Proof & Scaling-Resistant",
+      "Water Flow: Optimized High-Pressure Delivery",
+      "Suitable For: Modern Bathrooms & Spa Enclosures",
+      "Maintenance: Easy-to-Clean Surface",
+      "Installation: Fits Standard Plumbing Connections",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Waste Coupling-Full Threaded",
     description: "A Waste Coupling Full Thread Is A Fully Threaded Drain Fitting Used To Securely Connect Basins To The Waste Pipe, Ensuring Smooth And Leak-Free Water Flow.",
-    image: image24
+    image: image24,
+
+    specs: [
+      "Model Series: Waste Coupling-Full Threaded Edition",
+      "Material: Premium Quality High-Grade Polymer",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
   },
   {
     title: "Tank Filter",
     description: "A Tank Filter Is A Device Used To Screen Out Dirt And Debris Before Water Enters The Tank, Ensuring Cleaner Storage And Smoother Flow.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tankfilter.jpg?updatedAt=1773046227140'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tankfilter.jpg?updatedAt=1773046227140',
+
+    specs: [
+      "Material: Heavy-Duty Reinforced Polymer Composite",
+      "Design: Secure, Anti-Skid & Lockable Cover",
+      "Build Quality: Weather, UV & Temperature Resistant",
+      "Strength: High Load Bearing Capacity",
+      "Suitable For: Underground Chambers, Drainage Systems",
+      "Maintenance: Easy Lift & Access Design",
+      "Durability: Non-Brittle & Long-Lasting",
+      "Installation: Flush Mountable with Floor Surface",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "PVC Solvent Cement",
     description: "PVC Solvent Cement Is A Fast-Setting Adhesive Used To Bond PVC Pipes And Fittings, Creating A Strong, Leak-Proof Joint.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/PVCSolventCement.jpg?updatedAt=1773046227143'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/PVCSolventCement.jpg?updatedAt=1773046227143',
+
+    specs: [
+      "Model Series: PVC Solvent Cement Edition",
+      "Material: Premium Quality High-Grade Polymer",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
   }
   ]
  }

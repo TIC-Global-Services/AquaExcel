@@ -45,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 {/* Divider */}
                 <div className="w-full h-px bg-[#000000] mb-3" />
 
-                <p className="font-inter-tight text-sm font-regular md:text-[22px] text-[#646464] leading-relaxed line-clamp-4">
+                <p className="font-inter-tight text-sm font-regular md:text-[22px] text-[#646464] leading-[1.3] line-clamp-4">
                     {description}
                 </p>
 

@@ -21,47 +21,182 @@ export const Taps = [
     {
     title: "Bib Tap Short Body",
     description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Bib Tap Long Body",
     description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtaplongvalve.png?updatedAt=1773034090242'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtaplongvalve.png?updatedAt=1773034090242',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Angle Valve",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Two way Angle Valve",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bttwowayanglevalve.jpg?updatedAt=1773035820790'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bttwowayanglevalve.jpg?updatedAt=1773035820790',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Sink Tap Wallmount",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btsinktapwallmount.png?updatedAt=1773035035355'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btsinktapwallmount.png?updatedAt=1773035035355',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "High Flow",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bthighflow.png?updatedAt=1773034940348'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bthighflow.png?updatedAt=1773034940348',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Swan Neck",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btswanneck.png?updatedAt=1773035172620'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btswanneck.png?updatedAt=1773035172620',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Garden Tap",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btgardentap.png?updatedAt=1773034831367'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btgardentap.png?updatedAt=1773034831367',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Washing Machine Tap",
     description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btwashingmachinetap.png?updatedAt=1773035821381'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btwashingmachinetap.png?updatedAt=1773035821381',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   ]
  },
@@ -73,17 +208,62 @@ export const Taps = [
     {
     title: "Bib Tap Short Body",
     description: "A Lightweight, Corrosion-Resistant PTMT Tap Built For Everyday Use, Offering Smooth Flow Control And Long-Lasting Durability.",
-    image: image4
+    image: image4,
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Bib Tap Long Body",
     description: "A Durable PTMT Long-Body Tap That Provides Extended Reach With Smooth Water Flow And Dependable Daily Performance.",
-    image: image5
+    image: image5,
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Angle Valve",
     description: "A Sturdy PTMT Valve Designed To Control Water Direction And Flow, Ensuring Smooth Operation For Bathroom And Kitchen Fittings.",
-    image: image6   
+    image: image6,
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]   
   },
   ]
  },
@@ -95,50 +275,200 @@ export const Taps = [
      {
     title: "Bib Tap Short Body",
     description: "A Compact, Eco-Friendly Bib Tap Designed To Reduce Water Wastage While Delivering Smooth, Efficient Flow.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtapshort.png?updatedAt=1773037266228'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtapshort.png?updatedAt=1773037266228',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Bib Tap Long Body",
     description: "A Long-Reach Green Tap Built For Cleaner Water Use, Offering Controlled Flow With An Environmentally Conscious Design.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtaplong.png?updatedAt=1773037265496'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtaplong.png?updatedAt=1773037265496',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Angle Valve",
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtanglevalve.png?updatedAt=1773037266106'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtanglevalve.png?updatedAt=1773037266106',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "garden Tap",
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtgardentap.png?updatedAt=1773037265671'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtgardentap.png?updatedAt=1773037265671',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Hi-Flow Tap",
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gthighflow.png?updatedAt=1773037266193'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gthighflow.png?updatedAt=1773037266193',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Two Way Angle Valve",
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwoanglevalve.png?updatedAt=1773037266147'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwoanglevalve.png?updatedAt=1773037266147',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "swan neck",
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtswanneck.png?updatedAt=1773037266191'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtswanneck.png?updatedAt=1773037266191',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },
   {
     title: "Sink Tap",
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtsinktap.png?updatedAt=1773037266160'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtsinktap.png?updatedAt=1773037266160',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },{
     title:'Two Way Tap',
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwowaytap.png?updatedAt=1773037266107'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwowaytap.png?updatedAt=1773037266107',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   },{
     title:'Washing Machine Tap',
     description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtwashingmachine.png?updatedAt=1773037266243'
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtwashingmachine.png?updatedAt=1773037266243',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
   }
     ]
   }

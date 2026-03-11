@@ -32,23 +32,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
     if (!isOpen || !product) return null
 
-    // Fallback data to match the design if not provided in taps.ts
-    const mockColors = product.colors || [
-        { name: 'White', colorCode: '#FFFFFF' },
-        { name: 'Green', colorCode: '#4ADE80' }
-    ]
 
-    const mockSpecs = product.specs || [
-        "Material: UPVC Body + Brass Thread",
-        "Mechanism: Quarter-Turn Handle",
-        "Inlet Size: ½\" Standard",
-        "Build Quality: Leak-Proof & Corrosion-Resistant",
-        "Strength: Crack-Resistant Polymer",
-        "Suitable For: Bathroom, Garden, Utility Lines",
-        "Dimensions: 92 Mm (H) × 78 Mm (L)",
-        "Installation: PTFE Tape Recommended",
-        "Warranty: 5-Year Replacement",
-    ]
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/40 backdrop-blur-sm transition-opacity">
@@ -97,37 +81,33 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                         </h2>
 
                         {/* Colors */}
-                        <div className="flex items-center gap-4 mb-10">
-                            <span className="text-xl md:text-xl font-hoves-pro font-medium">Colors:</span>
-                            <div className="flex gap-4">
-                                {mockColors.map((color, idx) => (
-                                    <div key={idx} className="flex flex-col items-center gap-1">
-                                        <div
-                                            className={`w-8 h-8 rounded-full border border-gray-300 shadow-sm cursor-pointer hover:scale-110 transition-transform`}
-                                            style={{ backgroundColor: color.colorCode }}
-                                        />
-                                        <span className="text-[10px] font-inter-tight text-gray-600">{color.name}</span>
+                        {product.colors && product.colors.length > 0 && (
+                            <div className="flex items-center gap-4 mb-10">
+                                <span className="text-xl md:text-xl font-hoves-pro font-medium">Colors:</span>
+                                <div className="flex gap-4">
+                                    {product.colors.map((color, idx) => (
+                                        <div key={idx} className="flex flex-col items-center gap-1">
+                                            <div
+                                                className={`w-8 h-8 rounded-full border border-gray-300 shadow-sm cursor-pointer hover:scale-110 transition-transform`}
+                                                style={{ backgroundColor: color.colorCode }}
+                                            />
+                                            <span className="text-[10px] font-inter-tight text-gray-600">{color.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Specs Layout - Two Columns to prevent cutoff */}
+                        <div className="w-full mt-2">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 font-inter-tight text-sm md:text-base">
+                                {product.specs?.map((spec, idx) => (
+                                    <div key={idx} className="flex gap-3 items-start text-black font-medium leading-relaxed">
+                                        <span className="text-xl leading-none mt-0.5">•</span>
+                                        <span className="flex-1">{spec}</span>
                                     </div>
                                 ))}
                             </div>
-                        </div>
-
-                        {/* Specs & Description Two-Column Layout */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 w-full font-inter-tight text-base md:text-base">
-                            {/* Specs Column */}
-                            <div className="flex flex-col gap-1 text-black font-medium leading-relaxed">
-                                {mockSpecs.map((spec, idx) => (
-                                    <div key={idx} className="flex gap-2">
-                                        <span className="text-xl leading-none mt-1">•</span>
-                                        <span>{spec}</span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Description Column */}
-                            {/* <div className="text-black font-medium leading-relaxed">
-                                {product.description}
-                            </div> */}
                         </div>
                     </div>
                 </div>
