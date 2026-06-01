@@ -1,13 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import bgimage from "@/assets/why-us/qualitymeasurebg.png";
 import Image from "next/image";
 import sliderimg4 from "@/assets/why-us/slides/slideimg4.jpg";
 import Card from "../reuseable/why-us/slidercards";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Qualitycp = () => {
 
@@ -22,6 +17,7 @@ const Qualitycp = () => {
   // const sliderimg4 = "https://ik.imagekit.io/pgtxr2fmn/WhyUs/QualityCP/slideimg4.jpg"; image kit bad response
 
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const slides = [
     {
       title: "Hydrostatic Pressure Test",
@@ -54,35 +50,11 @@ const Qualitycp = () => {
   ];
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const isMobile = window.innerWidth < 768;
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: `+=${slides.length * (isMobile ? 150 : 100)}%`,
-          pin: true,
-          scrub: isMobile ? 0.2 : 1,
-        },
-      });
-
-      slides.forEach((_, index) => {
-        if (index === 0) {
-          tl.set(`.card-cp-${index}`, { xPercent: 0, opacity: 1 });
-        } else {
-          tl.to(`.card-cp-${index - 1}`, { opacity: 0, duration: 1 });
-          tl.fromTo(
-            `.card-cp-${index}`,
-            { xPercent: 130, opacity: 0 },
-            { xPercent: 0, opacity: 1, duration: 1, ease: "none" },
-            "<"
-          );
-        }
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, [slides]);
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
     <div
@@ -121,8 +93,12 @@ const Qualitycp = () => {
           {slides.map((res, index) => (
             <div
               key={index}
-              className={`card-cp-${index}  absolute inset-0 w-full h-full opacity-0`}
-              style={{ zIndex: index + 1 }}
+              className={`absolute inset-0 w-full h-full transition-all duration-700 ease-in-out ${
+                index === activeIndex
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-[130%]"
+              }`}
+              style={{ zIndex: index === activeIndex ? 1 : 0 }}
             >
               <Card
                 title={res.title}

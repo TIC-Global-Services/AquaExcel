@@ -13,7 +13,7 @@ interface Card {
 const Carousel3D = () => {
   const cards: Card[] = [
     { id: 1, title: "Pipes & Fittings", image: "/card1.jpg" },
-    { id: 2, title: "Pipes & Fittings", image: "/card2.jpg" },
+    { id: 2, title: "Brass-Threaded Taps", image: "/card2.jpg" },
     { id: 3, title: "Bath Fittings & Accessories", image: "/card3.jpg" },
     { id: 4, title: "Taps & Fittings", image: "/card4.jpg" },
     { id: 5, title: "Accessories", image: "/card5.jpg" },

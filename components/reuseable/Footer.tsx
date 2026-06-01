@@ -115,7 +115,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
-                    MIXING COVERS
+                    MAXION COVERS
                   </Link>
                 </li>
                 <li>

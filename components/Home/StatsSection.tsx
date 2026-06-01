@@ -14,7 +14,7 @@ const stats: Stat[] = [
   { id: 1, value: 48, suffix: "", label: "Products Built for\nDaily Reliability" },
   { id: 2, value: 1, suffix: "L+", label: "Customers Trust Us\nNationwide" },
   { id: 3, value: 48, suffix: "+", label: "Years of Proven\nExpertise" },
-  { id: 4, value: 2, label: "Patents Filed for\nInnovation" },
+  { id: 4, value: 2, label: "Patents awarded" },
 ];
 
 const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string }) => {

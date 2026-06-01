@@ -11,17 +11,17 @@ import {
 
 const IMGS: { url: string; title: string }[] = [
   { url: "/card1.jpg", title: "Pipes & Fittings" },
-  { url: "/card2.jpg", title: "Pipes & Fittings" },
+  { url: "/card2.jpg", title: "Brass-Threaded Taps" },
   { url: "/card3.jpg", title: "Bath Fittings\n& Accessories" },
   { url: "/card4.jpg", title: "Taps & Fittings" },
   { url: "/card5.jpg", title: "Accessories" },
   { url: "/card1.jpg", title: "Pipes & Fittings" },
-  { url: "/card2.jpg", title: "Pipes & Fittings" },
+  { url: "/card2.jpg", title: "Brass-Threaded Taps" },
   { url: "/card3.jpg", title: "Bath Fittings\n& Accessories" },
   { url: "/card4.jpg", title: "Taps & Fittings" },
   { url: "/card5.jpg", title: "Accessories" },
   { url: "/card1.jpg", title: "Pipes & Fittings" },
-  { url: "/card2.jpg", title: "Pipes & Fittings" },
+  { url: "/card2.jpg", title: "Brass-Threaded Taps" },
 ];
 
 interface RollingGalleryProps {
