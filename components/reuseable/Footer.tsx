@@ -1,51 +1,17 @@
 "use client";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const Footer = () => {
-  const pathname = usePathname();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
-  const animationRef = useRef<number | null>(null);
-
-  // Configuration for route-specific core colors
-  const routeColors: { [key: string]: string } = {
-    "/why-us": "#274689",
-    "/career": "#274689",
-    "/carrer": "#274689", // Handling potential typo in route usage
-  };
-
-  const activeColor = routeColors[pathname] || "#E31E24"; // Default color
+  const aquaRef = useRef<HTMLSpanElement>(null);
+  const excelRef = useRef<HTMLSpanElement>(null);
+  const [hoveredWord, setHoveredWord] = useState<'aqua' | 'excel' | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const animate = () => {
-      if (!isHovering && containerRef.current) {
-        const time = Date.now() / 1000;
-        // Create a moving spotlight effect (figure-8 pattern or circular)
-        const rect = containerRef.current.getBoundingClientRect();
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        // Movement radius (adjust as needed)
-        const radiusX = rect.width * 0.3;
-        const radiusY = rect.height * 0.3;
-
-        const x = centerX + Math.cos(time) * radiusX;
-        const y = centerY + Math.sin(time * 1.5) * radiusY;
-
-        containerRef.current.style.setProperty('--mouse-x', `${x}px`);
-        containerRef.current.style.setProperty('--mouse-y', `${y}px`);
-      }
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animationRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-    };
-  }, [isHovering]);
+    setIsMobile(window.innerWidth <= 768);
+  }, []);
 
   return (
     <footer className="lg:bg-[#2D2D2D] bg-[#000000] text-white pt-5 lg:pt-10 lg:pb-0 relative overflow-hidden">
@@ -74,29 +40,89 @@ const Footer = () => {
 
       </div>
 
-      {/* Large Logo with Radial Gradient Hover Effect - Full Width */}
+      {/* Large Logo */}
+      {isMobile ? (
+        <div className="pb-10 justify-center w-full relative flex z-10">
+          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.8vw] select-none">
+            <span
+              style={{
+                backgroundImage: `linear-gradient(135deg, #8AB8E8, #274689)`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >AQUA </span>
+            <span
+              style={{
+                backgroundImage: `linear-gradient(135deg, #FF6B6B, #E31E24)`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >EXCEL</span>
+          </h1>
+        </div>
+      ) : (
       <div
         ref={containerRef}
         className="pb-10 justify-center w-full relative cursor-pointer flex z-10"
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseLeave={() => setHoveredWord(null)}
         onMouseMove={(e) => {
-          if (!containerRef.current) return;
-          const rect = containerRef.current.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          containerRef.current.style.setProperty('--mouse-x', `${x}px`);
-          containerRef.current.style.setProperty('--mouse-y', `${y}px`);
+          [aquaRef, excelRef].forEach((ref) => {
+            if (!ref.current) return;
+            const rect = ref.current.getBoundingClientRect();
+            ref.current.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+            ref.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
+          });
         }}>
-        <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.8vw] select-none pointer-events-none"
-          style={{
-            backgroundImage: `radial-gradient(circle 250px at var(--mouse-x, 50%) var(--mouse-y, 50%), ${activeColor}, #363639 100%)`,
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >AQUA EXCEL</h1>
+        <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.8vw] select-none">
+          <span
+            ref={aquaRef}
+            className="relative inline-block pl-[2vw] pr-[2vw] -ml-[2vw] -mr-[2vw]"
+            onMouseEnter={() => setHoveredWord('aqua')}
+          >
+            <span className="text-[#777]">AQUA </span>
+            <span
+              className="absolute inset-0 pointer-events-none pl-[2vw] pr-[2vw]"
+              style={{
+                opacity: hoveredWord === 'aqua' ? 1 : 0,
+                transition: 'opacity 0.3s ease',
+                backgroundImage: `radial-gradient(circle 250px at var(--mx, 50%) var(--my, 50%), #8AB8E8, #274689 100%)`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                WebkitMaskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
+                maskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
+              }}
+            >
+              AQUA{' '}
+            </span>
+          </span>
+          <span
+            ref={excelRef}
+            className="relative inline-block pl-[2vw] pr-[2vw] -ml-[2vw] -mr-[2vw]"
+            onMouseEnter={() => setHoveredWord('excel')}
+          >
+            <span className="text-[#777]">EXCEL</span>
+            <span
+              className="absolute inset-0 pointer-events-none pl-[2vw] pr-[2vw]"
+              style={{
+                opacity: hoveredWord === 'excel' ? 1 : 0,
+                transition: 'opacity 0.3s ease',
+                backgroundImage: `radial-gradient(circle 250px at var(--mx, 50%) var(--my, 50%), #FF6B6B, #E31E24 100%)`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                WebkitMaskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
+                maskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
+              }}
+            >
+              EXCEL
+            </span>
+          </span>
+        </h1>
       </div>
+      )}
 
 
       <div className="px-6 xl:px-[80px] lg:px-[40px] relative z-20">

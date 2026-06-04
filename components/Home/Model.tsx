@@ -74,6 +74,7 @@ const Model: React.FC<ModelProps> = ({
     const [loadingProgress, setLoadingProgress] = useState(0);
     const [data, setData] = useState<Data | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const [isMobileCanvas, setIsMobileCanvas] = useState(false);
 
     const { setProgress, setIsLoading } = useLoaderStore();
 
@@ -93,6 +94,10 @@ const Model: React.FC<ModelProps> = ({
             videoHeight: data.h || 1080,
         };
     }, [data]);
+
+    useEffect(() => {
+        setIsMobileCanvas(window.innerWidth <= 767);
+    }, []);
 
     // Mobile-specific optimizations
     // Mobile-specific optimizations
@@ -594,8 +599,8 @@ const Model: React.FC<ModelProps> = ({
                     className={`w-full h-full transition-opacity duration-500 ${isLoaded ? "opacity-100" : "opacity-0"
                         }`}
                     style={{
-                        width: isMobile ? "67%" : "100%",
-                        height: isMobile ? "70%" : "100%",
+                        width: isMobileCanvas ? "67%" : "100%",
+                        height: isMobileCanvas ? "70%" : "100%",
                         willChange: "transform",
                         transform: "translateZ(0)",
                         WebkitTransform: "translateZ(0)",
