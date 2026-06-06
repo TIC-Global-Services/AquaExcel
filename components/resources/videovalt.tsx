@@ -3,13 +3,13 @@
 import ContainerLayout from '@/layouts/ContainerLayout'
 import React, { useState, useRef, useEffect } from 'react'
 
-const samplevideo = 'https://ik.imagekit.io/pgtxr2fmn/Resources/VideoVault/sample-video-1.mp4'
-
 const VideoCard = ({
+  src,
   index,
   activeIndex,
   setActiveIndex
 }: {
+  src: string
   index: number
   activeIndex: number | null
   setActiveIndex: (index: number | null) => void
@@ -37,12 +37,13 @@ const VideoCard = ({
   }, [shouldPlay, isMuted])
 
   const handleClick = () => {
-    // If already focused, toggle back to ambient (all autoplay)
-    // If not focused, set this one as active (unmuted, others paused)
     if (isFocused) {
       setActiveIndex(null)
     } else {
       setActiveIndex(index)
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0
+      }
     }
   }
 
@@ -53,7 +54,7 @@ const VideoCard = ({
     >
       <video
         ref={videoRef}
-        src={samplevideo}
+        src={src}
         className="w-full h-full object-cover"
         playsInline
         loop
@@ -69,21 +70,26 @@ const VideoCard = ({
   )
 }
 
+const tabVideos: Record<string, string[]> = {
+  'Story Tellers': ['/videos/story/story1.mp4', '/videos/story/story2.mp4', '/videos/story/story3.mp4', '/videos/story/story4.mp4'],
+  'Durability Tests': ['/videos/durabilityTest/test1.mp4', '/videos/durabilityTest/test2.mp4', '/videos/durabilityTest/test3.mp4', '/videos/durabilityTest/test4.mp4'],
+  'Plumber Stories': ['/videos/plumberStories/Plumber1.mp4', '/videos/plumberStories/Plumber2.mp4', '/videos/plumberStories/Plumber3.mp4', '/videos/plumberStories/Plumber4.mp4'],
+}
+
 const Videovault = () => {
-  const [activeTab, setActiveTab] = useState('Product Explainers')
-  const [activeIndex, setActiveIndex] = useState<number | null>(null) // null = all autoplay muted
-  const tabs = ['Product Explainers', 'Durability Tests', 'Plumber Stories']
+  const [activeTab, setActiveTab] = useState('Story Tellers')
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const tabs = Object.keys(tabVideos)
 
   return (
     <ContainerLayout>
       <div className="py-10">
-        {/* Tabs */}
         <h1 className='font-medium text-xl md:text-[44px] tracking-tighter text-center font-hoves-pro mb-10 md:mb-5'>Video Vault</h1>
         <div className="flex justify-center gap-4 mb-10">
           {tabs.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => { setActiveTab(tab); setActiveIndex(null) }}
               className={`md:px-8 md:py-3 py-2 px-3 rounded-xl cursor-pointer border transition-all duration-300 font-inter-tight text-xs md:text-lg ${activeTab === tab
                 ? 'bg-[#323232] text-white border-[#323232]'
                 : 'bg-white text-black border-[#E5E5E5] hover:border-gray-400'
@@ -94,11 +100,11 @@ const Videovault = () => {
           ))}
         </div>
 
-        {/* Video Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 4 }, (_, i) => (
+          {tabVideos[activeTab].map((src, i) => (
             <VideoCard
-              key={i}
+              key={`${activeTab}-${i}`}
+              src={src}
               index={i}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
