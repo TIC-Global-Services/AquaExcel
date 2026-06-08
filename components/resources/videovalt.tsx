@@ -73,7 +73,7 @@ const VideoCard = ({
 const tabVideos: Record<string, string[]> = {
   'Story Tellers': ['/videos/story/story1.mp4', '/videos/story/story2.mp4', '/videos/story/story3.mp4', '/videos/story/story4.mp4'],
   'Durability Tests': ['/videos/durabilityTest/test1.mp4', '/videos/durabilityTest/test2.mp4', '/videos/durabilityTest/test3.mp4', '/videos/durabilityTest/test4.mp4'],
-  'Plumber Stories': ['/videos/plumberStories/Plumber1.mp4', '/videos/plumberStories/Plumber2.mp4', '/videos/plumberStories/Plumber3.mp4', '/videos/plumberStories/Plumber4.mp4'],
+  'Plumber Stories': ['/videos/plumberStories/plumber1.mp4', '/videos/plumberStories/plumber2.mp4', '/videos/plumberStories/plumber3.mp4', '/videos/plumberStories/plumber4.mp4'],
 }
 
 const Videovault = () => {
