@@ -198,6 +198,26 @@ export const Taps = [
       "Warranty: 5-Year Replacement Guarantee"
     ]
   },
+  {
+    title: "Two Way Tap",
+    description: "A dual-outlet brass-threaded tap designed for multi-purpose usage, offering smooth flow control and leak-proof performance.",
+    image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/brassTwowaytap.png',
+    colors: [
+      { name: 'White', colorCode: '#FFFFFF' },
+      { name: 'Green', colorCode: '#4ADE80' }
+    ],
+    specs: [
+      "Material: Premium UPVC Body & Brass Thread",
+      "Mechanism: Smooth Quarter-Turn Handle",
+      "Inlet Size: ½\" Standard Fitting",
+      "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      "Strength: High-Density Crack-Resistant Polymer",
+      "Suitable For: Bathrooms, Gardens, Utility Areas",
+      "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      "Installation: PTFE Tape Recommended for Sealing",
+      "Warranty: 5-Year Replacement Guarantee"
+    ]
+  },
   ]
  },
 

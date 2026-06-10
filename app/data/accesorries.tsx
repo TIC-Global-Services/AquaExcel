@@ -109,6 +109,81 @@ export const accessories=[
       "Installation: Standard Industry Fitting Compatible",
       "Warranty: 5-Year Full Replacement Guarantee"
     ]
+  },
+  {
+    title: "Flexi Tap",
+    description: "A Flexible Tap Featuring A Bendable Spout For Versatile Directing Of Water Flow, Offering Ease Of Use For Washing Needs.",
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/flexiTap.png',
+    specs: [
+      "Material: Premium Quality High-Grade Polymer & Metal",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
+  },
+  {
+    title: "CPVC Concealed Valve",
+    description: "A CPVC Concealed Valve Is Installed Inside The Wall For A Sleek Look, Offering Reliable Flow Control For Hot And Cold Plumbing Systems.",
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/cpvcConcealedvalve.png',
+    specs: [
+      "Material: Premium Quality CPVC & Brass Core",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
+  },
+  {
+    title: "UPVC Compact Ball Valve",
+    description: "A UPVC Compact Ball Valve Offers Compact, Leak-Proof On/Off Flow Control, Designed For General Plumbing And Water Supply Networks.",
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/upvcCompact.png',
+    specs: [
+      "Material: Premium Quality UPVC",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
+  },
+  {
+    title: "CPVC Brass Union Ball Valve",
+    description: "A CPVC Ball Valve With A Brass Union Coupling That Permits Easy Disconnection and Reconnection, Providing High Leak Resistance Under Pressure.",
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/brassUnionBallvalveCPVC.png',
+    specs: [
+      "Material: Premium Quality CPVC & Brass Union",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
+  },
+  {
+    title: "CPVC Ball Valve",
+    description: "A CPVC Ball Valve Is A High-Temperature and Corrosion-Resistant Valve Designed For Smooth Operation And Durable Flow Regulation in CPVC Pipelines.",
+    image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/cpvcBallvalue.png',
+    specs: [
+      "Material: Premium Quality CPVC",
+      "Build Quality: Durable, Leak-Proof & Long-Lasting",
+      "Performance: Precision Engineered for Efficiency",
+      "Strength: High Impact & Crack Resistant",
+      "Application: Residential & Commercial Use",
+      "Maintenance: Low Maintenance & Easy to Clean",
+      "Installation: Standard Industry Fitting Compatible",
+      "Warranty: 5-Year Full Replacement Guarantee"
+    ]
   }
   ]
  }
