@@ -1,12 +1,83 @@
 "use client";
 import ContainerLayout from '@/layouts/ContainerLayout';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { generalEnquirySchema, GeneralEnquiryFormData, dealerEnquirySchema, DealerEnquiryFormData } from './schema';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
     const [activeTab, setActiveTab] = useState<'contact' | 'dealer'>('contact');
 
+    // General Enquiry Form Hook
+    const {
+        register: registerGeneral,
+        handleSubmit: handleSubmitGeneral,
+        formState: { errors: errorsGeneral, isSubmitting: isSubmittingGeneral },
+        reset: resetGeneral
+    } = useForm<GeneralEnquiryFormData>({
+        resolver: zodResolver(generalEnquirySchema)
+    });
+
+    // Dealer Enquiry Form Hook
+    const {
+        register: registerDealer,
+        handleSubmit: handleSubmitDealer,
+        formState: { errors: errorsDealer, isSubmitting: isSubmittingDealer },
+        reset: resetDealer
+    } = useForm<DealerEnquiryFormData>({
+        resolver: zodResolver(dealerEnquirySchema)
+    });
+
+    const onSubmitGeneral = async (data: GeneralEnquiryFormData) => {
+        try {
+            // Prepare App Script Payload
+            const payload = {
+                formType: 'enquiry',
+                ...data
+            };
+
+            
+            await fetch('https://script.google.com/macros/s/AKfycbyVx3wt3wwkP_j90A1odjBPIHcpTWcPkZfD6ThdDsfre4gfIiLt-FUcUwovQaOnsS8t/exec', {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            });
+
+            console.log('General Enquiry Submitted', payload);
+            toast.success('Enquiry submitted successfully!');
+            resetGeneral();
+        } catch (error) {
+            console.error('Submission error:', error);
+            toast.error('Failed to submit. Please try again later.');
+        }
+    };
+
+    const onSubmitDealer = async (data: DealerEnquiryFormData) => {
+        try {
+            // Prepare App Script Payload
+            const payload = {
+                formType: 'dealer',
+                ...data
+            };
+
+            await fetch('https://script.google.com/macros/s/AKfycbyVx3wt3wwkP_j90A1odjBPIHcpTWcPkZfD6ThdDsfre4gfIiLt-FUcUwovQaOnsS8t/exec', {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            });
+
+            console.log('Dealer Enquiry Submitted', payload);
+            toast.success('Enquiry submitted successfully!');
+            resetDealer();
+        } catch (error) {
+            console.error('Submission error:', error);
+            toast.error('Failed to submit. Please try again later.');
+        }
+    };
+
     return (
       <ContainerLayout>
+          <ToastContainer position="bottom-right" />
           <section className="py-15 lg:py-5 bg-background">
             <div className="max-w-5xl mx-auto">
                 {/* Tabs */}
@@ -42,45 +113,66 @@ const ContactForm = () => {
                             </p>
                         </div>
 
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmitGeneral(onSubmitGeneral)} className="space-y-6">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <input
-                                    type="text"
-                                    placeholder="Name"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium  focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
-                                <input
-                                    type="text"
-                                    placeholder="City / State"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Name"
+                                        {...registerGeneral('name')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium  focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsGeneral.name && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsGeneral.name.message}</p>}
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="City / State"
+                                        {...registerGeneral('city')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsGeneral.city && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsGeneral.city.message}</p>}
+                                </div>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <input
-                                    type="tel"
-                                    placeholder="Phone number"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
-                                <input
-                                    type="email"
-                                    placeholder="Email Address"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
+                                <div>
+                                    <input
+                                        type="tel"
+                                        placeholder="Phone number"
+                                        {...registerGeneral('phoneNumber')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsGeneral.phoneNumber && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsGeneral.phoneNumber.message}</p>}
+                                </div>
+                                <div>
+                                    <input
+                                        type="email"
+                                        placeholder="Email Address"
+                                        {...registerGeneral('email')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] placeholder:font-medium focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsGeneral.email && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsGeneral.email.message}</p>}
+                                </div>
                             </div>
 
-                            <textarea
-                                placeholder="Message / Description"
-                                rows={4}
-                                className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none placeholder:font-medium  focus:border-[#E31E24] transition-colors resize-none"
-                            />
+                            <div>
+                                <textarea
+                                    placeholder="Message / Description"
+                                    rows={4}
+                                    {...registerGeneral('message')}
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none placeholder:font-medium  focus:border-[#E31E24] transition-colors resize-none"
+                                />
+                                {errorsGeneral.message && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsGeneral.message.message}</p>}
+                            </div>
 
                             <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f]  transition-colors"
+                                    disabled={isSubmittingGeneral}
+                                    className="bg-[#E31E24] text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
                                 >
-                                    Submit Customer Enquiry
+                                    {isSubmittingGeneral ? 'Submitting...' : 'Submit Customer Enquiry'}
                                 </button>
                             </div>
                         </form>
@@ -100,58 +192,87 @@ const ContactForm = () => {
                             </p>
                         </div>
 
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmitDealer(onSubmitDealer)} className="space-y-6">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <input
-                                    type="text"
-                                    placeholder="Name"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
-                                <input
-                                    type="text"
-                                    placeholder="Company"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Name"
+                                        {...registerDealer('name')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsDealer.name && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.name.message}</p>}
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Company"
+                                        {...registerDealer('company')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsDealer.company && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.company.message}</p>}
+                                </div>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <input
-                                    type="text"
-                                    placeholder="Business Type(Dealer/Distributor/Retail)"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
-                                <input
-                                    type="tel"
-                                    placeholder="Phone Number"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Business Type(Dealer/Distributor/Retail)"
+                                        {...registerDealer('businessType')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsDealer.businessType && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.businessType.message}</p>}
+                                </div>
+                                <div>
+                                    <input
+                                        type="tel"
+                                        placeholder="Phone Number"
+                                        {...registerDealer('phoneNumber')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsDealer.phoneNumber && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.phoneNumber.message}</p>}
+                                </div>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <input
-                                    type="email"
-                                    placeholder="Email ID"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
-                                <input
-                                    type="text"
-                                    placeholder="City/State"
-                                    className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
-                                />
+                                <div>
+                                    <input
+                                        type="email"
+                                        placeholder="Email ID"
+                                        {...registerDealer('email')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsDealer.email && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.email.message}</p>}
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="City"
+                                        {...registerDealer('city')}
+                                        className="w-full px-4 py-4 bg-[#FAF9F5] border placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors"
+                                    />
+                                    {errorsDealer.city && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.city.message}</p>}
+                                </div>
                             </div>
 
-                            <textarea
-                                placeholder="Write your message here"
-                                rows={4}
-                                className="w-full px-4 py-4 bg-[#FAF9F5] border  placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
-                            />
+                            <div>
+                                <textarea
+                                    placeholder="Write your message here"
+                                    rows={4}
+                                    {...registerDealer('message')}
+                                    className="w-full px-4 py-4 bg-[#FAF9F5] border  placeholder:font-medium  border-[#646464] rounded-lg font-inter-tight text-foreground placeholder:text-[#757575] focus:outline-none focus:border-[#E31E24] transition-colors resize-none"
+                                />
+                                {errorsDealer.message && <p className="text-[#E31E24] text-sm mt-1 px-1">{errorsDealer.message.message}</p>}
+                            </div>
 
                             <div className="flex justify-center pt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] transition-colors"
+                                    disabled={isSubmittingDealer}
+                                    className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
                                 >
-                                    Connect With Us
+                                    {isSubmittingDealer ? 'Connecting...' : 'Connect With Us'}
                                 </button>
                             </div>
                         </form>

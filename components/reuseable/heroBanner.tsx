@@ -4,6 +4,7 @@ import Button from "./Button";
 import ContainerLayout from "@/layouts/ContainerLayout";
 import Link from "next/link";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface HeroBannerProps {
   // Background
@@ -112,6 +113,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const pathname = usePathname();
 
   return (
     <section className={`relative ${height} w-full bg-hero-bg overflow-hidden`}>
@@ -133,7 +135,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         {/* Optional Overlay */}
         {overlay && (
           <div
-            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
+            className={`absolute inset-0  ${pathname =='/contact' ? 'bg-gradient-to-b' :'bg-gradient-to-t'}  from-black/80 via-black/40 to-transparent`}
           // style={{
           //   backgroundColor: overlayColor,
           //   opacity: overlayOpacity

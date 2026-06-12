@@ -9,16 +9,14 @@ import TapAnimation from "@/components/Home/tapAnimation";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-     
+    <div className="overflow-hidden">    
       <Hero />
       <TapAnimation/>
       <Carousel3DMarquee />
       <TestimonialsSection />
       <StackedCardsSection />
       <AppSection />
-       <StatsSection />
-      
+       <StatsSection />     
     </div>
   );
 }

@@ -76,7 +76,7 @@ const Footer = () => {
               ref.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
             });
           }}>
-          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.8vw] select-none">
+          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.9vw] select-none">
             <span
               ref={aquaRef}
               className="relative inline-block pl-[2vw] pr-[2vw] -ml-[2vw] -mr-[2vw] mr-[2vw]"
