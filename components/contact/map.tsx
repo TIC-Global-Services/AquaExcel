@@ -31,10 +31,12 @@ const map = () => {
           </div>
         </div>
         <div className="w-full mt-8 px-[5%] md:px-[8%]">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=76.99909687042238%2C11.035412260567426%2C77.0191812515259%2C11.052618511481354&layer=mapnik"
-            className="w-full h-[400px] border border-gray-300 rounded-lg rounded-2xl"
-          ></iframe>
+          {/* <iframe
+            src="https://maps.google.com/maps?q=11.0455885,77.0083056&z=21&output=embed"
+            
+            
+          ></iframe> */}
+          <iframe className="w-full h-[400px] border border-gray-300 rounded-lg rounded-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.02006353472382!2d77.0083052748863!3d11.045588538052536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8581da4b687d5%3A0x9dcaa512c0ba925a!2sAQUA%20EXCEL!5e0!3m2!1sen!2sin!4v1781334369768!5m2!1sen!2sin"  loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </ContainerLayout>
