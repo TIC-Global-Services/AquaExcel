@@ -172,7 +172,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
                         {primaryButtonText}
                       </Button>
                     </Link>
-                    <Link href={secondaryLink || '/contact'}>
+                    <Link href={secondaryLink || '/contact#form'}>
                       <Button
                         className={secondaryButtonClassName}
                         variant={secondaryButtonVariant}

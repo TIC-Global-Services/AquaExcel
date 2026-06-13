@@ -78,8 +78,8 @@ const ContactForm = () => {
     return (
       <ContainerLayout>
           <ToastContainer position="bottom-right" />
-          <section className="py-15 lg:py-5 bg-background">
-            <div className="max-w-5xl mx-auto">
+          <section className="py-15 lg:py-5 bg-background" id='form'>
+            <div className="max-w-5xl mx-auto" >
                 {/* Tabs */}
                 <div className="flex justify-center gap-4 mb-10">
                     <button
