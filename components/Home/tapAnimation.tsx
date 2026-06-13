@@ -229,14 +229,17 @@ const TapAnimation = () => {
       })
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      if (tl.scrollTrigger) {
+        tl.scrollTrigger.kill();
+      }
+      tl.kill();
     };
   }, [isMobileDevice]);
 
   return (
     <div ref={containerRef} className="relative bg-white">
       {/* Mobile video */}
-      <div className="block md:hidden w-full min-h-[80vh] flex items-center justify-center">
+      <div className={`w-full min-h-[80vh] flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
         <video
           ref={videoRef}
           src="/videos/tapSequence-mobile.mp4"
@@ -249,7 +252,8 @@ const TapAnimation = () => {
       </div>
 
       {/* Desktop section */}
-      <div className="hidden md:block relative min-h-[300vh]">
+      {!isMobileDevice && (
+        <div className="hidden md:block relative min-h-[300vh]">
         {/* Plastic Tap - Left Middle (Start) */}
         <div
           ref={plasticRef}
@@ -375,6 +379,7 @@ const TapAnimation = () => {
           `}</style>
         </div>
       </div>
+      )}
     </div>
   );
 };
