@@ -178,7 +178,7 @@ const ContactForm = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmittingGeneral}
-                                    className="bg-[#E31E24] text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
+                                    className="bg-[#E31E24] cursor-pointer text-white cursor-pointer px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
                                 >
                                     {isSubmittingGeneral ? 'Submitting...' : 'Submit Customer Enquiry'}
                                 </button>
@@ -278,7 +278,7 @@ const ContactForm = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmittingDealer}
-                                    className="bg-[#E31E24] text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
+                                    className="bg-[#E31E24] cursor-pointer text-white px-4 md:px-8 py-3 rounded-[10px] md:rounded-xl font-hoves-pro font-medium text-sm md:text-base hover:bg-[#c91a1f] disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
                                 >
                                     {isSubmittingDealer ? 'Connecting...' : 'Connect With Us'}
                                 </button>

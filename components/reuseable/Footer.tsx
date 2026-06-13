@@ -7,10 +7,39 @@ const Footer = () => {
   const aquaRef = useRef<HTMLSpanElement>(null);
   const excelRef = useRef<HTMLSpanElement>(null);
   const [hoveredWord, setHoveredWord] = useState<'aqua' | 'excel' | null>(null);
+  const hoveredWordRef = useRef<'aqua' | 'excel' | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    hoveredWordRef.current = hoveredWord;
+  }, [hoveredWord]);
+
+  useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
+  }, []);
+
+  useEffect(() => {
+    let animationFrameId: number;
+
+    const animate = (time: number) => {
+      if (hoveredWordRef.current !== 'aqua' && aquaRef.current) {
+        const x = 50 + 40 * Math.sin(time * 0.001);
+        const y = 50 + 30 * Math.cos(time * 0.0013);
+        aquaRef.current.style.setProperty('--mx', `${x}%`);
+        aquaRef.current.style.setProperty('--my', `${y}%`);
+      }
+      if (hoveredWordRef.current !== 'excel' && excelRef.current) {
+        const x = 50 + 40 * Math.cos(time * 0.0011);
+        const y = 50 + 30 * Math.sin(time * 0.0009);
+        excelRef.current.style.setProperty('--mx', `${x}%`);
+        excelRef.current.style.setProperty('--my', `${y}%`);
+      }
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
@@ -43,7 +72,7 @@ const Footer = () => {
       {/* Large Logo */}
       {isMobile ? (
         <div className="pb-10 justify-center w-full relative flex z-10">
-          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.8vw] select-none">
+          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-1vw] select-none">
             <span
               className="mr-[2vw]"
               style={{
@@ -86,7 +115,7 @@ const Footer = () => {
               <span
                 className="absolute inset-0 pointer-events-none pl-[2vw] pr-[2vw]"
                 style={{
-                  opacity: hoveredWord === 'aqua' ? 1 : 0,
+                  opacity: 1,
                   transition: 'opacity 0.3s ease',
                   backgroundImage: `radial-gradient(circle 250px at var(--mx, 50%) var(--my, 50%), #8AB8E8, #274689 100%)`,
                   WebkitBackgroundClip: 'text',
@@ -101,14 +130,14 @@ const Footer = () => {
             </span>
             <span
               ref={excelRef}
-              className="relative inline-block pl-[2vw] pr-[2vw] -ml-[2vw] -mr-[2vw]"
+              className="relative inline-block pl-[0.5vw] pr-[2vw] -ml-[2vw] -mr-[2vw]"
               onMouseEnter={() => setHoveredWord('excel')}
             >
               <span className="text-[#777]">EXCEL</span>
               <span
-                className="absolute inset-0 pointer-events-none pl-[2vw] pr-[2vw]"
+                className="absolute inset-0 pointer-events-none pl-[0.5vw] pr-[2vw]"
                 style={{
-                  opacity: hoveredWord === 'excel' ? 1 : 0,
+                  opacity: 1,
                   transition: 'opacity 0.3s ease',
                   backgroundImage: `radial-gradient(circle 250px at var(--mx, 50%) var(--my, 50%), #FF6B6B, #E31E24 100%)`,
                   WebkitBackgroundClip: 'text',
