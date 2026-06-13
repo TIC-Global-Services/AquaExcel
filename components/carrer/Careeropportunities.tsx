@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import logo from '@/assets/carrer/logowithoutname.png'
 import ContainerLayout from '@/layouts/ContainerLayout'
+import Link from 'next/link'
 const Careeropportunities = () => {
 
   const logo = "https://ik.imagekit.io/pgtxr2fmn/Career/CareerOppurtunities/logowithoutname.png";
@@ -54,25 +55,13 @@ const Careeropportunities = () => {
           className="object-contain md:hidden block -rotate-90 opacity-30 z-0 scale-[1.8] translate-x-[18%] translate-y-[2%]"
         />
         <div className="z-20 relative flex items-center  justify-center min-h-[400px] md:min-h-[80vh] lg:min-h-[75.111vh]">
-          {jobList.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full justify-center items-center pl-8  md:pl-0 md:max-w-7xl px-[2%] xl:px-[10%]">
-              {jobList.map((res, index) => (
-                <div key={index} className='bg-[#FAF9F5] py-3 px-6 rounded-[20px] max-w-xl shadow-sm border-[1px]'>
-                  <p className="text-black text-xs md:text-sm font-medium">{res.location}</p>
-                  <h2 className="text-black text-base md:text-2xl font-semibold tracking-[-4%]">{res.title}</h2>
-                  <p className="text-black text-xs md:text-base font-light mb-2">{res.description}</p>
-                  <button className="text-white bg-[#E31E24] font-medium md:text-sm text-xs px-5 py-2 rounded-xl">Apply Now</button>
-                </div>
-              ))}
-            </div>
-          ) : (
             <div className='bg-[#FAF9F5] flex flex-col items-center justify-center py-3 gap-5 py-[3%] px-6 rounded-[20px] max-w-3xl shadow-sm border-[1px]'>
-              <h2 className="text-black text-2xl font-semibold tracking-[-4%]">No job postings currently available</h2>
-              <input className='w-full rounded-xl border-[1px] py-[2%] px-5' placeholder='Enter your email'></input>
-              <button className="text-white bg-[#E31E24] font-medium text-sm px-5 py-2 rounded-xl">Notify me</button>
-              <p className='text-center'>You'll receive an email once new job postings have been posted,<br /> thank you!</p>
+              <h2 className="text-black text-2xl font-semibold tracking-[-4%]">We’re hiring</h2>
+              {/* <input className='w-full rounded-xl border-[1px] py-[2%] px-5' placeholder='Enter your email'></input> */}
+               <p className='text-center'>Apply through our quick application form and select the role <br/> that best matches your skills and experience.</p>
+              <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSe2H_LoDBTZaska9nO8oZ_q7AAMgHVbeUJaFDV_d4rmcsh4MQ/viewform?usp=publish-editor"} target="_blank"><button className="text-white bg-[#E31E24] font-medium text-sm px-5 py-2 rounded-xl">Apply now</button></Link>
+             
             </div>
-          )}
         </div>
       </div>
     </div>
