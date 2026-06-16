@@ -28,18 +28,18 @@ const productSections = [
   {
     id: 'taps',
     title: 'Taps & Fittings',
-    description: <>Engineered for smooth water flow, strong sealing, and reliable daily use.<br /> Made with quality materials and precise craftsmanship to deliver long-lasting performance in any space</>,
+    description: <>Engineered for smooth water flow, strong sealing, and reliable daily use. Made with quality materials and precise craftsmanship to deliver long-lasting performance in any space</>,
     products: Taps
   },
   {
     id: 'Bath',
     title: 'Bath Fittings',
-    description: <>Engineered for smooth flow and everyday reliability, these fittings enhance comfort <br /> with every use. From showers to health faucets, each piece delivers durable<br />performance and consistent operation.</>,
+    description: <>Engineered for smooth flow and everyday reliability, these fittings enhance comfort with every use. From showers to health faucets, each piece delivers durable performance and consistent operation.</>,
     products: bathfitting
   }, {
     id: 'Pipe',
     title: 'Pipes',
-    description: <>Built to withstand pressure, heat, and time.<br />Delivers clean flow, strong joints, and reliable installation across all applications.</>,
+    description: <>Built to withstand pressure, heat, and time.Delivers clean flow, strong joints, and reliable installation across all applications.</>,
     products: pipes
   },
   {
@@ -51,7 +51,7 @@ const productSections = [
   {
     id: 'accessories',
     title: 'Accessories',
-    description: <>Essential add-ons that complete your plumbing setup.<br />
+    description: <>Essential add-ons that complete your plumbing setup.
       Each accessory is built for reliable performance, safer water flow, and long-lasting use.</>,
     products: accessories
   }
@@ -85,7 +85,7 @@ const ProductList = () => {
     <ContainerLayout disablePaddingX>
       <div className="py-10">
         {/* Tabs */}
-        <div className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:justify-center md:gap-4 mb-10 md:mb-20 px-0 md:px-0 lg:px-[50px] xl:px-[80px]">
+        <div className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:justify-center md:gap-4 mb-10 md:mb-20 px-2 md:px-0 lg:px-[50px] xl:px-[80px]">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -159,13 +159,13 @@ const ProductList = () => {
             );
           })}
 
-          <Appsection />
           {!activeSection && (
             <div className="text-center py-20 text-gray-400">
               Content coming soon for this category.
             </div>
           )}
         </div>
+        <Appsection />
       </div>
 
       <ProductModal

@@ -64,7 +64,7 @@ const StackedCardsSection = () => {
 
   return (
     <ContainerLayout>
-      <section className="lg:pt-[2%]  bg-background">
+      <section className="lg:pt-[2%]  bg-background mb-10">
         <div className="relative">
           <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-0 items-center">
             {/* Left Content */}
@@ -137,7 +137,7 @@ const StackedCardsSection = () => {
                           perspective: "1500px",
                         }}
                       >
-                        <div 
+                        <div
                           style={{
                             width: isNarrowMobile ? 200 : isMobile ? 250 : 350,
                             height: isNarrowMobile ? 240 : isMobile ? 300 : 450,

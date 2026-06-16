@@ -277,7 +277,7 @@ const TapAnimation = () => {
   return (
     <div ref={containerRef} className="relative bg-white">
       {/* Mobile video */}
-      <div className={`w-full flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
+      <div className={`w-full mb-8 flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
         <video
           ref={videoRef}
           src="/videos/tapsequence-mobile.mp4"

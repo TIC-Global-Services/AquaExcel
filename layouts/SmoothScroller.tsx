@@ -3,6 +3,7 @@ import { ReactNode, useRef, useEffect } from "react";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 interface LenisProviderProps {
   children: ReactNode;
@@ -10,6 +11,16 @@ interface LenisProviderProps {
 
 const SmoothScroller = ({ children }: LenisProviderProps) => {
   const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (lenisRef.current) {
+      setTimeout(() => {
+        lenisRef.current?.resize();
+        ScrollTrigger.refresh();
+      }, 100);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
