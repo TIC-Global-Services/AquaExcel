@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Model from "./Model";
 import { MoveDown, MoveLeft, MoveUp } from "lucide-react";
+import { useLoaderStore } from "@/store/loaderStore";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -19,6 +20,7 @@ const TapAnimation = () => {
   const scrollRef = useRef(null);
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { setIsLoading, setProgress } = useLoaderStore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,6 +30,42 @@ const TapAnimation = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !isMobileDevice) return;
+
+    let isCompleted = false;
+    const handleLoaded = () => {
+      if (isCompleted) return;
+      isCompleted = true;
+      setProgress(100);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 400);
+    };
+
+    // If video is already loaded or has enough data
+    if (video.readyState >= 3) {
+      handleLoaded();
+    } else {
+      video.addEventListener("loadeddata", handleLoaded);
+      video.addEventListener("canplay", handleLoaded);
+      video.addEventListener("canplaythrough", handleLoaded);
+    }
+
+    // Fallback timeout in case browser blocks loading events
+    const fallbackTimeout = setTimeout(() => {
+      handleLoaded();
+    }, 2000);
+
+    return () => {
+      video.removeEventListener("loadeddata", handleLoaded);
+      video.removeEventListener("canplay", handleLoaded);
+      video.removeEventListener("canplaythrough", handleLoaded);
+      clearTimeout(fallbackTimeout);
+    };
+  }, [isMobileDevice, setIsLoading, setProgress]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -239,7 +277,7 @@ const TapAnimation = () => {
   return (
     <div ref={containerRef} className="relative bg-white">
       {/* Mobile video */}
-      <div className={`w-full min-h-[80vh] flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
+      <div className={`w-full min-h-[400px] sm:min-h-[500px] py-6 flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
         <video
           ref={videoRef}
           src="/videos/tapSequence-mobile.mp4"
