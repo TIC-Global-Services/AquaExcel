@@ -24,7 +24,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 
   useEffect(() => {
     if (!isInView) return;
-    
+
     let startTime: number;
     const duration = 1500; // 1.5 seconds for better mobile performance
 
@@ -47,7 +47,7 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
   }, [isInView, value]);
 
   return (
-    <div ref={ref} key={`${count}-${suffix}`} className="text-[28px] sm:text-[40px] lg:text-[50px] md:text-[60px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
+    <div ref={ref} key={`${count}-${suffix}`} className="text-[40px] sm:text-[60px] lg:text-[50px] md:text-[60px] xl:text-[60px] font-inter-tight font-medium xl:font-bold text-foreground leading-none">
       {count}{suffix || "\u00A0"}
     </div>
   );
@@ -55,56 +55,56 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 
 const StatsSection = () => {
   return (
-   <ContainerLayout>
-     <section className="lg:pt-5 pb-20 md:pb-30 bg-background pt-10 md:pt-20">
-      <div className="">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-10 md:mb-16"
-        >
-          <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-tighter md:text-4xl lg:text-[44px] mb-1">
-            Aqua Excel at a glance
-          </h2>
-          <p className="text-foreground font-inter-tight font-regular tracking-tight text-base md:text-xl lg:text-[24px] max-w-4xl">
-            A brief look into the trust, expertise, and innovation shaping Aqua Excel today.
-          </p>
-        </motion.div>
+    <ContainerLayout>
+      <section className="lg:pt-5 pb-20 md:pb-30 bg-background pt-10 md:pt-20">
+        <div className="">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10 md:mb-16"
+          >
+            <h2 className="text-foreground font-hoves-pro font-medium text-[20px] leading-[46px] tracking-tighter md:text-4xl lg:text-[44px] mb-1">
+              Aqua Excel at a glance
+            </h2>
+            <p className="text-foreground font-inter-tight font-regular tracking-tight text-base md:text-xl lg:text-[24px] max-w-4xl">
+              A brief look into the trust, expertise, and innovation shaping Aqua Excel today.
+            </p>
+          </motion.div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-[#FAF9F5] rounded-[24px] lg:rounded-[20px] px-2 lg:px-5 py-10  flex flex-col items-start justify-center lg:items-start md:gap-20 gap-6 text-left h-[120px] sm:h-[250px] lg:h-[318px] w-full relative overflow-hidden"
-            >
-              {/* Background number - repositioned for mobile */}
-              <div className={`absolute font-inter-tight ${stat.id == 3 ? '' : ''}  ${stat.value == 2 ? 'md:top-[0%] -top-[30%] left-[15%] md:left-[10%]' : 'md:top-[0%] -top-[30%] left-[15%] md:left-[17%]'} text-[60px]  sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-[108px] select-none pointer-events-none tracking-[-4%]`}>
-                {stat.value}<span className={`${stat.id === 3 ? '-ml-2 lg:-ml-3   ' : ''}`}>{stat.suffix}</span>
-              </div>
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-[#FAF9F5] rounded-[24px] lg:rounded-[20px] px-2 lg:px-5 py-10  flex flex-col items-start justify-center lg:items-start md:gap-20 gap-6 text-left h-[120px] sm:h-[250px] lg:h-[318px] w-full relative overflow-hidden"
+              >
+                {/* Background number - repositioned for mobile */}
+                <div className={`absolute font-inter-tight ${stat.id == 3 ? '' : ''}  ${stat.value == 2 ? 'md:top-[0%] -top-[30%] left-[15%] md:left-[10%]' : 'md:top-[0%] -top-[30%] left-[15%] md:left-[17%]'} text-[60px]  sm:text-[120px] lg:text-[150px] font-hoves-pro font-medium text-white/80 lg:text-white leading-[108px] select-none pointer-events-none tracking-[-4%]`}>
+                  {stat.value}<span className={`${stat.id === 3 ? '-ml-2 lg:-ml-3   ' : ''}`}>{stat.suffix}</span>
+                </div>
 
-              {/* Foreground number container */}
-              <div className="relative z-10 lg:flex-1 flex items-start lg:items-start lg:pt-8 w-full justify-start lg:justify-start">
-                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-              </div>
+                {/* Foreground number container */}
+                <div className="relative z-10 lg:flex-1 flex items-start lg:items-start lg:pt-8 w-full justify-start lg:justify-start">
+                  <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+                </div>
 
-              {/* Label text */}
-              <p className="text-foreground leading-[100%] font-hoves-pro font-medium text-xs sm:text-lg lg:text-[24px] whitespace-pre-line leading-tight relative z-10">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
+                {/* Label text */}
+                <p className="text-foreground leading-[100%] font-hoves-pro font-medium text-xs sm:text-lg lg:text-[24px] whitespace-pre-line leading-tight relative z-10">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-   </ContainerLayout>
+      </section>
+    </ContainerLayout>
   );
 };
 

@@ -115,7 +115,7 @@ const Quality = () => {
         </div>
 
         {/* Right Side - Slider Cards */}
-        <div className="w-full max-w-[630px] aspect-auto h-[75vh] sm:h-[80vh] lg:h-[70vh] max-h-[700px] relative mx-auto lg:mx-0">
+        <div className="w-full max-w-[700px] aspect-auto h-[75vh] sm:h-[80vh] lg:h-[70vh] max-h-[700px] relative mx-auto lg:mx-0">
           {slides.map((res, index) => (
             <div
               key={index}

@@ -57,7 +57,7 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 right-0 z-50 py-6">
       {/*Desktop Navbar*/}
       <div className="px-6 xl:px-[80px] lg:px-[50px] flex items-center justify-between">
-        <Link href="/" className="flex-shrink-0">
+        <Link href="/" className="flex-shrink-0 mt-3 lg:mt-0">
           <Image
             src="/AE-logo-w-wordmark.png"
             alt="AquaExcel Logo"
@@ -90,10 +90,10 @@ const Navbar = () => {
       </div>
       {/*Mobile Navbar*/}
       <div className="lg:hidden">
-        <div className="fixed w-full px-3 sm:px-4 -mt-2 pt-0 pb-2 z-[10000] flex justify-end">
+        <div className="fixed top-[36px] right-6 z-[10000] flex items-center h-14">
           <motion.button
             onClick={toggleMenu}
-            className={`${isMenuOpen ? 'text-gray-600 ' : 'text-white'}  p-2 sm:p-3 z-[10001] hover:bg-black/30  touch-manipulation border-none outline-none -mt-3`}
+            className={`${isMenuOpen ? 'text-gray-600' : 'text-white'} p-2 z-[10001] hover:bg-black/30 touch-manipulation border-none outline-none`}
             style={{ appearance: 'none', WebkitAppearance: 'none' }}
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}

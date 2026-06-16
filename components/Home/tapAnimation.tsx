@@ -85,7 +85,7 @@ const TapAnimation = () => {
       if (video.currentTime <= 0) {
         video.currentTime = 0;
         isReversing = false;
-        video.play().catch(() => {});
+        video.play().catch(() => { });
         return;
       }
 
@@ -277,7 +277,7 @@ const TapAnimation = () => {
   return (
     <div ref={containerRef} className="relative bg-white">
       {/* Mobile video */}
-      <div className={`w-full min-h-[400px] sm:min-h-[500px] py-6 flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
+      <div className={`w-full flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
         <video
           ref={videoRef}
           src="/videos/tapsequence-mobile.mp4"
@@ -292,85 +292,85 @@ const TapAnimation = () => {
       {/* Desktop section */}
       {!isMobileDevice && (
         <div className="hidden md:block relative min-h-[300vh]">
-        {/* Plastic Tap - Left Middle (Start) */}
-        <div
-          ref={plasticRef}
-          className="fixed md:right-[10%] right-[24%] top-[18%] md:top-[20%] transform -translate-y-1/2 w-1/2 h-1/2 flex flex-row items-end text-right justify-end px-2 md:px-20 z-10 md:gap-2"
-          style={{ visibility: "hidden" }}
-        >
-          <div className="flex items-center md:gap-2 md:mt-20">
-            <MoveLeft strokeWidth={1.2} className="md:w-20 h-25 w-15 hidden md:block" />
-            <h1 className="md:text-[40px] text-[20px] md:leading-[42px] font-medium md:hidden">
-              Plastic Tap
-              <span className="flex items-center justify-center">
-                <MoveDown strokeWidth={1.2} className="md:hidden h-25 w-15" ></MoveDown>
-              </span>
-            </h1>
-            
-            <h1 className="md:text-[40px] text-[20px] leading-[42px] font-medium hidden md:block">
-              Plastic Tap
-            </h1>
-          </div>
+          {/* Plastic Tap - Left Middle (Start) */}
+          <div
+            ref={plasticRef}
+            className="fixed md:right-[10%] right-[24%] top-[18%] md:top-[20%] transform -translate-y-1/2 w-1/2 h-1/2 flex flex-row items-end text-right justify-end px-2 md:px-20 z-10 md:gap-2"
+            style={{ visibility: "hidden" }}
+          >
+            <div className="flex items-center md:gap-2 md:mt-20">
+              <MoveLeft strokeWidth={1.2} className="md:w-20 h-25 w-15 hidden md:block" />
+              <h1 className="md:text-[40px] text-[20px] md:leading-[42px] font-medium md:hidden">
+                Plastic Tap
+                <span className="flex items-center justify-center">
+                  <MoveDown strokeWidth={1.2} className="md:hidden h-25 w-15" ></MoveDown>
+                </span>
+              </h1>
 
-        </div>
-
-        {/* Brass 1 - Bottom Right */}
-        <div
-          ref={brass1Ref}
-          className="fixed md:right-[4%] right-[3%] md:right-12 bottom-[12%] md:bottom-0 w-1/2 h-1/2 flex flex-row items-center justify-start px-0 md:px-20 z-10 pb-20 md:gap-2 py-20"
-          style={{ visibility: "hidden" }}
-        >
-
-          <div className="flex flex-col md:gap-2 md:mt-10 mt-15">
-            <MoveUp strokeWidth={1.2} className="md:w-25 h-25 w-15" />
-            <h1 className="md:text-[40px] text-[20px] leading-[42px]  font-medium">
-              Brass
-            </h1>
-          </div>
-        </div>
-
-        {/* Brass 2 (Horizontal position) - Top Right */}
-        <div
-          ref={brass2Ref}
-          className="fixed md:right-[18%] right-[55%] md:top-[5%] top-[35%] w-1/2 h-1/2 flex md:flex-row flex-row-reverse items-start justify-start px-0 md:px-20 z-10 md:pt-20 pt-4 md:gap-2 gap-1"
-          style={{ visibility: "hidden" }}
-        >
-
-          <div className="flex flex-col md:gap-1 gap-1 md:mt-10 mt-2">
-            <h1 className="md:text-[40px] text-[18px] text-right leading-[20px] md:leading-[42px] font-medium">
-              Brass
-            </h1>
-            <Image
-              src={Arrowright}
-              alt="Right Arrow"
-              className="md:w-25 md:h-50 w-12 flex-shrink-0"
-            />
-          </div>
-        </div>
-
-        {/* Tap Animation - Always visible in center */}
-        <div className="flex items-center justify-center z-0">
-          <Model jsonPath="/tap.json" scrollSpeed={1.9} id="tap-animation" />
-        </div>
-        <div ref={contentRef} style={{ visibility: "hidden" }} className="fixed bottom-[14%] sm:bottom-6 md:bottom-20 left-0 right-0 flex justify-center items-center z-50 px-4">
-          <h1 className="text-[20px] md:text-[40px] font-inter-tight font-medium">{"\u201C"}Brass + Brass{"\u201D"} but with a plastic tap</h1>
-        </div>
-        {/* Keep Scrolling Indicator */}
-        <div
-          ref={scrollRef}
-          style={{ visibility: "hidden" }}
-          className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 flex justify-center items-center z-50 px-4"
-        >
-          <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-center px-3 sm:px-4 py-2 sm:py-2.5 md:py-3">
-            <div className="flex items-center justify-center">
-              <div className="dot-animation bg-black" />
+              <h1 className="md:text-[40px] text-[20px] leading-[42px] font-medium hidden md:block">
+                Plastic Tap
+              </h1>
             </div>
-            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-black whitespace-nowrap leading-none">
-              Keep scrolling
-            </span>
+
           </div>
 
-          <style jsx>{`
+          {/* Brass 1 - Bottom Right */}
+          <div
+            ref={brass1Ref}
+            className="fixed md:right-[4%] right-[3%] md:right-12 bottom-[12%] md:bottom-0 w-1/2 h-1/2 flex flex-row items-center justify-start px-0 md:px-20 z-10 pb-20 md:gap-2 py-20"
+            style={{ visibility: "hidden" }}
+          >
+
+            <div className="flex flex-col md:gap-2 md:mt-10 mt-15">
+              <MoveUp strokeWidth={1.2} className="md:w-25 h-25 w-15" />
+              <h1 className="md:text-[40px] text-[20px] leading-[42px]  font-medium">
+                Brass
+              </h1>
+            </div>
+          </div>
+
+          {/* Brass 2 (Horizontal position) - Top Right */}
+          <div
+            ref={brass2Ref}
+            className="fixed md:right-[18%] right-[55%] md:top-[5%] top-[35%] w-1/2 h-1/2 flex md:flex-row flex-row-reverse items-start justify-start px-0 md:px-20 z-10 md:pt-20 pt-4 md:gap-2 gap-1"
+            style={{ visibility: "hidden" }}
+          >
+
+            <div className="flex flex-col md:gap-1 gap-1 md:mt-10 mt-2">
+              <h1 className="md:text-[40px] text-[18px] text-right leading-[20px] md:leading-[42px] font-medium">
+                Brass
+              </h1>
+              <Image
+                src={Arrowright}
+                alt="Right Arrow"
+                className="md:w-25 md:h-50 w-12 flex-shrink-0"
+              />
+            </div>
+          </div>
+
+          {/* Tap Animation - Always visible in center */}
+          <div className="flex items-center justify-center z-0">
+            <Model jsonPath="/tap.json" scrollSpeed={1.9} id="tap-animation" />
+          </div>
+          <div ref={contentRef} style={{ visibility: "hidden" }} className="fixed bottom-[14%] sm:bottom-6 md:bottom-20 left-0 right-0 flex justify-center items-center z-50 px-4">
+            <h1 className="text-[20px] md:text-[40px] font-inter-tight font-medium">{"\u201C"}Brass + Brass{"\u201D"} but with a plastic tap</h1>
+          </div>
+          {/* Keep Scrolling Indicator */}
+          <div
+            ref={scrollRef}
+            style={{ visibility: "hidden" }}
+            className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 flex justify-center items-center z-50 px-4"
+          >
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-center px-3 sm:px-4 py-2 sm:py-2.5 md:py-3">
+              <div className="flex items-center justify-center">
+                <div className="dot-animation bg-black" />
+              </div>
+              <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-black whitespace-nowrap leading-none">
+                Keep scrolling
+              </span>
+            </div>
+
+            <style jsx>{`
             .dot-animation {
               width: 6px;
               height: 6px;
@@ -415,8 +415,8 @@ const TapAnimation = () => {
               }
             }
           `}</style>
+          </div>
         </div>
-      </div>
       )}
     </div>
   );

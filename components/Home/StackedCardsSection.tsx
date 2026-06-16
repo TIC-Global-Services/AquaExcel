@@ -92,16 +92,22 @@ const StackedCardsSection = () => {
                       key={card.id}
                       initial={{
                         scale: 1 - stackPosition * 0.08,
-                        x: stackPosition * (isMobile ? 30 : 70),
-                        y: stackPosition * (isMobile ? 6 : 12),
+                        x: isMobile 
+                          ? -177.5 + stackPosition * 40 
+                          : -310 + stackPosition * 70,
+                        y: stackPosition * (isMobile ? 8 : 12),
                         opacity: 0,
                         rotateY: 0,
                         rotateZ: 0,
                       }}
                       animate={{
                         scale: 1 - stackPosition * 0.08,
-                        x: stackPosition * (isMobile ? 35 : isSmallDesktop ? 60 : 90),
-                        y: stackPosition * (isMobile ? 6 : 12),
+                        x: isMobile 
+                          ? -177.5 + stackPosition * 45 
+                          : isSmallDesktop 
+                            ? -265 + stackPosition * 60 
+                            : -310 + stackPosition * 90,
+                        y: stackPosition * (isMobile ? 8 : 12),
                         opacity: 1,
                         rotateY: 0,
                         rotateZ: 0,
@@ -109,7 +115,7 @@ const StackedCardsSection = () => {
                       }}
                       exit={{
                         scale: 0.9,
-                        x: isMobile ? -100 : -150,
+                        x: isMobile ? -250 : -450,
                         opacity: 0,
                         rotateY: -25,
                       }}
@@ -117,7 +123,7 @@ const StackedCardsSection = () => {
                         duration: 0.7,
                         ease: [0.32, 0.72, 0, 1],
                       }}
-                      className="absolute top-0 left-0"
+                      className="absolute top-0 left-1/2"
                       style={{
                         transformStyle: "preserve-3d",
                         perspective: "1500px",

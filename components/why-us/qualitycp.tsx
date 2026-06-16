@@ -59,7 +59,7 @@ const Qualitycp = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+      className="relative w-full h-[700px] overflow-hidden flex items-center justify-center"
     >
       {/* Background Section */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
@@ -76,28 +76,27 @@ const Qualitycp = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-[5%] relative z-10 h-full flex flex-col lg:grid lg:grid-cols-2 lg:items-end lg:py-25 items-center justify-center gap-8 lg:gap-20 transition-all duration-500 pb-10 overflow-hidden">
 
         {/* Left Side - Text Content */}
-        <div className="flex flex-col text-left w-full mt-20 lg:mb-20   lg:overflow-hidden">
+        <div className="flex flex-col text-left w-full mt-10 lg:mb-20   lg:overflow-hidden">
           <h1 className="text-white text-xl leading-[100%] md:text-[clamp(16px,3vw,40px)] font-medium  mb-2 lg:leading-[50px] tracking-tight font-hoves-pro">
             Quality you can measure.
             <br />
             performance you can trust
           </h1>
           <p className="text-[#E0E0E0] text-sm md:text-[clamp(20px,1.4vw,44px)] font-regular opacity-90 max-w-md md:max-w-xl font-inter-tight leading-[120%]">
-            Every Pipe And Fitting Is Tested Across Critical <br/> Parameters To
+            Every Pipe And Fitting Is Tested Across Critical <br /> Parameters To
             Ensure Long-Term Safety And Reliability
           </p>
         </div>
 
         {/* Right Side - Slider Cards */}
-        <div className="w-full max-w-[630px] rounded-2xl aspect-auto h-[65vh] sm:h-[75vh] lg:h-[75vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
+        <div className="w-full max-w-[630px] rounded-2xl aspect-auto h-[50vh] sm:h-[75vh] lg:h-[75vh] max-h-[800px] relative mx-auto lg:mx-0 overflow-hidden">
           {slides.map((res, index) => (
             <div
               key={index}
-              className={`absolute inset-0 w-full h-full transition-all duration-700 ease-in-out ${
-                index === activeIndex
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-[130%]"
-              }`}
+              className={`absolute inset-0 w-full h-full transition-all duration-700 ease-in-out ${index === activeIndex
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-[130%]"
+                }`}
               style={{ zIndex: index === activeIndex ? 1 : 0 }}
             >
               <Card
