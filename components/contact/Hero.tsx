@@ -38,7 +38,7 @@ const Hero = () => {
           subtitleClassName="text-hero-text font-inter-tight font-regular leading-[120%] xl:text-[20px] text-base md:max-w-5xl mb-4"
           subtitle={
             <>
-              We're here to help and answer any questions you might have.Whether it's project<br/> inquiries, collaborations, or feedback, reach out to us and we'll get back to you promptly.
+              We're here to help and answer any questions you might have.Whether it's project<br /> inquiries, collaborations, or feedback, reach out to us and we'll get back to you promptly.
             </>
           }
           overlay={true}

@@ -135,11 +135,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         {/* Optional Overlay */}
         {overlay && (
           <div
-            className={`absolute inset-0  ${pathname =='/contact' ? 'bg-gradient-to-b' :'bg-gradient-to-t'}  from-black/80 via-black/40 to-transparent`}
-          // style={{
-          //   backgroundColor: overlayColor,
-          //   opacity: overlayOpacity
-          // }}
+            className="absolute inset-0 bg-black/40"
           />
         )}
       </div>

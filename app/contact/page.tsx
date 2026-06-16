@@ -1,7 +1,7 @@
 import ContactDetails from '@/components/contact/contactDetails'
 import ContactForm from '@/components/contact/form'
 import Hero from '@/components/contact/Hero'
-import GroupLegacy from '@/components/carrer/grouplegacy'
+import GroupLegacy from '@/components/contact/GroupLegacy'
 import React from 'react'
 import Faq from '@/components/contact/faq'
 import Map from '@/components/contact/map'
@@ -13,7 +13,7 @@ const page = () => {
       <Hero/>
       <Contactdetailscp/>
       <ContactForm/>
-      {/* <GroupLegacy/> */}
+      <GroupLegacy/>
       <Map/>
       <Faq/>
     </div>

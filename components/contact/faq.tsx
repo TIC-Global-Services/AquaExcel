@@ -104,7 +104,7 @@ const Faq = () => {
                                         className={`lg:hidden overflow-hidden px-3 md:px-0 transition-[max-height,opacity] duration-300 ease-in-out ${activeId === item.id ? "max-h-96 opacity-100 pb-4 bg-[#FAF9F5]" : "max-h-0 opacity-0"
                                             }`}
                                     >
-                                        <p className="text-gray-600 font-inter-tight leading-relaxed text-xs md:text-base pl-1">
+                                        <p className="text-gray-600 font-inter-tight leading-relaxed text-xs md:text-base pl-1 mt-4">
                                             {item.answer}
                                         </p>
                                     </div>

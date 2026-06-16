@@ -70,89 +70,65 @@ const Footer = () => {
       </div>
 
       {/* Large Logo */}
-      {isMobile ? (
-        <div className="pb-10 justify-center w-full relative flex z-10">
-          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-1vw] select-none">
+      <div
+        ref={isMobile ? null : containerRef}
+        className={`pb-10 justify-center w-full relative flex z-10 ${isMobile ? '' : 'cursor-pointer'}`}
+        onMouseLeave={isMobile ? undefined : () => setHoveredWord(null)}
+        onMouseMove={isMobile ? undefined : (e) => {
+          [aquaRef, excelRef].forEach((ref) => {
+            if (!ref.current) return;
+            const rect = ref.current.getBoundingClientRect();
+            ref.current.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+            ref.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
+          });
+        }}>
+        <h1 className={`font-uber-move text-[17.5vw] font-bold leading-none select-none ${isMobile ? 'tracking-[-1vw]' : 'tracking-[-0.9vw]'}`}>
+          <span
+            ref={aquaRef}
+            className="relative inline-block pl-[2vw] pr-[2vw] -ml-[2vw] -mr-[2vw] mr-[2vw]"
+            onMouseEnter={isMobile ? undefined : () => setHoveredWord('aqua')}
+          >
+            <span className="text-[#777]">AQUA</span>
             <span
-              className="mr-[2vw]"
+              className="absolute inset-0 pointer-events-none pl-[2vw] pr-[2vw]"
               style={{
-                backgroundImage: `linear-gradient(135deg, #8AB8E8, #274689)`,
+                opacity: 1,
+                transition: 'opacity 0.3s ease',
+                backgroundImage: `radial-gradient(circle ${isMobile ? '10vw' : '250px'} at var(--mx, 50%) var(--my, 50%), #8AB8E8, #274689 100%)`,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
+                WebkitMaskImage: `radial-gradient(circle ${isMobile ? '15vw' : '400px'} at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
+                maskImage: `radial-gradient(circle ${isMobile ? '15vw' : '400px'} at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
               }}
-            >AQUA</span>
+            >
+              AQUA
+            </span>
+          </span>
+          <span
+            ref={excelRef}
+            className="relative inline-block pl-[0.5vw] pr-[2vw] -ml-[2vw] -mr-[2vw]"
+            onMouseEnter={isMobile ? undefined : () => setHoveredWord('excel')}
+          >
+            <span className="text-[#777]">EXCEL</span>
             <span
+              className="absolute inset-0 pointer-events-none pl-[0.5vw] pr-[2vw]"
               style={{
-                backgroundImage: `linear-gradient(135deg, #FF6B6B, #E31E24)`,
+                opacity: 1,
+                transition: 'opacity 0.3s ease',
+                backgroundImage: `radial-gradient(circle ${isMobile ? '10vw' : '250px'} at var(--mx, 50%) var(--my, 50%), #FF6B6B, #E31E24 100%)`,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
+                WebkitMaskImage: `radial-gradient(circle ${isMobile ? '15vw' : '400px'} at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
+                maskImage: `radial-gradient(circle ${isMobile ? '15vw' : '400px'} at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
               }}
-            >EXCEL</span>
-          </h1>
-        </div>
-      ) : (
-        <div
-          ref={containerRef}
-          className="pb-10 justify-center w-full relative cursor-pointer flex z-10"
-          onMouseLeave={() => setHoveredWord(null)}
-          onMouseMove={(e) => {
-            [aquaRef, excelRef].forEach((ref) => {
-              if (!ref.current) return;
-              const rect = ref.current.getBoundingClientRect();
-              ref.current.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-              ref.current.style.setProperty('--my', `${e.clientY - rect.top}px`);
-            });
-          }}>
-          <h1 className="font-uber-move text-[17.5vw] font-bold leading-none tracking-[-0.9vw] select-none">
-            <span
-              ref={aquaRef}
-              className="relative inline-block pl-[2vw] pr-[2vw] -ml-[2vw] -mr-[2vw] mr-[2vw]"
-              onMouseEnter={() => setHoveredWord('aqua')}
             >
-              <span className="text-[#777]">AQUA</span>
-              <span
-                className="absolute inset-0 pointer-events-none pl-[2vw] pr-[2vw]"
-                style={{
-                  opacity: 1,
-                  transition: 'opacity 0.3s ease',
-                  backgroundImage: `radial-gradient(circle 250px at var(--mx, 50%) var(--my, 50%), #8AB8E8, #274689 100%)`,
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  WebkitMaskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
-                  maskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
-                }}
-              >
-                AQUA
-              </span>
+              EXCEL
             </span>
-            <span
-              ref={excelRef}
-              className="relative inline-block pl-[0.5vw] pr-[2vw] -ml-[2vw] -mr-[2vw]"
-              onMouseEnter={() => setHoveredWord('excel')}
-            >
-              <span className="text-[#777]">EXCEL</span>
-              <span
-                className="absolute inset-0 pointer-events-none pl-[0.5vw] pr-[2vw]"
-                style={{
-                  opacity: 1,
-                  transition: 'opacity 0.3s ease',
-                  backgroundImage: `radial-gradient(circle 250px at var(--mx, 50%) var(--my, 50%), #FF6B6B, #E31E24 100%)`,
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  WebkitMaskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
-                  maskImage: `radial-gradient(circle 400px at var(--mx, 50%) var(--my, 50%), black 30%, transparent 100%)`,
-                }}
-              >
-                EXCEL
-              </span>
-            </span>
-          </h1>
-        </div>
-      )}
+          </span>
+        </h1>
+      </div>
 
 
       <div className="px-6 xl:px-[80px] lg:px-[40px] relative z-20">
