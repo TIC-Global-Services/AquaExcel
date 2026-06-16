@@ -280,7 +280,7 @@ const TapAnimation = () => {
       <div className={`w-full min-h-[400px] sm:min-h-[500px] py-6 flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
         <video
           ref={videoRef}
-          src="/videos/tapSequence-mobile.mp4"
+          src="/videos/tapsequence-mobile.mp4"
           autoPlay
           muted
           playsInline
