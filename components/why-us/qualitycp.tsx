@@ -59,7 +59,7 @@ const Qualitycp = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full h-[700px] overflow-hidden flex items-center justify-center"
+      className="relative w-full h-[700px] md:h-screen overflow-hidden flex items-center justify-center"
     >
       {/* Background Section */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
