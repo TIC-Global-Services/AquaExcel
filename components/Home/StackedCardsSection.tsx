@@ -1,7 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { gsap } from "gsap";
+import { X } from "lucide-react";
 import Button from "../reuseable/Button";
 import Link from "next/link";
 import ContainerLayout from "@/layouts/ContainerLayout";
@@ -9,15 +10,15 @@ import ContainerLayout from "@/layouts/ContainerLayout";
 interface Card {
   id: number;
   title: string;
-  image: string;
+  video: string;
 }
 
 const cards: Card[] = [
-  { id: 1, title: "Seamless Water Delivery", image: "/stackcard1.png" },
-  { id: 2, title: "Premium Quality Fittings", image: "/stackcard2.png" },
-  { id: 3, title: "Innovative Design", image: "/stackcard3.png" },
-  { id: 4, title: "Durable Materials", image: "/stackcard4.png" },
-  { id: 5, title: "Expert Craftsmanship", image: "/stackcard5.png" }
+  { id: 1, title: "Maxion Water Tank Covers", video: "/videos/maxion-covers.mp4" },
+  { id: 2, title: "PVC Pipes", video: "/videos/pvc-pipes.mp4" },
+  { id: 3, title: "Flexi Sink", video: "/videos/flexi-sink.mp4" },
+  { id: 4, title: "Brass Thread Taps", video: "/videos/brass-thread-taps.mp4" },
+  { id: 5, title: "Health Faucet", video: "/videos/health-faucet.mp4" }
 ];
 
 const StackedCardsSection = () => {
@@ -43,13 +44,106 @@ const StackedCardsSection = () => {
     return () => window.removeEventListener('resize', checkSmallDesktop);
   }, []);
 
+  const [expandedCard, setExpandedCard] = useState<Card | null>(null);
+  const [rect, setRect] = useState<DOMRect | null>(null);
+  const modalOverlayRef = useRef<HTMLDivElement>(null);
+  const modalContentRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    if (expandedCard) return; // Pause auto rotation when modal is open
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % cards.length);
     }, 3000); // Change card every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [expandedCard]);
+
+  useEffect(() => {
+    if (expandedCard && rect && modalContentRef.current && modalOverlayRef.current) {
+      const overlay = modalOverlayRef.current;
+      const content = modalContentRef.current;
+      
+      gsap.killTweensOf([overlay, content]);
+
+      // 1. Position modal content exactly over the clicked card initially
+      gsap.set(overlay, { opacity: 0 });
+      gsap.set(content, {
+        position: "fixed",
+        top: rect.top,
+        left: rect.left,
+        width: rect.width,
+        height: rect.height,
+        borderRadius: "32px",
+        scale: 1,
+        opacity: 1,
+      });
+
+      // 2. Fade in the background overlay
+      gsap.to(overlay, {
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      // 3. Fade in UI elements slightly later
+      gsap.fromTo(".modal-ui", 
+        { opacity: 0 }, 
+        { opacity: 1, duration: 0.3, delay: 0.25, ease: "power2.out" }
+      );
+
+      // 4. Animate width, height, and coordinates to center on screen
+      const targetWidth = window.innerWidth < 768 ? window.innerWidth * 0.92 : 850;
+      const targetHeight = window.innerWidth < 768 ? 420 : 480;
+      const targetLeft = (window.innerWidth - targetWidth) / 2;
+      const targetTop = (window.innerHeight - targetHeight) / 2;
+
+      gsap.to(content, {
+        top: targetTop,
+        left: targetLeft,
+        width: targetWidth,
+        height: targetHeight,
+        borderRadius: "24px",
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    }
+  }, [expandedCard, rect]);
+
+  const handleCloseModal = () => {
+    if (!modalContentRef.current || !modalOverlayRef.current || !rect) return;
+    
+    const overlay = modalOverlayRef.current;
+    const content = modalContentRef.current;
+    
+    gsap.killTweensOf([overlay, content]);
+    
+    gsap.to(".modal-ui", {
+      opacity: 0,
+      duration: 0.2,
+      ease: "power2.in",
+    });
+
+    gsap.to(overlay, {
+      opacity: 0,
+      duration: 0.45,
+      ease: "power2.in",
+    });
+    
+    gsap.to(content, {
+      top: rect.top,
+      left: rect.left,
+      width: rect.width,
+      height: rect.height,
+      borderRadius: "32px",
+      duration: 0.45,
+      ease: "power3.inOut",
+      onComplete: () => {
+        setExpandedCard(null);
+        setRect(null);
+      }
+    });
+  };
 
   const getVisibleCards = () => {
     const visible = [];
@@ -135,6 +229,8 @@ const StackedCardsSection = () => {
                         style={{
                           transformStyle: "preserve-3d",
                           perspective: "1500px",
+                          opacity: expandedCard?.id === card.id ? 0 : 1,
+                          visibility: expandedCard?.id === card.id ? "hidden" : "visible",
                         }}
                       >
                         <div
@@ -142,16 +238,26 @@ const StackedCardsSection = () => {
                             width: isNarrowMobile ? 200 : isMobile ? 250 : 350,
                             height: isNarrowMobile ? 240 : isMobile ? 300 : 450,
                           }}
-                          className="relative rounded-[32px] overflow-hidden bg-white"
+                          className="relative rounded-[32px] overflow-hidden bg-white cursor-pointer"
+                          onClick={(e) => {
+                            if (expandedCard) return;
+                            const target = e.currentTarget as HTMLElement;
+                            setRect(target.getBoundingClientRect());
+                            setExpandedCard(card);
+                          }}
                         >
-                          <Image
-                            src={card.image}
-                            alt={card.title}
-                            fill
-                            className="object-cover"
-                          />
+                          <video
+                             src={card.video}
+                             autoPlay
+                             muted
+                             loop
+                             playsInline
+                             className="w-full h-full object-cover pointer-events-none"
+                           />
+                           {/* Dark Overlay (Top vignette effect) */}
+                           <div className="absolute inset-x-0 top-0 h-[35%] bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none" />
                         </div>
-                        {isActive && (
+                        {isActive && expandedCard?.id !== card.id && (
                           <motion.p
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -170,6 +276,54 @@ const StackedCardsSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Modal Video Player */}
+      {expandedCard && rect && (
+        <div
+          ref={modalOverlayRef}
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md"
+          onClick={handleCloseModal}
+        >
+          <div
+            ref={modalContentRef}
+            style={{
+              position: "fixed",
+              top: rect.top,
+              left: rect.left,
+              width: rect.width,
+              height: rect.height,
+              borderRadius: "32px",
+            }}
+            className="absolute bg-black overflow-hidden shadow-2xl border border-white/10 flex flex-col justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={handleCloseModal}
+              className="modal-ui absolute top-6 right-6 z-50 p-2.5 rounded-full bg-black/50 text-white hover:bg-black/85 hover:scale-105 border border-white/10 transition-all duration-200"
+              aria-label="Close modal"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Video Player (Unmuted / playing with audio) */}
+            <video
+              src={expandedCard.video}
+              autoPlay
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+            
+            {/* Title Overlay */}
+            <div className="modal-ui absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-10">
+              <h3 className="text-white font-hoves-pro font-medium text-2xl">
+                {expandedCard.title}
+              </h3>
+            </div>
+          </div>
+        </div>
+      )}
     </ContainerLayout>
   );
 };

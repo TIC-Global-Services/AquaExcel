@@ -186,8 +186,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="text-white font-inter-tight font-light text-[12px] leading-relaxed uppercase">
-                AQUA EXCEL, S.F.NO.774/4, ANNA PRIVATE INDUSTRIAL<br />
-                ESTATE, VILANKURICHI ROAD, COIMBATORE - 641035
+                Aqua Excel, S/F.No.339/1B, THANNEER panthal-<br />moripalayam road, moripalayam village, sulur<br />taluk, coimbatore-  641 659
               </li>
               <li>
                 <Link href="https://www.aquaexcel.in" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">

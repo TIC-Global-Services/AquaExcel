@@ -10,6 +10,7 @@ export const accessories = [
     products: [
       {
         title: "Cistern",
+        price: "₹ 1130 - ₹ 1429",
         description: "A Cistern Is A Water Storage Tank Used In Toilets To Hold And Release Water For Flushing, Designed For Efficient Flow And Smooth Operation.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/Cistern.png?updatedAt=1773046227551',
 
@@ -27,6 +28,7 @@ export const accessories = [
       },
       {
         title: "Seat Cover",
+        price: "₹ 775",
         description: "A Bathroom Seat Cover Is A Hinged Cover Fitted On The Toilet Seat, Designed For Comfort, Hygiene, And A Neat, Finished Look.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/SeatCover.png?updatedAt=1773046227635',
 
@@ -44,6 +46,7 @@ export const accessories = [
       },
       {
         title: "Bathroom Cabinet",
+        price: "₹ 2199",
         description: "A Bathroom Cabinet Is A Storage Unit Designed To Keep Toiletries Organized While Adding A Neat, Functional Look To The Bathroom Space.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/BathroomCabinet.png?updatedAt=1773046227753',
 
@@ -61,6 +64,7 @@ export const accessories = [
       },
       {
         title: "Waste Coupling-Full Threaded",
+        price: "₹ 109",
         description: "A Waste Coupling Full Thread Is A Fully Threaded Drain Fitting Used To Securely Connect Basins To The Waste Pipe, Ensuring Smooth And Leak-Free Water Flow.",
         image: image24,
 
@@ -78,6 +82,7 @@ export const accessories = [
       },
       {
         title: "Tank Filter",
+        price: "₹ 816 - ₹ 1881",
         description: "A Tank Filter Is A Device Used To Screen Out Dirt And Debris Before Water Enters The Tank, Ensuring Cleaner Storage And Smoother Flow.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tankfilter.jpg?updatedAt=1773046227140',
 
@@ -112,6 +117,7 @@ export const accessories = [
       },
       {
         title: "Flexi Tap",
+        price: "₹ 2999",
         description: "A Flexible Tap Featuring A Bendable Spout For Versatile Directing Of Water Flow, Offering Ease Of Use For Washing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/flexiTap.png',
         specs: [
@@ -127,6 +133,7 @@ export const accessories = [
       },
       {
         title: "CPVC Concealed Valve",
+        price: "₹ 1209 - ₹ 1264",
         description: "A CPVC Concealed Valve Is Installed Inside The Wall For A Sleek Look, Offering Reliable Flow Control For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/cpvcConcealedvalve.png',
         specs: [
@@ -142,6 +149,7 @@ export const accessories = [
       },
       {
         title: "UPVC Compact Ball Valve",
+        price: "₹ 109 - ₹ 549",
         description: "A UPVC Compact Ball Valve Offers Compact, Leak-Proof On/Off Flow Control, Designed For General Plumbing And Water Supply Networks.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/upvcCompact.png',
         specs: [
@@ -157,6 +165,7 @@ export const accessories = [
       },
       {
         title: "CPVC Brass Union Ball Valve",
+        price: "₹ 1285 - ₹ 1613",
         description: "A CPVC Ball Valve With A Brass Union Coupling That Permits Easy Disconnection and Reconnection, Providing High Leak Resistance Under Pressure.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/brassUnionBallvalveCPVC.png',
         specs: [
@@ -172,6 +181,7 @@ export const accessories = [
       },
       {
         title: "CPVC Ball Valve",
+        price: "₹ 211 - ₹ 1099",
         description: "A CPVC Ball Valve Is A High-Temperature and Corrosion-Resistant Valve Designed For Smooth Operation And Durable Flow Regulation in CPVC Pipelines.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/cpvcBallvalue.png',
         specs: [
@@ -187,6 +197,7 @@ export const accessories = [
       },
       {
         title: "Dual Flush Cistern",
+        price: "₹ 1999",
         description: "A Dual Flush Cistern Offers Water-Saving Options with Two Flushing Modes, Delivering Efficient Performance And A Modern Bathroom Aesthetic.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/dualFlushcistern.JPG',
         specs: [
@@ -201,6 +212,7 @@ export const accessories = [
       },
       {
         title: "GFRP Rods Reinforced FRP Water Tank Cover",
+        price: "₹ 1399 - ₹ 3499",
         description: "A High-Strength Water Tank Cover Reinforced with GFRP Rods, Designed to Be Extremely Durable, Load-Bearing, and Weather-Resistant.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tankcover.JPG',
         specs: [
@@ -216,6 +228,7 @@ export const accessories = [
       },
       {
         title: "Waste Coupling",
+        price: "₹ 109",
         description: "A Durable Waste Coupling Designed to Securely Connect Sinks and Basins to Waste Pipes, Ensuring Rapid and Leak-Free Drainage.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/wasteCoupling.JPG',
         specs: [
@@ -231,6 +244,7 @@ export const accessories = [
       },
       {
         title: "Shower",
+        price: "₹ 395",
         description: "An Advanced Overhead Shower Designed to Deliver a Refreshing Rain-Like Spray, Combining Sleek Looks with Clog-Resistant Nozzles.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/shower.JPG',
         specs: [
@@ -246,6 +260,7 @@ export const accessories = [
       },
       {
         title: "Connection Tube",
+        price: "₹ 109 - ₹ 266",
         description: "A Flexible and Heavy-Duty Connection Tube Designed to Safely Route Water to Wash Basins, Geysers, and Toilets.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/connectionTube.JPG',
         specs: [

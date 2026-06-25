@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
       <div className="relative z-20 bg-white/95 backdrop-blur-sm Fp-5 sm:p-6 md:p-8 lg:p-10 flex-shrink-0">
         {/* Icon */}
         <div className="mb-3 sm:mb-4 md:mb-5">
-          <Image src={icon} alt="icon" width={48} height={48} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+          <Image src={icon} alt="icon" width={48} height={48} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain" />
         </div>
 
         {/* Title */}

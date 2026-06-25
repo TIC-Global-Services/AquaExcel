@@ -33,16 +33,14 @@ const Distribution = () => {
   return (
     <div>
       <div className="hidden md:block">
-        <ContainerLayout> 
+        <ContainerLayout>
           <div className="w-full py-10 mt-5 overflow-hidden">
             <div className="flex flex-col gap-2 mb-8">
               <h1 className="text-xl md:text-3xl xl:text-[2.75rem] tracking-tighter font-medium font-hoves-pro">
                 For Distribution Partners
               </h1>
-              <p className="max-w-md md:max-w-3xl text-sm md:text-xl font-regular text-black font-inter-tight leading-[120%]">
-                We partner with distributors through dependable supply, strong
-                product demand,
-                <br className="hidden md:block" /> and responsive service.
+              <p className="max-w-sm md:max-w-3xl text-sm md:text-xl font-regular text-black font-inter-tight leading-[120%]">
+                We partner with distributors through dependable supply, strong product demand, responsive service, and financial support facilitated through our banking partners, helping drive sustainable business growth.
               </p>
             </div>
 
@@ -95,10 +93,8 @@ const Distribution = () => {
             <h1 className="text-xl xl:text-[2.75rem] tracking-tighter font-medium font-hoves-pro">
               For Distribution Partners
             </h1>
-            <p className="max-w-md md:max-w-3xl text-sm md:text-xl font-regular text-black font-inter-tight leading-[120%]">
-              We partner with distributors through dependable supply, strong
-              product demand,
-              <br className="hidden md:block" /> and responsive service.
+            <p className="max-w-xs md:max-w-3xl text-sm md:text-xl font-regular text-black font-inter-tight leading-[120%]">
+              We partner with distributors through dependable supply, strong product demand, responsive service, and financial support facilitated through our banking partners, helping drive sustainable business growth.
             </p>
           </div>
           {/* </ContainerLayout> */}

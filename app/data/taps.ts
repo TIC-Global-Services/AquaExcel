@@ -20,6 +20,7 @@ export const Taps = [
     products: [
       {
         title: "Bib Tap Short Body",
+        price: "₹ 320",
         description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
         colors: [
@@ -40,6 +41,7 @@ export const Taps = [
       },
       {
         title: "Bib Tap Long Body",
+        price: "₹ 425",
         description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtaplongvalve.png?updatedAt=1773034090242',
         colors: [
@@ -60,6 +62,7 @@ export const Taps = [
       },
       {
         title: "Angle Valve",
+        price: "₹ 335",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
         colors: [
@@ -80,6 +83,7 @@ export const Taps = [
       },
       {
         title: "Two way Angle Valve",
+        price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bttwowayanglevalve.jpg?updatedAt=1773035820790',
         colors: [
@@ -100,6 +104,7 @@ export const Taps = [
       },
       {
         title: "Sink Tap Wallmount",
+        price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btsinktapwallmount.png?updatedAt=1773035035355',
         colors: [
@@ -120,6 +125,7 @@ export const Taps = [
       },
       {
         title: "High Flow",
+        price: "₹ 399",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bthighflow.png?updatedAt=1773034940348',
         colors: [
@@ -140,6 +146,7 @@ export const Taps = [
       },
       {
         title: "Swan Neck",
+        price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btswanneck.png?updatedAt=1773035172620',
         colors: [
@@ -160,6 +167,7 @@ export const Taps = [
       },
       {
         title: "Garden Tap",
+        price: "₹ 445",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btgardentap.png?updatedAt=1773034831367',
         colors: [
@@ -180,6 +188,7 @@ export const Taps = [
       },
       {
         title: "Washing Machine Tap",
+        price: "₹ 495",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btwashingmachinetap.png?updatedAt=1773035821381',
         colors: [
@@ -200,6 +209,7 @@ export const Taps = [
       },
       {
         title: "Two Way Tap",
+        price: "₹ 585",
         description: "A dual-outlet brass-threaded tap designed for multi-purpose usage, offering smooth flow control and leak-proof performance.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/brassTwowaytap.png',
         colors: [
@@ -220,6 +230,7 @@ export const Taps = [
       },
       {
         title: "Brass Threaded Foam Tap",
+        price: "₹ 499",
         description: "A premium brass-threaded tap with a foam flow aerator designed for soft, splash-free water flow and optimal water conservation.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btFoam.JPG',
         colors: [
@@ -247,6 +258,7 @@ export const Taps = [
     products: [
       {
         title: "Bib Tap Short Body",
+        price: "₹ 164",
         description: "A Lightweight, Corrosion-Resistant PTMT Tap Built For Everyday Use, Offering Smooth Flow Control And Long-Lasting Durability.",
         image: image4,
         colors: [
@@ -267,6 +279,7 @@ export const Taps = [
       },
       {
         title: "Bib Tap Long Body",
+        price: "₹ 230",
         description: "A Durable PTMT Long-Body Tap That Provides Extended Reach With Smooth Water Flow And Dependable Daily Performance.",
         image: image5,
         colors: [
@@ -287,6 +300,7 @@ export const Taps = [
       },
       {
         title: "Angle Valve",
+        price: "₹ 164",
         description: "A Sturdy PTMT Valve Designed To Control Water Direction And Flow, Ensuring Smooth Operation For Bathroom And Kitchen Fittings.",
         image: image6,
         colors: [
@@ -314,6 +328,7 @@ export const Taps = [
     products: [
       {
         title: "Bib Tap Short Body",
+        price: "₹ 164",
         description: "A Compact, Eco-Friendly Bib Tap Designed To Reduce Water Wastage While Delivering Smooth, Efficient Flow.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtapshort.png?updatedAt=1773037266228',
         colors: [
@@ -334,6 +349,7 @@ export const Taps = [
       },
       {
         title: "Bib Tap Long Body",
+        price: "₹ 230",
         description: "A Long-Reach Green Tap Built For Cleaner Water Use, Offering Controlled Flow With An Environmentally Conscious Design.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtaplong.png?updatedAt=1773037265496',
         colors: [
@@ -354,6 +370,7 @@ export const Taps = [
       },
       {
         title: "Angle Valve",
+        price: "₹ 164",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtanglevalve.png?updatedAt=1773037266106',
         colors: [
@@ -374,6 +391,7 @@ export const Taps = [
       },
       {
         title: "garden Tap",
+        price: "₹ 445",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtgardentap.png?updatedAt=1773037265671',
         colors: [
@@ -394,6 +412,7 @@ export const Taps = [
       },
       {
         title: "Hi-Flow Tap",
+        price: "₹ 199",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gthighflow.png?updatedAt=1773037266193',
         colors: [
@@ -414,6 +433,7 @@ export const Taps = [
       },
       {
         title: "Two Way Angle Valve",
+        price: "₹ 439",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwoanglevalve.png?updatedAt=1773037266147',
         colors: [
@@ -434,6 +454,7 @@ export const Taps = [
       },
       {
         title: "swan neck",
+        price: "₹ 549",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtswanneck.png?updatedAt=1773037266191',
         colors: [
@@ -454,6 +475,7 @@ export const Taps = [
       },
       {
         title: "Sink Tap",
+        price: "₹ 549",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtsinktap.png?updatedAt=1773037266160',
         colors: [
@@ -473,6 +495,7 @@ export const Taps = [
         ]
       }, {
         title: 'Two Way Tap',
+        price: "₹ 439",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwowaytap.png?updatedAt=1773037266107',
         colors: [
@@ -492,6 +515,7 @@ export const Taps = [
         ]
       }, {
         title: 'Washing Machine Tap',
+        price: "₹ 495",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtwashingmachine.png?updatedAt=1773037266243',
         colors: [
@@ -512,6 +536,7 @@ export const Taps = [
       },
       {
         title: "Short Spout Sink Tap",
+        price: "₹ 439",
         description: "An Eco-Focused Sink Tap With A Compact Short Spout, Designed To Minimize Water Splashing And Maximize Utility In Modern Kitchens.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/shortSpoutSinktap.png',
         colors: [
@@ -532,6 +557,7 @@ export const Taps = [
       },
       {
         title: "Premium Pillar Tap",
+        price: "₹ 539",
         description: "An Elegant, High-Quality Pillar Tap Offering A Steady Water Stream, Designed For Wash Basin Installation With Premium Aesthetics.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/premiumPillarTap.png',
         colors: [
@@ -552,6 +578,7 @@ export const Taps = [
       },
       {
         title: "2 in 1 Tap",
+        price: "₹ 785",
         description: "A Versatile Two-in-One Tap Featuring Dual Outlets For Simultaneously Directing Water To Multiple Fixtures With Precise Flow Control.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/2in1Tap.png',
         colors: [
@@ -572,6 +599,7 @@ export const Taps = [
       },
       {
         title: "Green Tap Foam Tap",
+        price: "₹ 399",
         description: "An Eco-Friendly Tap Equipped With A Foam Flow Aerator For A Soft, Oxygenated Stream That Significantly Reduces Water Wastage.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtFoam.JPG',
         colors: [

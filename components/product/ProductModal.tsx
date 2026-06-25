@@ -14,6 +14,7 @@ interface ProductModalProps {
         // Optional fields that we might add to data later
         colors?: { name: string, colorCode: string }[]
         specs?: string[]
+        price?: string
     } | null
 }
 
@@ -75,10 +76,19 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
                     {/* Details Section */}
                     <div className="max-w-5xl mx-auto flex flex-col items-start w-full">
-                        {/* Title */}
-                        <h2 className="text-4xl md:text-3xl font-hoves-pro font-medium tracking-tight mb-6">
-                            {product.title}
-                        </h2>
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-center w-full mb-6 gap-2">
+                            {/* Title */}
+                            <h2 className="text-4xl md:text-3xl font-hoves-pro font-medium tracking-tight">
+                                {product.title}
+                            </h2>
+
+                            {/* Price */}
+                            {product.price && (
+                                <div className="text-2xl md:text-3xl font-medium text-[#1e1e1e]">
+                                    {product.price}
+                                </div>
+                            )}
+                        </div>
 
                         {/* Colors */}
                         {product.colors && product.colors.length > 0 && (

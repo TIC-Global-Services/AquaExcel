@@ -10,6 +10,7 @@ export const bathfitting = [
     products: [
       {
         title: "Health Faucet-CP",
+        price: "₹ 1099",
         description: "A Health Faucet CP Is A Handheld Bidet Spray With A Chrome-Plated Finish, Used For Personal Hygiene And Easy Cleaning.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/healthfaucetcp.jpg?updatedAt=1773038204408',
 
@@ -27,6 +28,7 @@ export const bathfitting = [
       },
       {
         title: "Health Faucet-PTMT",
+        price: "₹ 999",
         description: "A PTMT Health Faucet Is A Lightweight, Durable Handheld Bidet Spray Made From PTMT Material, Offering Reliable Performance And Long Life.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/Health%20Faucet-PTMT1.png',
 
@@ -44,6 +46,7 @@ export const bathfitting = [
       },
       {
         title: "Health Faucet Gun",
+        price: "₹ 330",
         description: "A Health Faucet Gun Is A Handheld Spray Used For Personal Hygiene, Designed To Provide Controlled Water Flow For Easy And Effective Cleaning.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/HealthFaucetGun.png?updatedAt=1773039737801',
 
@@ -61,6 +64,7 @@ export const bathfitting = [
       },
       {
         title: "Classic + Health Faucet",
+        price: "₹ 516 - ₹ 549",
         description: "A Classic Health Faucet Is A Traditional-Style Handheld Bidet Spray That Offers Smooth Water Flow And Reliable Hygiene For Everyday Use.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/Classic+HealthFaucet.jpg?updatedAt=1773039737197',
 
@@ -78,6 +82,7 @@ export const bathfitting = [
       },
       {
         title: "Shower Tap - HOT & COLD",
+        price: "₹ 2025",
         description: "A Hot And Cold Shower Tap Is A Mixer Tap That Blends Warm And Cold Water, Allowing Easy Control Of Temperature And Flow For A Comfortable Shower Experience.",
         image: image14,
 
@@ -95,6 +100,7 @@ export const bathfitting = [
       },
       {
         title: "Float Valve",
+        price: "₹ 324 - ₹ 954",
         description: "A Float Valve Is An Automatic Water-Level Control Valve That Stops Or Allows Water Flow In A Tank Based On The Float's Position.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/FloatValve.jpg?updatedAt=1773039737059',
 
@@ -112,6 +118,7 @@ export const bathfitting = [
       },
       {
         title: "Foot Valve",
+        price: "₹ 77",
         description: "A Foot Valve Is A Non-Return Valve Fitted To The Suction Line Of A Pump, Preventing Water From Draining Back Into The Source.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/footValve.png',
         specs: [
@@ -127,6 +134,7 @@ export const bathfitting = [
       },
       {
         title: "Geyser Steel Hose",
+        price: "₹ 333 - ₹ 439",
         description: "A Geyser Steel Hose Is A Flexible Stainless Steel Braided Connection Pipe Designed To Handle Hot And Cold Water Under High Pressure For Geysers And Wash Basin Inlets.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/geyerPipe.png',
         specs: [

@@ -10,18 +10,18 @@ import {
 } from "framer-motion";
 
 const IMGS: { url: string; title: string }[] = [
-  { url: "/card1.jpg", title: "Pipes & Fittings" },
-  { url: "/card2.jpg", title: "Brass-Threaded Taps" },
-  { url: "/card3.jpg", title: "Bath Fittings\n& Accessories" },
-  { url: "/card4.jpg", title: "Taps & Fittings" },
-  { url: "/card5.jpg", title: "Accessories" },
-  { url: "/card1.jpg", title: "Pipes & Fittings" },
-  { url: "/card2.jpg", title: "Brass-Threaded Taps" },
-  { url: "/card3.jpg", title: "Bath Fittings\n& Accessories" },
-  { url: "/card4.jpg", title: "Taps & Fittings" },
-  { url: "/card5.jpg", title: "Accessories" },
-  { url: "/card1.jpg", title: "Pipes & Fittings" },
-  { url: "/card2.jpg", title: "Brass-Threaded Taps" },
+  { url: "/bt-swan-neck.jpg", title: "Swan Neck" },
+  { url: "/bt-two-way.jpg", title: "Two-Way Angle Valve" },
+  { url: "/bt-sink-tap.jpg", title: "Sink Tap" },
+  { url: "/bt-bib-tap.jpg", title: "Bib Tap Short Body" },
+  { url: "/bt-angle.jpg", title: "Angle Valve" },
+  { url: "/bt-swan-neck.jpg", title: "Swan Neck" },
+  { url: "/bt-two-way.jpg", title: "Two-Way Angle Valve" },
+  { url: "/bt-sink-tap.jpg", title: "Sink Tap" },
+  { url: "/bt-bib-tap.jpg", title: "Bib Tap Short Body" },
+  { url: "/bt-angle.jpg", title: "Angle Valve" },
+  { url: "/bt-swan-neck.jpg", title: "Swan Neck" },
+  { url: "/bt-two-way.jpg", title: "Two-Way Angle Valve" },
 ];
 
 interface RollingGalleryProps {
@@ -381,6 +381,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                     src={item.url}
                     alt={item.title}
                     className="pointer-events-none object-cover w-full h-full select-none"
+                    style={{ objectPosition: "70% center" }}
                     draggable={false}
                   />
 

@@ -16,7 +16,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description, image }) => {
       <div className="relative z-20 bg-[#D9D9D9]/80 backdrop-blur-md p-[3vh] sm:p-[4vh] md:p-[5vh] flex-none min-h-[40%] flex flex-col justify-center rounded-t-2xl">
         {/* Icon */}
         <div className="mb-[2vh]">
-          <Image src={icon} alt="icon" width={64} height={64} className="w-[6vh] h-[6vh] sm:w-[7vh] sm:h-[7vh] md:w-[8vh] md:h-[8vh] shrink-0" />
+          <Image src={icon} alt="icon" width={64} height={64} className="w-[6vh] h-[6vh] sm:w-[7vh] sm:h-[7vh] md:w-[8vh] md:h-[8vh] shrink-0 object-contain" />
         </div>
 
         {/* Title */}

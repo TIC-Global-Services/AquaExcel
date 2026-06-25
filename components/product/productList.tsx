@@ -137,6 +137,7 @@ const ProductList = () => {
                         title={product.title}
                         description={product.description}
                         image={product.image || placeholderImage}
+                        price={(product as any).price}
                         onClick={() => setSelectedProduct(product)}
                       />
                     </div>

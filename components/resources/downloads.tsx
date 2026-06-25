@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Button from '../reuseable/Button';
 import ContainerLayout from '@/layouts/ContainerLayout';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -12,21 +11,21 @@ const Downloads = () => {
   const download4 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Download/downloads-1.jpg";
 
   const content = [
-    { id: 0, title: "PRODUCT CATALOG", image: download4 },
-    { id: 1, title: "INSTALLATION GUIDELINES", image: download2 },
-    { id: 2, title: "PRESSURE RATINGS", image: download3 },
-    { id: 3, title: "PRODUCT CATALOG", image: download4 },
-    { id: 4, title: "INSTALLATION GUIDELINES", image: download2 },
-    { id: 5, title: "PRESSURE RATINGS", image: download3 },
-    { id: 6, title: "PRODUCT CATALOG", image: download4 },
-    { id: 7, title: "INSTALLATION GUIDELINES", image: download2 },
-    { id: 8, title: "PRESSURE RATINGS", image: download3 },
-    { id: 9, title: "PRODUCT CATALOG", image: download4 },
-    { id: 10, title: "INSTALLATION GUIDELINES", image: download2 },
-    { id: 11, title: "PRESSURE RATINGS", image: download3 },
-    { id: 12, title: "PRODUCT CATALOG", image: download4 },
-    { id: 13, title: "INSTALLATION GUIDELINES", image: download2 },
-    { id: 14, title: "PRESSURE RATINGS", image: download3 },
+    { id: 0, title: "PRODUCT CATALOG", image: download4, file: "/resources/Brocher-AquaExcel-2026.pdf" },
+    { id: 1, title: "INSTALLATION GUIDELINES", image: download2, file: "/resources/installation-guide.pdf" },
+    { id: 2, title: "TECHNICAL SPECIFICATIONS", image: download3, file: "/resources/TECHNICAL-SPECIFICATIONS.pdf" },
+    { id: 3, title: "PRODUCT CATALOG", image: download4, file: "/resources/Brocher-AquaExcel-2026.pdf" },
+    { id: 4, title: "INSTALLATION GUIDELINES", image: download2, file: "/resources/installation-guide.pdf" },
+    { id: 5, title: "TECHNICAL SPECIFICATIONS", image: download3, file: "/resources/TECHNICAL-SPECIFICATIONS.pdf" },
+    { id: 6, title: "PRODUCT CATALOG", image: download4, file: "/resources/Brocher-AquaExcel-2026.pdf" },
+    { id: 7, title: "INSTALLATION GUIDELINES", image: download2, file: "/resources/installation-guide.pdf" },
+    { id: 8, title: "TECHNICAL SPECIFICATIONS", image: download3, file: "/resources/TECHNICAL-SPECIFICATIONS.pdf" },
+    { id: 9, title: "PRODUCT CATALOG", image: download4, file: "/resources/Brocher-AquaExcel-2026.pdf" },
+    { id: 10, title: "INSTALLATION GUIDELINES", image: download2, file: "/resources/installation-guide.pdf" },
+    { id: 11, title: "TECHNICAL SPECIFICATIONS", image: download3, file: "/resources/TECHNICAL-SPECIFICATIONS.pdf" },
+    { id: 12, title: "PRODUCT CATALOG", image: download4, file: "/resources/Brocher-AquaExcel-2026.pdf" },
+    { id: 13, title: "INSTALLATION GUIDELINES", image: download2, file: "/resources/installation-guide.pdf" },
+    { id: 14, title: "TECHNICAL SPECIFICATIONS", image: download3, file: "/resources/TECHNICAL-SPECIFICATIONS.pdf" },
   ];
 
   // State for responsive items per view
@@ -148,12 +147,13 @@ const Downloads = () => {
                           <h3 className="font-inter-tight font-medium text-[22px] leading-[100%] text-center text-white uppercase">
                             {item.title}
                           </h3>
-                          <Button
-                            variant="primary"
-                            className="bg-[#E31E24] hover:bg-[#C41217] text-white border-none px-8 py-2.5 rounded-[12px] text-sm"
+                          <a
+                            href={item.file}
+                            download={item.file.split('/').pop()}
+                            className="bg-[#E31E24] hover:bg-[#C41217] text-white px-8 py-2.5 rounded-[12px] text-sm font-inter-tight font-medium text-center transition-all inline-block cursor-pointer"
                           >
                             Download pdf
-                          </Button>
+                          </a>
                         </div>
                       </div>
                     ))}

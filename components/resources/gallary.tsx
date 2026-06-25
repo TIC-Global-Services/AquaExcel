@@ -7,18 +7,27 @@ import ContainerLayout from '@/layouts/ContainerLayout';
 const gallary = () => {
 
   const gallaryimg1 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-1.jpg";
-  const gallaryimg2 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-2.jpg";
-  const gallaryimg3 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-3.jpg";
-  const gallaryimg4 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-4.jpg";
+  const gallaryimg2 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/board.JPG";
+  const gallaryimg3 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/warehouse.JPG";
+  const gallaryimg4 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/team.JPG";
   const gallaryimg5 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-5.jpg";
   const gallaryimg6 = "https://ik.imagekit.io/pgtxr2fmn/Resources/Gallery/gallaryimg-6.jpg";
 
-  const GALLERY_ITEMS = [
+  interface GalleryItem {
+    id: number;
+    title: string;
+    description: string;
+    image?: string;
+    video?: string;
+    className: string;
+  }
+
+  const GALLERY_ITEMS: GalleryItem[] = [
     {
       id: 1,
       title: 'FACTORY',
       description: 'Where precision shapes every product.',
-      image: gallaryimg1,
+      video: "/videos/industry-video.mp4",
       className: 'col-span-1 md:col-span-2 lg:col-span-6 h-[250px] md:h-[400px]', // Full width row
     },
     {
@@ -70,12 +79,23 @@ const gallary = () => {
                 key={item.id}
                 className="relative flex-shrink-0 w-[60vw] h-[300px] rounded-[20px] overflow-hidden snap-start"
               >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <Image
+                    src={item.image!}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                )}
                 {/* Gradient Overlay */}
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
 
@@ -100,14 +120,25 @@ const gallary = () => {
                 key={item.id}
                 className={`relative group rounded-[20px] overflow-hidden cursor-pointer ${item.className}`}
               >
-                <SimpleParallax>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                </SimpleParallax>
+                ) : (
+                  <SimpleParallax>
+                    <Image
+                      src={item.image!}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </SimpleParallax>
+                )}
                 {/* Gradient Overlay */}
                 <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t bg-gradient-full from-black/90 via-black/50 to-transparent z-10" />
 

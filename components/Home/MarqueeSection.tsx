@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const MarqueeSection = () => {
   const cards = [
-    { id: 1, title: "Pipes & Fittings", image: "/card1.jpg" },
-    { id: 2, title: "Brass-Threaded Taps", image: "/card2.jpg" },
-    { id: 3, title: "Bath Fittings\n& Accessories", image: "/card3.jpg" },
-    { id: 4, title: "Taps & Fittings", image: "/card4.jpg" },
-    { id: 5, title: "Accessories", image: "/card5.jpg" },
+    { id: 1, title: "Swan Neck", image: "/bt-swan-neck.jpg" },
+    { id: 2, title: "Two-Way\nAngle Valve", image: "/bt-two-way.jpg" },
+    { id: 3, title: "Sink Tap", image: "/bt-sink-tap.jpg" },
+    { id: 4, title: "Bib Tap\nShort Body", image: "/bt-bib-tap.jpg" },
+    { id: 5, title: "Angle Valve", image: "/bt-angle.jpg" },
   ];
 
   return (
@@ -35,6 +35,7 @@ const MarqueeSection = () => {
                 alt={card.title}
                 fill
                 className="object-cover"
+                style={{ objectPosition: "80% center" }}
               />
               <div className="absolute inset-0 flex items-end p-6">
                 <h3 className="text-white font-hoves-pro font-medium text-xl leading-tight whitespace-pre-line">

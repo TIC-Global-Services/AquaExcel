@@ -7,6 +7,7 @@ interface ProductCardProps {
     title: string;
     description: string;
     image: string | StaticImageData;
+    price?: string;
     className?: string;
     onClick?: () => void;
 }
@@ -15,6 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     title,
     description,
     image,
+    price,
     className,
     onClick,
 }) => {
@@ -38,9 +40,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
             {/* Content */}
             <div className="flex flex-col">
-                <h3 className="font-inter-tight  font-medium text-lg md:text-[22px] text-black mb-3">
-                    {title}
-                </h3>
+                <div className="flex justify-between items-center mb-3 gap-4">
+                    <h3 className="font-inter-tight font-medium text-lg md:text-[22px] text-[#646464]">
+                        {title}
+                    </h3>
+
+                    {price && (
+                        <div className="font-inter-tight font-medium text-lg md:text-[22px] text-[#1e1e1e] whitespace-nowrap">
+                            {price}
+                        </div>
+                    )}
+                </div>
 
                 {/* Divider */}
                 <div className="w-full h-px bg-[#000000] mb-3" />
