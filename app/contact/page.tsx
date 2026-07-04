@@ -4,8 +4,9 @@ import Hero from '@/components/contact/Hero'
 import GroupLegacy from '@/components/contact/GroupLegacy'
 import React from 'react'
 import Faq from '@/components/contact/faq'
-import Map from '@/components/contact/map'
+import Map from '@/components/contact/DealerLocation'
 import Contactdetailscp from '@/components/contact/contactdetailscp'
+import Headofficemap from '@/components/contact/headofficemap'
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <GroupLegacy/>
       <Map/>
       <Faq/>
+      <Headofficemap/>
     </div>
   )
 }

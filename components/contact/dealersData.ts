@@ -1,4363 +1,1508 @@
 export interface Dealer {
-  name: string;
-  contact: string;
+  dealername: string;
+  contact?: string;
   location: string;
+  district: string;
+  state: string;
+  area: string;
+  address:string
 }
 
-export const dealersData: Dealer[] = [
-  {
-    "name": "Aai Mataji electrical and hardware",
-    "contact": "8925785304",
-    "location": "Madukkarai rd,Sundarapuram"
-  },
-  {
-    "name": "Aai Mataji electrical plumbing &hardware",
-    "contact": "8098330921",
-    "location": "Annur"
-  },
-  {
-    "name": "Ambica electrical and hardware",
-    "contact": "9655992599",
-    "location": "Saravanampatti"
-  },
-  {
-    "name": "Asha Pura electricals",
-    "contact": "9042890831",
-    "location": "Bilichi"
-  },
-  {
-    "name": "Athithiya traders",
-    "contact": "",
-    "location": "Kanuvai"
-  },
-  {
-    "name": "Balaji electrical and hardware",
-    "contact": "9445958365",
-    "location": "Ganeshapuram"
-  },
-  {
-    "name": "Devi agencies",
-    "contact": "9150513911",
-    "location": "Gandhima nagar"
-  },
-  {
-    "name": "Dhanalakshimi electrical and hardware",
-    "contact": "",
-    "location": "Pattanam"
-  },
-  {
-    "name": "Dhanalakshmi hardware",
-    "contact": "7339491709",
-    "location": "Chettipalyam rd,podanur"
-  },
-  {
-    "name": "G.R hatdware",
-    "contact": "9943029004",
-    "location": "Kurumbapalayam"
-  },
-  {
-    "name": "Hari om hardware and electrical",
-    "contact": "9677802516",
-    "location": "Annur"
-  },
-  {
-    "name": "Hariom Electrical and hardware",
-    "contact": "9629859483",
-    "location": "Saravanampatti"
-  },
-  {
-    "name": "Hema electricals and hardwares",
-    "contact": "",
-    "location": "Tripur"
-  },
-  {
-    "name": "Jayam electricals",
-    "contact": "9688425046",
-    "location": "Kalangal rd"
-  },
-  {
-    "name": "Kandhan electrical and hardware",
-    "contact": "9150514450",
-    "location": "Jothipuram"
-  },
-  {
-    "name": "Krishna electrical and hardware",
-    "contact": "9442642401",
-    "location": "Saravanampatti"
-  },
-  {
-    "name": "Krishna electrical and hardware",
-    "contact": "9940903616",
-    "location": "chinthamaniputhur"
-  },
-  {
-    "name": "Krishna electrical and hardware",
-    "contact": "7013415812",
-    "location": "Kalampalayam"
-  },
-  {
-    "name": "Mahadev electrical",
-    "contact": "9655510556",
-    "location": "Kariyampalyam"
-  },
-  {
-    "name": "Mahadev electrical",
-    "contact": "7019489108",
-    "location": "Bodipalayam"
-  },
-  {
-    "name": "Mahadev electrical and hardware",
-    "contact": "9043847183",
-    "location": "Vinayakapuram"
-  },
-  {
-    "name": "Mahadev electrical and hardware",
-    "contact": "7598850647",
-    "location": "Annur"
-  },
-  {
-    "name": "Mahadev electrical and hardware",
-    "contact": "8149662771",
-    "location": "Malumichampatti"
-  },
-  {
-    "name": "Mahadev Hardwares &Electricals",
-    "contact": "9043728117",
-    "location": "Vellalur"
-  },
-  {
-    "name": "Mahadev tiles &Electricals",
-    "contact": "9486241007",
-    "location": "k vadamadurai"
-  },
-  {
-    "name": "mahadev tiles& electrical",
-    "contact": "9843206364",
-    "location": "Sulur"
-  },
-  {
-    "name": "Mahalakshimi electrical and hardware",
-    "contact": "9597810349",
-    "location": "Annur"
-  },
-  {
-    "name": "Mahaveer electrical and hardware",
-    "contact": "9952452679",
-    "location": "Thudiyalur"
-  },
-  {
-    "name": "Mataji Electrical &HARDWARE",
-    "contact": "7026436181",
-    "location": "Vellalur"
-  },
-  {
-    "name": "Mathaji electrical and hardware",
-    "contact": "9489937063",
-    "location": "Kovilpalayam"
-  },
-  {
-    "name": "Mathaji electrical and hardware",
-    "contact": "9361000258",
-    "location": "Narasimanaiken palayam"
-  },
-  {
-    "name": "MN hardware",
-    "contact": "9843791438",
-    "location": "Irutupallam"
-  },
-  {
-    "name": "Parameshwar electrical and hardware",
-    "contact": "9444505049",
-    "location": "Vellalur"
-  },
-  {
-    "name": "Pooja shree hardware",
-    "contact": "8883881447",
-    "location": "Kalapatti rd,Vilankuruchi"
-  },
-  {
-    "name": "Ragunath Hardware and electrical",
-    "contact": "9443753788",
-    "location": "Thoppam patti privu"
-  },
-  {
-    "name": "Rajalaksmi electrical and hardware",
-    "contact": "8296918741",
-    "location": "ayemmapudur privu"
-  },
-  {
-    "name": "Rajasthan electrical and hardware",
-    "contact": "9442342401",
-    "location": "Kurumbapalayam"
-  },
-  {
-    "name": "Rajeshwar electricals and hardwares",
-    "contact": "",
-    "location": "Karumathampatti"
-  },
-  {
-    "name": "Ramdev electrical &hardware",
-    "contact": "9043887752",
-    "location": "Sundarapuram"
-  },
-  {
-    "name": "Ramdev electrical and hardware",
-    "contact": "9042290532",
-    "location": "Kovilpaliyam"
-  },
-  {
-    "name": "Ramdev electrical and hardware",
-    "contact": "9789583196",
-    "location": "Kalangal rd"
-  },
-  {
-    "name": "Ramdev electrical and hardware",
-    "contact": "9043658760",
-    "location": "Thoppam patti"
-  },
-  {
-    "name": "Rk hardware",
-    "contact": "9942082041",
-    "location": "Sundarapuram"
-  },
-  {
-    "name": "Roshan doors electrical and hardware",
-    "contact": "8248359429",
-    "location": "ganesha puram"
-  },
-  {
-    "name": "Sai deva traders",
-    "contact": "9095008829",
-    "location": "Chettipalyam"
-  },
-  {
-    "name": "Selvanayaki traders",
-    "contact": "9688959000",
-    "location": "Kurumbapalayam"
-  },
-  {
-    "name": "Shri kandhavel electrical and hardware",
-    "contact": "9894214467",
-    "location": "Kurumbapalayam"
-  },
-  {
-    "name": "Sree Mithra electricals and hardwares",
-    "contact": "9842594495",
-    "location": "Somanur"
-  },
-  {
-    "name": "Sri bhavani electrical",
-    "contact": "9842209262",
-    "location": "Sirumugai"
-  },
-  {
-    "name": "Sri Heera electrical and hardware",
-    "contact": "9080173760",
-    "location": "Alandhurai"
-  },
-  {
-    "name": "Sri krishna electrical",
-    "contact": "8489087964",
-    "location": "Karanampettai"
-  },
-  {
-    "name": "Sri maga ganapathi electrical and hardware",
-    "contact": "9894725822",
-    "location": "Narasima naicken palayam"
-  },
-  {
-    "name": "Sri Rayar traders",
-    "contact": "9787849479",
-    "location": "Kalangal rd"
-  },
-  {
-    "name": "Sri Renuma agency",
-    "contact": "9894337478",
-    "location": "avarampalayam"
-  },
-  {
-    "name": "Srinivasa electrical and hardware",
-    "contact": "8344597596",
-    "location": "Sulur privu"
-  },
-  {
-    "name": "Iyappa agencies",
-    "contact": "9363148732",
-    "location": "Peelamedu"
-  },
-  {
-    "name": "Mahadev electrical and hardware",
-    "contact": "9019403295",
-    "location": "Vellalore"
-  },
-  {
-    "name": "Prakash electricals and hardwares",
-    "contact": "9597950073",
-    "location": "Pattanam"
-  },
-  {
-    "name": "Dhanalakshmi electricals and hardwares",
-    "contact": "9790147929",
-    "location": "Pattanam"
-  },
-  {
-    "name": "Mahadev electrical and hardware",
-    "contact": "7426849135",
-    "location": "Singanallur"
-  },
-  {
-    "name": "Saranam ayyappa electricals and hardwares",
-    "contact": "7305349049",
-    "location": "NSM Palayam"
-  },
-  {
-    "name": "Mahalakshimi electrical and hardware",
-    "contact": "9079034897",
-    "location": "Vada Madhurai"
-  },
-  {
-    "name": "Maa ambee electricals and hardwares",
-    "contact": "9119217497",
-    "location": "Vada Madhurai"
-  },
-  {
-    "name": "Saraswathi electricals and hardwares",
-    "contact": "8778653411",
-    "location": "NSM palayam"
-  },
-  {
-    "name": "Vijayalakshimi electricals and hardwares",
-    "contact": "9043202171",
-    "location": "Karamadai"
-  },
-  {
-    "name": "kaveri electricals and hardwares",
-    "contact": "6350690472",
-    "location": "Mettupalayam"
-  },
-  {
-    "name": "Meenatchi electricals and hardwares",
-    "contact": "9828861023",
-    "location": "Mettupalayam"
-  },
-  {
-    "name": "Jayaram electricals and hardwares",
-    "contact": "9789720959",
-    "location": "Somanur"
-  },
-  {
-    "name": "Heera electricals",
-    "contact": "7708533417",
-    "location": "Pollachi"
-  },
-  {
-    "name": "Rayar traders",
-    "contact": "9787849479",
-    "location": "Kalangal"
-  },
-  {
-    "name": "A.S.K Traders",
-    "contact": "9944494900",
-    "location": "Periyanayakan palayam"
-  },
-  {
-    "name": "Aadhavan Enterprises",
-    "contact": "9894884768",
-    "location": "Karumathampatti"
-  },
-  {
-    "name": "Amuthalakshimi electrical and hardware",
-    "contact": "9944120710",
-    "location": "Ramanathapuram"
-  },
-  {
-    "name": "Anantha corporation",
-    "contact": "9626660190",
-    "location": "Townhall"
-  },
-  {
-    "name": "Andavar electrical and hardware",
-    "contact": "9894603732",
-    "location": "Kovundampalayam"
-  },
-  {
-    "name": "Annai hardware &Electricals",
-    "contact": "7695923975",
-    "location": "Kovundampalayam"
-  },
-  {
-    "name": "Anugraha traders",
-    "contact": "9865754301",
-    "location": "Ramapattinam privu,Pollachi"
-  },
-  {
-    "name": "Ariyavar traders",
-    "contact": "9895989834",
-    "location": "Gopalapuram ,pollachi"
-  },
-  {
-    "name": "Arun hardware",
-    "contact": "9976773883",
-    "location": "Sundakamuthur"
-  },
-  {
-    "name": "Asv hardware and electrical",
-    "contact": "9597159888",
-    "location": "Vilankuruchi"
-  },
-  {
-    "name": "Av traders",
-    "contact": "9842684499",
-    "location": "Kombakadu puthur"
-  },
-  {
-    "name": "AVS Hardwares &Electricals",
-    "contact": "9842767633",
-    "location": "Rakki palayam"
-  },
-  {
-    "name": "Ayyasamy hardware &Electricals store",
-    "contact": "7010643881",
-    "location": "Madhampatti"
-  },
-  {
-    "name": "Balamurugan traders",
-    "contact": "9843145595",
-    "location": "Thennampalayam"
-  },
-  {
-    "name": "Best traders",
-    "contact": "9894205858",
-    "location": "Devampalayam"
-  },
-  {
-    "name": "Bharath pipe ttaders",
-    "contact": "9786670701",
-    "location": "Pollachi"
-  },
-  {
-    "name": "Bohar traders",
-    "contact": "9600904513",
-    "location": "uripallam puthur"
-  },
-  {
-    "name": "Champion enterprises",
-    "contact": "8883431122",
-    "location": "Samakulam"
-  },
-  {
-    "name": "Chinnadurrai traders",
-    "contact": "8220795583",
-    "location": "Coffee kadai"
-  },
-  {
-    "name": "Chinniah traders",
-    "contact": "9943209325",
-    "location": "Ganeshapuram"
-  },
-  {
-    "name": "City electrical",
-    "contact": "9942109703",
-    "location": "Chittambalam"
-  },
-  {
-    "name": "Deepam agencies",
-    "contact": "9842616022",
-    "location": "Kinathukadavu,pollachi"
-  },
-  {
-    "name": "Durga Hardwares",
-    "contact": "9842208481",
-    "location": "Kalampalayam"
-  },
-  {
-    "name": "G A S Enterprises",
-    "contact": "9500515769",
-    "location": "Vilankuruchi,kumaran nagar"
-  },
-  {
-    "name": "Ganapathi hardware",
-    "contact": "9600877968",
-    "location": "Anamalai,pollachi"
-  },
-  {
-    "name": "Gowri traders",
-    "contact": "984224476",
-    "location": "Negamam"
-  },
-  {
-    "name": "Gp&co",
-    "contact": "8925824400",
-    "location": "Kunnathupalayam"
-  },
-  {
-    "name": "gs ceramics",
-    "contact": "9047033731",
-    "location": "L&t Byapass rd,Madukkarai"
-  },
-  {
-    "name": "Jai krishna Electrical and hardware",
-    "contact": "9843450340",
-    "location": "Avarampalayam"
-  },
-  {
-    "name": "Jayadhachana electrical and hardware",
-    "contact": "",
-    "location": "Karamadai"
-  },
-  {
-    "name": "Jayalakshmi hardware",
-    "contact": "",
-    "location": "Karamadai"
-  },
-  {
-    "name": "Jothi hardware& electricald",
-    "contact": "9659499936",
-    "location": "Vadakipalayam,pollachi"
-  },
-  {
-    "name": "k g steels",
-    "contact": "8344544593",
-    "location": "Periyanayakan palayam"
-  },
-  {
-    "name": "K Mart",
-    "contact": "9659992727",
-    "location": "Papampatti privu"
-  },
-  {
-    "name": "K.R.P hardware",
-    "contact": "9626040004",
-    "location": "Andakapalayam"
-  },
-  {
-    "name": "Kaliamman traders",
-    "contact": "9842966822",
-    "location": "Pollachi"
-  },
-  {
-    "name": "KK Adhirai electricals and hardwares",
-    "contact": "",
-    "location": "Vadambacheri"
-  },
-  {
-    "name": "Konar traders",
-    "contact": "9865018549",
-    "location": "Vadakipalayam privu,pollachi"
-  },
-  {
-    "name": "Kumaran stores",
-    "contact": "9790490908",
-    "location": "Rangasamuthiram,pollachi"
-  },
-  {
-    "name": "Lakshmi agencies",
-    "contact": "9344374240",
-    "location": "Kunnathur"
-  },
-  {
-    "name": "M K B Traders",
-    "contact": "8072117275",
-    "location": "Marappalam"
-  },
-  {
-    "name": "M M electrical and hardware",
-    "contact": "9566188057",
-    "location": "Kurumbapalyam"
-  },
-  {
-    "name": "M.V hardware& electrical",
-    "contact": "8939194161",
-    "location": "Ganapathy"
-  },
-  {
-    "name": "Mahalakshimi agencies",
-    "contact": "9843503348",
-    "location": "Kalampalayam"
-  },
-  {
-    "name": "mahalakshimi electrical",
-    "contact": "9791848495",
-    "location": "Madampatti"
-  },
-  {
-    "name": "Mahalakshmi Electrical and hardware",
-    "contact": "7402072027",
-    "location": "Vettaikaranputhur,pollachi"
-  },
-  {
-    "name": "Mk electrical",
-    "contact": "9045456737",
-    "location": "Kovilpalyam"
-  },
-  {
-    "name": "Mohamed Noufil traders",
-    "contact": "",
-    "location": "Anamalai pollachi"
-  },
-  {
-    "name": "Ms Texway Traders",
-    "contact": "9894010751",
-    "location": "Papampatti privu"
-  },
-  {
-    "name": "N.K.S Traders",
-    "contact": "8925023808",
-    "location": "Nadupuni ,pollachi"
-  },
-  {
-    "name": "Narayanasamy electrical",
-    "contact": "9894514117",
-    "location": "irutupallam"
-  },
-  {
-    "name": "Nivas hardware",
-    "contact": "9865434441",
-    "location": "Perur"
-  },
-  {
-    "name": "Nivetha marketing",
-    "contact": "",
-    "location": "Ramanathapuram"
-  },
-  {
-    "name": "Noor traders",
-    "contact": "7598056907",
-    "location": "Anamalai,pollachi"
-  },
-  {
-    "name": "Np electricals",
-    "contact": "9994956427",
-    "location": "Ganesha puram"
-  },
-  {
-    "name": "Om Traders",
-    "contact": "9025299678",
-    "location": "Kangeyampalayam"
-  },
-  {
-    "name": "P P sarathy Stores",
-    "contact": "9500633859",
-    "location": "Kariyampalayam"
-  },
-  {
-    "name": "Pon hardwares",
-    "contact": "9894730344",
-    "location": "Sulur privu"
-  },
-  {
-    "name": "Ponalagi hardware",
-    "contact": "9597996631",
-    "location": "Ganapathy"
-  },
-  {
-    "name": "ponmani store",
-    "contact": "8248725117",
-    "location": "alandhurai"
-  },
-  {
-    "name": "Ponnusamy and company",
-    "contact": "",
-    "location": "Samalapuram"
-  },
-  {
-    "name": "Poornima agencies",
-    "contact": "9790377605",
-    "location": "Kangeyampalayam"
-  },
-  {
-    "name": "Power Electricals",
-    "contact": "9488875769",
-    "location": "Thevanurputhur ,pollachi"
-  },
-  {
-    "name": "Praveen&co",
-    "contact": "9791951569",
-    "location": "Jothipuram"
-  },
-  {
-    "name": "Radhakrishnan Hardware",
-    "contact": "9500854137",
-    "location": "Thamaraikulam,pollachi"
-  },
-  {
-    "name": "Raja Traders",
-    "contact": "9488150005",
-    "location": "Vadasendhur,pollachi"
-  },
-  {
-    "name": "Rasi electrical",
-    "contact": "",
-    "location": "Ondiputhur"
-  },
-  {
-    "name": "Ravi electrical",
-    "contact": "9965556221",
-    "location": "alandhurai"
-  },
-  {
-    "name": "Ravi electrical and hardware",
-    "contact": "9942452434",
-    "location": "Sirumugai"
-  },
-  {
-    "name": "Ridham traders",
-    "contact": "8870459630 S",
-    "location": "angampalayam colony,pollac"
-  },
-  {
-    "name": "RK Tiles and electricals",
-    "contact": "",
-    "location": "Pollachi"
-  },
-  {
-    "name": "Rm agencies",
-    "contact": "9894835391",
-    "location": "Irugur"
-  },
-  {
-    "name": "Rr electrical &hardwares",
-    "contact": "9842345055",
-    "location": "Andakapalyam"
-  },
-  {
-    "name": "S.K.M Electrical",
-    "contact": "9791501213",
-    "location": "Ondiputhur"
-  },
-  {
-    "name": "Sabari traders",
-    "contact": "9244444407",
-    "location": "Sundakamuthur"
-  },
-  {
-    "name": "Sakthi &Co",
-    "contact": "9715288904",
-    "location": "Kalapatti"
-  },
-  {
-    "name": "Samasthti traders",
-    "contact": "8148931282",
-    "location": "Chettipalyam"
-  },
-  {
-    "name": "Sara Traders",
-    "contact": "8760230005",
-    "location": "Thirumalaiyampalayam"
-  },
-  {
-    "name": "Saraswathi electricals and hardwares",
-    "contact": "9842258349",
-    "location": "Echanari"
-  },
-  {
-    "name": "Saraswathi traders",
-    "contact": "9095010856",
-    "location": "Vettaikaranputhur,pollachi"
-  },
-  {
-    "name": "Sas Electricals plumbing &hardware",
-    "contact": "9965833487",
-    "location": "Pollachi"
-  },
-  {
-    "name": "Sasthi electrical",
-    "contact": "",
-    "location": "Saravanampatti"
-  },
-  {
-    "name": "Selvanayaki electrical",
-    "contact": "9944027500",
-    "location": "Neelambur"
-  },
-  {
-    "name": "Senthoor murugan Traders",
-    "contact": "9566926911",
-    "location": "Malumichampatti"
-  },
-  {
-    "name": "Sethu traders",
-    "contact": "9626041414",
-    "location": "Thamarai kulam"
-  },
-  {
-    "name": "Shree electricals",
-    "contact": "9443977445",
-    "location": "Ettimadai"
-  },
-  {
-    "name": "Shree sivam trading",
-    "contact": "9994466184",
-    "location": "Sowripalayam privu"
-  },
-  {
-    "name": "Shree Vinayaka electrical and hardware",
-    "contact": "8344236394 t",
-    "location": "himmiyam palayam,Karamad"
-  },
-  {
-    "name": "Sigma hardware",
-    "contact": "9894760642",
-    "location": "Kinathukadavu,pollachi"
-  },
-  {
-    "name": "Siruvanai agencies",
-    "contact": "9842265356",
-    "location": "Karamadai"
-  },
-  {
-    "name": "Sivasakthi traders",
-    "contact": "9842727176",
-    "location": "Naduvapalayam"
-  },
-  {
-    "name": "Sivasakthi traders",
-    "contact": "9842727176",
-    "location": "Naduvalayam palayam"
-  },
-  {
-    "name": "SNA traders",
-    "contact": "8300191628",
-    "location": "Vilankuruchi,kalapatti rd"
-  },
-  {
-    "name": "SR traders",
-    "contact": "8593810662",
-    "location": "Ettimaadai"
-  },
-  {
-    "name": "Sree hari agencies",
-    "contact": "9894885370",
-    "location": "Pooluvampatti"
-  },
-  {
-    "name": "Sree kumaran electrical and hardware",
-    "contact": "7708736800",
-    "location": "Kottai privu"
-  },
-  {
-    "name": "Sree vasantha agencires",
-    "contact": "7402244151",
-    "location": "Sulur"
-  },
-  {
-    "name": "Sri andal Traderd",
-    "contact": "9952821030",
-    "location": "Annur"
-  },
-  {
-    "name": "Sri ayyanar Electrical",
-    "contact": "9715284567",
-    "location": "Samathur,pollachi"
-  },
-  {
-    "name": "Sri ayyapa electrical",
-    "contact": "8220937443",
-    "location": "Irugur"
-  },
-  {
-    "name": "Sri Bagavathi electrical and hardware",
-    "contact": "Marachikenpalayam ,Pollachi",
+export const dealersData: Dealer[] =[
+  {
+    "dealername": "RM AGENCIES",
+    "address": "No.6 Ondipudur, to, Irugur Rd, opposite to Canara Bank, Irugur, Coimbatore, Tamil Nadu 641103, India",
+    "area": "Ondipudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/XmJ4wbhUpWs2a3VV7"
+  },
+  {
+    "dealername": "VISHNU TRADERS",
+    "address": "1/186 A, Muthalipalayam Pirivu Avinashi, Road, Neelambur, Tamil Nadu 641407, India",
+    "area": "Neelambur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/PzpLqVxtdQ45f8B36"
+  },
+  {
+    "dealername": "SRINIVASA ELECTRICAL AND HARDWARE",
+    "address": "2/208-8, sulur raliway feeder road Kurumbapalayam, muthugoundan pudur post Sulur, pirivu, near LRT, Coimbatore, Tamil Nadu 641402, India",
+    "area": "Sulur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/b2fdpjFcFkibdb8b9"
+  },
+  {
+    "dealername": "SRI KUMARAN ELECTRICALS AND HARDWARES",
+    "address": "1/176-16, Avinashi Rd, OPP. LAKSHMI PETROL BUNK, Neelambur, Tamil Nadu 641062, India",
+    "area": "Neelambur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ooYfMkCsTBQsMbJE6"
+  },
+  {
+    "dealername": "SELVANAYAKI",
+    "address": "Neelambur bustand, lokesh bakery side, Avinashi Rd, NPS Nagar, Neelambur, Tamil Nadu 641062, India",
+    "area": "Neelambur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/k92GjHkBVhoXeU7G9"
+  },
+  {
+    "dealername": "P P sarathy hardwares & Electricals",
+    "address": "2/214, KARAYAMPALAYAM ROAD, DHANAM NAGAR, POST, Chinniyampalayam, Mylampatti, Coimbatore, Tamil Nadu 641048, India",
+    "area": "Mylampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/wvfNJfh3CVuCcAFDA"
+  },
+  {
+    "dealername": "SAKTHI &CO",
+    "address": "32HQ+669, Rathinam Nagar, near Annai Velankanni Church, Cheran ma Nagar, Kalapatti, Coimbatore, Tamil Nadu 641048, India",
+    "area": "Kalapatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
     "location": ""
   },
   {
-    "name": "Sri Balaji agencies",
-    "contact": "9965903660",
-    "location": "Karanampettai"
+    "dealername": "SRI AYYAPPA ELECTRICALS AND HARDWARES",
+    "address": "64, Varadharaja Puram Main Rd, Periyar Nagar, Chitra Nagar, Balan Nagar, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Balan Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/aCGFjFLRyXpqbUTN6"
+  },
+  {
+    "dealername": "SRI AMUTHALAKSHIMI HARDWARE",
+    "address": "108, Pankaja Mills Rd, Olymbus, Ramasamy Nagar, Ramanathapuram, Coimbatore, Tamil Nadu 641045, India",
+    "area": "Ramanathapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/QPvMZUKpfWkQkETx6"
+  },
+  {
+    "dealername": "MATHAJI ELECTRICALS AND HARDWARES",
+    "address": "205, Palakkad Main Road, Palakkad Main Road, Near Perumal Temple Madhukarai, Tamil Nadu 641107, India",
+    "area": "Madhukarai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/zAam1BrCEqNQAnLb6"
+  },
+  {
+    "dealername": "CHAMPION ENTERPRISES",
+    "address": "No 1 ramaraj nagar, Sathy Rd, Coimbatore, Kovilpalayam, Tamil Nadu 641107, India",
+    "area": "Kovilpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/pVnXL2cB2wBYCmLH9"
+  },
+  {
+    "dealername": "LAKSHIMI AGENCIES",
+    "address": "Kavi broiler,Kunnathur, Sathy Rd, Coimbatore, Tamil Nadu 641107, India",
+    "area": "Sathy Rd",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ZwsKaZNNN2MQDHJt9"
+  },
+  {
+    "dealername": "CHINAIA TRADERS",
+    "address": "53F4+3CF, Ganeshapuram, Tamil Nadu 641107, India",
+    "area": "Ganeshapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ayuS9sg2KaDVofPz5"
+  },
+  {
+    "dealername": "Mamta Electricals & Hardware",
+    "address": "D.No 158, Saravanampatti, Sathy Rd, near Ragam Cake point, Saravanampatti, Tamil Nadu 641653, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/C63aq1yDG4eRitPr7"
+  },
+  {
+    "dealername": "SRI MEENATCHI TRADERS",
+    "address": "14A/10, Vilankurichi Road, Periyar Nagar, Ram Lakshman Nagar, Masakali Palayam, Coimbatore, Tamil Nadu 641015, India",
+    "area": "Vilankurichi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/pCq6kA4b14DHW3wSA"
+  },
+  {
+    "dealername": "MATAJI ELECTRICAL AND HARDWARE",
+    "address": "63PQ+273, Jeewanagar, Annur, Tamil Nadu 641653, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "MAHALAKSHIMI ELECTRICAL AND HARDWARE",
+    "address": "64M5+5FJ, 11/51, near CSB Bank, Annur, Coimbatore, Tamil Nadu 641653, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "AGNI MARIAMMAN HARDWARES",
+    "address": "no.3/63E, AM COMPLEX, Road, near EB office, Annur, Kaduvettipalayam, Tamil Nadu 641659, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJR-w-eUn8qDsRAAAAMAQg2g0"
+  },
+  {
+    "dealername": "GANESHA ELECTRICALS",
+    "address": "Nagarthar nagar, Kangayam Rd, Nachipalayam, Tamil Nadu 641606, India",
+    "area": "Nachipalayam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "MARUTHI ELECTRICALS AND HARDWARES",
+    "address": "3CPR+MCW, Tiruppur - Kangayam Rd, Nachipalayam, Tamil Nadu 641606, India",
+    "area": "Nachipalayam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJsSA-gtsJqTsR4wDQomJtBMs"
   },
   {
-    "name": "Sri Balaji agencies",
-    "contact": "9443655299",
-    "location": "Alandhurai"
+    "dealername": "SK ELECTRICALS AND HARDWARES",
+    "address": "S Peryapalayam, 3/941, Uthukuli Rd, Tiruppur, Tamil Nadu 641607, India",
+    "area": "Uthukuli",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJJfGyV6oJqTsR8xBYs-dKBKI"
   },
   {
-    "name": "Sri Balaji electricals",
-    "contact": "",
-    "location": "Nallampalayam"
+    "dealername": "SURIYA ELECTRICALS AND HARDWARES",
+    "address": "499G+3CX, Tirupur - Vijayamangalam Rd, Mannarai, Tiruppur, Tamil Nadu 641607, India",
+    "area": "Mannarai",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJtxG6BdUHqTsR3oy0uijTqxc"
   },
   {
-    "name": "Sri ganapathy murugan",
-    "contact": "7305764848",
-    "location": "sitra main rd,kalapatti"
+    "dealername": "JAGATHAMBA ELECTRICALS AND HARDWARES",
+    "address": "38XV+M56, Alangadu, Karuvampalayam, Tiruppur, Tamil Nadu 641604, India",
+    "area": "Karuvampalayam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ftVLytvuXMUxhV2y9"
   },
   {
-    "name": "Sri jayadharachana electrical and hardware",
-    "contact": "9843554414",
-    "location": "Karamadai"
+    "dealername": "BALAJI ELECTRICALS AND HARDWARES",
+    "address": "Perumal Kovil, 2/18/3A, Somanur Road, Backside, Mangalam, Tamil Nadu 641663, India",
+    "area": "Somanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/5wdAvBJesTDSxp1H9"
   },
   {
-    "name": "Sri kaliamman traders",
-    "contact": "",
-    "location": "Kangeyampalayam"
+    "dealername": "PRAKASH ELECTRICALS AND HARDWARES",
+    "address": "X3J4+JH4, Parathiyar St, Pattanam, Tamil Nadu 641016, India",
+    "area": "Pattanam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/EhtHTSc5PNB6CrP96"
   },
   {
-    "name": "Sri KRD agency",
-    "contact": "8778729598",
-    "location": "Onnipalayam privu"
+    "dealername": "MAHADEV ELECTRICAL AND HARDWARE",
+    "address": "X283+MCJ, Vellalore Rd, Kovai Mahalingapuram, Kallimadai, Coimbatore, Podanur, Tamil Nadu 641111, India",
+    "area": "Podanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Krishna hardware and electrical",
-    "contact": "9940819090",
-    "location": "Vellalur"
+    "dealername": "MARUTHAM HARDWARES",
+    "address": "146B, Sundakkamuthur Bypass Rd, Kurinji Garden, Selvapuram South, Selvapuram, Coimbatore, Tamil Nadu 641026, India",
+    "area": "Sundakkamuthur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/L5qSAuieQJ4e5CJE8"
   },
   {
-    "name": "Sri krishna traders",
-    "contact": "8921133139",
-    "location": "Meenakshipuram,Pollachi"
+    "dealername": "SRI SUNDAR ELECTRICALS AND HARDWARES",
+    "address": "2, Thaneer Pandhal, 433G, Mettupalayam Rd, Karamadai, Tamil Nadu 641104, India",
+    "area": "Karamadai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJ4xeQ2jXxqDsRG23H6LLyzCw"
   },
   {
-    "name": "Sri Krishna traders",
-    "contact": "7639955955",
-    "location": "Ramachettipalayam"
+    "dealername": "ESWARA AGRO",
+    "address": "87, Golf Club Rd, Rajiv Gandhi Nagar, SIDCO MALUMACHAMPATTI, Tamil Nadu 641050, India",
+    "area": "Malumachampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/P3aZ8QmiNqdvsina6"
   },
   {
-    "name": "Sri kumaran electricals",
-    "contact": "9943061566",
-    "location": "Pilliyampalayam"
+    "dealername": "SWATHI STEELS",
+    "address": "15/97, Coimbatore Mettupalayam Rd, near Chandra Honda Periyanaickenpalayam, Periyanaickenpalayam, Tamil Nadu 641020, India",
+    "area": "Periyanaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJX83BdjfxqDsRIz19czG3Q7w"
   },
   {
-    "name": "Sri kumaran hardware",
-    "contact": "9486385150",
-    "location": "Vilankuruchi"
+    "dealername": "PRAVEEN &CO",
+    "address": "Praveen & co 77, opposite Immaculate International School (CBSE, Pioneer Nagar, Veerapandi Pirivu, Coimbatore, Tamil Nadu 641047, India",
+    "area": "Veerapandi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/rEaygFnHH5JsJtbKA"
   },
   {
-    "name": "Sri kumaran hardware",
-    "contact": "9865413399",
-    "location": "Neelambur"
+    "dealername": "SRI RAYARA TRADERS",
+    "address": "242Q+P9C, Kalangal, Tamil Nadu 641402, India",
+    "area": "Kalangal",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/EBqCqNSuHiJ9uoRB7"
   },
   {
-    "name": "Sri kumaran hardware",
-    "contact": "",
-    "location": "Panampatti"
+    "dealername": "RASI HARDWARES",
+    "address": "2286, Trichy Rd, near Nellai muthu vilas sweets, Ellammal Layout, Ondipudur, Coimbatore, Tamil Nadu 641016, India",
+    "area": "Ondipudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/6feCBsgvkikDURS57"
   },
   {
-    "name": "Sri mahalakshimi traders",
-    "contact": "9965224933",
-    "location": "Appanaickenpatti"
+    "dealername": "PRIYA HARDWARES",
+    "address": "Vijalakshmi Complex, Ganapathy, Coimbatore, Tamil Nadu 641006, India",
+    "area": "Ganapathy",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/mjvvbdGvMNAokhXX9"
   },
   {
-    "name": "Sri meenatchi traders",
-    "contact": "9952566363",
-    "location": "Masakalipalayam"
+    "dealername": "DEVI AGENCIES",
+    "address": "MIG- 2962 CWC Road, near sree sai store, Gandhimaa Nagar, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Gandhimaa Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJPWwQbp1ZqDsR-PEGk6YUUaQ"
   },
   {
-    "name": "Sri mookambiga traders",
-    "contact": "9698894514",
-    "location": "Eripatti,pollachi"
+    "dealername": "JAI KRISHNA HARDWARES",
+    "address": "69c, S Street Number 5, KR Puram, Avarampalayam, Illango Nagar, Coimbatore, Tamil Nadu 641006, India",
+    "area": "Avarampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Zk1qhARKJ9kWCWCK8"
   },
   {
-    "name": "Sri Murugan hardware",
-    "contact": "9080809198",
-    "location": "Kinathukadavu,pollachi"
+    "dealername": "BINNY TRADERS",
+    "address": "34, Avinashi Rd, Avarampalayam, Rajagopal Layout, Krishnarayapuram, Illango Nagar, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Krishnarayapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJPflpmTFYqDsRphVEPW0nE7M"
   },
   {
-    "name": "Sri Ram Agro",
-    "contact": "7373144477",
-    "location": "Negamam ,Pollachi"
+    "dealername": "RAJASTHAN ELECTRICALS AND HARDWARES",
+    "address": "422C+9M6, Sathy Rd, Vaiyapuri Nagar, Kurumbapalayam SSKulam, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Kurumbapalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJM1h-VS74qDsR4NAWjGDG7Ik"
   },
   {
-    "name": "Sri ram Hardware & Electricals",
-    "contact": "9789250444",
-    "location": "Kangeyam palayam"
+    "dealername": "BEST TRADERS",
+    "address": "42MP+4HG, Kovilpalayam, Tamil Nadu 641107, India",
+    "area": "Kovilpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJOd7T_X75qDsR4cMvWfE9Nkk"
   },
   {
-    "name": "Sri Sai agencies",
-    "contact": "8870029291",
-    "location": "Shanthi medu"
+    "dealername": "CHINNAIA TRADERS",
+    "address": "53F4+3C6, Ganeshapuram, Tamil Nadu 641107, India",
+    "area": "Ganeshapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/5GUbHf8FGfy8PRuP6"
   },
   {
-    "name": "Sri sakthivel murugan electrical &Hardwares",
-    "contact": "9750414414",
-    "location": "Power house,Somanur"
+    "dealername": "SRI SAI PIPES AND SANITARY",
+    "address": "No- 82, Patel Rd, Ram Nagar, Coimbatore, Tamil Nadu 641009, India",
+    "area": "Ram Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJoQ1neo9ZqDsRzLEm13QJzqM"
   },
   {
-    "name": "Sri saraswathi traders",
-    "contact": "",
-    "location": "Kinathukadavu,pollachi"
+    "dealername": "KPR HARDWARES",
+    "address": "3/9A, Housing, Coimbatore, Tamil Nadu 641024, India",
+    "area": "Sundarapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJ1acSNTdaqDsRZbBOcgyS8zg"
   },
   {
-    "name": "Sri siddhammal traders",
-    "contact": "9843161761",
-    "location": "Kg school ,annur"
+    "dealername": "SENTHUR MURUGAN TRADERS",
+    "address": "W2X3+F6H, Podanur Rd, Anbu Nagar, Coimbatore, Podanur, Tamil Nadu 641023, India",
+    "area": "Podanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJeZoLNnNaqDsRyNTDzxQR0RM"
   },
   {
-    "name": "Sri sundar Electricals and hardwares",
-    "contact": "9842653998",
-    "location": "Karamadai"
+    "dealername": "SHAMSTI TRADERS",
+    "address": "Bus Stop, 1/862, Podanur Rd, JJ Nagar, Malumichampatti, Coimbatore, Tamil Nadu 641050, India",
+    "area": "Malumichampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/CW5U2ybcXhRmJFTG8"
   },
   {
-    "name": "Sri thirumoorthy electrical and hardware",
-    "contact": "9842582477",
-    "location": "Madhampatti"
+    "dealername": "SELVANAYAKI TRADERS",
+    "address": "38(1/2), R.S Complex, Siruvani Main Road, PO), opp. Bharat Pertol Pump, Pooluvapatti, Tamil Nadu 641101, India",
+    "area": "Pooluvapatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Z5sKbfptKWMfjcg76"
   },
   {
-    "name": "Sri velan traders",
-    "contact": "9087824026",
-    "location": "Kalangal"
+    "dealername": "PON MANI STORES",
+    "address": "XR63+872, Coimbatore, Pudur, Tamil Nadu 641101, India",
+    "area": "Pudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/27tHC3tD18bDNRyr5"
   },
   {
-    "name": "Sri velavan electrical",
-    "contact": "9994443420",
-    "location": "Kariyampalyam"
+    "dealername": "NATIONAL SALES CORPORATION",
+    "address": "61, Kattoor Main, Ram Nagar, Katoor, Coimbatore, Tamil Nadu 641009, India",
+    "area": "Kattoor",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/eJ9xGnAiZveVvaW1A"
   },
   {
-    "name": "Sri Vinayak agencies",
-    "contact": "8870782876",
-    "location": "Kangeyampalayam"
+    "dealername": "ANANTHA CORPORATION",
+    "address": "Sahara Decorators, Mill Road, Mania Thottam, Town Hall, Coimbatore 641001, India",
+    "area": "Town Hall",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/61veeQZmAxnhBmop8"
   },
   {
-    "name": "Sri vishnu traders",
-    "contact": "9843829222",
-    "location": "Mudhalipalayam privu"
+    "dealername": "ANKAAL MARKETING",
+    "address": "32, Mill Rd, Town Hall, Coimbatore, Tamil Nadu 641001, India",
+    "area": "Town Hall",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/61veeQZmAxnhBmop8"
   },
   {
-    "name": "Srp hardware",
-    "contact": "9092964411",
-    "location": "Kalampalayam"
+    "dealername": "PREMA ENTERPRISES",
+    "address": "2WGR+9V8, Sathy Rd, near Corporation School Street, Saravanampatti, Coimbatore, Tamil Nadu 641011, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJfYQvOuhYqDsRoxQ7u2EjVBs"
   },
   {
-    "name": "SS traders",
-    "contact": "8148125416",
-    "location": "Madhukarai"
+    "dealername": "SRI KRISHNA HARDWARES",
+    "address": "2, NGGO Colony Rd, Teachers Colony, K. Vadamadurai, Thudiyalur, Tamil Nadu 641022, India",
+    "area": "Thudiyalur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/yYm2mr9C5VmNP2Cj6"
   },
   {
-    "name": "Supreme electrical",
-    "contact": "",
-    "location": "Pattanam bypass"
+    "dealername": "SARASWATHI ELECTRICALS AND HARDWARES",
+    "address": "4D, Union Rd, north, Narasimhanaickenpalayam, Tamil Nadu 641031, India",
+    "area": "Narasimhanaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/3N5oG4jfbxbCRmQp6"
   },
   {
-    "name": "Suriya enterprises",
-    "contact": "9688811917",
-    "location": "Pollachi"
+    "dealername": "JAI BHAGAVATHI ELECTRICALS AND HARDWARES",
+    "address": "25CH+5RR, 1460, Nagapattinam - Coimbatore - Gundlupet Hwy, Karanampettai, Tamil Nadu 641401, India",
+    "area": "Karanampettai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/BwLnVGBF4GvLJSCR9"
   },
   {
-    "name": "Swathi Steels and hardwares",
-    "contact": "9843220211",
-    "location": "Periyanayakan palayam"
+    "dealername": "SIRUVANI AGENCIES",
+    "address": "28-1, West Car Street, Karamadai, Tamil Nadu 641104, India",
+    "area": "Karamadai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJiXgGYgDvqDsRDlpGu8rVcug"
   },
   {
-    "name": "The navrang electrical and hardware",
-    "contact": "9894156589",
-    "location": "chinthamaniputhur"
+    "dealername": "VIJAYALAKSHIMI ELECTRICALS AND HARDWARES",
+    "address": "6XR6+53F, Main Road, Karamadai, Mettupalayam, Karamadai, Tamil Nadu 641104, India",
+    "area": "Karamadai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJT1GPjCvuqDsR-b44WH1WZMc"
   },
   {
-    "name": "Thirumalai agencies",
-    "contact": "9865526666",
-    "location": "Kinathukadavu,pollachi"
+    "dealername": "SRI MAHA GANAPATHY ELECTRICALS AND HARDWARES",
+    "address": "SRRI MAGA GANAPATHY ELECTRICALS & H, 12/85, Mettupalayam Rd, Bombay Nagar, Narasimhanaickenpalayam, Coimbatore, Tamil Nadu 641031, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/HmDWaSNNvZcTxJHt9"
   },
   {
-    "name": "Thirumalai traders",
-    "contact": "9842050432",
-    "location": "Vadakipalayam,pollachi"
+    "dealername": "MAA AMBEE ELECTRICALS AND HARDWARES",
+    "address": "NVK Complex, 2/275, Pannimadai Rd, Dhamu Nagar, Appanaickenpalayam, Coimbatore, Tamil Nadu 641017, India",
+    "area": "Appanaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/PxTfAdAqAsTJtLWbA"
   },
   {
-    "name": "V.G enterprises",
-    "contact": "9578743570 t",
-    "location": "himmiyam palayam,Karamad"
+    "dealername": "SRI POOJA ELECTRICALS AND HARDWARES",
+    "address": "19, Kalapatti Main Rd, Nehru Nagar West, Coimbatore, Tamil Nadu 641048, India",
+    "area": "Kalapatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJS4Prbf9XqDsRsA1NU_Kmev8"
   },
   {
-    "name": "Vaari traders",
-    "contact": "9944932322",
-    "location": "Vilankuruchi"
+    "dealername": "SURIYA STORES",
+    "address": "Chinniyampalayam, Chinniyampalayam, Tamil Nadu 641048, India",
+    "area": "Chinniyampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJq6qqqjtWqDsR_STsvR_jlJo"
   },
   {
-    "name": "Vengadeshwara enterprices",
-    "contact": "9842215509",
-    "location": "Avarampalayam"
+    "dealername": "SRI THANGAM TRADERS",
+    "address": "NO.5, Saraswathi Complex, opposite Palladam, Minn Nagar, Palladam, Tamil Nadu 641664, India",
+    "area": "Palladam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJO94yph6rqTsRaXw96NvoNmI"
   },
   {
-    "name": "Vibin agencies",
-    "contact": "",
-    "location": "Sundarapuram"
+    "dealername": "JAI BALAJI ELECTRICALS AND HARDWARES",
+    "address": "105,Babycomplex,Annanagar,Coimbator, SH 163, opp. Sanjiv Nursing Home, Annanagar, Palladam, Tamil Nadu 641664, India",
+    "area": "Palladam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJS1RFOO-rqTsRuvNGyfUvwFE"
   },
   {
-    "name": "Vilva electrical",
-    "contact": "9360019115",
-    "location": "Shanthi medu"
+    "dealername": "SRI VETRI VELAVAN TRADERS",
+    "address": "245P+6RX, Coimbatore, Tamil Nadu 641402, India",
+    "area": "Sulur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJfSLnXrRVqDsRiB2F0H_N9gY"
   },
   {
-    "name": "VMR agencies",
-    "contact": "8220174950",
-    "location": "Sowripalayam"
+    "dealername": "SRI BHAGAVATHI ELECTRICALS AND HARDWARES",
+    "address": "2/221-1 Near Railway Gate Pollachi Main Road, Post, Divansapudur, Pollachi, Tamil Nadu 642103, India",
+    "area": "Pollachi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJaXT9wFc_qDsRsD5nmpBQpZY"
   },
   {
-    "name": "Vishnu electrical and hardware",
-    "contact": "9952479727",
-    "location": "Othakalmandapam"
+    "dealername": "BHARATH PIPES",
+    "address": "26a, Market Rd, Vinayagar Kovil, Pollachi, Tamil Nadu 642001, India",
+    "area": "Pollachi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "KPR Hardwares",
-    "contact": "7402233233",
-    "location": "Sundarapuram"
+    "dealername": "MSK ENTERPRISES",
+    "address": "1/323A, Kovai Main Road Kovilpalayam, Pollachi, Kovilpalayam, Tamil Nadu 642110, India",
+    "area": "Pollachi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJcxR36mNJqDsRxh9GvZ9W47g"
   },
   {
-    "name": "Eswara agro engineering",
-    "contact": "",
-    "location": "Malumichampatti"
+    "dealername": "SREE AYYAPPA AGENCIES",
+    "address": "40, Masakalipalayam Rd, Hopes, Balan Nagar, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Masakalipalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJMdoziYNXqDsRWqlYvKAhVgg"
   },
   {
-    "name": "Friends electricals and hardwares",
-    "contact": "8122360477",
-    "location": "Irugur"
+    "dealername": "SRI SARAVANA TRADERS",
+    "address": "54, Lalbahadur Nagar, Lakshmipuram, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Lakshmipuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Agni mariamman",
-    "contact": "9965668777",
-    "location": "Kaduvetti palayam"
+    "dealername": "SAI PIPES AND SANITARY",
+    "address": "119, Patel Rd, Ram Nagar, Coimbatore, Tamil Nadu 641009, India",
+    "area": "Ram Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Gem hardwares",
-    "contact": "",
-    "location": "Othakalmandapam"
+    "dealername": "RAMDEV ELECTRICAL AND HARDWARE",
+    "address": "SATHY MAIN ROAD,KURUMBAPALAYAM, Coimbatore, Tamil Nadu 641107, India",
+    "area": "Kurumbapalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJo155p6JZqDsRofBxdp8HBzE"
   },
   {
-    "name": "Ss electricals",
-    "contact": "",
-    "location": "Velanthapalayam"
+    "dealername": "SREE MAHADEV ELECTRICAL AND HARDWARE",
+    "address": "370, Trichy Rd, Agraharam, Singanallur, Coimbatore, Tamil Nadu 641005, India",
+    "area": "Singanallur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJtf94hGn2qDsR6O0xwALO2vI"
   },
   {
-    "name": "Tharani electricals and hardwares",
-    "contact": "9842571195",
-    "location": "Singanallur"
+    "dealername": "S CHINNA DHURAI TRADERS",
+    "address": "32W9+QQR, Kovai Rd, VGP Prem Nagar, Saravanampatti, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJX4M_US74qDsRuPIETjdC4fQ"
   },
   {
-    "name": "Kannan electricals and hardwares",
-    "contact": "",
-    "location": "Kk savadi"
+    "dealername": "GANAPATHY ELECTRICALS AND HARDWARES",
+    "address": "No. 1, 1st floor, Ganapathy Complex, A1, FC road, Gandhimaa Nagar, Peelamedu, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Ganapathy",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJRXARJhlYqDsRxZCjnL5BkuU"
   },
   {
-    "name": "Sri Velmurugan hardwares",
-    "contact": "",
-    "location": "Pollachi"
+    "dealername": "SRI JAYARAM HARDWARES",
+    "address": "35MP+28G, Bharathiyar Nagar, Somanur, Tamil Nadu 641668, India",
+    "area": "Somanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJN-6RKQD_qDsRFMvEATES3HE"
   },
   {
-    "name": "Chandru &co",
-    "contact": "9842248315.00",
-    "location": "Pollachi"
+    "dealername": "THARINI HARDWARES",
+    "address": "84, brindhavan thottam, Vellore road, singanallur, ELGI Nagar, Vellalore, Tamil Nadu 641005, India",
+    "area": "Vellalore",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJGWgnFT9XqDsRD2Ri8FWu7xQ"
   },
   {
-    "name": "A.K SONS hardware",
-    "contact": "9629164390",
-    "location": "Sarada mill rd,podanur"
+    "dealername": "SRI AYYAPPA AGENCIES",
+    "address": "87, Masakalipalayam Rd, Hopes, Balan Nagar, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Masakalipalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "All Win Pipe agencies",
-    "contact": "7667417300",
-    "location": "Madukkarai ,kurumbapalayam privu"
+    "dealername": "S CHINNADHURAI TRADERS",
+    "address": "17a Saravanampatti ,Kappikadai, Bus Stop, VGP Prem Nagar, Saravanampatti, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Anbu steels",
-    "contact": "6383214638",
-    "location": "Sidco"
+    "dealername": "SHREE VASANTHA AGENCIES",
+    "address": "36/1, Trt Business Center, Trichy Rd, Ranganathapuram, Sulur, Tamil Nadu 641402, India",
+    "area": "Sulur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJw2nCFtJVqDsRwuL9dxhz898"
   },
   {
-    "name": "Arun Kumaran electrical and hardware",
-    "contact": "8870145662",
-    "location": "Vellanaipatti"
+    "dealername": "AAI MATAJI ELECTRICAL AND HARDWARE",
+    "address": "3/131, Allikaranpalayam, Annur, Tamil Nadu 641653, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Bharath traders",
-    "contact": "9842368667",
-    "location": "Annur"
+    "dealername": "SEETHA ELECTRICALS AND HARDWARES",
+    "address": "W232+W8J, Guruvayur Nagar, Malumichampatti, Tamil Nadu 641050, India",
+    "area": "Malumichampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJA2Tqd5haqDsRAAAAMAqm6i4"
   },
   {
-    "name": "Bhavani electricals",
-    "contact": "9843852975",
-    "location": "Chettipalyam rd,podanur"
+    "dealername": "SREE AMMAN HARDWARES",
+    "address": "39/105,KOVAI ROAD, OPP POLICE STATION, ANNUR, COIMBATORE, Annur, Tamil Nadu 641653, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJxQZRZAD9qDsR7tdyrc-BYEo"
   },
   {
-    "name": "Buildec hardware",
-    "contact": "7092014000",
-    "location": "Sundarapuram"
+    "dealername": "ASK TRADERS",
+    "address": "S.F.319/E, 1, Mettupalayam Rd, opp. Pricol Plant, Periyanaickenpalayam, Tamil Nadu 641020, India",
+    "area": "Periyanaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJBwlvBgDxqDsRcf1-XbnzgeM"
   },
   {
-    "name": "Dhanalakshimi electrical and hardware",
-    "contact": "9976038868",
-    "location": "Sowripalayam"
+    "dealername": "SHYAM ELECTRICALS AND HARDWARES",
+    "address": "7/45, AVINASHI ROAD, RAMPURAM NAGAR, NEAR SF SONIC BATTERIES, GOLDWINS, Goldwins, Karuparampalayam Pirvu, Coimbatore, Tamil Nadu 641014, India",
+    "area": "Ram Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJLRQBHM9XqDsRLG7n4POao0I"
   },
   {
-    "name": "Dhiviyam traders",
-    "contact": "9994963885",
-    "location": "Puliyakulam"
+    "dealername": "SNA TRADERS",
+    "address": "430, Avinashi Road, Avinashi Road, Near kathir College, Nilambur, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Nilambur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Divya hardware",
-    "contact": "9994536662",
-    "location": "kuniyamuthur"
+    "dealername": "SREE MURUGAPPA ELECTRICALS AND HARDWARES",
+    "address": "SF NO : 68, 3A PART, near Sri Murugan Nagar Road, T-Nagar, Rathinagiri Nagar, Villankurichi, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Villankurichi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "E-Zone",
-    "contact": "8056674797",
-    "location": "Podanur"
+    "dealername": "BHAKIYALAKSHIMI ELECTRICALS AND HARDWARES",
+    "address": "Gandhi Medha Sadan, Devangapet Street Number 2, Sukrawar Pettai, R.S. Puram, Coimbatore, Tamil Nadu 641001, India",
+    "area": "R.S. Puram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "ganapathy hardware",
-    "contact": "9698630006",
-    "location": "Chettipalyam rd,Echanari"
+    "dealername": "MS TRADERS",
+    "address": "3/178-C, Nadupalayam Rd, Pattanam, Coimbatore, Tamil Nadu 641006, India",
+    "area": "Pattanam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJWxz8LtZWqDsRAhVt6DGf_HA"
   },
   {
-    "name": "gifta hardware",
-    "contact": "9865258096",
-    "location": "kuniyamuthur"
+    "dealername": "DEEPAM AGENCIES",
+    "address": "2, 168-4 ward no, 2, Pollachi Main Rd, Kinathukadavu, Tamil Nadu 642109, India",
+    "area": "Kinathukadavu",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJCW3SsFZPqDsRMugiDUmtTa4"
   },
   {
-    "name": "Gowtham electrical and hardware",
-    "contact": "9003443949",
-    "location": "sundarapuram"
+    "dealername": "SETHU TRADERS",
+    "address": "SETHU STEELS, Kovai Main Road, Coimbatore, Thamaraikulam, Tamil Nadu 642109, India",
+    "area": "Thamaraikulam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Indira Trading Company",
-    "contact": "8754708061",
-    "location": "Kangeyampalayam"
+    "dealername": "KRESANT ELECTRICALS AND HARDWARES",
+    "address": "M244+V2J, Kamatchi Amman Kovil St, Vinayagar Kovil, Pollachi, Tamil Nadu 642001, India",
+    "area": "Pollachi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "ishwarya Electrical",
-    "contact": "9791786116",
-    "location": "Viswasapuram"
+    "dealername": "BHAVANI ELECTRICALS AND HARDWARES",
+    "address": "1/142-12, 1/142-12, Kathir College Rd, NPS Nagar, ANNA NAGAR, Neelambur, Tamil Nadu 641048, India",
+    "area": "Neelambur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": "https://www.google.com/maps/place/?q=place_id:ChIJ6esAIL5XqDsRdPliCvedgrk"
   },
   {
-    "name": "K.s Palani",
-    "contact": "",
-    "location": "Chettipalyam rd,podanur"
+    "dealername": "NN TRADERS",
+    "address": "Veriyampalayam, Veeriampalayam, Tamil Nadu 641048, India",
+    "area": "Veeriyampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Kavin electrical and hardware",
-    "contact": "9842226444",
-    "location": "Vellalur"
+    "dealername": "GK TRADERS",
+    "address": "7/2A TOTTIPALAYAM ROAD, PO, Civil Aerodrome Post, Karuparampalayam Pirvu, Coimbatore, Tamil Nadu 641014, India",
+    "area": "Karuparampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Kavin traders",
-    "contact": "9788611919",
-    "location": "Saibaba colony"
+    "dealername": "POOJA SHREE HARDWARES",
+    "address": "4/17,Lenin street, Rayappa Nagar, Kalapattila, Road, T-Nagar, Villankurichi, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Kalapatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "KBS TRADERS",
-    "contact": "9842276766",
-    "location": "Kamachipuram"
+    "dealername": "VAARI TRADERS",
+    "address": "29, Kumaran Nagar, Vishweshwara Nagar, Cheran ma Nagar, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Cheran Ma Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Kg Electrical and hardware",
-    "contact": "8754682400",
-    "location": "Nggo colony"
+    "dealername": "ANDAVAR ELECTRICALS AND HARDWARES",
+    "address": "Tanjavore Bus Stand, SIHS Colony Rd, TNHB Housing Unit, Nethaji Puram, Coimbatore, Tamil Nadu 641014, India",
+    "area": "Nethaji Puram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "KRD Enterprises",
-    "contact": "9942789999",
-    "location": "Kovaiputhur"
+    "dealername": "SUPREME HARDWARES",
+    "address": "23 L & T BYEPASS ROAD, Kamachipuram, Ondipudur, Coimbatore, Tamil Nadu 641016, India",
+    "area": "Ondipudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Ksr enterprises",
-    "contact": "9043352871",
-    "location": "Kk pudhur,Kavundampalayam"
+    "dealername": "JAYAM ELECTRICALS AND HARDWARES",
+    "address": "4/25 new subbu complex, Kalangal Rd, Sulur, Tamil Nadu 641402, India",
+    "area": "Sulur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Lakshimi electricals",
-    "contact": "",
-    "location": "Selvapuram"
+    "dealername": "VENGADESWARA ELECTRICAL AND HARDWARE",
+    "address": "46, Shoba Nagar, Chintamani Nagar, Avarampalayam, Illango Nagar, Coimbatore, Tamil Nadu 641006, India",
+    "area": "Avarampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Lakshimi ram hardware",
-    "contact": "",
-    "location": "Kariyampalyam"
+    "dealername": "THANGANAYAKI TRADERS",
+    "address": "35FV+929, Samalapuram, Tamil Nadu 641663, India",
+    "area": "Samalapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Lakshmi agency",
-    "contact": "9894053437",
-    "location": "B.K puthur"
+    "dealername": "AV TRADERS",
+    "address": "354R+M3V, Kombakadu, Tamil Nadu 641668, India",
+    "area": "Kombakadu",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "LAKSHMI hardware",
-    "contact": "9944207697",
-    "location": "Sulur"
+    "dealername": "SIVASAKTHI TRADERS",
+    "address": "26RV+FJ6, Naduvelyampalayam, Tamil Nadu 641663, India",
+    "area": "Naduvelyampalayam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Leo Traders",
-    "contact": "9597956007",
-    "location": "Udiyam palayam"
+    "dealername": "OM TRADERS",
+    "address": "Shivan Building, Trichy Rd, Kangayampalayam, Coimbatore, Tamil Nadu 641401, India",
+    "area": "Kangayampalayam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "M.k electricals",
-    "contact": "9791954885",
-    "location": "Vilankuruchi"
+    "dealername": "MAHADEV TILES AND ELECTRICALS",
+    "address": "Sulur, 2ND FLOOR, Ranga electronic, Coimbatore, Sulur, Tamil Nadu 641402, India",
+    "area": "Sulur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Madan electrical and hardware",
-    "contact": "9842226651",
-    "location": "kuniyamuthur"
+    "dealername": "PRANAV STEELS",
+    "address": "VXX4+9XJ, Palathurai Rd, Anbu Nagar, Madukkarai, Tamil Nadu 641105, India",
+    "area": "Madukkarai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Mahadev electrical and hardware",
-    "contact": "8668049978",
-    "location": "Sidco"
+    "dealername": "ESWARA AGRO L",
+    "address": "SIDCO Private Industrial Estate, 394/2, CHETTIPALAYAM ROAD, Rajiv Gandhi Nagar, THIRUMALAI NAGAR, Malumichampatti, Tamil Nadu 641050, India",
+    "area": "Malumichampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Mani electricals",
-    "contact": "9952853697",
-    "location": "Kk pudhur"
+    "dealername": "PALANISAMY ELECTRICALS AND HARDWARES",
+    "address": "GUHAN TOWERS, 175/1, Mettupalayam Rd, Cheran Colony, Thudiyalur, Coimbatore, Tamil Nadu 641034, India",
+    "area": "Thudiyalur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Ms Hardware",
-    "contact": "9043643699",
-    "location": "Irugur"
+    "dealername": "NANJUDESWARA HARDWARES",
+    "address": "Then, thirupathi four road, Mettupalayam, Tamil Nadu 641302, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Nandhi corporation",
-    "contact": "9043973673",
-    "location": "Ganapathy"
+    "dealername": "SANDEEPAN ELECTRICALS AND HARDWARES",
+    "address": "Jadayampalayam, Mettupalayam, Tamil Nadu 641302, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Nvs Hardwares",
-    "contact": "9788383896",
-    "location": "Echanari"
+    "dealername": "KAVERI ELECTRICALS AND PLUMBING",
+    "address": "198, Sukrawarpet, Near Indian Bank, Town Hall, Coimbatore, Mettupalayam, Tamil Nadu 641301, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "R&R enterprises",
-    "contact": "9092137755",
-    "location": "Kovaiputhur"
+    "dealername": "VG ENTERPRISES",
+    "address": "6WQX+P9R, Tholampalayam Rd, Karamadai, Tamil Nadu 641104, India",
+    "area": "Karamadai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Rajalaksmi",
-    "contact": "8825983841",
-    "location": "Sidco"
+    "dealername": "SREE VELAVAN HARDWARES",
+    "address": "5/235 D , Opp to PowerHouse, Kariyampalayam, Annur, Tamil Nadu 641653, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Riddhi Siddhi electricals",
-    "contact": "9940453869",
-    "location": "Puliyakulam"
+    "dealername": "AADHAVAN ELECTRICALS AND HARDWARES",
+    "address": "SP Complex, Somanur Rd, karur vysya bank Somanur, Somanur, Karumathampatti, Tamil Nadu 641659, India",
+    "area": "Somanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sabari electrical and hardware",
-    "contact": "9942823235",
-    "location": "Ganesha puram"
+    "dealername": "RAMDEV HARDWARES",
+    "address": "34QF+8FV, Thennampalayam, Tamil Nadu 641407, India",
+    "area": "Thennampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sakthi hardwares",
-    "contact": "9566946943",
-    "location": "Ganesha puram"
+    "dealername": "SRI BALAMURUGAN TRADERS",
+    "address": "5/239, Annur Road, Post, Arasur, Thennampalayam, Tamil Nadu 641407, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sathya Balaji enterprises",
-    "contact": "9597430944",
-    "location": "Kk puthur"
+    "dealername": "SREE RENUGA ELECTRICALS AND HARDWARES",
+    "address": "327P+RWX, Kalapatti Main Rd, Sharp Nagar, Nehru Nagar West, Coimbatore, Tamil Nadu 641048, India",
+    "area": "Kalapatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Selvi electrical and hardware",
-    "contact": "7339642661",
-    "location": "Narasimanaiken palayam"
+    "dealername": "NAVADHURGA HARDWARES",
+    "address": "Ritha complex, Edayarpalayam Rd, Gandhi Maa Nagar, Pappampatti, Coimbatore, Tamil Nadu 641016, India",
+    "area": "Pappampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Senthil hardware",
-    "contact": "9442375972",
-    "location": "Sarada mill rd,podanur"
+    "dealername": "SREE RAKKI TRADERS",
+    "address": "Pappampatti road,kannampalayam pirivu, X3VP+6C8, Pallapalayam, Coimbatore, Kannampalayam, Tamil Nadu 641402, India",
+    "area": "Kannampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Shri bhuvana traders",
-    "contact": "9976032209",
-    "location": "Sidco"
+    "dealername": "MERIUM CORPORATION",
+    "address": "597, Cross Cut Rd, Near North Fly Over, Ranganathapuram, Gandhipuram, Coimbatore, Tamil Nadu 641012, India",
+    "area": "Ranganathapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SM&co",
-    "contact": "9698996969",
-    "location": "Kalampalayam"
+    "dealername": "PONNUSAMY &COMPANY",
+    "address": "Karugampalayam, Samalapuram, Manglam Road, Kombakadu, Tamil Nadu 641668, India",
+    "area": "Samalapuram",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sree Meenakshi Associates",
-    "contact": "9952015533",
-    "location": "Saravanampatti"
+    "dealername": "GUHAN TRADERS",
+    "address": "22C9+394, Varadharaja Puram Main Rd, Peelamedu, Lakshmipuram, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Peelamedu",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "sree sachasha electrical",
-    "contact": "7395868677",
-    "location": "Kalapatti rd"
+    "dealername": "YAMUNA STORES",
+    "address": "162, Vetrilaikara St, Peelamedu, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Peelamedu",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Brinda electrical and hardware",
-    "contact": "9943210120",
-    "location": "sakthi rd,kurumbapalayam"
+    "dealername": ".MAHALAKSHIMI ELECTRICAL AND HARDWARE",
+    "address": "2c, Thudiyalur - Saravanampatti Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri dhurgai amman steels",
-    "contact": "9677556405",
-    "location": "Sidco"
+    "dealername": "SHREE URUMANATHAR TRADERS",
+    "address": "First Floor, SMR Complex, 83/1, Thudiyalur - Saravanampatti Rd, near Reliance mart, Saravanampatti, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri krishna Hardware",
-    "contact": "7010326309",
-    "location": "Varatharajapuram"
+    "dealername": "TEXCITY HARDWARES",
+    "address": "7, 77, Athipalayam Rd, Fathima Nagar, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Fathima Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri murugan hardware",
-    "contact": "8925442436",
-    "location": "Kuniyamuthur rd"
+    "dealername": "LAKSHIMI PLUMBING",
+    "address": "4/1, ARIVOZHINAGAR,VILANKURUCHI,PO), 641 035, Arivoli Nagar, FCI Nagar, Saravanampatti, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri senthoor electrical and hardware",
-    "contact": "9894062350",
-    "location": "Narasimanaiken palayam"
+    "dealername": "PRATHIKSA TRADERS",
+    "address": "Door no 2A, SF No 101, Villankurichi Rd, Balaji Nagar, Saravanampatti, Villankurichi, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Saravanampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "sri Senthur murugan hardware",
-    "contact": "",
-    "location": "Ganapathy"
+    "dealername": "POOJA HARDWARE",
+    "address": "323Q+FGC, Kalapatti Main Rd, Nehru Nagar West, Coimbatore, Tamil Nadu 641014, India",
+    "area": "Kalapatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Vinayaka hardware",
-    "contact": "9894790335",
-    "location": "Vilankuruchi"
+    "dealername": "FRIENDS ELECTRICALS AND HARDWARES",
+    "address": "8, 306/8, Mahatma Gandhi Rd, Irugur, Tamil Nadu 641103, India",
+    "area": "Irugur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Srlvanayaki traders",
-    "contact": "9790476049",
-    "location": "pooluvapatti"
+    "dealername": "MS HARDWARES",
+    "address": "13X1B, Irugur Main Rd, Irugur, Coimbatore, Tamil Nadu 641103, India",
+    "area": "Irugur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Thangaraj traders",
-    "contact": "9677647549",
-    "location": "Vilankuruchi,kumaran nagar"
+    "dealername": "KSK TRADERS",
+    "address": "5W7P+J8P, Sowdambika Nagar, Samichettipalayam, Periyanaickenpalayam, Tamil Nadu 641047, India",
+    "area": "Periyanaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Tirupati electrical and hardware",
-    "contact": "9942892406",
-    "location": "Vellanaipatti"
+    "dealername": "SARANAM AYYAPPA",
+    "address": "19, Mettupalayam Rd, NARASHIMNAIKA, Pappanaickenpalayam, Coimbatore, Tamil Nadu 641031, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Vetrivel traders",
-    "contact": "9042122262",
-    "location": "Arasur"
+    "dealername": "AMUTHALAKSHIMI HARDWARE",
+    "address": "First Floor, 1770, Trichy Rd, near Chennai Mobiles, Olymbus, Ramasamy Nagar, Ramanathapuram, Coimbatore, Tamil Nadu 641045, India",
+    "area": "Ramanathapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "AVM AGENCIES",
-    "contact": "",
-    "location": "Palladam"
+    "dealername": "THAIYALNAYAGI HARDWARES",
+    "address": "HDFC Bank Ltd., 443, Ground Floor, Palakkad - Coimbatore Rd, opp. City Union Bank, Sai Garden, Kuniyamuthur, Coimbatore, Tamil Nadu 641008, India",
+    "area": "Kuniyamuthur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Al Anwar Industrial Stores",
-    "contact": "",
-    "location": "Unknown"
+    "dealername": "NATIONAL CORPORATION",
+    "address": "Kuniyamuthur, Coimbatore, Tamil Nadu 641008, India",
+    "area": "Kuniyamuthur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "AQUA EXCEL",
-    "contact": "",
-    "location": "Unknown"
+    "dealername": "VILVA ELECTRICAL AND HARDWARE",
+    "address": "5XG3+3Q9, Thiruvalluvar Nagar, Press Colony, Coimbatore, Tamil Nadu 641019, India",
+    "area": "Press Colony",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "CASH SALES",
-    "contact": "",
-    "location": "Unknown"
+    "dealername": "SRI MAHADEV ELECTRICAL AND HARDWARE",
+    "address": "10, Kovai Mahalingapuram, Mahalingapuram, Coimbatore, Tamil Nadu 641111, India",
+    "area": "Mahalingapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "BR LED",
-    "contact": "",
-    "location": "Unknown"
+    "dealername": "SAMASTI TRADERS",
+    "address": "1/862ABC, Podanur Rd, Seerakonar Nagar, Kallanagattupudhur, Coimbatore, Tamil Nadu 641050, India",
+    "area": "Podanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Kumaran Traders - Kanniyakumari",
-    "contact": "",
-    "location": "Unknown"
+    "dealername": "SRS &CO",
+    "address": "Kamarajar race cours 641017, VL Nagar, Coimbatore, Tamil Nadu 641015, India",
+    "area": "VL Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SRI KUMARAN PIPE AGENCIES",
-    "contact": "",
-    "location": "Unknown"
+    "dealername": "NATIONAL SALES",
+    "address": "XX73+CW8, vethalakara street, Pulakadu, Kuniyamuthur, Coimbatore, Tamil Nadu 641008, India",
+    "area": "Kuniyamuthur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "G.P& Co",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "TAJ ELECTRICALS AND HARDWARES",
+    "address": "XW8W+6JW, Amman Kovil Rd, Pulakadu, Kuniyamuthur, Coimbatore, Tamil Nadu 641008, India",
+    "area": "Kuniyamuthur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SRI ANDAL TRADERS",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "ASP ELECTRICALS AND HARDWARES",
+    "address": "4B, Marappan Saravana Nagar, Gokulam Colony, Kulathupalayam, Kovaipudur, Coimbatore, Tamil Nadu 641042, India",
+    "area": "Pudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Murugan Electrical And Hardwares - Annur",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "SUNDARAM ASSOCIATING",
+    "address": "Shop No.T-114, M.R. Complex, Mahatma Gandhi Rd, A-Block, Coimbatore, Tamil Nadu 641042, India",
+    "area": "Kovaipudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SRI SIDDAMMAL TRADERS",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "SRI KRISHNA TRADERS",
+    "address": "15, Main Rd, Ramachettypalayam, Indian Bank Colony, Sundakkamuthur, Coimbatore, Tamil Nadu 641010, India",
+    "area": "Sundakkamuthur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Mayon Plast",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "PONMANI STORES",
+    "address": "Pudur School, Pudur, Tamil Nadu 641101, India",
+    "area": "Pudur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "P.Gopalakrishnan - Annur",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "CHINNIYA TRADERS",
+    "address": "DIYASH PRODUCTIONS COMPLEX, near SBI BANK, Ganeshapuram, Tamil Nadu 641107, India",
+    "area": "Ganeshapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SSS Electricals & Hardwares - Annur ( New)",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "KRISHNA AGENCIES",
+    "address": "Besides Aashirwad Supermart, SF-545, Siruvani Main Rd, opposite Police station, Alanthurai, Coimbatore, Tamil Nadu 641101, India",
+    "area": "Alanthurai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sree Vaari Hardwares And Electricals - Annur",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "THIRUMOORTHY ELECTRICALS AND HARDWARES",
+    "address": "1/226 GK complex, Siruvani Main Rd, Madampatti, Tamil Nadu 641010, India",
+    "area": "Madampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "APS Hardwares & Steels",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "AARBEE AGENCIES",
+    "address": "411, Kamarajar Rd, Near Mani's Theater, Lakshmi Ammal Layout, Hope College, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Hope College",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Ajay Electrical & Infotech - Kariyampalyam",
-    "contact": "",
-    "location": "ANNUR"
+    "dealername": "MARUTHY TRADERS",
+    "address": "RK Apartments, Kamarajar Rd, Sri Ram Nagar, Alamelu Nagar, Uppilipalayam, Coimbatore, Tamil Nadu 641015, India",
+    "area": "Sri Ram Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "BBaaggaavvaatthhii AAmmmmaann EEnnggiinneeeerriinngg",
-    "contact": "",
-    "location": "AVINASHI"
+    "dealername": "SREE SABARI TRADERS",
+    "address": "475a, Akasthyar Nagar, RS Puram, Coimbatore, Tamil Nadu 641015, India",
+    "area": "RS Puram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "DHARSHAN TRADERS - AVINASHI",
-    "contact": "",
-    "location": "AVINASHI"
+    "dealername": "MAJISA ELECTRICALS AND HARDWARES",
+    "address": "2116, Trichy Rd, TNHB Housing Unit, Singanallur, Coimbatore, Tamil Nadu 641005, India",
+    "area": "Singanallur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Adhavan Enterprises",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "VGROW ENTERPRISES",
+    "address": "No.2/142, Podanur Main Rd, Mayilkal, Kurichi, Coimbatore, Tamil Nadu 641023, India",
+    "area": "Podanur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Agnimariamman Hardwares",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "VIBIN AGENCIES",
+    "address": "Sundarapuram, Coimbatore, Tamil Nadu 641024, India",
+    "area": "Sundarapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Balamurugan Traders - Arasur",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SS ELECTRICALS AND HARDWARES",
+    "address": "VX67+45W, 168B, Palathurai Rd, Nachipalayam, Tamil Nadu 641032, India",
+    "area": "Nachipalayam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Friends Electricals - Irugur",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "MS TEXWAY",
+    "address": "Bus stop Road, Pappampatti, Pirivu, opposite Canara Bank, Barathipuram, Kannampalayam, Coimbatore, Tamil Nadu 641103, India",
+    "area": "Kannampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Jai Krishna Electricals And Hardwares ( Ganapathy)",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "MARUTHI TRADERS",
+    "address": "2/88, Irugur, Tamil Nadu 641103, India",
+    "area": "Irugur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "K.R.P Hardwares - Andakkapalayam",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SRI VINAYAGA TRADERS",
+    "address": "18-26, Karanampettai - Karumathampatti Rd, Samalapuram, Tamil Nadu 641663, India",
+    "area": "Samalapuram",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Kumaran Agency - Neelambur",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "ASHAPURA ELECTRICALS AND HARDWARES",
+    "address": "MTP ROAD,BILLICHI VILLAGE, PERIYA, Mathampalayam, Coimbatore, Tamil Nadu 641019, India",
+    "area": "Mathampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Mayil Pipes",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SRI BHAVANI ELECTRICALS AND HARDWARES",
+    "address": "16, Nagapattinam - Coimbatore - Gundlupet Hwy, wellington bazaar, Coonoor, Chickadasampalayam, Tamil Nadu 641301, India",
+    "area": "Coonoor",
+    "district": "The Nilgiris",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Pon Hardwares",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "JAILAKSHIMI ELECTRICALS AND HARDWARES",
+    "address": "SRI AYYASAMY & CO 2/135, Ayyamapudur Privu, Otterpalayam Post, Mettupalayam Rd, Annur, Tamil Nadu 641653, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Pooja Hardwares And Electricals",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "AMJ HARDWARES",
+    "address": "W28V+Q47, Vignesh Park, Chettipalayam, Tamil Nadu 641201, India",
+    "area": "Chettipalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Raja Traders - Samalapuram",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "VIGNESH TRADERS",
+    "address": "4,Mettuppalayam road,Kavundampalayam, Koundampalayam, Coimbatore, Tamil Nadu 641030, India",
+    "area": "Kavundampalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sakthivelmurugan Steels Electricals Hard Wares",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "OHMLY TRADERS",
+    "address": "1/499C, Kothari Nagar, Sri Lakshmi Nagar, Thoppampatti Pirivu, K. Vadamadurai, Coimbatore, Tamil Nadu 641017, India",
+    "area": "Vadamadurai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SNA Traders",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SREE KUMARAN HARDWARE",
+    "address": "Kottai Pirivu, Mettupalayam Rd, Coimbatore, Tamil Nadu 641019, India",
+    "area": "Mettupalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "SRE MITHRAA ELECTRICALSS",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SARANAM AYYAPPA ELECTRICALS AND HARDWARES",
+    "address": "19/A, opposite to Alpha Gym, Ajantha Nagar, Indiranagar, Narasimhanaickenpalayam, Coimbatore, Tamil Nadu 641031, India",
+    "area": "Narasimhanaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Jayaram Hardwares - Somanur",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "FRIENDS ELECTRICALS",
+    "address": "2392+VWG, Mahatma Gandhi Rd, Irugur, Tamil Nadu 641033, India",
+    "area": "Irugur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Lakshmi Agency - Karumathampatti",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SRI VASANTHA AGENCIES",
+    "address": "36/2, Ranganathapuram, Sulur, Tamil Nadu 641402, India",
+    "area": "Sulur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Mahalakshmi Agencies- Somanur",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "VELAVAN TRADERS",
+    "address": "X4WQ+P5Q, Kalangal, Tamil Nadu 641402, India",
+    "area": "Kalangal",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Meenatchi Traders",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "VASANTHA AGENCIES",
+    "address": "GK COMPLEX- FCI MAIN ROAD GANDHIMMAANAGAR PEELAMEDU.COIMBATORE-641004, Sriram Nagar, Murugan Nagar, Coimbatore, Tamil Nadu 641004, India",
+    "area": "Peelamedu",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Srinivasa Electrical And Hardwares",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "DHANALAKSHMI ELECTRICALS AND HARDWARES",
+    "address": "Srinivasa Garden, Tamil Nadu 641016, India",
+    "area": "Srinivasa Garden",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Selvanayaki Electricals And Hardwares-Neelambur",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "MATHAJI ELECTRICAL AND HARDWARE",
+    "address": "12/71, Sathy Rd, Kovilpalayam, Tamil Nadu 641107, India",
+    "area": "Kovilpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Sri Selva Vinayaga Traders - Karumathampatti",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "APS TRADERS",
+    "address": "6/297H, opp. to INDIAN PETROL BUNK, MAYILKAL, COIMBATORE, Tamil Nadu 641653, India",
+    "area": "Mayilkal",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Venkateswara Enterprises",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "MAHALAKSHMI ELECTRICAL AND HARDWARE",
+    "address": "11/51,near csb bank, annur., Coimbatore, Annur, Tamil Nadu 641653, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Lamika Educational And Charitable Trust",
-    "contact": "",
-    "location": "AVINASHI ROAD"
+    "dealername": "SIVANANTHI HARDWARES",
+    "address": "VXWG+3C7, Ottakkalmandapam Rd, Tamil Nadu 641032, India",
+    "area": "Ottakkalmandapam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   },
   {
-    "name": "Vinayaga Traders",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Sakthi & Co (kalapatti) - New",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Bagavathi Traders - Thennampalayam",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "V.P.Electrical Works ( Peelamedu)",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "KTR Electricals & Hardwares - Vellanaipatti",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Sri Mahalakshmi Traders- Samalapuram",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Sri Saravana Enterprises - New",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Ganapathy Hardwares And Electricalss - Gaandhi Maanagar",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "SAP Electricals & Hardwares - Karumathampatti",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "NATIONAL TRADERS",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Mr.Nandhakumar ( Jayaram H/w -somanur)",
-    "contact": "",
-    "location": "AVINASHI ROAD"
-  },
-  {
-    "name": "Covai Enterprises",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "TRP TRADERS",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Venkateswara Modern Dairy Chemicals",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Koco & Koir Exports Private Limited",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Dhanvee Enterprises",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "M/s.JNC TEXTILES",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "CHETTIPALAYAM+PAPP+SELAKARASAL",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Balaji Hardwares & Electricals - Peedampalli",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "BBaallaajjii HHaarrddwwaarreess -- PPaappppaammppaattttii",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Lakshara Electricals & Hardware - Peedampalli",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Senthoor Murugan Traders ( Chettipalayam )",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Sree Iyyappa Traders - Vadasithur",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Sri Ayyanar Traders - Peedampalli",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Sri Kumaran Hardware & Electricals-Panappatti",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Sri Ramakrishna Vivekananda Electricals And Hardware",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "V R ELECTRICALS AND HARDWARES",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Thiru Traders (supreme Hardwrae)",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Magizhan Hardware & Electrical - Panapatti",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Shree Saraswathi Agencies",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "S.V. TRADERS",
-    "contact": "",
-    "location": "CBE OUTER"
-  },
-  {
-    "name": "Gem Electricals",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "KRK TRADER",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Praneez Traders",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Selva Kumar Electricals",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sivakumar & Co - Dharapuram",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sivakumar Trading ( Dharapuram)",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sri Bathrakaliamman Electricals - Therpathai",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Kaadaieswaran Electrical & Hardwares- Dharapuram",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sri Kothanur Equipments",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sri Makaliamman Traders - Govindapuram",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "SENTHUR MURUGAN ELECTRICALS & HARDWARES-PAINTS",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sri Velavan Electrical ( Poolavadi Privu)",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Tharun Traders - Alangiam",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Vijay Electricals - Dharapuram",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "YALINIYA TRADERS",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Bhuvanesh ( Pasumai Ele)",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "NEOLEX ELECTRICALS & AGENCIES (NEW)",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "SIVAM TRADERS - THOPPAMPATTI",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Aadan Traders",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Saravana Agencies - Palani",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "KADAIESWARAR TRADERS-PALANI",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "VEL TRADERS",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "SASTI VELAN ELECTRICALS & PLUMBING",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Mr. Durai - Mulanur",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Sri Lakshmi Traders - Kanakkampatti",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Safwan Traders - Melkaraipatti",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Amani Hardwares - Keeranur",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Naveena Traders",
-    "contact": "",
-    "location": "DHARAPURAM"
-  },
-  {
-    "name": "Aathi Ganesha Electricals",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Amman Electricals & Hardwares - D.N.Puthur",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Arun Hardwares Electricals - Poolankinar",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Dharun Traders - Reddiyar Madam",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Gokulam Traders",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "KKoommaalliiyyaarr TTrraaddeerrss",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Maruthi Electricals - Kodingiam Rd ( Erisanampatti)",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Murali- D.N Pudhur",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Murugan Agencies-erisinapatti",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Power Steels & Tiles",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "PV Paints And Hardwares - Mukkonam",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Selvanayagi Traders - Reddiyarmadam",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Sri Gokulam Traders - Kurichikottai",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "V.S Electricals & Hardwares",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Amman Electricals - Kurichikottai( No GST)",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Mr.Nanthagopal",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Sakthi Traders - Kedimedu",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Thirukumaran Hardwares",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Abi Traders - Valavadi",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Muthukumaran Traders - Pallapalayam",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Mani Electricals & Two Wheeler Spares - Mukkonam",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "M.M Traders",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Sangeetha Electricals & Hardwares",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Arulmurugan Paints & Hardwares - Erisanampatti",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Felicks Agencies - Kurichikottai",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "KANGEYAM",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Sri Vaagai Traders - Kangeyam",
-    "contact": "",
-    "location": "D.N.PUDHUR"
-  },
-  {
-    "name": "Balu Hardware - Marayoor",
-    "contact": "",
-    "location": "KERALA"
-  },
-  {
-    "name": "Rithvik Pipe Company",
-    "contact": "",
-    "location": "KERALA"
-  },
-  {
-    "name": "Arun Hardwares - Kkd",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Dheepam Agencies",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "MSK Enterprise",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "M.S.K.ENTERPRISES-(PAINTS)",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Murugan Hardwares(KKD)",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "N.Sampathkumar",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Palanisamy Auto",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "RADHAKRISHNAN HARDWARE",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Sethu Traders - Thamaraikulam",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Sigma Hardwares",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Sri Sai Hari Constructions",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Sri Saraswathi TradersKkd (kumaran Tr -kkd)",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Sri Vaari Steels - Thamaraikulam",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Velavan Hardwares And Steels -KKD",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Thirumalai Agencies - Kkd",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Thirumalai Traders - Kkd",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Venkateshwara Electrical & Hardware - KKD",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Vinayaga H/w & Ele - Kinathukadavu",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Sabari & Co - Andipalayam",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "Dinesh - Solavampalayam",
-    "contact": "",
-    "location": "KINATHUKADAVU"
-  },
-  {
-    "name": "SSeenntthhuurr MMuurruuggaann EElleeccttrriiccaallss && HHaarrddwwaarree -- RRuuddrraavvaatthhii",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Amman Electricals & Agencies - Jallipatti",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Amman Traders & Hollow Blocks",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Amman Traders - Mettukadai",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "A.S.ELECTRICAL & HARDWARES",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Bharathi Electricals & Hardwares - Poolavaadi",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Jai Krishna Electricals & H/w Mettukadai",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Jai Krishna Traders - Periyapatti",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Mani(murugan Electrical)",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "M N Electricals & Hardwares",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "NEELAKANDIAMMAN TRADERS",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Om Saravana Electrical",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Pugalraj Jallipatti",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Sabari Traders",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Sakthivelavan Traders",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Sathya Auto Spares & Hardwares",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Shree Ganapathy Traders - Jallipatti",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Kadesvara Co - Othakadai",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Sivam Electricals & H/w - Senjeriputhur",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Sri Solieswarar Electricals",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Udumalai Traders",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "VENUGOPAL(MV ELECTRICALS)",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "SRI SURYAA TRADERS (NEW)",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Zam Zam Electricals & Paints ( New)",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "M/s. Appandu Electricals & Hardwares",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Shree Kalabairavar Electricals - New",
-    "contact": "",
-    "location": "KUNDADAM+OTTHAKADI+VAVI +SENC+GUDI"
-  },
-  {
-    "name": "Aaadummy",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Aalls Enterprises",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Aashirwad Aqua Technology",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Edison Electric Marketing Division",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "EMDEN ASSOCIATES",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "GLOBAL TRADERS (S)",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Indsys Tech Services India Private Limited",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Mani Electrical Hardware",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Mr.Balraj",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Om Enterprises - Anuparpalayam",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Orient Marketing Company",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Pon Vigneshwaran Pipe Traders",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Rajeshwari Agency",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "R.S.Agencies",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Sayar Electricals (s)",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Sri Thangam Textiles",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "SRV Constructions",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Velstan Pipes And Pneumatic Solutions (S)",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Vinayak Plumbing Engineering Private Limited",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "E-Zone (CBE) Corporation",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "TTaahhaa HHaarrddwwaaeerree",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Amman Foundray",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Avinash Enterprises",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Devaraj And Co",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Flow Controls",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Gohinoor Pipes Pvt Ltd",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Sri Ambikai Pipe Corporation",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Ultimate Corporation",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Uma Maheswari Traders",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Salem Pipe Traders",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Tooling India Enterprises",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Crossfields Water Purifiers Private Ltd",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Karpaga Vinayagar Pipe Traders",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Angalamman Traders",
-    "contact": "",
-    "location": "LOCAL I"
-  },
-  {
-    "name": "Diamond City Developers India Pvt Ltd",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Pon Vigneshwaran Pipe Agencies",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Rajeshwari Enterprises",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Rel Agencies (S)",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Siva Sakthi Enterprises-podanur",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Suresh Traders - Cbe",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Vari Agencies- Ganapathy",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Vignesh Agencies",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Sathish Agro Tech",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "G D NAIDU CHARITIES",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Pillaiyar Trading Company",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Nets & Shades",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Rohith Enterprises",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Genn Automation",
-    "contact": "",
-    "location": "LOCAL O"
-  },
-  {
-    "name": "Easwara Agro And Engg Agencies",
-    "contact": "",
-    "location": "MALUMICHAMPATTI"
-  },
-  {
-    "name": "S.S. Agencies",
-    "contact": "",
-    "location": "MALUMICHAMPATTI"
-  },
-  {
-    "name": "Ambika Hardwares & Electicals- Sirumugai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Ananya Electricals & Hardwares- Sirumugai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Aruna Electricals",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Cpm Enterprices",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Kumaran Ele & H/w- Karamadai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Ravi Electricals & Hardwares Stores - Sirumugai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "R P Enterprises ( V.G.Enterprises)",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "SHRI SHRINIVASA ELECTRICALS",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "SIRUVANI AGENCIES",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Sri Bhavani Agencies",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "SRI NANJUNDESHWARA TRADERS (SIRUMUGAI)",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "SRI SUNDAR ELECTRICALS AND PIPES",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Sutheesna Electrical And Hardware - Pethikuttai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Thiruvenpha Electricals And Engg - Sirumugai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "JJaayyaallaakksshhmmii HHaarrddwwaarreess -- KKaarraammaaddaaii",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Sri Ranganathar Paints And Hardwares",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Sri Av Traders - Pethikuttai",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Thiru Kumaran Steel Corporation - MTP",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "Bogeshwar Enterprises ( Vrk)",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "SRI SUNDAR ELECTRICALS -TIRUVARUR",
-    "contact": "",
-    "location": "METTUPALAYAM"
-  },
-  {
-    "name": "VILVAA ELECTRICAL AND HARDWARE",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Aandavar Electricals Hardwares Vellakinar Pirivu",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "E.Kousalram",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Prabha Traders - Mathampalayam",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sai Motors- Goundampalayam",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Shree Kumaran Electrical & Hardware- Matthampalayam (new)",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri Balaji Electricals And Hardwares - Nallampalayam",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri KRD Agency Electricals & Hardwares",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri Sai Agencies (shanthi Medu)",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri Vinayaga Electrical & Hardwares- Vadamadurai",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Swathi Steels Hardwares",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri Velli Vinayagar Electricals & Hardwares",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Ohmly Electrical & Hardwares - Thoppampatti Kurudampalayam",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri Thirupathi Traders - Periyanaickan Palayam",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Kavin Traders",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Annai Hardware & Electricals - Kavundam Palayam",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "M/s. R.G.Paints And Electricals",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sree Murugan Hardware Electricals - GN Mills",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "KSR Enterprises",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Sri Maha Ganapathy Hardwares",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "A K R Engineering Works",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Ohm Sai Traders",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Matha Electrical & Hardwares - Thoppampatti",
-    "contact": "",
-    "location": "METTUPALAYAM ROAD"
-  },
-  {
-    "name": "Samy Electricals & Electronics",
-    "contact": "",
-    "location": "NAMBIYUR"
-  },
-  {
-    "name": "Sivan Electrical And Hardware (Vemandam palayam)",
-    "contact": "",
-    "location": "NAMBIYUR"
-  },
-  {
-    "name": "Chakravarthy Plastic Industries",
-    "contact": "",
-    "location": "NAMBIYUR"
-  },
-  {
-    "name": "Abirami Electricals - Senjeri",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Annai Electricals and Hardwares",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Ashoka Traders - Sulthanpet",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "City Electricals - Chithambalam Pirivu",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Gowri Traders",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "K.K Aadhirai Electricals And Hardwares",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Mr.Balu- Kamanaicken Palayam",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Naveen Electricals",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Palani Andavar- Kattampatti",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Saswin Electrical And Hardwares - Pacharpalayam",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "S.N.Muthu Agencies",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Sree Balaji Traders - Kamanaickenpalayam",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "SSrreeee SSuurryyaa AAggeennccyy",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Sri Sai Agencies",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Selvanayaki Amman Traders - Poorandampalayam",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "SRS Agro Link - Kattampatti",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Velaudhasamy Traders- Negamam",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Sri Automation",
-    "contact": "",
-    "location": "NEGAMAM"
-  },
-  {
-    "name": "Prabinav Agencies",
-    "contact": "",
-    "location": "OOTY"
-  },
-  {
-    "name": "DMS ASSOCIATES",
-    "contact": "",
-    "location": "PALANI"
-  },
-  {
-    "name": "C P Electricals & Hardware - Pongalur",
-    "contact": "",
-    "location": "PALLADAM"
-  },
-  {
-    "name": "MSM Traders - Koduvai",
-    "contact": "",
-    "location": "PALLADAM"
-  },
-  {
-    "name": "Sri Amman Traders - Pongalur",
-    "contact": "",
-    "location": "PALLADAM"
-  },
-  {
-    "name": "Riyan Electricals And Hardwares",
-    "contact": "",
-    "location": "PALLADAM"
-  },
-  {
-    "name": "Anugraha Traders",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Ariyavar Traders",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Jothi Ele & H/ws- Vadakipalayam",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Krishna Hardwares - Meenakshipuram",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Mahalakshmi Electricals & Hardwares - V.K Puthur",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "MOHMED NOUFAL TRADERS",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Monish Traders - Ambarampalayam",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Mr.Kanagaraj ( Kanagu -agri)",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Mr.Muruganantham ( Ariyavar)",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Noor Traders- Anaimalai",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Prabhu Anna Sendrampalayam",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "P.S.Vaidyanath & Sons",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Saraswathi Cement Works & Hardwares",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Sree Bagavathiamman Traders-mannur ( New)",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Bagavathi Electricals And Hardwares - Divansapudhur",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Sri Sakthi Narayana Hardwares",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Sri Vinayaga Electricals- Govindhrapuram",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Thirumalai Traders - Vadakipalayam",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Vetrivel Traders - Anaimalai",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Sivakumar VPM",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Upc Senthil Kumar",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "R.R.Electricals - Vadakipalayam",
-    "contact": "",
-    "location": "POLLACHI1"
-  },
-  {
-    "name": "Sri Kanthan & Co - Pollachi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Ganapathy Agri And Hardware - Kottur",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "K.V.Enterprises",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Raja Traders ( N.M Sungam)",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Senthur Murugan Steels - Kottur",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Shri Meenakshi Electrical",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Sivasakthi Agencies - Palladam Rd Pollachi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Sivasakthi Hardwares- Angalakurichi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "AAyyyyaannaarr EElleeccttrriiccaallss -- SSaammaatthhuurr",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Sri Mookambiga Agencies( Erripatti)",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Sri Sakthi Traders - Pollachi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Thirumalai Traders - Kottur",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Agathur Amman Traders",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Bhaarath Pipe Traders",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Chandhru & Co - Udumalai Road",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Heera Electricals",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Kaliamman Traders - Pollachi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Konar Traders - Pollachi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Kumar - Vanjiyapuram",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Power Electricals - Pollachi New",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "SAS ELECTRICALS",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Selvanayaki Traders - Unjavelampatti",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Senthilkumar Enterprise",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Lakshmi Electricals - Pollachi",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Sri Mannur Amman Electricals & Hardwares",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Sri Vinayaga Eb Service Center ( Ramakrishnan)",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Suriya Enterprises",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Vasantham Electricals & Hardwares",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Kumaran Karp India Private Limited",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Senthur Murugan Electrical And Hardware - Nallur",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "SRI MURUGAN TRADERS",
-    "contact": "",
-    "location": "POLLACHI 2"
-  },
-  {
-    "name": "Aadhi Electricals & Hardwares",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "Amman Agenciees Ele & H/w - Vellaparaimedu PPT",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "Amman Electricals & Hardwares - Puliyampatti",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "Nava Electronics - Puliyampatti",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "Sarath Engineer",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "Murugan Irrigation System - Puliyampatti",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "VIMAL TRADERS",
-    "contact": "",
-    "location": "PULIAMPATTI"
-  },
-  {
-    "name": "Leo Plast Pipes & Fitings NEW",
-    "contact": "",
-    "location": "SALEM"
-  },
-  {
-    "name": "Raja Corporation",
-    "contact": "",
-    "location": "SALEM"
-  },
-  {
-    "name": "Mayilvaganam Ceramics",
-    "contact": "",
-    "location": "SATHY"
-  },
-  {
-    "name": "Shanmuga Electricals - Thalavadi",
-    "contact": "",
-    "location": "SATHY"
-  },
-  {
-    "name": "THIRUMALAIYAN STORES",
-    "contact": "",
-    "location": "SATHY"
-  },
-  {
-    "name": "Shanmuga Electricals - Sathy New",
-    "contact": "",
-    "location": "SATHY"
-  },
-  {
-    "name": "Ramoorthy - Peelamedu",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "D2D Enterprises",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Balaji Electricals And Hardwares - Annur",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Best Traders",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Manickam TradersGanapathy",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "M.K.Electricals & Hardwares- Kovilpalayam",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "N.P Electricals Hardwares - Ganesapuram",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "PPLLAASSTTRROOTTEECCHH",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "S.Cinnadurai Traders - Kaapikadai",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Shri Kandhavel Electrical And Hardwares - Kurumbapalayam",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Velava Traders - Kariyampalaym",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Sri Kumaran Electricals & Hardwares- Annur",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Velavan Steels And Hardwares - Saravanampatti",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Thangamman Traders - Vilankurichi",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Vasudev Electricals & Hardwares",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Velmurugan Electrical & Hardwares- P.G.Puthur",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Velmurugan Traders- Ganesapuram",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Balaji Traders ( Kk- Traders)",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "NPR ELECTRICAL - CHINNAVEDAMPATTI",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Priya Hardwares - Ganapathy",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Chinnaia Traders - Ganesapuram",
-    "contact": "",
-    "location": "SATHY ROAD"
-  },
-  {
-    "name": "Adhavan Agencies - Senjerimalai",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Lakshmi Traders - Pukkulam",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "MRS Traders",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Murugan Traders - Senjerimalai",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Pankaja Traders - Pethappampatti.",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Samvida Traders",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Sivaselvi Traders - P.Patti",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Amman Agencies - Moongiltholuvu",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Adhavan Traders - Nagarakalanthai",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "SRI KRISHNA TRADERS -PETHAPAMPATTI(PAINTS)",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Sri Mookambika Agencies( New)Pethappampatti",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "SRI SAMY TRADERS",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Sri Skantha Traders",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "SUNDARAM HARDWARE AND PLYWOOD",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Tarun Electricals",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "VEL TRADERS - KOSAVAMPALAYAM",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "AVANTHIKA AGENCY",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Ramdev Electricals & Hardware ( No gst)",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Velavan Traders - Moongiltholuvu Pirivu",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Sabari Agencies",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Adhavan Traders - Senjerimalai New",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "MAGIZH TRADERS - SINTHILUPPU",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "SRI SKANDHA TRADERS- NEW",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Prachidhi Spinners Private Ltd",
-    "contact": "",
-    "location": "SENCHERIMALAI+ PETHAPAM+MOONKIL"
-  },
-  {
-    "name": "Sri Thayalnayaki Hardwares",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Bohar Traders",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Durga Hardwares (kalampalayam)",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "MKB TRADERS (Madukkarai)",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Nivas Hardwares",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Ponmani Stores And Hardwares",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Sri Krishna Traders - RCP",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "SSrrii MMaahhaallaakksshhmmii TTrraaddeerrss -- MMaaddaammppaattttii",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Ravi Electricals - Alandurai",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Divya Hardwares",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Rajendran Hardwares & Electricals - Kuniamuthur",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Prince Hardwares",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "SUDARAPURAM + KG SAVADI",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "MATHAJI HARDWARE & ELECTRICALS",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Amman Hardware - Malumichampatti",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "K.P.R HARDWARES-SUNDARAPURAM",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "P.M.C. Traders",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Shree Electricals & H/w",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Dhanam Associates - New",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Sri Rams Hardwares - Malumichampatti",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "S.S Electric & Hardwares Plumbing",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "VIBIN AGENCIES",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Vishnu Electricals",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Adithyacholan Electricals ( Saraswathi - Eachanari)",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Kannan Traders - New",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Mr.Kannan",
-    "contact": "",
-    "location": "SIRUVANI MAIN ROAD"
-  },
-  {
-    "name": "Alagurathi Hardwares",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "AV TRADERS - SOMANUR",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Bharani & Co- Kannam Palayam",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Gopalakrishnan- Palladam",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Kaliamman Agencies - Sulur",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "K MART PRIVATE LIMITED",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "MANO GLASS & PLYWOODS",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "OM TRADERS - KANGEYAMPALAYAM",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "PONNUSAMY AND COMPANY",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "RAYAR ELECTRICAL & HARDWARE",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Sarral Irrigations",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Shivam Traders",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Shree Sivam Trading",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "SIVASAKTHI TRADERS - PALLADAM",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "SREE VELAN TRADERS - KALANGAL",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Sriram Hardware Ele - Kangeyampalayam",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "The Navrang Mososaics",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Vigneshwara Hardwares - Ramanathapuram",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Shree Vasanthaa Agencies",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "M.N. Hardwares - Kangayampalayam",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Krishna Traders - Karanampettai",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Sri Guruvayurappa Traders",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Sri Amman Engineering Works",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Shree Sivam Hardwares & Electricals",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "TNK Transports",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Nestling Technologies India Private Limited",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Mr.Vijayakumar ( Shivam Traders)",
-    "contact": "",
-    "location": "SULUR"
-  },
-  {
-    "name": "Angalaamman Electricals - Vayalur",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "ANJANEYA TRADERS PAINTS",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Anjaneya Traders",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "AN Power Tek",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Jafar(kaniyur Electricals)",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Maruthi Traders - Kumaralingam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "R.P.Electricals & Hardwares",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Selva Ganapathy Trader - Elayamuthur",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "SHRI BRAHMA IRRIGATION",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Siva Tiles - Kumaralingam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Sri Varsha Traders - Malayandigoundanur",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Vetha Electricals",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Kuppanna Electrical Hardwares - Madathukulam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Madathukulam Ragavendra Electricals",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Mohamad - Kurinji Electricals",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Sri Periyanayaghi Agency - Kaniyur",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "SUGUNA ELECTRICALS",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Siva Electrical - Karatholuvu ( No GST)",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "KANDASAMY GOUNDER AND SONS",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Sivaa Traders - Karatholuvu ( No gst)",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "SM ENGINEERING & HARDWARE - VAYALUR",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Balaji Electrical H/w & Hollow Blocks - Kolumam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "S.S Electrical - Kadathur( No gst)",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Vihazhini Electricals & Hardwares",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Balakrishnan General Stores - Kolumam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Dharsini Elec & H/w - Krishnapuram",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Maa Bhavani Ele & H/w - Madathukulam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Sornalakshmi Traders - Komaralingam",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "KPH Traders - Elayamuthur ( New)",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Panse Exports Private Limited",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "Mr.Rajesh ( R.P Ele Thoongavi)",
-    "contact": "",
-    "location": "SS..VV..PPUURRAAMM++KKOOLLUUMMAAMM++NN..KK..PPAATTTTII++KKUUMMAARRAALLIINNGGAAMM"
-  },
-  {
-    "name": "ANANYA SHELTERS (P) LTD",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Angle90 Design Studios",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "GANESH STORES",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "RLK HARDWARE",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Romaa Electricals & Haard Wares",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Sri Radha Krishna Hardwares",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Thiruthani Agencies - Vadavalli",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Anandh & Co",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Muthumari Hardwares",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Sai Lakshmi Electricals & Hardwares",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Kavitha Traders",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Tharmar Hardware & Electricals",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "Mr. R .Kumar ( Romaa Electricals & Hardware)",
-    "contact": "",
-    "location": "THONDAMUTHUR ROAD"
-  },
-  {
-    "name": "GGlloobbaall TTrraaddee CCeennttrree -- TTiirruuppuurr",
-    "contact": "",
-    "location": "TIRUPUR"
-  },
-  {
-    "name": "POWER ELECTRICALS & SPARES",
-    "contact": "",
-    "location": "TIRUPUR"
-  },
-  {
-    "name": "Prannav Steels",
-    "contact": "",
-    "location": "TIRUPUR"
-  },
-  {
-    "name": "NOVA CARBONS INDIA PRIVATE LIMITED",
-    "contact": "",
-    "location": "TRIUNELVELI"
-  },
-  {
-    "name": "Kurinji Electricals",
-    "contact": "",
-    "location": "UDUMALAI DP ROAD+ KANI+MADA"
-  },
-  {
-    "name": "Ponnu Electricals - Palani",
-    "contact": "",
-    "location": "UDUMALAI DP ROAD+ KANI+MADA"
-  },
-  {
-    "name": "VETRI AGENCY",
-    "contact": "",
-    "location": "UDUMALAI DP ROAD+ KANI+MADA"
-  },
-  {
-    "name": "Amman Electricals Udumalpet",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Angala Parameswari Electricals",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Arul Bhagavathi Traders",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Ayyan Electricals ( UDTNEW )",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Ayyappa Electricals - UDT",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Crown Enterprises",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Dharmakumar",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Ganga Agro System - UDT",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Kumaran Agency",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Lakshmi H/w Malayandipattinam",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Lakshmi Traders",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mahaalaxmi Ceramics",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Maharaja Traders",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mr.Suresh",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Paranjervazhi Sri Kariyakaliamman Traders",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Prabakar",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Premier Pipe & Fitting",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Premier Traders - Bodipatti Udt",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "PRIMIER AGENCY",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Rajendra Electricals",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Shree Surya Electrical",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Siva Sakthi Traders - Dhali Road",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "S.K.N Electricals",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Bhavani Electricals & Hardwares",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Malaiamman Electricals & Hardwares (UDT)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Murugan Electricals & Hardwares - SS Colony",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Saravanaa Agencies - Udt",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "SRI SENTHUR MURUGAN AGENCYS",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sivaselvi Traders - Kuralkuttai",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Suresh Traders - Udt",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Udumalai Electrical & Hardwares",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "VBS EQUIPMENTS",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Veeramani Electricals",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Chinadurai - Chinappanputhur",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Dheeparam(parvathy Ele)Udt",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Kalimuthu (sivasakthi Ele)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "KMS PUMBS AND ELETRICALS ( NEW)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "MMaammaattaa EElleeccttrriiccaallss && HHaarrddwwaarreess",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Manokaran(sakthi Pipes)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "MARIMUTHU - CHINNAPANPUTHUR",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mathaji Electricals & Pipe Fitting",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mr.Eswaran (godown Owner)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mr.Yogesh",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Parameshwaran - Chinnapanputhur",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Parvathy Electricals & Hardware",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Perfect Electricals & Pumps",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Rajeshwar Electricals Hardware & Plumbing",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Rajlaxmi Electricals Hardwares & Plumbing",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Selvam TradersUdt",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "SRI AMMAN CERAMIC TILES & GRANITES",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Amman Traders - Venjamadai",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Bairavalakshmi Traders",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Srinivasan - Chinappanputhur",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Ranga Electricals",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Sivam Electricals - Skp School",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sukumar - Palani",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "VA Consultancy",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "CASH SALES UDT",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Suresh (sadhana Auto)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Shri Amman Associates",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "MOHAN UPC",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sree Palaniandavar Traders",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Senthur Tiles",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "VM ENGINEERING-UDUMALPET",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Guruvayurappan Builders- Udt",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Suguna Foods P Ltd",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Coco Grove",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "M/s. Sasi Engineering Company",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "SVM Electricals & Hardwares - Kuralkuttai",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mrs- Vimala",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Mr.Kanagarai - Udt ( Electrician)",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "ERODE",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Sri Chinnamman Trading",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Roca Bathroom Products Private Limited",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "V. Sathyamoorthy & Co",
-    "contact": "",
-    "location": "UDUMALPET"
-  },
-  {
-    "name": "Abirami Engineering Construction & Co",
-    "contact": "",
-    "location": "NAMAKKAL"
+    "dealername": "HARIOM HARDWARE",
+    "address": "9/1A, Sathy Rd, Vaiyapuri Nagar, Kurumbapalayam SSKulam, Tamil Nadu 641653, India",
+    "area": "Kurumbapalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "ANUGRAGHA TRADERS",
+    "address": "MWQ6+PJH check, post, Mannur, Tamil Nadu 62005, India",
+    "area": "Annur",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "SRI BAGAVATHI ELECTRICALS AND HARDWARES",
+    "address": "2/335a, Coimbatore, Marchinaickenpalayam, Tamil Nadu 642103, India",
+    "area": "Marchinaickenpalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "SRI NAVDURGA ELECTRICALS AND HARDWARES",
+    "address": "LAND MARK HALL BUILDING, Meenkarai Rd, opp. LAKSHMI NARAYANA MAHAL, Zamin Uthukuli, Tamil Nadu 642004, India",
+    "area": "Uthukuli",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "ANANTHA HARDWARES",
+    "address": "1st Floor R.R. Complex 262, School, Opp, Dr Nanjapaa Rd, Anupperpalayam, Ram Nagar, Coimbatore, Tamil Nadu 641018, India",
+    "area": "Ram Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "SREE VEDHAS ELECTRICALS AND HARDWARES",
+    "address": "16/15, Indira Garden Road, Sakkarai Chettiyar Colony, Srinivasa Garden, Coimbatore, Tamil Nadu 641015, India",
+    "area": "Srinivasa Garden",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "NO1 HARDWARES",
+    "address": "WX3X+97H, 331, Pollachi Main Rd, Post, Settipalayam, Malumichampatti, Tamil Nadu 641050, India",
+    "area": "Malumichampatti",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "THIRUPATHI ELECTRICALS AND HARDWARES",
+    "address": "432G+4H2, Pachapalayam, Tamil Nadu 641048, India",
+    "area": "Pachapalayam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "POOJA SREE HARDWARES",
+    "address": "7c VNS COMPLEX, Lenin St, T-Nagar, Villankurichi, Coimbatore, Tamil Nadu 641035, India",
+    "area": "Villankurichi",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "ANNAI ELECTRICALS AND HARDWARES",
+    "address": "P.VADUGA PALAYAM, VETERINARY HOSPITAL, opposite PALLADAM, P. Vaduga Palayam, Tamil Nadu 641664, India",
+    "area": "Palladam",
+    "district": "Tiruppur",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "SAKTHI AGENCIES",
+    "address": "396/95, Periyar Nagar, Ram Lakshman Nagar, Coimbatore, Tamil Nadu 641028, India",
+    "area": "Ram Lakshman Nagar",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "DHANALAKSHMI ELECTRICALS AND",
+    "address": "Sri Annai Ayyammal nagar, 4/191, near SBIOA school, Pattanam, Coimbatore, Tamil Nadu 641016, India",
+    "area": "Pattanam",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
+  },
+  {
+    "dealername": "SRI HEERA ELECTRICALS AND HARDWARES",
+    "address": "XQ3Q+FF3, Siruvani Main Rd, Thomblipalayam, Madawarayapuram, Alanthurai, Tamil Nadu 641101, India",
+    "area": "Alanthurai",
+    "district": "Coimbatore",
+    "state": "Tamil Nadu",
+    "location": ""
   }
-];
+]
