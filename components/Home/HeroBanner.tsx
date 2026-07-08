@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Button from "../reuseable/Button";
 import HeroBanner from "../reuseable/heroBanner";
 
@@ -42,9 +41,9 @@ const Hero = () => {
       <div className="hidden md:block">
         <HeroBanner
           height="h-screen"
-
+          backgroundVideo="/videos/hero_banner_video.mp4"
           backgroundImage="/hero-banner.jpg"
-          titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-[#E0E0E0] w-full"
+          titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-white w-full"
           title={
             <>
               Elevating water usage <br className="hidden md:block" /> with <br className="md:hidden block" /> future-ready design.
@@ -54,13 +53,14 @@ const Hero = () => {
           maxWidth='md:max-w-6xl'
           subtitleClassName="mb-5"
           subtitle={
-            <span className="font-[300] font-inter-tight text-[#E0E0E0] text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
+            <span className="font-[300] font-inter-tight text-white text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
               Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel <br className="hidden md:block"></br>Product Is Made To Last, Leak-Free And Worry-Free.
             </span>
           }
           primaryButtonClassName='text-[12px] py-2  md:text-sm md:px-10 w-full'
           secondaryButtonClassName="text-[12px] py-2 md:text-sm md:px-10 w-full"
           buttonClassName='flex gap-4 '
+          overlay={true}
           primaryButtonText="Explore Innovations"
           secondaryButtonText="Customer Enquiry"
         />
@@ -68,14 +68,15 @@ const Hero = () => {
       <div className="md:hidden">
         <HeroBanner
           height="h-screen"
-
+          backgroundVideo="/videos/hero_banner_video.mp4"
           backgroundImage="/hero-banner.jpg"
-          titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-[#E0E0E0] w-full"
+          titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-white w-full"
           title={
             <>
               Elevating water usage <br className="hidden md:block" /> with <br className="md:hidden block" /> future-ready design.
             </>
           }
+          overlay={true}
           backgroundClassName="object-cover scale-[0.95] overflow-hidden relative"
           maxWidth='md:max-w-6xl'
           subtitleClassName="mb-5"

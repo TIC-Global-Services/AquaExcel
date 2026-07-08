@@ -3,12 +3,14 @@ import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
 import ContainerLayout from "@/layouts/ContainerLayout";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { Volume2, VolumeX } from "lucide-react";
 
 interface HeroBannerProps {
   // Background
   backgroundImage?: string | StaticImageData;
+  backgroundVideo?: string;
   backgroundAlt?: string;
   backgroundClassName?: string;
   backgroundQuality?: number;
@@ -49,6 +51,7 @@ interface HeroBannerProps {
 const HeroBanner: React.FC<HeroBannerProps> = ({
   // Background
   backgroundImage,
+  backgroundVideo,
   backgroundAlt,
   backgroundClassName,
   backgroundQuality,
@@ -85,6 +88,26 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   overlayColor = "black",
   overlayOpacity = 0.6,
 }) => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const muteVideo = () => {
+    if (videoRef.current && !videoRef.current.muted) {
+      videoRef.current.muted = true;
+      setIsMuted(true);
+    }
+  };
+
+  const toggleMute = (e?: React.MouseEvent) => {
+    // Prevent section click from double-firing when hitting the button
+    if (e) e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
   const contentAlignmentClasses = {
     left: "items-start text-left",
     center: "items-center text-center",
@@ -113,24 +136,59 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Auto-mute when hero scrolls out of view
+  useEffect(() => {
+    if (!backgroundVideo) return;
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          muteVideo();
+        }
+      },
+      { threshold: 0.1 } // mute once 90%+ of hero is off-screen
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [backgroundVideo]);
   const pathname = usePathname();
 
   return (
-    <section className={`relative ${height} w-full bg-hero-bg overflow-hidden`}>
-      {/* Background Image */}
+    <section
+      ref={sectionRef}
+      className={`relative ${height} w-full bg-hero-bg overflow-hidden cursor-pointer`}
+      onClick={() => backgroundVideo && toggleMute()}
+    >
+      {/* Background Image / Video */}
 
-      <div className="absolute parallax-media inset-0">
+      <div className="absolute parallax-media inset-0 w-full h-full">
 
-        <Image
-
-          src={backgroundImage || "/hero-banner.jpg"}
-          alt={backgroundAlt || "Hero background image"}
-          fill
-          className={backgroundClassName || "object-cover scale-100"}
-          priority={backgroundPriority || true}
-          quality={backgroundQuality || 90}
-          style={{ objectPosition: "47% 0%" }}
-        />
+        {backgroundVideo ? (
+          <video
+            ref={videoRef}
+            src={backgroundVideo}
+            autoPlay
+            loop
+            muted={isMuted}
+            playsInline
+            className={backgroundClassName || "object-cover w-full h-full scale-100"}
+          />
+        ) : (
+          <Image
+            src={backgroundImage || "/hero-banner.jpg"}
+            alt={backgroundAlt || "Hero background image"}
+            fill
+            className={backgroundClassName || "object-cover scale-100"}
+            priority={backgroundPriority || true}
+            quality={backgroundQuality || 90}
+            style={{ objectPosition: "47% 0%" }}
+          />
+        )}
 
         {/* Optional Overlay */}
         {overlay && (
@@ -139,6 +197,21 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           />
         )}
       </div>
+
+      {/* Mute/Unmute Toggle Button */}
+      {backgroundVideo && (
+        <button
+          onClick={(e) => toggleMute(e)}
+          className="absolute bottom-8 right-8 z-30 flex items-center justify-center w-12 h-12 bg-black/40 hover:bg-black/60 backdrop-blur-sm text-white rounded-full transition-all border border-white/20 focus:outline-none cursor-pointer hover:scale-105 active:scale-95"
+          aria-label={isMuted ? "Unmute video" : "Mute video"}
+        >
+          {isMuted ? (
+            <VolumeX className="w-5 h-5" />
+          ) : (
+            <Volume2 className="w-5 h-5" />
+          )}
+        </button>
+      )}
 
       {/* Content */}
       <ContainerLayout>
