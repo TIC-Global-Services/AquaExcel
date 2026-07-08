@@ -15,9 +15,9 @@ const LifeAt = () => {
   const icon1 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/icon1.svg";
   const icon2 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/icon2.svg";
   const icon3 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/icon3.svg";
-  const sliderimg1 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/slider1.jpg";
-  const sliderimg2 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/slider1.jpg";
-  const sliderimg3 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/slider1.jpg";
+  const sliderimg1 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/culture_Built.png";
+  const sliderimg2 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/work_pressure.png";
+  const sliderimg3 = "https://ik.imagekit.io/pgtxr2fmn/Career/LifeAt/learning_growth.png";
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const slides = [

@@ -5,7 +5,7 @@ import HeroBanner from '../reuseable/heroBanner'
 
 const hero = () => {
 
-  const banner = "https://ik.imagekit.io/pgtxr2fmn/Career/Hero/carrerhomebanner.png";
+  const banner = "https://ik.imagekit.io/pgtxr2fmn/Career/Hero/carrer_hero_banner.png";
 
   return (
       // <section className="relative h-[860px] w-full bg-hero-bg overflow-hidden">

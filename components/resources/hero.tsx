@@ -5,7 +5,7 @@ import HeroBanner from '../reuseable/heroBanner'
 
 const hero = () => {
 
-  const banner = "https://ik.imagekit.io/pgtxr2fmn/Resources/Hero/resourceherobanner.png";
+  const banner = "https://ik.imagekit.io/pgtxr2fmn/Resources/Hero/resource_banner_image.png";
 
   return (
     <div>
