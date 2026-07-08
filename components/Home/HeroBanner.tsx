@@ -68,7 +68,6 @@ const Hero = () => {
       <div className="md:hidden">
         <HeroBanner
           height="h-screen"
-          backgroundVideo="/videos/hero_banner_video.mp4"
           backgroundImage="/hero-banner.jpg"
           titleClassName="text-[22px] font-hoves-pro md:text-[40px] xl:text-[60px] xl:leading-[64px] md:leading-[40px] tracking-tighter font-medium mb-4 text-white w-full"
           title={
