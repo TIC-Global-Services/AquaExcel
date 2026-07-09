@@ -201,13 +201,13 @@ const Footer = () => {
             <h3 className="text-white font-hoves-pro font-medium text-sm hidden lg:block lg:mb-4 tracking-wide opacity-0">CONTACT</h3>
             <ul className="space-y-1.5">
               <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
-                PHONE: +91-422-2666842
+                PHONE: +91-422-2986842
               </li>
               <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
-                ENQUIRY: +91-87540-14018
+                ENQUIRY: +91-87540 10016
               </li>
               <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
-                <a href="mailto:salescoordinator@aquaexcel.in">EMAIL: SALESCORPORATE@AQUAEXCEL.IN</a>
+                <a href="mailto:customercare@aquaexcel.in">EMAIL: customercare@aquaexcel.in</a>
               </li>
             </ul>
           </div>

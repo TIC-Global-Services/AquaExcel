@@ -43,7 +43,7 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 425",
         description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtaplongvalve.png?updatedAt=1773034090242',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Bib-Tap-Long-Body.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -85,7 +85,7 @@ export const Taps = [
         title: "Two way Angle Valve",
         price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bttwowayanglevalve.jpg?updatedAt=1773035820790',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -106,7 +106,7 @@ export const Taps = [
         title: "Sink Tap Wallmount",
         price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btsinktapwallmount.png?updatedAt=1773035035355',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -148,7 +148,7 @@ export const Taps = [
         title: "Swan Neck",
         price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btswanneck.png?updatedAt=1773035172620',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -169,7 +169,7 @@ export const Taps = [
         title: "Garden Tap",
         price: "₹ 445",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btgardentap.png?updatedAt=1773034831367',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/garden_tap.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -190,7 +190,7 @@ export const Taps = [
         title: "Washing Machine Tap",
         price: "₹ 495",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btwashingmachinetap.png?updatedAt=1773035821381',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Washing-Machine-Tap.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
