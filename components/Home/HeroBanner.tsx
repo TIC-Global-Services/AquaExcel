@@ -53,7 +53,7 @@ const Hero = () => {
           maxWidth='md:max-w-6xl'
           subtitleClassName="mb-5"
           subtitle={
-            <span className="font-[300] font-inter-tight text-white text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
+            <span className="font-light font-inter-tight text-white text-sm md:text-base xl:text-[20px] xl:leading-[120%] text-base text-left  mb-6">
               Trusted By Thousands Of Plumbers, Built On Patent-Applied Technology, Every Aqua Excel <br className="hidden md:block"></br>Product Is Made To Last, Leak-Free And Worry-Free.
             </span>
           }

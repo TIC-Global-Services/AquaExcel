@@ -330,7 +330,7 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 164",
         description: "A Compact, Eco-Friendly Bib Tap Designed To Reduce Water Wastage While Delivering Smooth, Efficient Flow.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtapshort.png?updatedAt=1773037266228',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/bib-tap-short-body.png?updatedAt=1783589107802',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -372,7 +372,7 @@ export const Taps = [
         title: "Angle Valve",
         price: "₹ 164",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtanglevalve.png?updatedAt=1773037266106',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/angle-valve.png?updatedAt=1783589107795',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -393,7 +393,7 @@ export const Taps = [
         title: "garden Tap",
         price: "₹ 445",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtgardentap.png?updatedAt=1773037265671',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/garden-tap.png?updatedAt=1783589241637',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -414,7 +414,7 @@ export const Taps = [
         title: "Hi-Flow Tap",
         price: "₹ 199",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gthighflow.png?updatedAt=1773037266193',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/hi-flow-tap.png?updatedAt=1783589241792',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -435,7 +435,7 @@ export const Taps = [
         title: "Two Way Angle Valve",
         price: "₹ 439",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwoanglevalve.png?updatedAt=1773037266147',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/two-way-angle-valve.png?updatedAt=1783589241787',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -456,7 +456,7 @@ export const Taps = [
         title: "swan neck",
         price: "₹ 549",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtswanneck.png?updatedAt=1773037266191',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/swan-neck.png?updatedAt=1783589107775',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -477,7 +477,7 @@ export const Taps = [
         title: "Sink Tap",
         price: "₹ 549",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtsinktap.png?updatedAt=1773037266160',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/sink-tap.png?updatedAt=1783589241308',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -497,7 +497,7 @@ export const Taps = [
         title: 'Two Way Tap',
         price: "₹ 439",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gttwowaytap.png?updatedAt=1773037266107',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/two-way-tap.png?updatedAt=1783589241583',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -517,7 +517,7 @@ export const Taps = [
         title: 'Washing Machine Tap',
         price: "₹ 495",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtwashingmachine.png?updatedAt=1773037266243',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/washing-machine-tap.png?updatedAt=1783589241656',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -538,7 +538,7 @@ export const Taps = [
         title: "Short Spout Sink Tap",
         price: "₹ 439",
         description: "An Eco-Focused Sink Tap With A Compact Short Spout, Designed To Minimize Water Splashing And Maximize Utility In Modern Kitchens.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/shortSpoutSinktap.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/short-spout-sink-tap.png?updatedAt=1783589241373',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -559,7 +559,7 @@ export const Taps = [
         title: "Premium Pillar Tap",
         price: "₹ 539",
         description: "An Elegant, High-Quality Pillar Tap Offering A Steady Water Stream, Designed For Wash Basin Installation With Premium Aesthetics.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/premiumPillarTap.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/premium-pillar-tap.png?updatedAt=1783589241310',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
@@ -580,7 +580,7 @@ export const Taps = [
         title: "2 in 1 Tap",
         price: "₹ 785",
         description: "A Versatile Two-in-One Tap Featuring Dual Outlets For Simultaneously Directing Water To Multiple Fixtures With Precise Flow Control.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/2in1Tap.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/two-in-one-tap.png?updatedAt=1783589241783',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }
