@@ -2,6 +2,7 @@ import ContainerLayout from '@/layouts/ContainerLayout'
 import React from 'react'
 import SimpleParallax from 'simple-parallax-js'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const appsection = () => {
     return (
@@ -32,15 +33,18 @@ const appsection = () => {
                             From taps to valves to fittings, every Aqua Excel component is designed with engineering accuracy and built to last. Explore a complete range crafted for performance, reliability, and seamless installation.
                         </p>
                         <div>
-                            <button className="bg-[#E31E24] text-white xl:px-10 px-5 text-[10px] xl:text-sm py-2 md:py-3 font-inter-tight rounded-[12px]">
-                                Download App
-                            </button>
+                            <Link href="https://play.google.com/store/apps/details?id=com.aquaexcel.holo" target='_blank'>
+                                <button className="bg-[#E31E24] text-white xl:px-10 px-5 text-[10px] xl:text-sm py-2 md:py-3 font-inter-tight rounded-[12px]">
+                                    Download App
+                                </button>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
             </section>
         </ContainerLayout>
-    </div>
+        </div>
     )
 }
 

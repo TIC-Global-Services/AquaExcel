@@ -253,74 +253,74 @@ export const Taps = [
   },
 
   // PTMT Taps section
-  {
-    heading: 'PTMT Taps',
-    products: [
-      {
-        title: "Bib Tap Short Body",
-        price: "₹ 164",
-        description: "A Lightweight, Corrosion-Resistant PTMT Tap Built For Everyday Use, Offering Smooth Flow Control And Long-Lasting Durability.",
-        image: image4,
-        colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
-        ],
-        specs: [
-          "Material: Premium UPVC Body & Brass Thread",
-          "Mechanism: Smooth Quarter-Turn Handle",
-          "Inlet Size: ½\" Standard Fitting",
-          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-          "Strength: High-Density Crack-Resistant Polymer",
-          "Suitable For: Bathrooms, Gardens, Utility Areas",
-          "Dimensions: 92 Mm (H) × 78 Mm (L)",
-          "Installation: PTFE Tape Recommended for Sealing",
-          "Warranty: 5-Year Replacement Guarantee"
-        ]
-      },
-      {
-        title: "Bib Tap Long Body",
-        price: "₹ 230",
-        description: "A Durable PTMT Long-Body Tap That Provides Extended Reach With Smooth Water Flow And Dependable Daily Performance.",
-        image: image5,
-        colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
-        ],
-        specs: [
-          "Material: Premium UPVC Body & Brass Thread",
-          "Mechanism: Smooth Quarter-Turn Handle",
-          "Inlet Size: ½\" Standard Fitting",
-          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-          "Strength: High-Density Crack-Resistant Polymer",
-          "Suitable For: Bathrooms, Gardens, Utility Areas",
-          "Dimensions: 92 Mm (H) × 78 Mm (L)",
-          "Installation: PTFE Tape Recommended for Sealing",
-          "Warranty: 5-Year Replacement Guarantee"
-        ]
-      },
-      {
-        title: "Angle Valve",
-        price: "₹ 164",
-        description: "A Sturdy PTMT Valve Designed To Control Water Direction And Flow, Ensuring Smooth Operation For Bathroom And Kitchen Fittings.",
-        image: image6,
-        colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
-        ],
-        specs: [
-          "Material: Premium UPVC Body & Brass Thread",
-          "Mechanism: Smooth Quarter-Turn Handle",
-          "Inlet Size: ½\" Standard Fitting",
-          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-          "Strength: High-Density Crack-Resistant Polymer",
-          "Suitable For: Bathrooms, Gardens, Utility Areas",
-          "Dimensions: 92 Mm (H) × 78 Mm (L)",
-          "Installation: PTFE Tape Recommended for Sealing",
-          "Warranty: 5-Year Replacement Guarantee"
-        ]
-      },
-    ]
-  },
+  // {
+  //   heading: 'PTMT Taps',
+  //   products: [
+  //     {
+  //       title: "Bib Tap Short Body",
+  //       price: "₹ 164",
+  //       description: "A Lightweight, Corrosion-Resistant PTMT Tap Built For Everyday Use, Offering Smooth Flow Control And Long-Lasting Durability.",
+  //       image: "https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/bib-tap-short-body.png?updatedAt=1783589107802",
+  //       colors: [
+  //         { name: 'White', colorCode: '#FFFFFF' },
+  //         { name: 'Green', colorCode: '#4ADE80' }
+  //       ],
+  //       specs: [
+  //         "Material: Premium UPVC Body & Brass Thread",
+  //         "Mechanism: Smooth Quarter-Turn Handle",
+  //         "Inlet Size: ½\" Standard Fitting",
+  //         "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+  //         "Strength: High-Density Crack-Resistant Polymer",
+  //         "Suitable For: Bathrooms, Gardens, Utility Areas",
+  //         "Dimensions: 92 Mm (H) × 78 Mm (L)",
+  //         "Installation: PTFE Tape Recommended for Sealing",
+  //         "Warranty: 5-Year Replacement Guarantee"
+  //       ]
+  //     },
+  //     {
+  //       title: "Bib Tap Long Body",
+  //       price: "₹ 230",
+  //       description: "A Durable PTMT Long-Body Tap That Provides Extended Reach With Smooth Water Flow And Dependable Daily Performance.",
+  //       image: "https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtaplong.png?updatedAt=1773037265496",
+  //       colors: [
+  //         { name: 'White', colorCode: '#FFFFFF' },
+  //         { name: 'Green', colorCode: '#4ADE80' }
+  //       ],
+  //       specs: [
+  //         "Material: Premium UPVC Body & Brass Thread",
+  //         "Mechanism: Smooth Quarter-Turn Handle",
+  //         "Inlet Size: ½\" Standard Fitting",
+  //         "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+  //         "Strength: High-Density Crack-Resistant Polymer",
+  //         "Suitable For: Bathrooms, Gardens, Utility Areas",
+  //         "Dimensions: 92 Mm (H) × 78 Mm (L)",
+  //         "Installation: PTFE Tape Recommended for Sealing",
+  //         "Warranty: 5-Year Replacement Guarantee"
+  //       ]
+  //     },
+  //     {
+  //       title: "Angle Valve",
+  //       price: "₹ 164",
+  //       description: "A Sturdy PTMT Valve Designed To Control Water Direction And Flow, Ensuring Smooth Operation For Bathroom And Kitchen Fittings.",
+  //       image: "https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/angle-valve.png?updatedAt=1783589107795",
+  //       colors: [
+  //         { name: 'White', colorCode: '#FFFFFF' },
+  //         { name: 'Green', colorCode: '#4ADE80' }
+  //       ],
+  //       specs: [
+  //         "Material: Premium UPVC Body & Brass Thread",
+  //         "Mechanism: Smooth Quarter-Turn Handle",
+  //         "Inlet Size: ½\" Standard Fitting",
+  //         "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+  //         "Strength: High-Density Crack-Resistant Polymer",
+  //         "Suitable For: Bathrooms, Gardens, Utility Areas",
+  //         "Dimensions: 92 Mm (H) × 78 Mm (L)",
+  //         "Installation: PTFE Tape Recommended for Sealing",
+  //         "Warranty: 5-Year Replacement Guarantee"
+  //       ]
+  //     },
+  //   ]
+  // },
 
   // Green Taps section
   {
@@ -372,7 +372,7 @@ export const Taps = [
         title: "Angle Valve",
         price: "₹ 164",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/angle-valve.png?updatedAt=1783589107795',
+        image: "https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/angle-valve.png?updatedAt=1783589107795",
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Green', colorCode: '#4ADE80' }

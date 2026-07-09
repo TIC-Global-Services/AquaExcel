@@ -59,7 +59,7 @@ const DownloadApp = () => {
             <div className='flex flex-col'>
               <div className="border-2 rounded-2xl border-white py-5 px-6 bg-white/10 backdrop-blur-sm">
               {/* <p className='text-white font-medium text-xs md:text-xl tracking-[-4%] text-center uppercase mb-1  block'>About App</p> */}
-              <Image src={qrcode} width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
+              <Image src='/AQUAEXCEL_app.png' width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
             </div>
             <p className='text-white font-light font-hoves-pro text-sm md:text-xl mt-2 text-center'>Scan to <br className='block md:hidden'/> know more</p>
             </div>
