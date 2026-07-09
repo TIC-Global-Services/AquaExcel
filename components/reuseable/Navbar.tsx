@@ -84,9 +84,10 @@ const Navbar = () => {
         </div>
 
         <Link href='/contact' className={`${shouldHideNavbar==true ? 'hidden' : 'lg:block hidden'}`}>
-          <button className="bg-white text-foreground px-8 py-3 cursor-pointer rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity">
+          <div className="bg-white text-foreground px-8 py-3 cursor-pointer rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity inline-block text-center">
             For Enquiries
-          </button></Link>
+          </div>
+        </Link>
       </div>
       {/*Mobile Navbar*/}
       <div className="lg:hidden">

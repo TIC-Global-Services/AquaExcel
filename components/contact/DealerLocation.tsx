@@ -1,10 +1,87 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import filterIcon from "@/assets/contact/icon/mynaui_filter-solid.svg";
 import ContainerLayout from "@/layouts/ContainerLayout";
 import { dealersData } from "@/components/contact/dealersData";
+import { ChevronDown, X } from "lucide-react";
+
+const SearchableSelect = ({ options, value, onChange, placeholder, disabled = false }: any) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const filteredOptions = options.filter((opt: string) => opt.toLowerCase().includes(search.toLowerCase()));
+
+  return (
+    <div className="relative w-full" ref={wrapperRef}>
+      <div 
+        className={`flex items-center justify-between w-full p-2 border border-gray-300 rounded-md bg-white text-sm h-[38px] cursor-pointer ${disabled ? "opacity-50 cursor-not-allowed" : "focus-within:border-[#E31E24]"}`}
+        onClick={() => !disabled && setIsOpen(!isOpen)}
+      >
+        <div className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-left">
+          {value || <span className="text-gray-500">{placeholder}</span>}
+        </div>
+        <div className="flex items-center gap-1">
+          {value && (
+            <X 
+              className="w-4 h-4 text-gray-400 hover:text-[#E31E24] cursor-pointer" 
+              onClick={(e) => {
+                e.stopPropagation();
+                onChange("");
+                setSearch("");
+              }}
+            />
+          )}
+          <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        </div>
+      </div>
+
+      {isOpen && !disabled && (
+        <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-y-auto">
+          <div className="sticky top-0 bg-white p-2 border-b border-gray-100 z-10">
+            <input
+              type="text"
+              className="w-full p-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:border-[#E31E24]"
+              placeholder="Search..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+          {filteredOptions.length > 0 ? (
+            filteredOptions.map((opt: string) => (
+              <div
+                key={opt}
+                className={`p-2 text-sm cursor-pointer hover:bg-gray-100 ${value === opt ? "bg-red-50 text-[#E31E24] font-medium" : ""}`}
+                onClick={() => {
+                  onChange(opt);
+                  setSearch("");
+                  setIsOpen(false);
+                }}
+              >
+                {opt}
+              </div>
+            ))
+          ) : (
+            <div className="p-2 text-sm text-gray-500 text-center">No options found</div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const map = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -102,55 +179,37 @@ const map = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
-                <select
+                <SearchableSelect
+                  options={states}
                   value={selectedState}
-                  onChange={(e) => {
-                    setSelectedState(e.target.value);
+                  onChange={(val: string) => {
+                    setSelectedState(val);
                     setSelectedDistrict("");
                     setSelectedArea("");
                   }}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#E31E24] bg-white text-sm h-[38px]"
-                >
-                  <option value="">All States</option>
-                  {states.map((state) => (
-                    <option key={state} value={state}>
-                      {state}
-                    </option>
-                  ))}
-                </select>
+                  placeholder="All States"
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">District</label>
-                <select
+                <SearchableSelect
+                  options={districts}
                   value={selectedDistrict}
-                  onChange={(e) => {
-                    setSelectedDistrict(e.target.value);
+                  onChange={(val: string) => {
+                    setSelectedDistrict(val);
                     setSelectedArea("");
                   }}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#E31E24] bg-white text-sm h-[38px]"
-                >
-                  <option value="">All Districts</option>
-                  {districts.map((district) => (
-                    <option key={district} value={district}>
-                      {district}
-                    </option>
-                  ))}
-                </select>
+                  placeholder="All Districts"
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Area</label>
-                <select
+                <SearchableSelect
+                  options={areas}
                   value={selectedArea}
-                  onChange={(e) => setSelectedArea(e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#E31E24] bg-white text-sm h-[38px]"
-                >
-                  <option value="">All Areas</option>
-                  {areas.map((area) => (
-                    <option key={area} value={area}>
-                      {area}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setSelectedArea}
+                  placeholder="All Areas"
+                />
               </div>
               <div className="flex items-end">
                 <button
