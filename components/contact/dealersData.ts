@@ -1504,5 +1504,1045 @@ export const dealersData: Dealer[] =[
     "district": "Coimbatore",
     "state": "Tamil Nadu",
     "location": ""
+  },
+  {
+    "dealername": "NATIONAL ELECTRICAL & HARDWARE",
+    "address": "(சேகரட், ஹார்ட் பள்ளி எதிரில்), பெயின்ரோடு, ஆவூர் - 606 755, Avur, Tamil Nadu 606755, India",
+    "area": "Avur",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/t7jnSfGkVbHAcdh78"
+  },
+  {
+    "dealername": "SRI KAILASHTRADERS",
+    "address": "05, Polur Rd, near Ramakrishna Hotel, Mathalangulam, Tiruvannamalai, Annamalai R.F., Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/FcjBsz1dH1ooAJdH9"
+  },
+  {
+    "dealername": "AVR PAINTS & HARDWARE KATPADI VELLORE",
+    "address": "1 Katpadi To Gudiyatham, Rd, Latteri, Tamil Nadu 632202, India",
+    "area": "Latteri",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/PmbiY3TRgZwvF9n29"
+  },
+  {
+    "dealername": "SRI GUGAN ELECTRICALS -VLR",
+    "address": "1, Arcot Rd, Phase 1, Sathuvachari, Vellore, Venkatapuram, Tamil Nadu 632009, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/A6X5sN3Px8v2eDDc6"
+  },
+  {
+    "dealername": "MS HARDEV TRADERS",
+    "address": "1, Brahmapur, Bajapalli, Odisha 761012, India",
+    "area": "Ganjam",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/qKqCvYwDV1KQtRb48"
+  },
+  {
+    "dealername": "MEGHANA ENTERPRISES",
+    "address": "1, Lanjipalli Rd, Lanjipalli, Brahmapur, Sanakhajuria, Odisha 760008, India",
+    "area": "Brahmapur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/JDqbe5i4CDrTQ7kV9"
+  },
+  {
+    "dealername": "NEW SARAVANA ELECTRICALS -ANAICUT",
+    "address": "1, Main Bazar St, Anaicut, Tamil Nadu 632055, India",
+    "area": "Anaicut",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/CDmzWL4pncs9vkC79"
+  },
+  {
+    "dealername": "S.S SANITARY MART",
+    "address": "1, Ranihat, Ranihat Colony, Cuttack, Odisha 753001, India",
+    "area": "Cuttack",
+    "district": "Cuttack",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/j8uh9ZpkoKNGEHjv9"
+  },
+  {
+    "dealername": "SK ELECTRICAL",
+    "address": "1, Tiruvannamalai Rd, Tiruvannamalai, Alampundi, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Q1YtcxHKcciqcq8v5"
+  },
+  {
+    "dealername": "SATYA ELECTRICAL & HARDWARE",
+    "address": "1, Venkatachalapathy St, Pazhampettai, Chepet, Tamil Nadu 606801, India",
+    "area": "Chepet",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Lvzshuz1FiAkrHHb6"
+  },
+  {
+    "dealername": "MATHAJI ELECTRICALS -SRIPURAM",
+    "address": "1/178, Gandhi Rd, Ariyur, Vellore, Tamil Nadu 632055, India",
+    "area": "Ariyur",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/mygZG3tEo3fC9CB28"
+  },
+  {
+    "dealername": "THANIGAI TRADERS -KATPADI",
+    "address": "10, Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/TmZUUD9o1ss9P1aV8"
+  },
+  {
+    "dealername": "BALAJI ELECTRICALS -SATHUVACHARI",
+    "address": "10/67, Chavadi St, Sathuvachari, Vellore, Tamil Nadu 632009, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/oevCFJGoevDqKRrt7"
+  },
+  {
+    "dealername": "NEW LUCKY TRADERS VELLORE",
+    "address": "111, Bangalore Rd, Konavattam, Vellore, Mullipalayam, Tamil Nadu 632013, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/2hAkiU1b6k1R127y7"
+  },
+  {
+    "dealername": "SARASWATHI TRADERS",
+    "address": "112, Vallam - Orathanadu Main Rd, Marungulam, Tamil Nadu 613006, India",
+    "area": "Marungulam",
+    "district": "Thanjavur",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/RXsfev17u4HC682f8"
+  },
+  {
+    "dealername": "INDIA ELECTRICALS",
+    "address": "113/2, Kannar Rd, Vasanthapuram, R N Palayam, Vellore, Tamil Nadu 632001, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/mGhqXLmCVuTTBKzf7"
+  },
+  {
+    "dealername": "MATHINA ARASAN ELECTRICAL HARDWARE",
+    "address": "116/2, Anna Nagar, Kurinjipadi, Tamil Nadu 607302, India",
+    "area": "Kurinjipadi",
+    "district": "Cuddalore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/VxApooSdzvK7LVmi9"
+  },
+  {
+    "dealername": "PR ELECTRICALS",
+    "address": "119, 13F, Gandhi Salai, Cheyyar, Tamil Nadu 604407, India",
+    "area": "Cheyyar",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/1H4syg1HPPR7zNSGA"
+  },
+  {
+    "dealername": "SRI MAHALAKSHMI AGENCY VELLORE CHUNNAMBUKAR ST",
+    "address": "12, Chunnambukara St, Sripuram, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ikgX9HcfNZmmmcdn6"
+  },
+  {
+    "dealername": "MARUTHI ELECTRICAL VANDAVASI",
+    "address": "12, Yadhavar St., Vandavasi, Tamil Nadu 604408, India",
+    "area": "Vandavasi",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ecbKYdtcg3t4qdGa8"
+  },
+  {
+    "dealername": "VINAYAGA ELECTRICAL HARDWARE",
+    "address": "12/24, Surapa Muduii St, Surapattu, Tamil Nadu 605402, India",
+    "area": "Surapattu",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/WQMEegywT6dKeoKb8"
+  },
+  {
+    "dealername": "URMILA ELECTRICALS -SNEPAKKAM",
+    "address": "121A, Karugampudur, Vellore, Tamil Nadu 632013, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/H9nUgCxW14FEoEB86"
+  },
+  {
+    "dealername": "VELMURUGAN TRADERS",
+    "address": "12th Main Road, South Avenue Road, 12th Main Road, South Avenue Road, Vallalar, next to Arul Mess, Phase III, Sathuvachari, Vellore, Tamil Nadu 632009, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/D2Szhx4nAuJP6EpW7"
+  },
+  {
+    "dealername": "R.T.D TRADERS",
+    "address": "131, Manalurpet Rd, Kilnakkarai, Tiruvannamalai, Tamil Nadu 606603, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/oqZVYxYCQH4J5Nie9"
+  },
+  {
+    "dealername": "MURUGAN AGENCY VELLORE",
+    "address": "132/1/179, Long Bazzar, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/KBELiZckJ4xPRD8VA"
+  },
+  {
+    "dealername": "SRI SHANATHINATH HARDWARE VELLORE",
+    "address": "138, Chunnambukara St, Sripuram, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/BELYqGb6NzA4yCi27"
+  },
+  {
+    "dealername": "SRI LAXMI ELECTRICAL & HARDWARE",
+    "address": "138A, Muthukadai, Navalpur, Ranipet, Tamil Nadu 632401, India",
+    "area": "Ranipet",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/NahR9iwymdWHD3yH8"
+  },
+  {
+    "dealername": "ZAHID ELECTRICALS -VLRBAZAAR",
+    "address": "139/5, Sripuram, Saidapet, Vellore, Tamil Nadu 632012, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/mrBBinWuwU8CL9zK7"
+  },
+  {
+    "dealername": "SEKAR ELECTRICAL WALAJA",
+    "address": "14 thirumalai street MBD Road, Walajapet, Tamil Nadu 632513, India",
+    "area": "Walajapet",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/zDbfnDmUskuqHUJRA"
+  },
+  {
+    "dealername": "SRI ANNAPOORANI ELECTRICALS -GYM",
+    "address": "141b, Sannathi St, near Vidyalaya School, Bosepet, Nellorepettai, Gudiyatham, Tamil Nadu 632602, India",
+    "area": "Nellorepettai",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/GvPjaja9ShqoE7e66"
+  },
+  {
+    "dealername": "HARI OM ELECTRICAL VELLORE",
+    "address": "142, Chunnambukara St, near Solapuri Amman Temple, Sripuram, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Y4ZkMeRe2RTw9ejh6"
+  },
+  {
+    "dealername": "SK ELECTRICALS",
+    "address": "15, Katpadi Main Rd, opposite Indian Bank, near Poorvika Appliances, Thottapalayam, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/o2qMUtERMHYxgFy97"
+  },
+  {
+    "dealername": "HARIOM ELECTRICALS -VLRBAZAAR",
+    "address": "163, Chunnambukara St, Sripuram, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/rJ9Lp6ao8YbgHcgK9"
+  },
+  {
+    "dealername": "SHIVAJI ELECTRICAL -VLR BAZZAR",
+    "address": "163, Chunnambukara St, Sripuram, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/rJ9Lp6ao8YbgHcgK9"
+  },
+  {
+    "dealername": "EVR CORPORATION THIRUVANAMALAI",
+    "address": "166, Car St, near to Gandhi Statue, Pavazhakundur, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/cdnxFtaDmLoBFeku8"
+  },
+  {
+    "dealername": "SRI SANTHI RLECTRICAL",
+    "address": "167, Bharathiyar St, Arcot, Tamil Nadu 632503, India",
+    "area": "Arcot",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/qjND86S9ZVkbvScp7"
+  },
+  {
+    "dealername": "SRI SAI ARUNCHALA ELECTRICAL",
+    "address": "1683, South Avenue Road, Phase 2, Sathuvachari, Vellore, Tamil Nadu 632009, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/sM1faJpw9FfUAP6j6"
+  },
+  {
+    "dealername": "SRI KUMARAN TRADERS POLUR",
+    "address": "16A, Perumal Koil St, Polur, Tamil Nadu 606803, India",
+    "area": "Polur",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/7HfdXevanbw72bS67"
+  },
+  {
+    "dealername": "GNANAM ELECTRICALS-SATHUVACHARI",
+    "address": "17, Arcot Rd, near aiswarya hospital, Phase 2, Sathuvachari, Vellore, Tamil Nadu 632009, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/7aRi4pNzY4KdaikE7"
+  },
+  {
+    "dealername": "KISHNA ELECTRICAL KANIYAMBADI VELLORE",
+    "address": "176, Arni Rd, Kaniyambadi, Vellore, Tamil Nadu 632311, India",
+    "area": "Kaniyambadi",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/AuyaABihKJ9okzYa6"
+  },
+  {
+    "dealername": "TIRUMALAI ELECTRICAL",
+    "address": "18, Durgai Amman Koil St, Valappandal, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/d5opZmzJdB9bHRJn9"
+  },
+  {
+    "dealername": "BALAJI HARDWARE",
+    "address": "18, Kuppam Rd, Pudupalayam, Tamil Nadu 606705, India",
+    "area": "Pudupalayam",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/GW5rmAPGHnfpsv2V7"
+  },
+  {
+    "dealername": "SAHU TREADERS",
+    "address": "183, Raul Sahi, Ganjam, Odisha 761025, India",
+    "area": "Ganjam",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/PkwA1u7TTWDBPi1H7"
+  },
+  {
+    "dealername": "SRI LAKSHMI AGENCIES-VLR",
+    "address": "189, Surrambakarath St, Sripuram, Vellore Fort, Saidapet, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/W843ZGveTH9hrJ8m9"
+  },
+  {
+    "dealername": "MONARCH PVC PIPES CHITTOR",
+    "address": "18991-992, Thotapalyam, Chittoor, Andhra Pradesh 517001, India",
+    "area": "Chittoor",
+    "district": "Chittoor",
+    "state": "Andhra Pradesh",
+    "location": "https://maps.app.goo.gl/NohSsXUy6jSvDXKf8"
+  },
+  {
+    "dealername": "JP TRADERS",
+    "address": "19/28, Villar Rd, Thillai Nagar, Anna Nagar, Thanjavur, Tamil Nadu 613006, India",
+    "area": "Thanjavur",
+    "district": "Thanjavur",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/f8GFssA4CQ4pw27N9"
+  },
+  {
+    "dealername": "ROSHAN ELECTRICAL VISHARAM",
+    "address": "191, Anna Salai Main Rd, Melvisharam, Tamil Nadu 632509, India",
+    "area": "Melvisharam",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/5hjTxjRiPDLfUBNF8"
+  },
+  {
+    "dealername": "SANTHI ELECTRICAL & AGENCY CHEYYAR",
+    "address": "1st Floor, No. 9/10, New Kanchipuram Rd, Cheyyar, Tamil Nadu 604407, India",
+    "area": "Cheyyar",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/uSzwqg7SG46Q9cMx5"
+  },
+  {
+    "dealername": "NEW SANKARI ELECTRICALS WALAJA",
+    "address": "2, Bus Stand Rd, Walajapet, Tamil Nadu 632513, India",
+    "area": "Walajapet",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/GGsyFvNcN9AMmpvK9"
+  },
+  {
+    "dealername": "KARTHI ELECTRICAL",
+    "address": "2, Durgai Amman Koil St, Pavazhakundur, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Dxgnf3LXPAMmkkE47"
+  },
+  {
+    "dealername": "RK TRADERS VELLORE",
+    "address": "2/2, Adukkamparai, Vellore, Tamil Nadu 632011, India",
+    "area": "Adukkamparai",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/SQyDZR2wZZPCxgbGA"
+  },
+  {
+    "dealername": "MR TRADERS",
+    "address": "2/64, North Garden, Vilar, Tamil Nadu 613006, India",
+    "area": "Vilar",
+    "district": "Thanjavur",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/jiehXPyF7YSnyr5s5"
+  },
+  {
+    "dealername": "TAMIL ELECTRICAL",
+    "address": "20, Chetpet Rd, Avalurpet, Tamil Nadu 604204, India",
+    "area": "Avalurpet",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/dTZuVuUwR265pjuC9"
+  },
+  {
+    "dealername": "ARS ELECTRICAL",
+    "address": "20, Villupuram Rd, Gandhi Bazaar, Narasingarayanpettai, Gingee, Tamil Nadu 604202, India",
+    "area": "Gingee",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/2hzpHgF8jKNmh3ry8"
+  },
+  {
+    "dealername": "BOMBAY ELECTRICAL",
+    "address": "202, Gandhi Rd, Thiruvalluvar Illam, Vettavalam, Tamil Nadu 606754, India",
+    "area": "Vettavalam",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/KNfjqUzCXJrLJgC79"
+  },
+  {
+    "dealername": "DEV ELECTRICAL POLUR",
+    "address": "216/2B, Diversion Rd, Polur, Tamil Nadu 606803, India",
+    "area": "Polur",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/B2yMJisXkoDDhkPs9"
+  },
+  {
+    "dealername": "JAI SANKAR ELECTRICALS &HARDWARE-ARANIROAD",
+    "address": "219, Kammasamudram, Tamil Nadu 632319, India",
+    "area": "Kammasamudram",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/9DdbZ99rKzasvgVx6"
+  },
+  {
+    "dealername": "GALAXY ELECTRICALS -KATPADI",
+    "address": "21a, 4th East Cross Rd, opposite More Super Market & CSC Computer Centre, Suthanthira Ponvizha Nagar, Gandhinagar, Katpadi, Vellore, Tamil Nadu 632006, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/GXmXWbUupA7FbtQP6"
+  },
+  {
+    "dealername": "SS AGENCIES",
+    "address": "21A, East St, Suthanthira Ponvizha Nagar, Mottur, Gandhi Nagar, Vellore, Tamil Nadu 632006, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/tLv66GkiZMLpiqzC6"
+  },
+  {
+    "dealername": "BHARATH ELECTRICALS",
+    "address": "225, Kaspa, Vellore, Tamil Nadu 632001, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ERRtU24fTV2Zp3gw9"
+  },
+  {
+    "dealername": "HARI HOME ELECTRICAL",
+    "address": "229, Arni Rd, Arcot, Tamil Nadu 632503, India",
+    "area": "Arcot",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/iz8RymsrSq6NaY766"
+  },
+  {
+    "dealername": "THIRUMALAI TRADERS",
+    "address": "240, Tiruvannamalai Rd, Thalavanur, Gingee, Tamil Nadu 604202, India",
+    "area": "Gingee",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/9WefReUUg8DHYxcK6"
+  },
+  {
+    "dealername": "SATYA TRADERS",
+    "address": "25/39 POLUR MAIN ROAD, Mariyamman mahakal, X ROAD, opposite Kanji, opposite SS Mariyamman mahakal, JAMBERI, Kanji, Tamil Nadu 606702, India",
+    "area": "Kanji",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/r4NmtigcRp8q4QXu7"
+  },
+  {
+    "dealername": "BAJARANGI ELECTRICAL & PLUMBING",
+    "address": "255, Main Rd, near international kidz school front, Santoshpur, Lauput, Pokharibari, Odisha 761027, India",
+    "area": "Santoshpur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/Rh6HoAj8Y3DtcHZi9"
+  },
+  {
+    "dealername": "MAURTHI ELECTRICALS",
+    "address": "26, Othavadai Chetty St, Vandavasi, Tamil Nadu 604408, India",
+    "area": "Vandavasi",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/y1Wb49H4vuCArC1y6"
+  },
+  {
+    "dealername": "ARRAHMAN AGENCY",
+    "address": "27/130, 27/130, 1st St, Vgp Nagar, Kamalakannapan Nagar, Viluppuram, Tamil Nadu 605604, India",
+    "area": "Viluppuram",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/cyKXxWnYdFBsT7wQ8"
+  },
+  {
+    "dealername": "ARCOT ELECTRICAL & HARDWARE",
+    "address": "28J8+JQX, Indranagar Colony, Odiyathur, Oduvankuppam, Tamil Nadu 605701, India",
+    "area": "Odiyathur",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/A7aiFNNFNptztjPj6"
+  },
+  {
+    "dealername": "PONNUSAMY TRADERS",
+    "address": "28P3+XF6, Kandachipuram, Tamil Nadu 605701, India",
+    "area": "Kandachipuram",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/qGXPsPvu2wCSJonUA"
+  },
+  {
+    "dealername": "SAMAY HARDWARE",
+    "address": "28Q2+H9C, NH 38, Kandachipuram, Tamil Nadu 605701, India",
+    "area": "Kandachipuram",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/sZ6NZBxqhLcqZba36"
+  },
+  {
+    "dealername": "SRI THIRUMALAI ELECTRICAL & TRADERS VELLORE",
+    "address": "29, Vella Mundy St, Balaji Nagar, Vellore, Tamil Nadu 632004, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/a8bNfQwEs37CXQV57"
+  },
+  {
+    "dealername": "AYYANAR ELECTRICAL & HARDWARE",
+    "address": "299M+64R, Mangalore - Villupuram Rd, Ariyalur Thirukkai, Ariyalur, Tamil Nadu 605202, India",
+    "area": "Ariyalur Thirukkai",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/j6engdZhmYDWoJab8"
+  },
+  {
+    "dealername": "DINESH HARDWARE",
+    "address": "2C58+J3, Viramur, Tamil Nadu 605402, India",
+    "area": "Viramur",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/T4Kq9boXZmANDNWBA"
+  },
+  {
+    "dealername": "SRI BALAJI ELECTRICALS & HARDWARE",
+    "address": "2C65+298, Kedar, Tamil Nadu 605202, India",
+    "area": "Kedar",
+    "district": "Villupuram",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/aLnbGN2GG5VF4i946"
+  },
+  {
+    "dealername": "SAKTHI ELECTRICAL PANAPAKAM",
+    "address": "2F9J+7GC, SH128, Banavaram, Tamil Nadu 632505, India",
+    "area": "Banavaram",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/betqVtLP5ma8ngtU8"
+  },
+  {
+    "dealername": "SREE LAKSHMI ELECTRICALS",
+    "address": "2WV8+M8V, MDR807, Perungolathur, Tamil Nadu 606708, India",
+    "area": "Perungolathur",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/TvfGLhh9XqxZSumY9"
+  },
+  {
+    "dealername": "AMALA TRADERS",
+    "address": "2XV7+HMG, Villupuram, Moongilthuraippattu, Tamil Nadu 605702, India",
+    "area": "Villupuram",
+    "district": "Kallakurichi",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/x7tY9T4Ric7kCDZJ7"
+  },
+  {
+    "dealername": "ROMAN TRADERS",
+    "address": "2XW7+4X, Poruvalur, Moongilthuraippattu, Tamil Nadu 605702, India",
+    "area": "Poruvalur",
+    "district": "Kallakurichi",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/grDtdQEcmiPTtnyR7"
+  },
+  {
+    "dealername": "ARCOT LIGHT HOSE ARCOT",
+    "address": "3, Arni Rd, near Lakshmi Theatre Street, Arcot, Tamil Nadu 632503, India",
+    "area": "Arcot",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/tYTggXbabeFUNrNd6"
+  },
+  {
+    "dealername": "SANTHI ELECTRICALS -OTTERI",
+    "address": "3, NH 38, Vellore, Tamil Nadu 632002, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/HCFN4UWDGCnsXtX88"
+  },
+  {
+    "dealername": "SRI RAM ELECTRICAL",
+    "address": "3, Thanipadi Rd, opp. Taluk Office, Thandarampattu, Tamil Nadu 606701, India",
+    "area": "Thandarampattu",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/hjT983obo1jNFB2G7"
+  },
+  {
+    "dealername": "SRI LAKSHMI CORPORATION",
+    "address": "3, Tindivanam Rd, So, Kilnachipattu, Kil Pennathur, Tamil Nadu 606601, India",
+    "area": "Kilnachipattu",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/eP4Nb4W6MebiG2iU8"
+  },
+  {
+    "dealername": "SG ELECTRICALS",
+    "address": "3, Vellore Main Rd, Anna Nagar, Masapettai, Arcot, Tamil Nadu 632503, India",
+    "area": "Arcot",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/52XqJwimbkRzvDYC7"
+  },
+  {
+    "dealername": "CSS ENTERPRISES -KATPADI",
+    "address": "30, Chittor Main Rd, Suthanthira Ponvizha Nagar, Thiru Nagar, Vellore, Tamil Nadu 632006, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/m2DUaL7uavpGWao96"
+  },
+  {
+    "dealername": "AMMAN ELECTRICALS -KATPADI",
+    "address": "31, 6th West Cross Rd, Suthanthira Ponvizha Nagar, Gandhinagar West, Gandhi Nagar, Vellore, Tamil Nadu 632006, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/DrZ2TMc29kt67RCb9"
+  },
+  {
+    "dealername": "ADITHYARAM MARKETING -KATPADI",
+    "address": "32, 1st St, Suthanthira Ponvizha Nagar, Venkatraman Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/DGDkXeMKxxLCNuLU8"
+  },
+  {
+    "dealername": "HINDUSTAN ELECTRICALS -RTO RD VELLORE",
+    "address": "349, Regional Transport Office Rd, opposite to A to Z Food Zone, Phase 2, Sathuvachari, Vellore, Tamil Nadu 632009, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/nQ8jFVBgFtzmumkk9"
+  },
+  {
+    "dealername": "ASHOK ELECTRICALS",
+    "address": "34-A, Polur Rd, opp. Vijay park Hotel, Mathalangulam, Tiruvannamalai, Annamalai R.F., Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/2Xi4GAvNb6WnSEAf9"
+  },
+  {
+    "dealername": "AASHIRVAD ELECTRICAL & HE APPLIANCE",
+    "address": "34-A, Polur Rd, opp. Vijay park Hotel, Mathalangulam, Tiruvannamalai, Annamalai R.F., Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/2Xi4GAvNb6WnSEAf9"
+  },
+  {
+    "dealername": "MOIN ELECTRICALS",
+    "address": "37/51, Saleem Nagar, Melvisharam, Tamil Nadu 632509, India",
+    "area": "Melvisharam",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/KJvyJwSa3DhLzau28"
+  },
+  {
+    "dealername": "SRI MATHESWARI ELECTRICALS",
+    "address": "398, Armi Rd, Virupatchipuram, Sainathapuram, Vellore, Tamil Nadu 632001, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/ZLz3sVhnYVTnR8xd7"
+  },
+  {
+    "dealername": "BABY TRADERS",
+    "address": "41/1, Vellore - Chennai Rd, Puttuthakku, Arapakkam, Tamil Nadu 632517, India",
+    "area": "Arapakkam",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/sdtkoMKKEDWhHU2L7"
+  },
+  {
+    "dealername": "DSP ELECTRICALS",
+    "address": "42/7, Ganesapuram, Tiruvannamalai, Tamil Nadu 606603, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Hkg7pghxxRhtpF5C8"
+  },
+  {
+    "dealername": "OM MURUGA ELECTRICALS",
+    "address": "440, Deepam Nagar, Vengikkal, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/Nun9XwtPGUk52urZ6"
+  },
+  {
+    "dealername": "SHREE JAGANNATH DISTRIBUTOR",
+    "address": "44G6+PRR, Sundaria, Nayagarh, Odisha 752069, India",
+    "area": "Sundaria",
+    "district": "Nayagarh",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/mN3CBVc3sPqqKZNh7"
+  },
+  {
+    "dealername": "DEV ELECTRICALS",
+    "address": "46/A, Melvisharam, Tamil Nadu 632509, India",
+    "area": "Melvisharam",
+    "district": "Ranipet",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/qDcRYT3GhG29YR6Y7"
+  },
+  {
+    "dealername": "KRISHNA ELECTRICAL & HARDWARE",
+    "address": "54HV+76P, Velanandal, Tamil Nadu 606808, India",
+    "area": "Velanandal",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/wCWqWJCnAxTeaNdi6"
+  },
+  {
+    "dealername": "SRI SUNDHARAM ELECTRICAL & HARDWARE",
+    "address": "5569+4J6, Tiruvannamalai, Tamil Nadu 606755, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/GJmErNXY9kUoT1p79"
+  },
+  {
+    "dealername": "RADHAKRISHNAN SANITARY",
+    "address": "5WVX+G4P, Banamalipur Rd, Balipatna, Odisha 752102, India",
+    "area": "Balipatna",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/NwS8pzeGbH7e3qWP8"
+  },
+  {
+    "dealername": "MAA MANGALA HW ,SANITARY,ELECTRICALS",
+    "address": "5XMF+4RP, Banamalipur Rd, Athantar, Odisha 752102, India",
+    "area": "Athantar",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/kjYgkJN1jdWjyS2p7"
+  },
+  {
+    "dealername": "GOLDEN TRADERS",
+    "address": "6362+4M9, Samuthiram, Tiruvannamalai, Tamil Nadu 606603, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/tSLdwVnfEvAMDaYC7"
+  },
+  {
+    "dealername": "KAREEM TRADERS",
+    "address": "6363+XG2, Samuthiram, Tiruvannamalai, Tamil Nadu 606603, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/AjvcHUe4btTE1R658"
+  },
+  {
+    "dealername": "GROWMORE TRADING COMPANY",
+    "address": "636J+RHV, Edapalayam, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/qtysVJHQXuBSgAKs6"
+  },
+  {
+    "dealername": "POWER ELECTRICALS",
+    "address": "63GG+25H, Mathiyazhagan, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/a3fqWCdzgUxfyZz1A"
+  },
+  {
+    "dealername": "POWER ELECTRICALS",
+    "address": "68, Azad Rd, near Lalitha Jewellers, Thorapadi, Vellore, Tamil Nadu 632002, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/oDPVvijKyQYPuG3V7"
+  },
+  {
+    "dealername": "SUNYA BASI AGENCY",
+    "address": "6X94+M8C, At/po, Kakarudrapur Rd, Khamangasasan, Odisha 752102, India",
+    "area": "Khamangasasan",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/CdRHca5Lopi2vwea8"
+  },
+  {
+    "dealername": "A.K.S ELECTRICAL",
+    "address": "7359+3GW, Polur Rd, Om Sakthi Nagar, Vengikkal, Tiruvannamalai, Tamil Nadu 606604, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/7W5nwJPA3df2sq9b7"
+  },
+  {
+    "dealername": "OMM SANITATION",
+    "address": "760, Bajrakabati Rd, Samanta Sahi, Siba Bazar, Cuttack, Odisha 753001, India",
+    "area": "Cuttack",
+    "district": "Cuttack",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/hog8sD9rLFaqosBh7"
+  },
+  {
+    "dealername": "MAA BILASINI SANITARY",
+    "address": "7W4M+63X, Sasan, Odisha 752100, India",
+    "area": "Sasan",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/SbbtXeuie9z626Tr9"
+  },
+  {
+    "dealername": "BAJARANG SANITARY",
+    "address": "7W8J+9WR, Bhingarpur, Odisha 752115, India",
+    "area": "Bhingarpur",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/WneKPvRhd4q94KB26"
+  },
+  {
+    "dealername": "HANUMAN ELECTRICAL &HARDWARE",
+    "address": "8, Amirthi Rd, Pennathur, Tamil Nadu 632058, India",
+    "area": "Pennathur",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/x3akM7MJ24Bfz6ZL8"
+  },
+  {
+    "dealername": "SRI ANGALAMMAN ELECTRICALS",
+    "address": "820, Vettavalam Rd, beside Vijaya Mall, Thiruvalluvar nagar, Tiruvennanallur, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/n4PzGjye6ZigzqJb9"
+  },
+  {
+    "dealername": "POOJA ELECTRICAL",
+    "address": "861b, NH 77, Kilnathur, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Kilnathur",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/n7XbZurVjwAjWNPt6"
+  },
+  {
+    "dealername": "RAJASTHANI TILES",
+    "address": "861b, NH 77, Kilnathur, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Kilnathur",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/n7XbZurVjwAjWNPt6"
+  },
+  {
+    "dealername": "AMIT ELECTRICAL & HARDWARE",
+    "address": "8Q7Q+6F4, Baidiya Nath Pur, Brahmapur, Odisha 760001, India",
+    "area": "Brahmapur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/VwvyfpWsZwJRFhiBA"
+  },
+  {
+    "dealername": "SIVA SHANKAR HARDWARE SANITARY",
+    "address": "8Q9C+JP2, Haridakhandi, Brahmapur, Odisha 760006, India",
+    "area": "Brahmapur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/5hiBntWu2cFFGoJL8"
+  },
+  {
+    "dealername": "MAA KALUA ELECTRICAL & HARDWARE",
+    "address": "8QJ6+CH9, SH 17, Duduma Colony, Brahmapur, Odisha 760006, India",
+    "area": "Brahmapur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/qbCtW1HKhJufMzpG9"
+  },
+  {
+    "dealername": "SAHU HARDWARE & SANITARY",
+    "address": "8QPX+J76, Nimakhandi Main Rd, Nimakhandi, Odisha 761001, India",
+    "area": "Nimakhandi",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/sgiAdAcfDLuN6SAF7"
+  },
+  {
+    "dealername": "BIJAYA MARKETING",
+    "address": "8R62+QRV, New Bus Stand Rd, Lingaraj Nagar, Aurobinda Nagar, Brahmapur, Odisha 760001, India",
+    "area": "Brahmapur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/yHH6mNXDw2WME5JY7"
+  },
+  {
+    "dealername": "MUNA ELECTRICAL",
+    "address": "8R8W+2JV, Bima Nagar, Brahmapur, Odisha 760011, India",
+    "area": "Brahmapur",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/kzrii1eabRGKz1Aq6"
+  },
+  {
+    "dealername": "ASHIRVAD SANITARY",
+    "address": "8V27+6FQ, Square, Palasuni, Rasulgarh, Bhubaneswar, Odisha 751010, India",
+    "area": "Bhubaneswar",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/aYis3kbYTBUdu41J7"
+  },
+  {
+    "dealername": "OMM SAI AGENCY",
+    "address": "8V5R+2CC, Balianta, Atala, Bhubaneswar, Odisha 752101, India",
+    "area": "Atala",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/xhdxTmECQ8jF6ADAA"
+  },
+  {
+    "dealername": "MAA BHABANI TRADERS",
+    "address": "8W22+8GJ, Balianta to SH 60, Balianta, Bhubanpur, Bhubaneswar, Odisha 752101, India",
+    "area": "Bhubanpur",
+    "district": "Khordha",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/T7pJ7qwVTedBA4128"
+  },
+  {
+    "dealername": "RR SANITARY WORLD",
+    "address": "8W3R+FHW, Balipatana - Bhingarpur Rd, Uttamapur, Odisha 754001, India",
+    "area": "Uttamapur",
+    "district": "Cuttack",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/rixZ3D3wSX9CFPw99"
+  },
+  {
+    "dealername": "PVN CORPORATION",
+    "address": "93/1, Chinnakadai St, Pavazhakundur, Tiruvannamalai, Tamil Nadu 606601, India",
+    "area": "Tiruvannamalai",
+    "district": "Tiruvannamalai",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/xD9LoTpRuJbrFyqw8"
+  },
+  {
+    "dealername": "GANGA ELECTRICALS -THORAPADI",
+    "address": "99, Azad Rd, Thorapadi, Vellore, Tamil Nadu 632002, India",
+    "area": "Vellore",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/J5eeZFwKnq8bMKHP6"
+  },
+  {
+    "dealername": "VISALACHI AMMAN ELECTRICAL",
+    "address": "99XM+9W3, Athirai Rd, துவரங்குறிச்சி நார்த், பட்டுக்கோட்டை, தமிழ் நாடு 614613, India",
+    "area": "பட்டுக்கோட்டை",
+    "district": "Thanjavur",
+    "state": "Tamil Nadu",
+    "location": "https://maps.app.goo.gl/cvQG3ncz6MLkSaZ58"
+  },
+  {
+    "dealername": "SANTI ELECTRICAL",
+    "address": "9HG9+VVM, SH 17, Digapahandi, Odisha 761007, India",
+    "area": "Digapahandi",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/AiysGLoTMoU9T8s67"
+  },
+  {
+    "dealername": "PROMOD ELECTRICAL",
+    "address": "9HG9+VVM, SH 17, Digapahandi, Odisha 761007, India",
+    "area": "Digapahandi",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/AiysGLoTMoU9T8s67"
+  },
+  {
+    "dealername": "SANTI ELECTRICAL & PLUMBING",
+    "address": "9HG9+VVM, SH 17, Digapahandi, Odisha 761007, India",
+    "area": "Digapahandi",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/AiysGLoTMoU9T8s67"
+  },
+  {
+    "dealername": "TARA TARINI ELECTRICAL",
+    "address": "9HG9+VVM, SH 17, Digapahandi, Odisha 761012, India",
+    "area": "Digapahandi",
+    "district": "Ganjam",
+    "state": "Odisha",
+    "location": "https://maps.app.goo.gl/AiysGLoTMoU9T8s67"
   }
 ]
