@@ -39,7 +39,7 @@ const ContactForm = () => {
             };
 
             
-            await fetch('https://script.google.com/macros/s/AKfycbyVx3wt3wwkP_j90A1odjBPIHcpTWcPkZfD6ThdDsfre4gfIiLt-FUcUwovQaOnsS8t/exec', {
+            await fetch('https://script.google.com/macros/s/AKfycbyInlrGjKb6nhyT0FVj6l3as_4UCVw2I7JMdBJWDsSOsG8uK0rnusoaCuEdbpx0zeQ3/exec', {
                 method: 'POST',
                 body: JSON.stringify(payload)
             });
@@ -61,7 +61,7 @@ const ContactForm = () => {
                 ...data
             };
 
-            await fetch('https://script.google.com/macros/s/AKfycbyVx3wt3wwkP_j90A1odjBPIHcpTWcPkZfD6ThdDsfre4gfIiLt-FUcUwovQaOnsS8t/exec', {
+            await fetch('https://script.google.com/macros/s/AKfycbyInlrGjKb6nhyT0FVj6l3as_4UCVw2I7JMdBJWDsSOsG8uK0rnusoaCuEdbpx0zeQ3/exec', {
                 method: 'POST',
                 body: JSON.stringify(payload)
             });
