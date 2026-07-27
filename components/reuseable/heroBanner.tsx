@@ -166,7 +166,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     >
       {/* Background Image / Video */}
 
-      <div className="absolute parallax-media inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full">
 
         {backgroundVideo ? (
           <video
@@ -176,7 +176,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             loop
             muted={isMuted}
             playsInline
-            className={backgroundClassName || "object-cover w-full h-full scale-100"}
+            className={"object-cover w-full h-full"}
           />
         ) : (
           <Image

@@ -207,7 +207,7 @@ const Footer = () => {
                 ENQUIRY: +91-87540 10016
               </li>
               <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
-                <a href="mailto:customercare@aquaexcel.in">EMAIL: customercare@aquaexcel.in</a>
+                <a href="mailto:salescoordinator@aquaexcel.in">EMAIL: salescoordinator@aquaexcel.in</a>
               </li>
             </ul>
           </div>
