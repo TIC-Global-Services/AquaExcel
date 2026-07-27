@@ -280,7 +280,7 @@ const TapAnimation = () => {
       <div className={`w-full mb-8 flex items-center justify-center ${isMobileDevice ? 'block' : 'hidden md:hidden'}`}>
         <video
           ref={videoRef}
-          src="/videos/tapsequence-mobile.mp4"
+          src="https://ik.imagekit.io/pgtxr2fmn/tapanimation/tapsequence-mobile.mp4"
           autoPlay
           muted
           playsInline
