@@ -59,7 +59,7 @@ const Careeropportunities = () => {
               <h2 className="text-black text-4xl font-semibold tracking-tight">We’re Hiring</h2>
               {/* <input className='w-full rounded-xl border-[1px] py-[2%] px-5' placeholder='Enter your email'></input> */}
                <p className='text-center text-xl'>Apply through our quick application form and select the role <br/> that best matches your skills and experience.</p>
-              <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSe2H_LoDBTZaska9nO8oZ_q7AAMgHVbeUJaFDV_d4rmcsh4MQ/viewform?usp=publish-editor"} target="_blank"><button className="text-white bg-[#E31E24] font-medium text-base px-5 py-2 rounded-xl">Apply now</button></Link>
+              <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSe2H_LoDBTZaska9nO8oZ_q7AAMgHVbeUJaFDV_d4rmcsh4MQ/viewform?usp=publish-editor"} target="_blank"><button className="text-white bg-[#E31E24] font-medium text-base px-5 py-2 rounded-xl cursor-pointer">Apply now</button></Link>
             </div>
         </div>
       </div>
