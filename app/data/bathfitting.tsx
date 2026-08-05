@@ -84,7 +84,7 @@ export const bathfitting = [
         title: "Shower Tap - HOT & COLD",
         price: "₹ 2025",
         description: "A Hot And Cold Shower Tap Is A Mixer Tap That Blends Warm And Cold Water, Allowing Easy Control Of Temperature And Flow For A Comfortable Shower Experience.",
-        image: image14,
+        image: "https://ik.imagekit.io/pgtxr2fmn/bathfitting/Shower-Tap-HOT-COLD.png",
 
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -102,7 +102,7 @@ export const bathfitting = [
         title: "Float Valve",
         price: "₹ 324 - ₹ 954",
         description: "A Float Valve Is An Automatic Water-Level Control Valve That Stops Or Allows Water Flow In A Tank Based On The Float's Position.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/FloatValve.jpg?updatedAt=1773039737059',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/bathfitting/Float_valve.png',
 
         specs: [
           "Material: Premium UPVC Body & Brass Thread",

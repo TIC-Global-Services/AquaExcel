@@ -84,7 +84,7 @@ export const accessories = [
         title: "Tank Filter",
         price: "₹ 816 - ₹ 1881",
         description: "A Tank Filter Is A Device Used To Screen Out Dirt And Debris Before Water Enters The Tank, Ensuring Cleaner Storage And Smoother Flow.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tankfilter.jpg?updatedAt=1773046227140',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/tank_filter.png',
 
         specs: [
           "Material: Heavy-Duty Reinforced Polymer Composite",
@@ -135,7 +135,7 @@ export const accessories = [
         title: "CPVC Concealed Valve",
         price: "₹ 1209 - ₹ 1264",
         description: "A CPVC Concealed Valve Is Installed Inside The Wall For A Sleek Look, Offering Reliable Flow Control For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/cpvcConcealedvalve.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/CPVC-Concealed-Valve.png',
         specs: [
           "Material: Premium Quality CPVC & Brass Core",
           "Build Quality: Durable, Leak-Proof & Long-Lasting",
@@ -151,7 +151,7 @@ export const accessories = [
         title: "UPVC Compact Ball Valve",
         price: "₹ 109 - ₹ 549",
         description: "A UPVC Compact Ball Valve Offers Compact, Leak-Proof On/Off Flow Control, Designed For General Plumbing And Water Supply Networks.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/upvcCompact.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/UPVC_compact_ball_valve.png',
         specs: [
           "Material: Premium Quality UPVC",
           "Build Quality: Durable, Leak-Proof & Long-Lasting",
@@ -167,7 +167,7 @@ export const accessories = [
         title: "CPVC Brass Union Ball Valve",
         price: "₹ 1285 - ₹ 1613",
         description: "A CPVC Ball Valve With A Brass Union Coupling That Permits Easy Disconnection and Reconnection, Providing High Leak Resistance Under Pressure.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/brassUnionBallvalveCPVC.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/CPVC_brass_union.png',
         specs: [
           "Material: Premium Quality CPVC & Brass Union",
           "Build Quality: Durable, Leak-Proof & Long-Lasting",
@@ -183,7 +183,7 @@ export const accessories = [
         title: "CPVC Ball Valve",
         price: "₹ 211 - ₹ 1099",
         description: "A CPVC Ball Valve Is A High-Temperature and Corrosion-Resistant Valve Designed For Smooth Operation And Durable Flow Regulation in CPVC Pipelines.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/cpvcBallvalue.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/accessories/CPVC_ball_valve.png',
         specs: [
           "Material: Premium Quality CPVC",
           "Build Quality: Durable, Leak-Proof & Long-Lasting",

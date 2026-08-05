@@ -300,7 +300,7 @@ const StackedCardsSection = () => {
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="modal-ui absolute top-6 right-6 z-50 p-2.5 rounded-full bg-black/50 text-white hover:bg-black/85 hover:scale-105 border border-white/10 transition-all duration-200"
+              className="modal-ui absolute cursor-pointer top-6 right-6 z-50 p-2.5 rounded-full bg-black/50 text-white hover:bg-black/85 hover:scale-105 border border-white/10 transition-all duration-200"
               aria-label="Close modal"
             >
               <X size={24} />

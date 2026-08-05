@@ -376,12 +376,12 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                     }deg) translateZ(${radius}px)`,
                 }}
               >
-                <div className="relative w-[344px] aspect-[280/455] rounded-[32px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
+                <div className="relative w-[344px] bg-black/96   aspect-[280/455] rounded-[32px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
                   <img
                     src={item.url}
                     alt={item.title}
-                    className="pointer-events-none object-cover w-full h-full select-none"
-                    style={{ objectPosition: "70% center" }}
+                    className="pointer-events-none object-contain w-full h-full select-none"
+                    // style={{ objectPosition: "70% center" }}
                     draggable={false}
                   />
 
