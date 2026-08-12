@@ -1,12 +1,14 @@
 import Hero from '@/components/product/hero'
-import React from 'react'
+import React, { Suspense } from 'react'
 import ProductList from '@/components/product/productList'
 
 const page = () => {
   return (
     <div>
        <Hero />
-       <ProductList/>
+       <Suspense fallback={null}>
+         <ProductList/>
+       </Suspense>
     </div>
   )
 }
