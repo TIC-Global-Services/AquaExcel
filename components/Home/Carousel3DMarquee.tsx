@@ -8,20 +8,327 @@ import {
   PanInfo,
   ResolvedValues,
 } from "framer-motion";
+import ProductModal from "../product/ProductModal";
 
-const IMGS: { url: string; title: string }[] = [
-  { url: "/bt-swan-neck.jpg", title: "Swan Neck" },
-  { url: "/bt-two-way.jpg", title: "Two-Way Angle Valve" },
-  { url: "/bt-sink-tap.jpg", title: "Sink Tap" },
-  { url: "/bt-bib-tap.jpg", title: "Bib Tap Short Body" },
-  { url: "/bt-angle.jpg", title: "Angle Valve" },
-  { url: "/bt-swan-neck.jpg", title: "Swan Neck" },
-  { url: "/bt-two-way.jpg", title: "Two-Way Angle Valve" },
-  { url: "/bt-sink-tap.jpg", title: "Sink Tap" },
-  { url: "/bt-bib-tap.jpg", title: "Bib Tap Short Body" },
-  { url: "/bt-angle.jpg", title: "Angle Valve" },
-  { url: "/bt-swan-neck.jpg", title: "Swan Neck" },
-  { url: "/bt-two-way.jpg", title: "Two-Way Angle Valve" },
+const IMGS: { url: string; title: string, products?: any }[] = [
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bib_swan_neck.png",
+    title: "Swan Neck",
+    products: [{
+      title: "Swan Neck",
+      price: "₹ 880",
+      description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+      image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
+      colors: [
+        { name: 'White', colorCode: '#FFFFFF' },
+        { name: 'Green', colorCode: '#4ADE80' }
+      ],
+      specs: [
+        "Material: Premium UPVC Body & Brass Thread",
+        "Mechanism: Smooth Quarter-Turn Handle",
+        "Inlet Size: ½\" Standard Fitting",
+        "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+        "Strength: High-Density Crack-Resistant Polymer",
+        "Suitable For: Bathrooms, Gardens, Utility Areas",
+        "Dimensions: 92 Mm (H) × 78 Mm (L)",
+        "Installation: PTFE Tape Recommended for Sealing",
+        "Warranty: 5-Year Replacement Guarantee"
+      ]
+    },]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
+    title: "Two-Way Angle Valve",
+    products: [
+      {
+        title: "Two way Angle Valve",
+        price: "₹ 560",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/sink_tap.png",
+    title: "Sink Tap",
+    products: [
+      {
+        title: "Sink Tap Wallmount",
+        price: "₹ 880",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-bib-tap.png",
+    title: "Bib Tap Short Body",
+    products: [
+      {
+        title: "Bib Tap Short Body",
+        price: "₹ 320",
+        description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-angle-valve.png",
+    title: "Angle Valve",
+    products: [
+      {
+        title: "Angle Valve",
+        price: "₹ 335",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bib_swan_neck.png",
+    title: "Swan Neck",
+    products: [{
+      title: "Swan Neck",
+      price: "₹ 880",
+      description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+      image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
+      colors: [
+        { name: 'White', colorCode: '#FFFFFF' },
+        { name: 'Green', colorCode: '#4ADE80' }
+      ],
+      specs: [
+        "Material: Premium UPVC Body & Brass Thread",
+        "Mechanism: Smooth Quarter-Turn Handle",
+        "Inlet Size: ½\" Standard Fitting",
+        "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+        "Strength: High-Density Crack-Resistant Polymer",
+        "Suitable For: Bathrooms, Gardens, Utility Areas",
+        "Dimensions: 92 Mm (H) × 78 Mm (L)",
+        "Installation: PTFE Tape Recommended for Sealing",
+        "Warranty: 5-Year Replacement Guarantee"
+      ]
+    },]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
+    title: "Two-Way Angle Valve",
+    products: [
+      {
+        title: "Two way Angle Valve",
+        price: "₹ 560",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/sink_tap.png",
+    title: "Sink Tap",
+    products: [
+      {
+        title: "Sink Tap Wallmount",
+        price: "₹ 880",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-bib-tap.png",
+    title: "Bib Tap Short Body",
+    products: [
+      {
+        title: "Bib Tap Short Body",
+        price: "₹ 320",
+        description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-angle-valve.png",
+    title: "Angle Valve",
+    products: [
+      {
+        title: "Angle Valve",
+        price: "₹ 335",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bib_swan_neck.png",
+    title: "Swan Neck",
+    products: [{
+      title: "Swan Neck",
+      price: "₹ 880",
+      description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+      image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
+      colors: [
+        { name: 'White', colorCode: '#FFFFFF' },
+        { name: 'Green', colorCode: '#4ADE80' }
+      ],
+      specs: [
+        "Material: Premium UPVC Body & Brass Thread",
+        "Mechanism: Smooth Quarter-Turn Handle",
+        "Inlet Size: ½\" Standard Fitting",
+        "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+        "Strength: High-Density Crack-Resistant Polymer",
+        "Suitable For: Bathrooms, Gardens, Utility Areas",
+        "Dimensions: 92 Mm (H) × 78 Mm (L)",
+        "Installation: PTFE Tape Recommended for Sealing",
+        "Warranty: 5-Year Replacement Guarantee"
+      ]
+    },]
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
+    title: "Two-Way Angle Valve",
+    products: [
+      {
+        title: "Two way Angle Valve",
+        price: "₹ 560",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Green', colorCode: '#4ADE80' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
+    ]
+  },
 ];
 
 interface RollingGalleryProps {
@@ -31,6 +338,7 @@ interface RollingGalleryProps {
     url: string;
     title: string;
     description?: string;
+    products?:[]
   }[];
   autoScrollInterval?: number;
   dragSensitivity?: number;
@@ -50,6 +358,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   const [isAutoScrolling, setIsAutoScrolling] = useState<boolean>(true);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null)
 
   // Navigation drag state
   const navDragStartX = useRef<number>(0);
@@ -97,7 +406,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
 
   const transform = useTransform(
     rotation,
-    (val: number) => `rotate3d(0,1,0,${val}deg)`
+    (val: number) => `rotate3d(0,1,0,${val}deg)`,
   );
 
   useEffect(() => {
@@ -153,7 +462,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
 
   const handleDrag = (
     _: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
+    info: PanInfo,
   ): void => {
     const newDragDistance = dragDistance + info.delta.x;
     setDragDistance(newDragDistance);
@@ -188,7 +497,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
 
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
+    info: PanInfo,
   ): void => {
     setIsDragging(false);
     setDragDistance(0);
@@ -236,7 +545,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
   // Navigation drag handlers with throttling to prevent bugs
   const handleNavDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     e.preventDefault();
-    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
     navDragStartX.current = clientX;
     isNavDragging.current = true;
     lastNavUpdate.current = Date.now();
@@ -252,7 +561,7 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
     if (now - lastNavUpdate.current < 50) return;
 
     e.preventDefault();
-    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
     const totalDrag = clientX - navDragStartX.current;
 
     // Calculate how many items to scroll (increased sensitivity)
@@ -261,7 +570,8 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
 
     if (itemsToScroll !== 0) {
       // Calculate new index and wrap around
-      const newIndex = (currentIndex - itemsToScroll + faceCount * 100) % faceCount;
+      const newIndex =
+        (currentIndex - itemsToScroll + faceCount * 100) % faceCount;
 
       if (newIndex !== currentIndex) {
         navigateToIndex(newIndex);
@@ -326,7 +636,9 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
             Product Universe
           </h2>
           <p className="text-foreground font-inter-tight leading-[120%] font-light text-sm md:text-[20px] md:tracking-tight w-full  md:max-w-2xl mx-auto">
-            Offering Forward-Thinking Products Paired With <br className="block md:hidden" /> Complete, Reliable <br className="hidden md:block" />
+            Offering Forward-Thinking Products Paired With{" "}
+            <br className="block md:hidden" /> Complete, Reliable{" "}
+            <br className="hidden md:block" />
             Solutions For Every Need.
           </p>
         </div>
@@ -375,8 +687,10 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
                   transform: `rotateY(${(360 / faceCount) * i
                     }deg) translateZ(${radius}px)`,
                 }}
+                onClick={() => setSelectedProduct(item.products?.[0])}
+                
               >
-                <div className="relative w-[344px] bg-black/96   aspect-[280/455] rounded-[32px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
+                <div className="relative w-[344px] bg-black  aspect-[280/455] rounded-[32px] overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105">
                   <img
                     src={item.url}
                     alt={item.title}
@@ -435,11 +749,15 @@ const Carousel3DMarquee: React.FC<RollingGalleryProps> = ({
               </div>
 
               {/* Navigation Dots Container */}
-
             </div>
           </div>
         </div>
       </motion.div>
+      <ProductModal
+        isOpen={!!selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+        product={selectedProduct}
+      />
     </div>
   );
 };

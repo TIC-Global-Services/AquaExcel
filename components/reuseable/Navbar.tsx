@@ -26,7 +26,7 @@ const Navbar = () => {
     { name: "Why us", href: "/why-us" },
     { name: "Resources", href: "/resources" },
     { name: "Career", href: "/career" },
-    // { name: "Contact us", href: "/contact" },
+    { name: "Contact us", href: "/contact" },
   ];
   const mobileNavLinks = [
     { name: "Home", href: "/" },
@@ -82,12 +82,13 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+        <div></div>
 
-        <Link href='/contact' className={`${shouldHideNavbar==true ? 'hidden' : 'lg:block hidden'}`}>
+        {/* <Link href='/contact' className={`${shouldHideNavbar==true ? 'hidden' : 'lg:block hidden'}`}>
           <div className="bg-white text-foreground px-8 py-3 cursor-pointer rounded-lg font-hoves-pro font-medium text-sm hover:opacity-90 transition-opacity inline-block text-center">
             For Enquiries
           </div>
-        </Link>
+        </Link> */}
       </div>
       {/*Mobile Navbar*/}
       <div className="lg:hidden">

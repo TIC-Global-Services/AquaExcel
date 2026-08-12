@@ -19,15 +19,48 @@ interface ProductModalProps {
 }
 
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
-    // Prevent scrolling on body when modal is open
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = 'hidden'
-        } else {
-            document.body.style.overflow = ''
-        }
+        if (!isOpen) return
+
+        const body = document.body
+        const html = document.documentElement
+        const scrollY = window.scrollY
+
+        const previousBodyOverflow = body.style.overflow
+        const previousHtmlOverflow = html.style.overflow
+        const previousBodyPosition = body.style.position
+        const previousBodyTop = body.style.top
+        const previousBodyLeft = body.style.left
+        const previousBodyRight = body.style.right
+        const previousBodyWidth = body.style.width
+        const previousBodyTouchAction = body.style.touchAction
+        const previousHtmlTouchAction = html.style.touchAction
+
+        body.style.overflow = 'hidden'
+        html.style.overflow = 'hidden'
+        body.style.position = 'fixed'
+        body.style.top = `-${scrollY}px`
+        body.style.left = '0'
+        body.style.right = '0'
+        body.style.width = '100%'
+        body.style.touchAction = 'none'
+        html.style.touchAction = 'none'
+        body.style.overscrollBehavior = 'none'
+        html.style.overscrollBehavior = 'none'
+
         return () => {
-            document.body.style.overflow = ''
+            body.style.overflow = previousBodyOverflow
+            html.style.overflow = previousHtmlOverflow
+            body.style.position = previousBodyPosition
+            body.style.top = previousBodyTop
+            body.style.left = previousBodyLeft
+            body.style.right = previousBodyRight
+            body.style.width = previousBodyWidth
+            body.style.touchAction = previousBodyTouchAction
+            html.style.touchAction = previousHtmlTouchAction
+            body.style.overscrollBehavior = ''
+            html.style.overscrollBehavior = ''
+            window.scrollTo(0, scrollY)
         }
     }, [isOpen])
 

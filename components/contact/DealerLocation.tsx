@@ -139,7 +139,7 @@ const map = () => {
 
   return (
     <ContainerLayout>
-      <div className="pb-16">
+      <div id="dealer-location" className="pb-16">
         <div className="flex flex-col gap-2 justify-center items-center">
           <h1 className="text-[20px] md:text-[44px] tracking-tighter font-hoves-pro font-medium tracking-[-4%]">
             Find a Dealer

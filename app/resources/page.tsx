@@ -15,6 +15,7 @@ const page = () => {
       <Downloads/>
      <AppSection/>
     </div>
+    
   )
 }
 

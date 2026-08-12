@@ -1,15 +1,16 @@
 'use client'
 
-import React, { ReactElement, use, useState } from 'react'
+import React, { useMemo, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import ContainerLayout from '@/layouts/ContainerLayout'
 import ProductCard from '../reuseable/ProductCard'
+import { StaticImageData } from 'next/image'
 import { Taps } from '@/app/data/taps'
 import { bathfitting } from '@/app/data/bathfitting'
 import { pipes } from '@/app/data/Pipes'
 import { maxion } from '@/app/data/maxion'
 import { accessories } from '@/app/data/accesorries'
 import Appsection from './appsection'
-import { StaticImageData } from 'next/image'
 import { ArrowDown, ArrowUp } from 'lucide-react'
 import ProductModal from './ProductModal'
 // Placeholder images - using imports if available or strings
@@ -57,10 +58,34 @@ const productSections = [
   }
 ]
 
+type ProductItem = {
+  title: string
+  description: string
+  image: string | StaticImageData
+  price?: string
+  colors?: { name: string; colorCode: string }[]
+  specs?: string[]
+}
+
 const ProductList = () => {
-  const [activeTab, setActiveTab] = useState('taps')
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const tabs = useMemo(() => [
+    { id: "taps", label: "Taps & Fittings" },
+    { id: "Bath", label: "Bath Fittings" },
+    { id: "Pipe", label: "Pipes" },
+    { id: "maxion", label: "Maxion" },
+    { id: "accessories", label: "Accessories" },
+  ] as const, [])
+
+  const queryTab = searchParams.get('tab')
+  const initialTab = queryTab && tabs.some((tab) => tab.id === queryTab) ? queryTab : 'taps'
+
+  const [activeTab, setActiveTab] = useState<string>(initialTab)
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
-  const [selectedProduct, setSelectedProduct] = useState<any>(null)
+  const [selectedProduct, setSelectedProduct] = useState<null | ProductItem>(null)
+
+  const resolvedActiveTab = queryTab && tabs.some((tab) => tab.id === queryTab) ? queryTab : activeTab
 
   const toggleViewMore = (categoryKey: string) => {
     setExpandedCategories(prev => ({
@@ -69,28 +94,24 @@ const ProductList = () => {
     }))
   }
 
-  const tabs = [
-    { id: "taps", label: "Taps & Fittings" },
-    { id: "Bath", label: "Bath Fittings" },
-    { id: "Pipe", label: "Pipes" },
-    { id: "maxion", label: "Maxion" },
-    { id: "accessories", label: "Accessories" },
-  ]
-
   // Filter or show all? Design usually implies one section active at a time for tabs
-  const activeSection = productSections.find(s => s.id === activeTab)
-  console.log("activeSection", activeSection)
+  const activeSection = productSections.find(s => s.id === resolvedActiveTab)
 
   return (
     <ContainerLayout disablePaddingX>
       <div className="py-10">
         {/* Tabs */}
-        <div className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:justify-center md:gap-4 mb-10 md:mb-20 px-2 md:px-0 lg:px-[50px] xl:px-[80px]">
+        <div id="product-tabs" className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 md:justify-center md:gap-4 mb-10 md:mb-20 px-2 md:px-0 lg:px-[50px] xl:px-[80px]">
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-2 md:px-5 lg:py-3 whitespace-nowrap shrink-0 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${activeTab === tab.id
+              onClick={() => {
+                setActiveTab(tab.id)
+                const params = new URLSearchParams(searchParams.toString())
+                params.set('tab', tab.id)
+                router.replace(`/products?${params.toString()}`, { scroll: false })
+              }}
+              className={`px-6 py-2 md:px-5 lg:py-3 whitespace-nowrap shrink-0 rounded-xl border transition-all cursor-pointer duration-300 font-inter-tight text-sm md:text-xl ${resolvedActiveTab === tab.id
                 ? 'bg-[#323232] text-white'
                 : 'bg-white text-black border-[#AAAAAA] hover:border-gray-400'
                 }`}
@@ -115,7 +136,7 @@ const ProductList = () => {
         <div className="px-6 md:px-[50px] xl:px-[80px]">
           {/* Products by Subcategory */}
           {activeSection?.products.map((subcategory, subIndex) => {
-            const categoryKey = `${activeTab}-${subIndex}`;
+            const categoryKey = `${resolvedActiveTab}-${subIndex}`;
             const isExpanded = expandedCategories[categoryKey];
             const productsToShow = isExpanded ? subcategory.products : subcategory.products.slice(0, 3);
             const hasMore = subcategory.products.length > 3;
@@ -137,8 +158,8 @@ const ProductList = () => {
                         title={product.title}
                         description={product.description}
                         image={product.image || placeholderImage}
-                        price={(product as any).price}
-                        onClick={() => setSelectedProduct(product)}
+                        price={'price' in product ? product.price : undefined}
+                        onClick={() => setSelectedProduct(product as ProductItem)}
                       />
                     </div>
                   ))}

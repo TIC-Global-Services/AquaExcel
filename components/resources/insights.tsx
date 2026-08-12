@@ -46,6 +46,7 @@ const insights = () => {
                                 href={`/resources/blogs/${item.slug}`}
                                 className={`relative w-full overflow-hidden rounded-[20px] shadow-lg ${gridClass} group block touch-manipulation`}
                                 style={{ WebkitTapHighlightColor: 'transparent' }}
+                                  scroll={true}
                             >
                                 <SimpleParallax>
                                     <Image src={item.image} alt={item.title} fill className="object-cover pointer-events-none" />

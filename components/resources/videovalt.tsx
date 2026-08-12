@@ -2,14 +2,18 @@
 
 import ContainerLayout from '@/layouts/ContainerLayout'
 import React, { useState, useRef, useEffect } from 'react'
+import { Instagram } from 'lucide-react'
+import Link from 'next/link'
 
 const VideoCard = ({
   src,
+  iglink,
   index,
   activeIndex,
   setActiveIndex
 }: {
   src: string
+  iglink: string
   index: number
   activeIndex: number | null
   setActiveIndex: (index: number | null) => void
@@ -36,7 +40,9 @@ const VideoCard = ({
     }
   }, [shouldPlay, isMuted])
 
-  const handleClick = () => {
+  const handleCardClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.defaultPrevented) return
+
     if (isFocused) {
       setActiveIndex(null)
     } else {
@@ -47,10 +53,14 @@ const VideoCard = ({
     }
   }
 
+  const handleIconClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.stopPropagation()
+  }
+
   return (
     <div
-      className="relative aspect-9/16 h-full rounded-2xl overflow-hidden cursor-pointer group"
-      onClick={handleClick}
+      className="relative aspect-9/16 h-full rounded-2xl overflow-hidden cursor-pointer group block"
+      onClick={handleCardClick}
     >
       <video
         ref={videoRef}
@@ -66,14 +76,88 @@ const VideoCard = ({
           <span className="text-white text-lg font-medium drop-shadow-md">Click To Play!</span>
         </div>
       </div>
+
+      <Link
+        href={iglink}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleIconClick}
+        className="absolute bottom-4 left-4 z-10 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 text-[#E1306C] shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-110"
+        aria-label="Open Instagram"
+      >
+        <Instagram className="h-5 w-5" />
+      </Link>
     </div>
   )
 }
+type VideoItem = {
+  video: string;
+  iglink: string;
+};
 
-const tabVideos: Record<string, string[]> = {
-  'Story Tellers': ['/videos/story/story1.mp4', '/videos/story/story2.mp4', '/videos/story/story3.mp4', '/videos/story/story4.mp4'],
-  'Durability Tests': ['/videos/durabilityTest/test1.mp4', '/videos/durabilityTest/test2.mp4', '/videos/durabilityTest/test3.mp4', '/videos/durabilityTest/test4.mp4'],
-  'Plumber Stories': ['/videos/plumberStories/Plumber1.mp4', '/videos/plumberStories/Plumber2.mp4', '/videos/plumberStories/Plumber3.mp4', '/videos/plumberStories/Plumber4.mp4'],
+const videoDetails: Record<string, VideoItem[]> = {
+  "Story Tellers": [
+    {
+      video: "/videos/story/story1.mp4",
+      iglink: "https://www.instagram.com/p/DLR3dY_v6Gy/",
+    },
+    {
+      video: "/videos/story/story2.mp4",
+      iglink: "https://www.instagram.com/p/DMKvi0ivU4p/",
+    },
+    {
+      video: "/videos/story/story3.mp4",
+      iglink: "https://www.instagram.com/p/DOlwKiGiM6O/",
+    },
+    {
+      video: "/videos/story/story4.mp4",
+      iglink: "https://www.instagram.com/p/DNdQjs5PjA-/",
+    },
+  ],
+
+  "Durability Tests": [
+    {
+      video: "/videos/durabilityTest/test1.mp4",
+      iglink: "",
+    },
+    {
+      video: "/videos/durabilityTest/test2.mp4",
+      iglink: "",
+    },
+    {
+      video: "/videos/durabilityTest/test3.mp4",
+      iglink: "",
+    },
+    {
+      video: "/videos/durabilityTest/test4.mp4",
+      iglink: "",
+    },
+  ],
+
+  "Plumber Stories": [
+    {
+      video: "/videos/plumberStories/Plumber1.mp4",
+      iglink: "",
+    },
+    {
+      video: "/videos/plumberStories/Plumber2.mp4",
+      iglink: "",
+    },
+    {
+      video: "/videos/plumberStories/Plumber3.mp4",
+      iglink: "",
+    },
+    {
+      video: "/videos/plumberStories/Plumber4.mp4",
+      iglink: "https://www.instagram.com/p/DPZIvtGiKHF/",
+    },
+  ],
+};
+
+const tabVideos: Record<string, VideoItem[]> = {
+  'Story Tellers': videoDetails['Story Tellers'],
+  'Durability Tests': videoDetails['Durability Tests'],
+  'Plumber Stories': videoDetails['Plumber Stories'],
 }
 
 const Videovault = () => {
@@ -101,10 +185,11 @@ const Videovault = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tabVideos[activeTab].map((src, i) => (
+          {tabVideos[activeTab].map((item, i) => (
             <VideoCard
               key={`${activeTab}-${i}`}
-              src={src}
+              src={item.video}
+              iglink={item.iglink}
               index={i}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}

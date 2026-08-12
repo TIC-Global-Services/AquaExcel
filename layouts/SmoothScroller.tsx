@@ -14,7 +14,9 @@ const SmoothScroller = ({ children }: LenisProviderProps) => {
   const pathname = usePathname();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
       setTimeout(() => {
         lenisRef.current?.resize();
         ScrollTrigger.refresh();
@@ -45,6 +47,9 @@ const SmoothScroller = ({ children }: LenisProviderProps) => {
       });
 
       lenisRef.current = lenis;
+      if (typeof window !== "undefined") {
+        (window as any).lenis = lenis;
+      }
 
       lenis.on("scroll", () => ScrollTrigger.update());
 
@@ -84,6 +89,9 @@ const SmoothScroller = ({ children }: LenisProviderProps) => {
     });
 
     return () => {
+      if (typeof window !== "undefined") {
+        delete (window as any).lenis;
+      }
       lenisRef.current?.destroy();
       ScrollTrigger.killAll();
     };

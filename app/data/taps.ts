@@ -165,27 +165,27 @@ export const Taps = [
           "Warranty: 5-Year Replacement Guarantee"
         ]
       },
-      {
-        title: "Garden Tap",
-        price: "₹ 445",
-        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/garden_tap.png',
-        colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
-        ],
-        specs: [
-          "Material: Premium UPVC Body & Brass Thread",
-          "Mechanism: Smooth Quarter-Turn Handle",
-          "Inlet Size: ½\" Standard Fitting",
-          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-          "Strength: High-Density Crack-Resistant Polymer",
-          "Suitable For: Bathrooms, Gardens, Utility Areas",
-          "Dimensions: 92 Mm (H) × 78 Mm (L)",
-          "Installation: PTFE Tape Recommended for Sealing",
-          "Warranty: 5-Year Replacement Guarantee"
-        ]
-      },
+      // {
+      //   title: "Garden Tap",
+      //   price: "₹ 445",
+      //   description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+      //   image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/garden_tap.png',
+      //   colors: [
+      //     { name: 'White', colorCode: '#FFFFFF' },
+      //     { name: 'Green', colorCode: '#4ADE80' }
+      //   ],
+      //   specs: [
+      //     "Material: Premium UPVC Body & Brass Thread",
+      //     "Mechanism: Smooth Quarter-Turn Handle",
+      //     "Inlet Size: ½\" Standard Fitting",
+      //     "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+      //     "Strength: High-Density Crack-Resistant Polymer",
+      //     "Suitable For: Bathrooms, Gardens, Utility Areas",
+      //     "Dimensions: 92 Mm (H) × 78 Mm (L)",
+      //     "Installation: PTFE Tape Recommended for Sealing",
+      //     "Warranty: 5-Year Replacement Guarantee"
+      //   ]
+      // },
       {
         title: "Washing Machine Tap",
         price: "₹ 495",

@@ -141,29 +141,29 @@ const Footer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-5">
               <ul className="md:space-y-1.5">
                 <li>
-                  <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
-                    BRASS THREADED TAPS
+                  <Link href="/products?tab=taps" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
+                    Taps & Fitting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
+                  <Link href="/products?tab=maxion" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     MAXION COVERS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
+                  <Link href="/products?tab=Bath" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     BATH FITTINGS
                   </Link>
                 </li>
               </ul>
               <ul className="md:space-y-1.5">
                 <li>
-                  <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
-                    PIPES & FITTINGS
+                  <Link href="/products?tab=Pipe" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
+                    PIPES
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
+                  <Link href="/products?tab=accessories" className="text-white font-inter-tight font-light leading-[16px] text-[12px] hover:opacity-80 uppercase">
                     ACCESSORIES
                   </Link>
                 </li>
@@ -176,17 +176,17 @@ const Footer = () => {
             <h3 className="text-white font-hoves-pro font-medium text-[18px] mb-4 tracking-wide">OTHERS</h3>
             <ul className="space-y-1.5">
               <li>
-                <Link href="/resources" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                <Link href="https://play.google.com/store/apps/details?id=com.aquaexcel.holo"  target="_blank" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                   PLUMBER APP (PLAY STORE)
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
+                <Link href="/contact#dealer-location" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
                   FIND A DEALER
                 </Link>
               </li>
               <li className="text-white font-inter-tight font-light text-[12px] leading-relaxed uppercase">
-                Aqua Excel, S/F.No.339/1B, THANNEER panthal-<br />moripalayam road, moripalayam village, sulur<br />taluk, coimbatore-  641 659
+                Aqua Excel, S/F.No.339/1B, THANNEER panthal-<br />mopripalayam road, moripalayam village, sulur<br />taluk, coimbatore-  641 659
               </li>
               <li>
                 <Link href="https://www.aquaexcel.in" className="text-white font-inter-tight font-light text-[12px] hover:opacity-80 uppercase">
@@ -200,9 +200,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-hoves-pro font-medium text-sm hidden lg:block lg:mb-4 tracking-wide opacity-0">CONTACT</h3>
             <ul className="space-y-1.5">
-              <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
+              {/* <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
                 PHONE: +91-422-2986842
-              </li>
+              </li> */}
               <li className="text-white font-inter-tight font-light leading-[16px] text-[12px] uppercase">
                 ENQUIRY: +91-87540 10016
               </li>

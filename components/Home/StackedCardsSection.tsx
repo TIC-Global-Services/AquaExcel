@@ -312,6 +312,7 @@ const StackedCardsSection = () => {
               autoPlay
               loop
               playsInline
+              controls
               className="w-full h-full object-cover"
             />
             
