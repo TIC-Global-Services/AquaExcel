@@ -1,22 +1,88 @@
 'use client'
 
 import ContainerLayout from '@/layouts/ContainerLayout'
-import React, { useState, useRef, useEffect } from 'react'
-import { Instagram } from 'lucide-react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
+import { Instagram, X } from 'lucide-react'
 import Link from 'next/link'
+
+/* ─── Fullscreen Video Modal ─── */
+const VideoModal = ({
+  src,
+  onClose
+}: {
+  src: string
+  onClose: () => void
+}) => {
+  const modalVideoRef = useRef<HTMLVideoElement>(null)
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', handleKey)
+    // Prevent body scroll while modal is open
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handleKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  // Auto-play when modal opens
+  useEffect(() => {
+    if (modalVideoRef.current) {
+      modalVideoRef.current.play().catch(() => {})
+    }
+  }, [])
+
+  return (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
+      onClick={onClose}
+    >
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-[10000] flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md border border-white/20 transition-all duration-300 hover:bg-white/25 hover:scale-110 cursor-pointer"
+        aria-label="Close video"
+      >
+        <X className="h-5 w-5 md:h-6 md:w-6" />
+      </button>
+
+      {/* Video container – responsive portrait */}
+      <div
+        className="relative w-[85vw] max-w-[420px] md:max-w-[480px] aspect-[9/14] rounded-2xl overflow-hidden shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <video
+          ref={modalVideoRef}
+          src={src}
+          className="w-full h-full object-cover"
+          controls
+          autoPlay
+          playsInline
+          loop
+        />
+      </div>
+    </div>
+  )
+}
 
 const VideoCard = ({
   src,
   iglink,
   index,
   activeIndex,
-  setActiveIndex
+  setActiveIndex,
+  onOpenModal
 }: {
   src: string
   iglink: string
   index: number
   activeIndex: number | null
   setActiveIndex: (index: number | null) => void
+  onOpenModal: (src: string) => void
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -42,15 +108,8 @@ const VideoCard = ({
 
   const handleCardClick = (event: React.MouseEvent<HTMLElement>) => {
     if (event.defaultPrevented) return
-
-    if (isFocused) {
-      setActiveIndex(null)
-    } else {
-      setActiveIndex(index)
-      if (videoRef.current) {
-        videoRef.current.currentTime = 0
-      }
-    }
+    // Open the fullscreen modal on tap/click
+    onOpenModal(src)
   }
 
   const handleIconClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -72,7 +131,7 @@ const VideoCard = ({
 
       {/* Overlay: Visible only when not focused (i.e. Ambient or Paused) */}
       <div className={`absolute inset-0 bg-black/20 pointer-events-none transition-opacity duration-300 ${isFocused ? 'opacity-0' : 'opacity-100'}`}>
-        <div className="absolute bottom-6 right-6">
+        <div className="absolute md:bottom-6 bottom-5 right-4 md:right-6">
           <span className="text-white text-lg font-medium drop-shadow-md">Click To Play!</span>
         </div>
       </div>
@@ -82,10 +141,10 @@ const VideoCard = ({
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleIconClick}
-        className="absolute bottom-4 left-4 z-10 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 text-[#E1306C] shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-110"
+        className="absolute bottom-4 left-4 z-10 flex h-8 w-8  md:h-10 md:w-10 items-center justify-center rounded-xl bg-white/90 text-[#E1306C] shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-110"
         aria-label="Open Instagram"
       >
-        <Instagram className="h-5 w-5" />
+        <Instagram className="md:h-5 md:w-5 h-4 w-4" />
       </Link>
     </div>
   )
@@ -163,7 +222,16 @@ const tabVideos: Record<string, VideoItem[]> = {
 const Videovault = () => {
   const [activeTab, setActiveTab] = useState('Story Tellers')
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const [modalSrc, setModalSrc] = useState<string | null>(null)
   const tabs = Object.keys(tabVideos)
+
+  const handleOpenModal = useCallback((src: string) => {
+    setModalSrc(src)
+  }, [])
+
+  const handleCloseModal = useCallback(() => {
+    setModalSrc(null)
+  }, [])
 
   return (
     <ContainerLayout>
@@ -193,10 +261,16 @@ const Videovault = () => {
               index={i}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
+              onOpenModal={handleOpenModal}
             />
           ))}
         </div>
       </div>
+
+      {/* Fullscreen Video Modal */}
+      {modalSrc && (
+        <VideoModal src={modalSrc} onClose={handleCloseModal} />
+      )}
     </ContainerLayout>
   )
 }

@@ -54,7 +54,7 @@ const Careeropportunities = () => {
           loading="lazy"
           className="object-contain md:hidden block -rotate-90 opacity-30 z-0 scale-[1.8] translate-x-[18%] translate-y-[2%]"
         />
-        <div className="z-20 relative flex items-center  justify-center min-h-[400px] md:min-h-[80vh] lg:min-h-[75.111vh]">
+        <div className="z-20 relative flex items-center justify-center min-h-[400px] md:min-h-[80vh] lg:min-h-[75.111vh] px-[8%]">
             <div className='bg-[#FAF9F5] flex flex-col items-center justify-center py-3 gap-5 py-[3%] px-6 rounded-[20px] max-w-xl shadow-sm border-[1px]'>
               <h2 className="text-black text-4xl font-semibold tracking-tight">We’re Hiring</h2>
               {/* <input className='w-full rounded-xl border-[1px] py-[2%] px-5' placeholder='Enter your email'></input> */}

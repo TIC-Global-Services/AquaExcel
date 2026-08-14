@@ -23,6 +23,7 @@
   --font-hoves-pro: var(--font-hoves-pro);
   --font-uber-move:var(--font-uber-move);
   --font-inter-tight: var(--font-inter-tight);
+  --animate-fadeIn: fadeIn 0.3s ease-out;
 }
 .outline-text {
   font-size: 4.063rem;              /* adjust size */
@@ -51,6 +52,15 @@ body {
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .scrollbar-hide::-webkit-scrollbar {
