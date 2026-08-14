@@ -82,7 +82,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                     <X className="w-5 h-5 text-black" />
                 </button>
 
-                <div className="p-6 sm:p-8 md:p-12 overflow-y-hidden w-full">
+                <div className="p-6 sm:p-8 md:p-12 overflow-y-auto w-full">
                     {/* Image Gallery Section */}
                     <div className="relative w-full flex items-center justify-center mb-8 md:mb-10 mt-4 md:mt-0">
                         {/* Left Arrow */}
@@ -91,7 +91,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                         </button>
 
                         {/* Main Image Container */}
-                        <div className="w-full max-w-sm sm:max-w-md md:max-w-3xl aspect-[4/3] md:aspect-auto md:h-[40vh] md:w-[50vh] bg-[#0F0F0F] rounded-3xl relative flex justify-center items-center overflow-hidden">
+                        <div className="w-full max-w-sm sm:max-w-md md:max-w-3xl aspect-[4/3] md:aspect-auto md:h-[30vh] md:w-[50vh] bg-[#0F0F0F] rounded-3xl relative flex justify-center items-center overflow-hidden">
                             <Image
                                 src={product.image}
                                 alt={product.title}
