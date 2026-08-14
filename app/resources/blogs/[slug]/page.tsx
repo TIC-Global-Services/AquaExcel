@@ -188,7 +188,7 @@ const BlogDetailPage = async ({ params }: BlogPageProps) => {
         <div className="py-10 md:py-16 relative">
           <ContainerLayout>
             <Link
-              href="/resources"
+              href="/resources#blogs"
               className=" absolute top-10 left-[5%] flex items-center gap-2 text-black/90 hover:text-black transition-colors font-inter-tight z-20"
             >
               <ArrowLeft className="w-5 h-5" />
