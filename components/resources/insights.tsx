@@ -8,19 +8,48 @@ import { MoveRight } from 'lucide-react'
 import { blogs } from '@/app/data/blogData' // Import the blogs data
 
 const insights = () => {
-      useLayoutEffect(() => {
+        useLayoutEffect(() => {
         const hash = window.location.hash;
         if (!hash) return;
 
-        // stop the browser's own scroll restoration from fighting this
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual';
         }
 
-        const element = document.querySelector(hash);
-        if (element) {
-            element.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
+        let attempts = 0;
+        let lastY = -1;
+        let stableCount = 0;
+        const maxAttempts = 60; // ~1s at 60fps, safe upper bound
+
+        const tryScroll = () => {
+            const element = document.querySelector(hash);
+            if (!element) {
+                attempts++;
+                if (attempts < maxAttempts) requestAnimationFrame(tryScroll);
+                return;
+            }
+
+            const rect = element.getBoundingClientRect();
+            const targetY = window.scrollY + rect.top;
+
+            // Check if the position has stabilized across two frames
+            if (Math.abs(targetY - lastY) < 2) {
+                stableCount++;
+            } else {
+                stableCount = 0;
+            }
+            lastY = targetY;
+
+            if (stableCount >= 2 || attempts >= maxAttempts) {
+                element.scrollIntoView({ behavior: 'auto', block: 'start' });
+                return;
+            }
+
+            attempts++;
+            requestAnimationFrame(tryScroll);
+        };
+
+        requestAnimationFrame(tryScroll);
     }, []);
 
     return (
