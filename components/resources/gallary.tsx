@@ -142,7 +142,7 @@ const gallary = () => {
   return (
     <>
       <div className='md:py-0 py-7'>
-        <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro text-center'>Aqua Excel Gallery</h1>
+        <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro text-center'>Aqua Excel Gallery.</h1>
         <div className="w-full max-w-[1440px] mx-auto py-10">
 
           {/* Mobile: Scrollable Carousel */}
