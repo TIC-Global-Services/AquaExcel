@@ -19,10 +19,12 @@ const IMGS: { url: string; title: string, products?: any }[] = [
       price: "₹ 880",
       description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
       image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
-      colors: [
-        { name: 'White', colorCode: '#FFFFFF' },
-        { name: 'Green', colorCode: '#4ADE80' }
-      ],
+       colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
+        ],
       specs: [
         "Material: Premium UPVC Body & Brass Thread",
         "Mechanism: Smooth Quarter-Turn Handle",
@@ -45,9 +47,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -74,7 +78,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -99,9 +105,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 320",
         description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -126,9 +134,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 335",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -153,9 +163,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
       description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
       image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
       colors: [
-        { name: 'White', colorCode: '#FFFFFF' },
-        { name: 'Green', colorCode: '#4ADE80' }
-      ],
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
+        ],
       specs: [
         "Material: Premium UPVC Body & Brass Thread",
         "Mechanism: Smooth Quarter-Turn Handle",
@@ -180,7 +192,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -205,9 +219,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -232,9 +248,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 320",
         description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -259,9 +277,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 335",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -285,10 +305,12 @@ const IMGS: { url: string; title: string, products?: any }[] = [
       price: "₹ 880",
       description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
       image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
-      colors: [
-        { name: 'White', colorCode: '#FFFFFF' },
-        { name: 'Green', colorCode: '#4ADE80' }
-      ],
+       colors: [
+          { name: 'White', colorCode: '#FFFFFF' },
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
+        ],
       specs: [
         "Material: Premium UPVC Body & Brass Thread",
         "Mechanism: Smooth Quarter-Turn Handle",
@@ -311,9 +333,11 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
-        colors: [
+         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Green', colorCode: '#4ADE80' }
+          { name: 'Charcoal', colorCode: '#2C2C2C' },
+          { name: 'Blue', colorCode: '#2563EB' },
+          { name: 'Almond', colorCode: '#E8D5B5' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
