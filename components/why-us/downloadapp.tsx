@@ -48,29 +48,27 @@ const DownloadApp = () => {
           <div className="flex flex-col md:flex-row md:items-center items-start justify-start md:justify-center gap-10 md:gap-15 w-full">
             <div className="text-left md:text-left text-white max-w-2xl pt-5 block md:hidden">
               <h2 className="text-[1.5rem] lg:text-[2.75rem] font-hoves-pro font-medium tracking-tighter"> 
-                Plumbers/Dealers
+               AQUA EXCEL APP
               </h2>
               <p className="mt-2 text-sm lg:text-[1.25rem] font-inter-tight">
-                One scan gives you instant access to installation <br className='block md:hidden'/> videos,
-                <br className="hidden lg:block" /> product guides, catalogs, and
-                support.
+                Access Aqua Excel’s complete range of Taps, Mixers, Pipes & Plumbing Products,
+                along with product details, installation videos, catalogs, guides, and support 
               </p>
             </div>
             <div className='flex flex-col'>
               <div className="border-2 rounded-2xl border-white py-5 px-6 bg-white/10 backdrop-blur-sm">
               {/* <p className='text-white font-medium text-xs md:text-xl tracking-[-4%] text-center uppercase mb-1  block'>About App</p> */}
-              <Image src='/AQUAEXCEL_app.png' width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
+              <Image src='https://ik.imagekit.io/pgtxr2fmn/aqua_excel_app.png' width={148} height={152} alt="qrcode" className='w-24 md:w-full' />
             </div>
             <p className='text-white font-light font-hoves-pro text-sm md:text-xl mt-2 text-center'>Scan to <br className='block md:hidden'/> know more</p>
             </div>
             <div className="text-center md:text-left text-white max-w-2xl hidden md:block">
               <h2 className="text-[1.5rem] lg:text-[2.75rem] tracking-tighter font-medium font-hoves-pro"> 
-                Plumbers / Dealers
+               AQUA EXCEL APP
               </h2>
               <p className="text-sm lg:text-[1.25rem] font-regular leading-[120%] font-inter-tight">
-                One scan gives you instant access to installation videos,
-                <br className="hidden lg:block" /> product guides, catalogs, and
-                support.
+                Access Aqua Excel’s complete range of Taps, Mixers, Pipes & Plumbing Products,
+               along with product details, installation videos, catalogs, guides, and support 
               </p>
             </div>
           </div>
