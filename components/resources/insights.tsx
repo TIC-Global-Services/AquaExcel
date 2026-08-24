@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContainerLayout from '@/layouts/ContainerLayout'
@@ -8,22 +8,18 @@ import { MoveRight } from 'lucide-react'
 import { blogs } from '@/app/data/blogData' // Import the blogs data
 
 const insights = () => {
-    useEffect(() => {
-        // Check if there's a hash in the URL and scroll immediately without delay
+      useLayoutEffect(() => {
         const hash = window.location.hash;
+        if (!hash) return;
 
-        if (hash) {
-            const scrollToElement = () => {
-                const element = document.querySelector(hash);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
-            };
+        // stop the browser's own scroll restoration from fighting this
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
 
-            // Execute immediately without 1s delay
-            scrollToElement();
-            const frameId = requestAnimationFrame(scrollToElement);
-            return () => cancelAnimationFrame(frameId);
+        const element = document.querySelector(hash);
+        if (element) {
+            element.scrollIntoView({ behavior: 'auto', block: 'start' });
         }
     }, []);
 
