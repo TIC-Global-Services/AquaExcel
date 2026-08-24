@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useLayoutEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContainerLayout from '@/layouts/ContainerLayout'
@@ -8,53 +8,10 @@ import { MoveRight } from 'lucide-react'
 import { blogs } from '@/app/data/blogData' // Import the blogs data
 
 const insights = () => {
-        useLayoutEffect(() => {
-        const hash = window.location.hash;
-        if (!hash) return;
-
-        if ('scrollRestoration' in window.history) {
-            window.history.scrollRestoration = 'manual';
-        }
-
-        let attempts = 0;
-        let lastY = -1;
-        let stableCount = 0;
-        const maxAttempts = 60; // ~1s at 60fps, safe upper bound
-
-        const tryScroll = () => {
-            const element = document.querySelector(hash);
-            if (!element) {
-                attempts++;
-                if (attempts < maxAttempts) requestAnimationFrame(tryScroll);
-                return;
-            }
-
-            const rect = element.getBoundingClientRect();
-            const targetY = window.scrollY + rect.top;
-
-            // Check if the position has stabilized across two frames
-            if (Math.abs(targetY - lastY) < 2) {
-                stableCount++;
-            } else {
-                stableCount = 0;
-            }
-            lastY = targetY;
-
-            if (stableCount >= 2 || attempts >= maxAttempts) {
-                element.scrollIntoView({ behavior: 'auto', block: 'start' });
-                return;
-            }
-
-            attempts++;
-            requestAnimationFrame(tryScroll);
-        };
-
-        requestAnimationFrame(tryScroll);
-    }, []);
 
     return (
         <ContainerLayout>
-            <div id='blogs' className='scroll-mt-10 md:scroll-mt-16'>
+            <div id='blogs'>
                 <div className='flex flex-col items-center'>
                     <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro'>Insights That Inspire</h1>
                     <p className='font-regular text-sm  text-center w-full md:text-xl leading-[120%] font-inter-tight py-2'>
