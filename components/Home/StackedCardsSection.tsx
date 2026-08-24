@@ -1,8 +1,8 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { gsap } from "gsap";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "../reuseable/Button";
 import Link from "next/link";
 import ContainerLayout from "@/layouts/ContainerLayout";
@@ -49,15 +49,71 @@ const StackedCardsSection = () => {
   const modalOverlayRef = useRef<HTMLDivElement>(null);
   const modalContentRef = useRef<HTMLDivElement>(null);
 
+  // Touch swipe tracking
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const isSwiping = useRef(false);
+  // Pause auto-rotation briefly after manual interaction
+  const [userInteracted, setUserInteracted] = useState(false);
+  const interactionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const goToPrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
+    setUserInteracted(true);
+    if (interactionTimer.current) clearTimeout(interactionTimer.current);
+    interactionTimer.current = setTimeout(() => setUserInteracted(false), 5000);
+  }, []);
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % cards.length);
+    setUserInteracted(true);
+    if (interactionTimer.current) clearTimeout(interactionTimer.current);
+    interactionTimer.current = setTimeout(() => setUserInteracted(false), 5000);
+  }, []);
+
   useEffect(() => {
-    if (expandedCard) return; // Pause auto rotation when modal is open
+    if (expandedCard || userInteracted) return; // Pause auto rotation when modal is open or user just swiped
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % cards.length);
     }, 3000); // Change card every 3 seconds
 
     return () => clearInterval(interval);
-  }, [expandedCard]);
+  }, [expandedCard, userInteracted]);
+
+  // Touch swipe handlers for mobile
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isSwiping.current = false;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const deltaY = Math.abs(e.touches[0].clientY - touchStartY.current);
+    // Only count as swipe if horizontal movement is dominant
+    if (deltaX > deltaY && deltaX > 10) {
+      isSwiping.current = true;
+    }
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const minSwipeDistance = 50;
+
+    if (isSwiping.current && Math.abs(deltaX) > minSwipeDistance) {
+      if (deltaX < 0) {
+        goToNext();
+      } else {
+        goToPrev();
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+    isSwiping.current = false;
+  }, [goToNext, goToPrev]);
 
   useEffect(() => {
     if (expandedCard && rect && modalContentRef.current && modalOverlayRef.current) {
@@ -178,7 +234,12 @@ const StackedCardsSection = () => {
             </motion.div>
 
             {/* Right Stacked Cards */}
-            <div className="relative h-[400px] lg:h-[550px] flex items-center justify-center">
+            <div
+              className="relative h-[400px] lg:h-[550px] flex items-center justify-center touch-manipulation"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div className="relative w-full max-w-[700px] h-[300px] lg:h-[520px]">
                 <AnimatePresence mode="popLayout">
                   {visibleCards.map((card, index) => {
@@ -240,7 +301,8 @@ const StackedCardsSection = () => {
                           }}
                           className="relative rounded-[32px] overflow-hidden bg-white cursor-pointer"
                           onClick={(e) => {
-                            if (expandedCard) return;
+                            // Don't open modal if user was swiping
+                            if (expandedCard || isSwiping.current) return;
                             const target = e.currentTarget as HTMLElement;
                             setRect(target.getBoundingClientRect());
                             setExpandedCard(card);
@@ -271,6 +333,26 @@ const StackedCardsSection = () => {
                     );
                   })}
                 </AnimatePresence>
+              </div>
+
+              {/* Mobile-only Navigation Buttons */}
+              <div className="absolute bottom-20 -left-170 flex items-start gap-3 z-20">
+                <button
+                  type="button"
+                  onClick={goToPrev}
+                  aria-label="Previous video"
+                  className="flex items-center justify-center w-11 h-11 rounded-full bg-black border border-[#E5E5E5] text-white shadow-md active:scale-90 transition-all cursor-pointer"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={goToNext}
+                  aria-label="Next video"
+                  className="flex items-center justify-center w-11 h-11 rounded-full bg-[#323232] text-white shadow-md active:scale-90 transition-all cursor-pointer"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
             </div>
           </div>
@@ -313,7 +395,7 @@ const StackedCardsSection = () => {
               loop
               playsInline
               controls
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain md:object-cover"
             />
             
             {/* Title Overlay */}

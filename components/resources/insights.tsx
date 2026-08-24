@@ -9,23 +9,27 @@ import { blogs } from '@/app/data/blogData' // Import the blogs data
 
 const insights = () => {
     useEffect(() => {
-        // Check if there's a hash in the URL
+        // Check if there's a hash in the URL and scroll immediately without delay
         const hash = window.location.hash;
 
         if (hash) {
-            // Small timeout to ensure DOM is ready
-            setTimeout(() => {
+            const scrollToElement = () => {
                 const element = document.querySelector(hash);
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 1000);
+            };
+
+            // Execute immediately without 1s delay
+            scrollToElement();
+            const frameId = requestAnimationFrame(scrollToElement);
+            return () => cancelAnimationFrame(frameId);
         }
     }, []);
 
     return (
         <ContainerLayout>
-            <div id='blogs'>
+            <div id='blogs' className='scroll-mt-10 md:scroll-mt-16'>
                 <div className='flex flex-col items-center'>
                     <h1 className='font-medium text-xl md:text-[44px] tracking-tighter font-hoves-pro'>Insights That Inspire</h1>
                     <p className='font-regular text-sm  text-center w-full md:text-xl leading-[120%] font-inter-tight py-2'>
@@ -46,7 +50,7 @@ const insights = () => {
                                 href={`/resources/blogs/${item.slug}`}
                                 className={`relative w-full overflow-hidden rounded-[20px] shadow-lg ${gridClass} group block touch-manipulation`}
                                 style={{ WebkitTapHighlightColor: 'transparent' }}
-                                  scroll={true}
+                                scroll={true}
                             >
                                 <SimpleParallax>
                                     <Image src={item.image} alt={item.title} fill className="object-cover pointer-events-none" />

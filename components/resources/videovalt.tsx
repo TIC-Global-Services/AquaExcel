@@ -32,7 +32,7 @@ const VideoModal = ({
   // Auto-play when modal opens
   useEffect(() => {
     if (modalVideoRef.current) {
-      modalVideoRef.current.play().catch(() => {})
+      modalVideoRef.current.play().catch(() => { })
     }
   }, [])
 
