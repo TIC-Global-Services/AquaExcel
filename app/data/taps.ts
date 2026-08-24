@@ -22,7 +22,7 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 320",
         description: "A Compact Short-Body Bib Tap Designed For Reliable Water Flow Control, Easy Operation, And Durable Everyday Use.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/1-processed%20(1).webp',
         colors: [
        { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -45,7 +45,7 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 425",
         description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Bib-Tap-Long-Body.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/4-processed.webp',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -68,7 +68,7 @@ export const Taps = [
         title: "Angle Valve",
         price: "₹ 335",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/6-processed.webp',
         colors: [
         { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -91,7 +91,7 @@ export const Taps = [
         title: "Two way Angle Valve",
         price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp',
         colors: [
         { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -114,7 +114,7 @@ export const Taps = [
         title: "Sink Tap Wallmount",
         price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/9.png',
         colors: [
        { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -137,7 +137,7 @@ export const Taps = [
         title: "High Flow",
         price: "₹ 399",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/bthighflow.png?updatedAt=1773034940348',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/3-processed.webp',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -350,7 +350,7 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 164",
         description: "A Compact, Eco-Friendly Bib Tap Designed To Reduce Water Wastage While Delivering Smooth, Efficient Flow.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/bib-tap-short-body.png?updatedAt=1783589107802',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/2-processed.webp',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -373,7 +373,7 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 230",
         description: "A Long-Reach Green Tap Built For Cleaner Water Use, Offering Controlled Flow With An Environmentally Conscious Design.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/greentaps/gtbibtaplong.png?updatedAt=1773037265496',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/7-processed.webp',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -396,7 +396,7 @@ export const Taps = [
         title: "Angle Valve",
         price: "₹ 164",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: "https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/brass%20thread%20taps/angle-valve.png?updatedAt=1783589107795",
+        image: "https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/8-processed.webp",
         colors: [
          { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
