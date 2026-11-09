@@ -22,7 +22,7 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 320",
         description: "A Compact Short-Body Bib Tap Designed For Reliable Water Flow Control, Easy Operation, And Durable Everyday Use.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/1-processed%20(1).webp',
+        image: '/BT TAPS/BT Short/bt-bib-tap-short.jpg',
         colors: [
        { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -45,7 +45,7 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 425",
         description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/4-processed.webp',
+        image: '/BT TAPS/BT Long/bt-bib-tap-long.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -137,7 +137,7 @@ export const Taps = [
         title: "High Flow",
         price: "₹ 399",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/3-processed.webp',
+        image: '/BT TAPS/BT High Flow/bt-high-flow.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -183,7 +183,7 @@ export const Taps = [
       //   title: "Garden Tap",
       //   price: "₹ 445",
       //   description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-      //   image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/garden_tap.png',
+      //   image: '/BT TAPS/BT Garden Tap/bt-garden-tap.jpg',
       //   colors: [
       //     { name: 'White', colorCode: '#FFFFFF' },
       //     { name: 'Green', colorCode: '#4ADE80' }
@@ -204,7 +204,7 @@ export const Taps = [
         title: "Washing Machine Tap",
         price: "₹ 495",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Washing-Machine-Tap.png',
+        image: '/BT TAPS/BT Washing Machine Tap/bt-washing-machine-tap.jpg',
         colors: [
        { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -250,7 +250,7 @@ export const Taps = [
         title: "Brass Threaded Foam Tap",
         price: "₹ 499",
         description: "A premium brass-threaded tap with a foam flow aerator designed for soft, splash-free water flow and optimal water conservation.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btFoam.JPG',
+        image: '/BT TAPS/BT Foam Flow/bt-foam-flow.jpg',
         colors: [
      { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -350,7 +350,7 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 164",
         description: "A Compact, Eco-Friendly Bib Tap Designed To Reduce Water Wastage While Delivering Smooth, Efficient Flow.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/2-processed.webp',
+        image: '/GT TAPS/GT Short Body/gt-bib-tap-short.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -373,7 +373,7 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 230",
         description: "A Long-Reach Green Tap Built For Cleaner Water Use, Offering Controlled Flow With An Environmentally Conscious Design.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/7-processed.webp',
+        image: '/GT TAPS/GT Long Body/gt-bib-tap-long.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -396,7 +396,7 @@ export const Taps = [
         title: "Angle Valve",
         price: "₹ 164",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: "https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/8-processed.webp",
+        image: '/GT TAPS/GT Angle Valve/gt-angle-valve.jpg',
         colors: [
          { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -442,7 +442,7 @@ export const Taps = [
         title: "Hi-Flow Tap",
         price: "₹ 199",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/hi-flow-tap.png?updatedAt=1783589241792',
+        image: '/GT TAPS/GT High Flow/gt-high-flow.jpg',
         colors: [
          { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -511,7 +511,7 @@ export const Taps = [
         title: "Sink Tap",
         price: "₹ 549",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/sink-tap.png?updatedAt=1783589241308',
+        image: '/GT TAPS/GT Sink Tap Wall Mount/gt-sink-tap-wall-mount.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -578,7 +578,7 @@ export const Taps = [
         title: "Short Spout Sink Tap",
         price: "₹ 439",
         description: "An Eco-Focused Sink Tap With A Compact Short Spout, Designed To Minimize Water Splashing And Maximize Utility In Modern Kitchens.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/short-spout-sink-tap.png?updatedAt=1783589241373',
+        image: '/GT TAPS/GT Spout Sink Tap ( Wall Mount )/gt-spout-sink-tap.jpg',
         colors: [
          { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -624,7 +624,7 @@ export const Taps = [
         title: "2 in 1 Tap",
         price: "₹ 286",
         description: "A Versatile Two-in-One Tap Featuring Dual Outlets For Simultaneously Directing Water To Multiple Fixtures With Precise Flow Control.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/two-in-one-tap.png?updatedAt=1783589241783',
+        image: '/GT TAPS/GT 2in1 Tap/gt-2in1-tap.jpg',
         colors: [
          { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
