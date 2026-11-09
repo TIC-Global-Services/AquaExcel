@@ -511,7 +511,7 @@ export const Taps = [
         title: "Sink Tap",
         price: "₹ 549",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: '/GT TAPS/GT Sink Tap Wall Mount/gt-sink-tap-wall-mount.jpg',
+        image: '/GT TAPS/GT Sink Tap Wall Mount/gt-sink-tap-wall-mount-4x3.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
@@ -578,7 +578,7 @@ export const Taps = [
         title: "Short Spout Sink Tap",
         price: "₹ 439",
         description: "An Eco-Focused Sink Tap With A Compact Short Spout, Designed To Minimize Water Splashing And Maximize Utility In Modern Kitchens.",
-        image: '/GT TAPS/GT Spout Sink Tap ( Wall Mount )/gt-spout-sink-tap.jpg',
+        image: '/GT TAPS/GT Spout Sink Tap ( Wall Mount )/gt-spout-sink-tap-4x3.jpg',
         colors: [
          { name: 'White', colorCode: '#FFFFFF' },
           { name: 'Charcoal', colorCode: '#2C2C2C' },
