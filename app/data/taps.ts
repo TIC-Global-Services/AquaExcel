@@ -573,7 +573,7 @@ export const Taps = [
         title: "2 in 1 Tap",
         price: "₹ 286",
         description: "A Versatile Two-in-One Tap Featuring Dual Outlets For Simultaneously Directing Water To Multiple Fixtures With Precise Flow Control.",
-        image: '/GT TAPS/GT 2in1 Tap/gt-2in1-tap-white.jpg',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/GT%20TAPS/GT%202in1%20Tap/gt-2in1-tap-white.jpg',
         colors: [
           { name: 'White', colorCode: '#FFFFFF', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/GT%20TAPS/GT%202in1%20Tap/gt-2in1-tap-white.jpg' },
           { name: 'Blue', colorCode: '#2563EB', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/GT%20TAPS/GT%202in1%20Tap/gt-2in1-tap-blue.jpg' },
