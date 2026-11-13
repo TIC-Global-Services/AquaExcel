@@ -10,48 +10,18 @@ import {
 } from "framer-motion";
 import ProductModal from "../product/ProductModal";
 
-const IMGS: { url: string; title: string, products?: any }[] = [
+const IMGS: { url: string; title: string; products?: any[] }[] = [
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bib_swan_neck.png",
     title: "Swan Neck",
-    products: [{
-      title: "Swan Neck",
-      price: "₹ 880",
-      description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-      image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
-       colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
-        ],
-      specs: [
-        "Material: Premium UPVC Body & Brass Thread",
-        "Mechanism: Smooth Quarter-Turn Handle",
-        "Inlet Size: ½\" Standard Fitting",
-        "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-        "Strength: High-Density Crack-Resistant Polymer",
-        "Suitable For: Bathrooms, Gardens, Utility Areas",
-        "Dimensions: 92 Mm (H) × 78 Mm (L)",
-        "Installation: PTFE Tape Recommended for Sealing",
-        "Warranty: 5-Year Replacement Guarantee"
-      ]
-    },]
-  },
-  {
-    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
-    title: "Two-Way Angle Valve",
     products: [
       {
-        title: "Two way Angle Valve",
-        price: "₹ 560",
+        title: "Swan Neck",
+        price: "₹ 659",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
+        colors: [
+          { name: 'Charcoal', colorCode: '#2C2C2C', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -64,8 +34,34 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
+  },
+  {
+    url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
+    title: "Two-Way Angle Valve",
+    products: [
+      {
+        title: "Two way Angle Valve",
+        price: "₹ 560",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp' },
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/sink_tap.png",
@@ -75,12 +71,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         title: "Sink Tap Wallmount",
         price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/9.png',
         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'Charcoal', colorCode: '#2C2C2C', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/9.png' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -93,8 +86,8 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-bib-tap.png",
@@ -103,13 +96,10 @@ const IMGS: { url: string; title: string, products?: any }[] = [
       {
         title: "Bib Tap Short Body",
         price: "₹ 320",
-        description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        description: "A Compact Short-Body Bib Tap Designed For Reliable Water Flow Control, Easy Operation, And Durable Everyday Use.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/BT%20TAPS/BT%20Short/bt-bib-tap-short-blue.jpg',
+        colors: [
+          { name: 'Blue', colorCode: '#2563EB', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/BT%20TAPS/BT%20Short/bt-bib-tap-short-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -122,8 +112,8 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-angle-valve.png",
@@ -133,12 +123,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         title: "Angle Valve",
         price: "₹ 335",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/6-processed.webp',
+        colors: [
+          { name: 'Brown', colorCode: '#3d302d', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/6-processed.webp' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -151,35 +138,34 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bib_swan_neck.png",
     title: "Swan Neck",
-    products: [{
-      title: "Swan Neck",
-      price: "₹ 880",
-      description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-      image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
-      colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+    products: [
+      {
+        title: "Swan Neck",
+        price: "₹ 659",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
+        colors: [
+          { name: 'Charcoal', colorCode: '#2C2C2C', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png' },
         ],
-      specs: [
-        "Material: Premium UPVC Body & Brass Thread",
-        "Mechanism: Smooth Quarter-Turn Handle",
-        "Inlet Size: ½\" Standard Fitting",
-        "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-        "Strength: High-Density Crack-Resistant Polymer",
-        "Suitable For: Bathrooms, Gardens, Utility Areas",
-        "Dimensions: 92 Mm (H) × 78 Mm (L)",
-        "Installation: PTFE Tape Recommended for Sealing",
-        "Warranty: 5-Year Replacement Guarantee"
-      ]
-    },]
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
@@ -189,12 +175,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         title: "Two way Angle Valve",
         price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp',
         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -207,8 +190,8 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/sink_tap.png",
@@ -218,12 +201,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         title: "Sink Tap Wallmount",
         price: "₹ 880",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Sink-Tap-Wallmount.png',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/9.png',
+        colors: [
+          { name: 'Charcoal', colorCode: '#2C2C2C', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/9.png' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -236,8 +216,8 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-bib-tap.png",
@@ -246,13 +226,10 @@ const IMGS: { url: string; title: string, products?: any }[] = [
       {
         title: "Bib Tap Short Body",
         price: "₹ 320",
-        description: "UPVC Ball Valve Pipes Are Strong, Corrosion-Resistant Pipes With A Ball Valve For Easy Flow Control.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btbibtapshortbody.jpg?updatedAt=1773034742128',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        description: "A Compact Short-Body Bib Tap Designed For Reliable Water Flow Control, Easy Operation, And Durable Everyday Use.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/BT%20TAPS/BT%20Short/bt-bib-tap-short-blue.jpg',
+        colors: [
+          { name: 'Blue', colorCode: '#2563EB', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/BT%20TAPS/BT%20Short/bt-bib-tap-short-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -265,8 +242,8 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-angle-valve.png",
@@ -276,12 +253,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         title: "Angle Valve",
         price: "₹ 335",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/TapsAndFittings/BrassThreadedTaps/btanglevalve.png?updatedAt=1773033688196',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/6-processed.webp',
+        colors: [
+          { name: 'Brown', colorCode: '#3d302d', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/6-processed.webp' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -294,35 +268,34 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bib_swan_neck.png",
     title: "Swan Neck",
-    products: [{
-      title: "Swan Neck",
-      price: "₹ 880",
-      description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-      image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
-       colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+    products: [
+      {
+        title: "Swan Neck",
+        price: "₹ 659",
+        description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot Cold Plumbing Systems.",
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png',
+        colors: [
+          { name: 'Charcoal', colorCode: '#2C2C2C', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Swan-Neck.png' },
         ],
-      specs: [
-        "Material: Premium UPVC Body & Brass Thread",
-        "Mechanism: Smooth Quarter-Turn Handle",
-        "Inlet Size: ½\" Standard Fitting",
-        "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-        "Strength: High-Density Crack-Resistant Polymer",
-        "Suitable For: Bathrooms, Gardens, Utility Areas",
-        "Dimensions: 92 Mm (H) × 78 Mm (L)",
-        "Installation: PTFE Tape Recommended for Sealing",
-        "Warranty: 5-Year Replacement Guarantee"
-      ]
-    },]
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      }
+    ],
   },
   {
     url: "https://ik.imagekit.io/pgtxr2fmn/Home/bt-two_way.png",
@@ -332,12 +305,9 @@ const IMGS: { url: string; title: string, products?: any }[] = [
         title: "Two way Angle Valve",
         price: "₹ 560",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/greentaps/Two-way-Angle-Valve.png',
-         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+        image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF', image: 'https://ik.imagekit.io/pgtxr2fmn/Tapsandfittings/5-processed.webp' },
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -350,8 +320,8 @@ const IMGS: { url: string; title: string, products?: any }[] = [
           "Installation: PTFE Tape Recommended for Sealing",
           "Warranty: 5-Year Replacement Guarantee"
         ]
-      },
-    ]
+      }
+    ],
   },
 ];
 
@@ -362,7 +332,7 @@ interface RollingGalleryProps {
     url: string;
     title: string;
     description?: string;
-    products?:[]
+    products?: any[];
   }[];
   autoScrollInterval?: number;
   dragSensitivity?: number;
