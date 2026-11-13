@@ -12,7 +12,7 @@ export const pipes = [
         description: "Garden Hose Pipes Are Flexible Tubes Used For Watering And Outdoor Cleaning, Designed To Provide Smooth Flow And Easy Handling.",
         image: 'https://ik.imagekit.io/pgtxr2fmn/pipes/GardenHousePipe.jpg?updatedAt=1773040420413',
         colors: [
-          { name: 'blue', colorCode: '#41c8e9' },
+         
           { name: 'Green', colorCode: '#4ADE80' }
         ],
         specs: [
