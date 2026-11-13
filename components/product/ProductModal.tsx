@@ -12,13 +12,29 @@ interface ProductModalProps {
         description: string | React.ReactNode
         image: string | StaticImageData
         // Optional fields that we might add to data later
-        colors?: { name: string, colorCode: string }[]
+        colors?: { name: string, colorCode: string, image?: string | StaticImageData }[]
         specs?: string[]
         price?: string
     } | null
 }
 
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
+    // Only show available colors (colors that have an image, or fallback to product colors)
+    const availableColors = React.useMemo(() => {
+        if (!product?.colors || product.colors.length === 0) return []
+        const withImage = product.colors.filter((c) => Boolean(c.image))
+        return withImage.length > 0 ? withImage : product.colors
+    }, [product])
+
+    const [selectedColor, setSelectedColor] = React.useState<{ name: string; colorCode: string; image?: string | StaticImageData } | null>(null)
+
+    React.useEffect(() => {
+        if (availableColors.length > 0) {
+            setSelectedColor(availableColors[0])
+        } else {
+            setSelectedColor(null)
+        }
+    }, [availableColors])
     useEffect(() => {
         if (!isOpen) return
 
@@ -68,6 +84,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
 
 
 
+    const activeImage = selectedColor?.image || product.image
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/40 backdrop-blur-sm transition-opacity">
             <div
@@ -91,14 +109,17 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                         </button>
 
                         {/* Main Image Container */}
-                        <div className="w-full max-w-sm sm:max-w-md md:max-w-3xl aspect-[4/3] md:aspect-auto md:h-[30vh] md:w-[50vh] bg-[#0F0F0F] rounded-3xl relative flex justify-center items-center overflow-hidden">
-                            <Image
-                                src={product.image}
-                                alt={product.title}
-                                fill
-                                style={{ objectFit: 'contain' }}
-                                className="p-6 md:p-10"
-                            />
+                        <div className="w-full max-w-sm sm:max-w-md md:max-w-3xl aspect-[4/3] md:aspect-auto md:h-[30vh] md:w-[50vh] bg-black rounded-3xl relative flex justify-center items-center overflow-hidden">
+                            {activeImage && (
+                                <Image
+                                    key={typeof activeImage === 'string' ? activeImage : activeImage.src}
+                                    src={activeImage}
+                                    alt={product.title}
+                                    fill
+                                    style={{ objectFit: 'contain' }}
+                                    className="p-6 md:p-10 transition-all duration-300"
+                                />
+                            )}
                         </div>
 
                         {/* Right Arrow */}
@@ -124,19 +145,44 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
                         </div>
 
                         {/* Colors */}
-                        {product.colors && product.colors.length > 0 && (
+                        {availableColors.length > 0 && (
                             <div className="flex items-center gap-4 mb-10">
                                 <span className="text-xl md:text-xl font-hoves-pro font-medium">Colors:</span>
                                 <div className="flex gap-4">
-                                    {product.colors.map((color, idx) => (
-                                        <div key={idx} className="flex flex-col items-center gap-1">
-                                            <div
-                                                className={`w-8 h-8 rounded-full border border-gray-300 shadow-sm cursor-pointer hover:scale-110 transition-transform`}
-                                                style={{ backgroundColor: color.colorCode }}
-                                            />
-                                            <span className="text-[10px] font-inter-tight text-gray-600">{color.name}</span>
-                                        </div>
-                                    ))}
+                                    {availableColors.map((color, idx) => {
+                                        const isSelected = selectedColor?.name === color.name
+                                        const isClickable = availableColors.length > 1 && Boolean(color.image)
+                                        return (
+                                            <button
+                                                key={color.name || idx}
+                                                type="button"
+                                                disabled={!isClickable}
+                                                onClick={() => {
+                                                    if (isClickable) setSelectedColor(color)
+                                                }}
+                                                className={`flex flex-col items-center gap-1.5 focus:outline-none ${
+                                                    isClickable ? 'cursor-pointer group' : 'cursor-default pointer-events-none'
+                                                }`}
+                                                title={isClickable ? `Select ${color.name}` : color.name}
+                                            >
+                                                <div
+                                                    className={`w-8 h-8 rounded-full shadow-sm transition-all duration-200 ${
+                                                        isSelected
+                                                            ? 'ring-2 ring-black ring-offset-2 scale-110'
+                                                            : isClickable
+                                                            ? 'border border-gray-300 hover:scale-105 opacity-80 hover:opacity-100'
+                                                            : 'border border-gray-300 opacity-90'
+                                                    }`}
+                                                    style={{ backgroundColor: color.colorCode }}
+                                                />
+                                                <span className={`text-[10px] font-inter-tight transition-colors ${
+                                                    isSelected ? 'text-black font-semibold' : 'text-gray-500'
+                                                }`}>
+                                                    {color.name}
+                                                </span>
+                                            </button>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         )}

@@ -63,7 +63,7 @@ type ProductItem = {
   description: string
   image: string | StaticImageData
   price?: string
-  colors?: { name: string; colorCode: string }[]
+  colors?: { name: string; colorCode: string; image?: string | StaticImageData }[]
   specs?: string[]
 }
 

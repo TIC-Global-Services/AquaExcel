@@ -22,12 +22,9 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 320",
         description: "A Compact Short-Body Bib Tap Designed For Reliable Water Flow Control, Easy Operation, And Durable Everyday Use.",
-        image: '/BT TAPS/BT Short/bt-bib-tap-short.jpg',
+        image: '/BT TAPS/BT Short/bt-bib-tap-short-blue.jpg',
         colors: [
-       { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'Blue', colorCode: '#2563EB', image: '/BT TAPS/BT Short/bt-bib-tap-short-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -45,12 +42,9 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 425",
         description: "A Longer-Bodied Tap Designed For Extended Reach, Delivering Smooth Water Flow And Reliable, Everyday Performance In Bathrooms Or Utility Spaces.",
-        image: '/BT TAPS/BT Long/bt-bib-tap-long.jpg',
+        image: '/BT TAPS/BT Long/bt-bib-tap-long-white.jpg',
         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/BT TAPS/BT Long/bt-bib-tap-long-white.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -137,12 +131,9 @@ export const Taps = [
         title: "High Flow",
         price: "₹ 399",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: '/BT TAPS/BT High Flow/bt-high-flow.jpg',
+        image: '/BT TAPS/BT High Flow/bt-high-flow-white.jpg',
         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/BT TAPS/BT High Flow/bt-high-flow-white.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -179,37 +170,34 @@ export const Taps = [
           "Warranty: 5-Year Replacement Guarantee"
         ]
       },
-      // {
-      //   title: "Garden Tap",
-      //   price: "₹ 445",
-      //   description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-      //   image: '/BT TAPS/BT Garden Tap/bt-garden-tap.jpg',
-      //   colors: [
-      //     { name: 'White', colorCode: '#FFFFFF' },
-      //     { name: 'Green', colorCode: '#4ADE80' }
-      //   ],
-      //   specs: [
-      //     "Material: Premium UPVC Body & Brass Thread",
-      //     "Mechanism: Smooth Quarter-Turn Handle",
-      //     "Inlet Size: ½\" Standard Fitting",
-      //     "Build Quality: 100% Leak-Proof & Anti-Corrosive",
-      //     "Strength: High-Density Crack-Resistant Polymer",
-      //     "Suitable For: Bathrooms, Gardens, Utility Areas",
-      //     "Dimensions: 92 Mm (H) × 78 Mm (L)",
-      //     "Installation: PTFE Tape Recommended for Sealing",
-      //     "Warranty: 5-Year Replacement Guarantee"
-      //   ]
-      // },
+      {
+        title: "Garden Tap",
+        price: "₹ 445",
+        description: "A durable and versatile garden tap designed for smooth water regulation, easy hose attachment, and reliable performance in outdoor and utility environments.",
+        image: '/BT TAPS/BT Garden Tap/bt-garden-tap-white.jpg',
+        colors: [
+          { name: 'White', colorCode: '#FFFFFF', image: '/BT TAPS/BT Garden Tap/bt-garden-tap-white.jpg' },
+          { name: 'Blue', colorCode: '#2563EB', image: '/BT TAPS/BT Garden Tap/bt-garden-tap-blue.jpg' }
+        ],
+        specs: [
+          "Material: Premium UPVC Body & Brass Thread",
+          "Mechanism: Smooth Quarter-Turn Handle",
+          "Inlet Size: ½\" Standard Fitting",
+          "Build Quality: 100% Leak-Proof & Anti-Corrosive",
+          "Strength: High-Density Crack-Resistant Polymer",
+          "Suitable For: Bathrooms, Gardens, Utility Areas",
+          "Dimensions: 92 Mm (H) × 78 Mm (L)",
+          "Installation: PTFE Tape Recommended for Sealing",
+          "Warranty: 5-Year Replacement Guarantee"
+        ]
+      },
       {
         title: "Washing Machine Tap",
         price: "₹ 495",
         description: "A CPVC Ball Valve Is A Heat-Resistant Valve Used To Control Water Flow, Offering Smooth Operation And Durability For Hot And Cold Plumbing Systems.",
-        image: '/BT TAPS/BT Washing Machine Tap/bt-washing-machine-tap.jpg',
+        image: '/BT TAPS/BT Washing Machine Tap/bt-washing-machine-tap-white.jpg',
         colors: [
-       { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/BT TAPS/BT Washing Machine Tap/bt-washing-machine-tap-white.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -350,12 +338,10 @@ export const Taps = [
         title: "Bib Tap Short Body",
         price: "₹ 164",
         description: "A Compact, Eco-Friendly Bib Tap Designed To Reduce Water Wastage While Delivering Smooth, Efficient Flow.",
-        image: '/GT TAPS/GT Short Body/gt-bib-tap-short.jpg',
+        image: '/GT TAPS/GT Short Body/gt-bib-tap-short-white.jpg',
         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/GT TAPS/GT Short Body/gt-bib-tap-short-white.jpg' },
+          { name: 'Blue', colorCode: '#2563EB', image: '/GT TAPS/GT Short Body/gt-bib-tap-short-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -373,12 +359,10 @@ export const Taps = [
         title: "Bib Tap Long Body",
         price: "₹ 230",
         description: "A Long-Reach Green Tap Built For Cleaner Water Use, Offering Controlled Flow With An Environmentally Conscious Design.",
-        image: '/GT TAPS/GT Long Body/gt-bib-tap-long.jpg',
+        image: '/GT TAPS/GT Long Body/gt-bib-tap-long-white.jpg',
         colors: [
-          { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/GT TAPS/GT Long Body/gt-bib-tap-long-white.jpg' },
+          { name: 'Blue', colorCode: '#2563EB', image: '/GT TAPS/GT Long Body/gt-bib-tap-long-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -396,12 +380,10 @@ export const Taps = [
         title: "Angle Valve",
         price: "₹ 164",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: '/GT TAPS/GT Angle Valve/gt-angle-valve.jpg',
+        image: '/GT TAPS/GT Angle Valve/gt-angle-valve-white.jpg',
         colors: [
-         { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/GT TAPS/GT Angle Valve/gt-angle-valve-white.jpg' },
+          { name: 'Blue', colorCode: '#2563EB', image: '/GT TAPS/GT Angle Valve/gt-angle-valve-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -442,12 +424,9 @@ export const Taps = [
         title: "Hi-Flow Tap",
         price: "₹ 199",
         description: "An Eco-Focused Angle Valve Made For Precise Control, Helping Conserve Water While Supporting Everyday Plumbing Needs.",
-        image: '/GT TAPS/GT High Flow/gt-high-flow.jpg',
+        image: '/GT TAPS/GT High Flow/gt-high-flow-white.jpg',
         colors: [
-         { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/GT TAPS/GT High Flow/gt-high-flow-white.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -580,10 +559,7 @@ export const Taps = [
         description: "An Eco-Focused Sink Tap With A Compact Short Spout, Designed To Minimize Water Splashing And Maximize Utility In Modern Kitchens.",
         image: '/GT TAPS/GT Spout Sink Tap ( Wall Mount )/gt-spout-sink-tap-4x3.jpg',
         colors: [
-         { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'Blue', colorCode: '#2563EB', image: '/GT TAPS/GT Spout Sink Tap ( Wall Mount )/gt-spout-sink-tap-4x3.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
@@ -624,12 +600,10 @@ export const Taps = [
         title: "2 in 1 Tap",
         price: "₹ 286",
         description: "A Versatile Two-in-One Tap Featuring Dual Outlets For Simultaneously Directing Water To Multiple Fixtures With Precise Flow Control.",
-        image: '/GT TAPS/GT 2in1 Tap/gt-2in1-tap.jpg',
+        image: '/GT TAPS/GT 2in1 Tap/gt-2in1-tap-white.jpg',
         colors: [
-         { name: 'White', colorCode: '#FFFFFF' },
-          { name: 'Charcoal', colorCode: '#2C2C2C' },
-          { name: 'Blue', colorCode: '#2563EB' },
-          { name: 'Almond', colorCode: '#E8D5B5' }
+          { name: 'White', colorCode: '#FFFFFF', image: '/GT TAPS/GT 2in1 Tap/gt-2in1-tap-white.jpg' },
+          { name: 'Blue', colorCode: '#2563EB', image: '/GT TAPS/GT 2in1 Tap/gt-2in1-tap-blue.jpg' }
         ],
         specs: [
           "Material: Premium UPVC Body & Brass Thread",
